@@ -1,0 +1,6 @@
+framework module Pods_Hoya_Thailand {
+  umbrella header "Pods-Hoya Thailand-umbrella.h"
+
+  export *
+  module * { export * }
+}
