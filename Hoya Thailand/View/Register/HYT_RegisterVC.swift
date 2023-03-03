@@ -9,7 +9,16 @@
 import Toast_Swift
 import UIKit
 
-class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, LanguageDropDownDelegate,DatePickerDelegate,UITextFieldDelegate, SuccessMessageDelegate {
+class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, LanguageDropDownDelegate,DateSelectedDelegate,UITextFieldDelegate, SuccessMessageDelegate {
+    
+    func acceptDate(_ vc: HYT_DatePickerVC) {
+        if vc.isComeFrom == "DOB"{
+            selectDOBLbl.text = vc.selectedDate
+            dob = vc.selectedDate
+        }
+    }
+    
+    func declineDate(_ vc: HYT_DatePickerVC) {}
     func goToLoginPage() {
         navigationController?.popViewController(animated: true)
     }
@@ -22,22 +31,11 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
         }
     }
     
-    func didTappedDOA(date: String) {
-    }
-    
-    func didTappedFromDate(date: String) {
-    }
-    
-    func didTappedToDate(date: String) {
-    }
-    
-    func didTappedDOB(date: String) {
-        selectDOBLbl.text = date
-    }
-    
+
     func didTappedSalesRepresentative(item: HYT_DropDownVC) {
         salesRep_Id = item.salesRepId
         selectSalesRepresentativeLbl.text = item.salesRepresentativeName
+        self.selectSalesRepresentativeLbl.textColor = .black
     }
     
     func didTappedRoleBtn(item: HYT_DropDownVC) {
@@ -63,36 +61,60 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             roleTitleLbl.isHidden = false
             roleStarImage.isHidden = false
             firstNameTopConstraint.constant = 82
-            dobStar.isHidden = false
+//            dobStar.isHidden = false
             dobTitleLbl.isHidden = false
             dobView.isHidden = false
-            genderStar.isHidden = false
+           
             genderTitleLbl.isHidden = false
             genderView.isHidden = false
             genderTopView.constant = 154
+            self.accountTypeId = 2
+            self.storeIdTF.text = ""
+            self.storeNameTF.text = ""
+            self.selectRoleLbl.text = "Select role"
+            self.firstNameTF.text = ""
+            self.lastNameTF.text = ""
+            self.emailTF.text = ""
+            self.mobileNumberTF.text = ""
+            self.selectSalesRepresentativeLbl.text = "Select sales representative"
+            self.setPasswordTF.text = ""
+            self.selectDOBLbl.text = "Select DOB"
+            self.selectGenderLbl.text = "Select gender"
+            self.idCardNumberTF.text = ""
             
         }else{
+            self.accountTypeId = 1
             roleView.isHidden = true
             roleTitleLbl.isHidden = true
             roleStarImage.isHidden = true
             firstNameTopConstraint.constant = 10
-            dobStar.isHidden = true
+//            dobStar.isHidden = true
             dobTitleLbl.isHidden = true
             dobView.isHidden = true
-            genderStar.isHidden = true
             genderTitleLbl.isHidden = true
             genderView.isHidden = true
             genderTopView.constant = 10
+            self.storeIdTF.text = ""
+            self.storeNameTF.text = ""
+            self.selectRoleLbl.text = "Select role"
+            self.firstNameTF.text = ""
+            self.lastNameTF.text = ""
+            self.emailTF.text = ""
+            self.mobileNumberTF.text = ""
+            self.selectSalesRepresentativeLbl.text = "Select sales representative"
+            self.setPasswordTF.text = ""
+            self.selectDOBLbl.text = "Select DOB"
+            self.selectGenderLbl.text = "Select gender"
+            self.idCardNumberTF.text = ""
         }
         
     }
     
     @IBOutlet weak var dobView: UIView!
-    @IBOutlet weak var dobStar: UILabel!
+//    @IBOutlet weak var dobStar: UILabel!
     
     @IBOutlet weak var genderTopView: NSLayoutConstraint!
     @IBOutlet weak var genderView: UIView!
-    @IBOutlet weak var genderStar: UILabel!
     @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var roleView: UIView!
     @IBOutlet weak var roleStarImage: UILabel!
@@ -132,12 +154,15 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     var VM = HYT_RegisterVM()
     weak var VC1 : HYT_RegisterOtpVC?
     var mobileNumberExistancy = 1
-    var emailExistancy = 1
+    var emailExistancy = 0
     var storeIdExistancy = 1
     var locationCode: String = ""
     var storeUserNameExistancy = 0
     var idCardValidationStatus = 2
     var salesRep_Id = 0
+    var dob:String = ""
+    var validationMobileNo = 0
+    var accountTypeId = -1
     
 
     override func viewDidLoad() {
@@ -168,17 +193,25 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         vc?.delegate = self
-        vc?.flags = "DOB"
+        vc?.isComeFrom = "DOB"
         present(vc!, animated: true)
     }
     @IBAction func didTappedSelectRoleBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_DropDownVC") as? HYT_DropDownVC
-        vc?.modalTransitionStyle = .crossDissolve
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.delegate = self
-
-        vc?.flags = "role"
-        present(vc!, animated: true)
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_DropDownVC") as? HYT_DropDownVC
+            vc?.modalTransitionStyle = .crossDissolve
+            vc?.modalPresentationStyle = .overFullScreen
+            vc?.delegate = self
+            vc?.accountTypeId = self.accountTypeId
+            vc?.flags = "role"
+            present(vc!, animated: true)
+        }
     }
     @IBAction func didTappedSelectLanguageBtn(_ sender: UIButton) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LanguageDropDownVC") as? HYT_LanguageDropDownVC
@@ -198,13 +231,33 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     
     
     @IBAction func didTappedSalesRepresentativeBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_DropDownVC") as? HYT_DropDownVC
-        vc?.modalTransitionStyle = .crossDissolve
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.delegate = self
-        vc?.locationId = locationCode
-        vc?.flags = "sales"
-        present(vc!, animated: true)
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }else if lastNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+        }
+//        else if emailTF.text?.count == 0 {
+//            self.view.makeToast("Enter email", duration: 2.0, position: .center)
+//        }
+        else if mobileNumberTF.text?.count == 0 {
+            self.view.makeToast("Enter your mobile number", duration: 2.0, position: .center)
+        }else if selectSalesRepresentativeLbl.text == "Select sales representative" {
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_DropDownVC") as? HYT_DropDownVC
+            vc?.modalTransitionStyle = .crossDissolve
+            vc?.modalPresentationStyle = .overFullScreen
+            vc?.delegate = self
+            vc?.locationId = locationCode
+            vc?.flags = "sales"
+            present(vc!, animated: true)
+        }
     }
     
     
@@ -216,50 +269,49 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     @IBAction func didTappedRegisterBtn(_ sender: UIButton) {
         
         if selectAccountType.text == "Select account type" {
-            self.view.makeToast("Select Acoount Type", duration: 2.0, position: .center)
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
         }else if storeIdTF.text?.count == 0 {
-            self.view.makeToast("Enter the store id", duration: 2.0, position: .center)
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
         }else if lastNameTF.text?.count == 0 {
             self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
-        }else if emailTF.text?.count == 0 {
-            self.view.makeToast("Enter email", duration: 2.0, position: .center)
-        }else if mobileNumberTF.text?.count == 0 {
-            self.view.makeToast("Enter your mobule number", duration: 2.0, position: .center)
+        }
+//        else if emailTF.text?.count == 0 {
+//            self.view.makeToast("Enter email", duration: 2.0, position: .center)
+//        }
+        else if mobileNumberTF.text?.count == 0 {
+            self.view.makeToast("Enter your mobile number", duration: 2.0, position: .center)
         }else if selectSalesRepresentativeLbl.text == "Select sales representative" {
             self.view.makeToast("Selet sales representative", duration: 2.0, position: .center)
         }else if setPasswordTF.text?.count == 0 {
-            self.view.makeToast("set a password", duration: 2.0, position: .center)
+            self.view.makeToast("set password", duration: 2.0, position: .center)
         }else if idCardNumberTF.text?.count == 0 {
-            self.view.makeToast("Enter the idcard number", duration: 2.0, position: .center)
+            self.view.makeToast("Enter the ID card number", duration: 2.0, position: .center)
         }else if storeUserNameExistancy == 1 {
-            self.view.makeToast("This storeid already exist", duration: 2.0, position: .center)
-        }else if emailExistancy == 1 {
+            self.view.makeToast("This store ID already exist", duration: 2.0, position: .center)
+        }else if emailExistancy == 1 && self.emailTF.text!.count != 0  {
             self.view.makeToast("This Email already exist try another email", duration: 2.0, position: .center)
+        }else if validationMobileNo == 0 {
+            self.view.makeToast("Enter a valid mobile number", duration: 2.0, position: .center)
         }else if mobileNumberExistancy == 1 {
             self.view.makeToast("This mobile number already exist try another mobile number", duration: 2.0, position: .center)
         }else if idCardValidationStatus != 1 {
-            self.view.makeToast("Enter a valid id card number", duration: 2.0, position: .center)
+            self.view.makeToast("Enter a valid ID card number", duration: 2.0, position: .center)
         }else{
             
             if selectAccountType.text  == "Individual"{
-                if selectGenderLbl.text == "Select gender" {
-                   self.view.makeToast("Select gender", duration: 2.0, position: .center)
-               }else if selectDOBLbl.text == "Select DOB" {
-                   self.view.makeToast("Select Date of birth", duration: 2.0, position: .center)
-               }else if selectRoleLbl.text == "Select role" {
-                   self.view.makeToast("Select the Role", duration: 2.0, position: .center)
-               }else{
+               
                    let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_RegisterOtpVC") as? HYT_RegisterOtpVC
                    vc?.modalPresentationStyle = .overFullScreen
                    vc?.modalTransitionStyle = .crossDissolve
 //                   vc?.registrationData = self
                    vc?.delegate = self
                    present(vc!, animated: true)
-               }
             }else{
                 let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_RegisterOtpVC") as? HYT_RegisterOtpVC
                 vc?.modalPresentationStyle = .overFullScreen
@@ -271,18 +323,108 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
    
         }
     }
+    @IBAction func firstNameEditingDidEnd(_ sender: Any) {
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }
+    }
+    @IBAction func lastNameEditingDidEnt(_ sender: Any) {
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }else if lastNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+        }
+    }
     
     @IBAction func didTappedStoreIdTF(_ sender: UITextField) {
         if storeIdTF.text?.count != 0{
             checkStoreIdExistancy()
+        }else{
+            self.storeNameTF.text = ""
+            self.selectRoleLbl.text = "Select role"
+            self.firstNameTF.text = ""
+            self.lastNameTF.text = ""
+            self.emailTF.text = ""
+            self.mobileNumberTF.text = ""
+            self.selectSalesRepresentativeLbl.text = ""
+            self.setPasswordTF.text = ""
+            self.selectDOBLbl.text = "Select DOB"
+            self.selectGenderLbl.text = "Select gender"
+            self.idCardNumberTF.text = ""
         }
     }
     
     @IBAction func didTappedMobileNumberTF(_ sender: UITextField) {
-        if mobileNumberTF.text?.count != 0{
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }else if lastNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+        }else if mobileNumberTF.text?.count == 0{
+            validationMobileNo = 0
+        }else  if mobileNumberTF.text?.count != 9{
+            self.view.makeToast("Mobile number should be 9 digit", duration: 2.0, position: .center)
+            validationMobileNo = 0
+        }else if String(mobileNumberTF.text?.prefix(1) ?? "") == "9" || String(mobileNumberTF.text?.prefix(1) ?? "") == "8" || String(mobileNumberTF.text?.prefix(1) ?? "") == "7" || String(mobileNumberTF.text?.prefix(1) ?? "") == "6"{
+            validationMobileNo = 1
             checkMobileNumberExistancy()
+        }else{
+            self.view.makeToast("Enter a valid mobile number", duration: 2.0, position: .center)
+            validationMobileNo = 0
+        }
+        
+       
+    }
+    
+    @IBAction func setPasswordEditingDidEnd(_ sender: Any) {
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }else if lastNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+        }
+//        else if emailTF.text?.count == 0 {
+//            self.view.makeToast("Enter email", duration: 2.0, position: .center)
+//        }
+        else if mobileNumberTF.text?.count == 0 {
+            self.view.makeToast("Enter your mobile number", duration: 2.0, position: .center)
+        }else if selectSalesRepresentativeLbl.text == "Select sales representative" {
+            self.view.makeToast("Selet sales representative", duration: 2.0, position: .center)
+        }else if setPasswordTF.text?.count == 0 {
+            self.view.makeToast("set password", duration: 2.0, position: .center)
         }
     }
+    
     
     @IBAction func didTappedEmailTF(_ sender: UITextField) {
         if emailTF.text?.count != 0{
@@ -295,7 +437,41 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     }
     
     @IBAction func didTappedIDNumberTF(_ sender: UITextField) {
-        checkIdcardNumber()
+        if selectAccountType.text == "Select account type" {
+            self.view.makeToast("Select Account Type", duration: 2.0, position: .center)
+        }else if storeIdTF.text?.count == 0 {
+            self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
+        }else if storeNameTF.text?.count == 0 {
+            self.view.makeToast("", duration: 2.0, position: .center)
+        }else if selectRoleLbl.text == "Select role" {
+            self.view.makeToast("Select the Role", duration: 2.0, position: .center)
+        }else if firstNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+        }else if lastNameTF.text?.count == 0 {
+            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+        }
+//        else if emailTF.text?.count == 0 {
+//            self.view.makeToast("Enter email", duration: 2.0, position: .center)
+//        }
+        else if mobileNumberTF.text?.count == 0 {
+            self.view.makeToast("Enter your mobile number", duration: 2.0, position: .center)
+        }else if selectSalesRepresentativeLbl.text == "Select sales representative" {
+            self.view.makeToast("Selet sales representative", duration: 2.0, position: .center)
+        }else if setPasswordTF.text?.count == 0 {
+            self.view.makeToast("set password", duration: 2.0, position: .center)
+        }else if idCardNumberTF.text?.count == 0 {
+            self.view.makeToast("Enter the ID card number", duration: 2.0, position: .center)
+        }else if storeUserNameExistancy == 1 {
+            self.view.makeToast("This store ID already exist", duration: 2.0, position: .center)
+        }else if emailExistancy == 1 && self.emailTF.text!.count != 0  {
+            self.view.makeToast("This Email already exist try another email", duration: 2.0, position: .center)
+        }else if validationMobileNo == 0 {
+            self.view.makeToast("Enter a valid mobile number", duration: 2.0, position: .center)
+        }else if mobileNumberExistancy == 1 {
+            self.view.makeToast("This mobile number already exist try another mobile number", duration: 2.0, position: .center)
+        }else{
+            checkIdcardNumber()
+        }
     }
     
     
@@ -357,7 +533,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var maxLength : Int = 10
         if textField == mobileNumberTF{
-            maxLength = 10
+            maxLength = 9
         }else if textField == setPasswordTF{
             maxLength = 6
         }else if textField == idCardNumberTF{
@@ -392,7 +568,7 @@ extension HYT_RegisterVC{
                 "Mobile": "\(mobileNumberTF.text ?? "")",
                 "Mobile_Two": "",
                 "Password": "\(setPasswordTF.text ?? "")",
-                "DOB": "\(selectDOBLbl.text ?? "")",
+                "DOB": "\(dob)",
                 "Gender": "\(selectGenderLbl.text ?? "")",
                 "IdentificationNo": "\(idCardNumberTF.text ?? "")",
                 "RegistrationSource": 3,

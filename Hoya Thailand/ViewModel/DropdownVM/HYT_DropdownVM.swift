@@ -12,22 +12,30 @@ class HYT_DropdownVM{
     
     var requestAPIs = RestAPI_Requests()
     weak var VC: HYT_DropDownVC?
-    var roleList = [LstAttributesDetails2]()
+    var roleListArray = [LstAttributesDetails2]()
     var salesRepresentativeList = [LstAttributesDetails3]()
     var queryStatusList = [LstAttributesDetails5]()
     var promotionList = [LtyPrgBaseDetails]()
     
     func roleListinApi(parameter: JSON){
-        self.roleList.removeAll()
+        self.roleListArray.removeAll()
         self.VC?.startLoading()
         requestAPIs.roleListing_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    self.roleList = result?.lstAttributesDetails ?? []
+                    
                     DispatchQueue.main.async {
-                        if result?.lstAttributesDetails?.count != 0{
-                            self.VC?.heightOfTableView.constant = CGFloat(30*self.roleList.count)
-                            self.VC?.rowNumber = self.roleList.count
+                        for data in result?.lstAttributesDetails ?? []{
+                            if data.attributeValue ?? "" != "Store Owner"{
+                                self.roleListArray.append(data)
+                            }
+                        }
+                                
+                        if self.roleListArray.count != 0{
+                            self.VC?.heightOfTableView.constant = CGFloat(45 * self.roleListArray.count)
+                            self.VC?.rowNumber = self.roleListArray.count
+                            
+                            
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                             
@@ -59,7 +67,7 @@ class HYT_DropdownVM{
                     self.salesRepresentativeList = result?.lstAttributesDetails ?? []
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?.count != 0{
-                            self.VC?.heightOfTableView.constant = CGFloat(30*self.salesRepresentativeList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.salesRepresentativeList.count)
                             self.VC?.rowNumber = self.salesRepresentativeList.count
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
@@ -92,7 +100,7 @@ class HYT_DropdownVM{
                     self.queryStatusList = result?.lstAttributesDetails ?? []
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?.count != 0{
-                            self.VC?.heightOfTableView.constant = CGFloat(30*self.queryStatusList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.queryStatusList.count)
                             self.VC?.rowNumber = self.queryStatusList.count
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
@@ -125,12 +133,13 @@ class HYT_DropdownVM{
                     self.promotionList = result?.ltyPrgBaseDetails ?? []
                     DispatchQueue.main.async {
                         if result?.ltyPrgBaseDetails?.count != 0 && result?.ltyPrgBaseDetails != nil{
-                            self.VC?.heightOfTableView.constant = CGFloat(30*self.promotionList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
                             self.VC?.rowNumber = self.promotionList.count
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                         }else{
-                            self.VC?.heightOfTableView.constant = CGFloat(30*self.promotionList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                         }

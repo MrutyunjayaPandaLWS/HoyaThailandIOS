@@ -62,7 +62,7 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
     func getPointExpireReportDetails(){
         let parameter : [String : Any] = [
         
-                "LoyaltyId": "TH000004",
+            "LoyaltyId": "\(self.loyaltyId)",
                 "FromDate": fromDate,
                 "ToDate": toDate
             

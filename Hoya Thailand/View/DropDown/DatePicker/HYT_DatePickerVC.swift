@@ -7,11 +7,9 @@
 
 import UIKit
 
-protocol DatePickerDelegate{
-    func didTappedFromDate(date: String)
-    func didTappedToDate(date: String)
-    func didTappedDOB(date:String)
-    func didTappedDOA(date:String)
+protocol DateSelectedDelegate{
+    func acceptDate(_ vc: HYT_DatePickerVC)
+    func declineDate(_ vc: HYT_DatePickerVC)
 }
 
 class HYT_DatePickerVC: UIViewController {
@@ -22,7 +20,9 @@ class HYT_DatePickerVC: UIViewController {
     
     var date = String()
     var flags: String = ""
-    var delegate: DatePickerDelegate?
+    var isComeFrom = ""
+    var delegate: DateSelectedDelegate!
+    var selectedDate = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,39 +35,52 @@ class HYT_DatePickerVC: UIViewController {
         // Do any additional setup after loading the view.
         datePickerView.maximumDate = Calendar.current.date(byAdding: .year, value: 0, to: Date())
     }
-    
-    @IBAction func didTappedOkBtn(_ sender: UIButton) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        date = dateFormatter.string(from: datePickerView.date)
-        print(date)
-        switch flags{
-        case "FromDate":
-            delegate?.didTappedFromDate(date: date)
-        case "ToDate":
-            delegate?.didTappedToDate(date: date)
-        case "DOB":
-            delegate?.didTappedDOB(date: date)
-        case "DOA":
-            delegate?.didTappedDOA(date: date)
-        default: print("send valid flags")
+    override func touchesBegan(_ touchscreen: Set<UITouch>, with event: UIEvent?)
+    {
+        let touch = touchscreen.first
+        if touch?.view != self.presentingViewController
+        {
+            self.dismiss(animated: true, completion: nil)
+
         }
-        dismiss(animated: true)
+    }
+    @IBAction func didTappedOkBtn(_ sender: UIButton) {
+        let today = Date() //Jun 21, 2017, 7:18 PM
+        let sevenDaysBeforeToday = Calendar.current.date(byAdding: .year, value: -18, to: today)!
+        print(sevenDaysBeforeToday)
+        if isComeFrom == "DOB"{
+            if datePickerView.date > sevenDaysBeforeToday{
+                let alert = UIAlertController(title: "", message: "It seems you are less than 18 years of age. You can apply for HOYO membership only if you are 18 years and above", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd"
+                selectedDate = formatter.string(from: datePickerView.date)
+                self.delegate.acceptDate(self)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }else if isComeFrom == "1"{
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            selectedDate = formatter.string(from: datePickerView.date)
+            self.delegate.acceptDate(self)
+            self.dismiss(animated: true, completion: nil)
+        }else if isComeFrom == "2"{
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            selectedDate = formatter.string(from: datePickerView.date)
+            self.delegate.acceptDate(self)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        
     }
     
     @IBAction func didTappedCancelBTn(_ sender: UIButton) {
-//        switch flags{
-//        case "FromDate":
-//            delegate?.didTappedFromDate(date: "")
-//        case "ToDate":
-//            delegate?.didTappedToDate(date: "")
-//        default: print("send valid flags")
-//        }
-        dismiss(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: true)
-    }
+   
     
 }

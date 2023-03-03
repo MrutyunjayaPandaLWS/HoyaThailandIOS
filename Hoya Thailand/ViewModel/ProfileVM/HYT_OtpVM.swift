@@ -61,7 +61,7 @@ class HYT_OtpVM{
     //    MARK: - CHECK MOBILE NUMBER EXISTANCY
     func checkMobileNumberExistancyApi(parameter : JSON){
         self.VC?.startLoading()
-        requestAPIs.s_MobileNumberExistancy_Api(parameters: parameter) { result, error in
+        requestAPIs.storeMobileNumberExistancy_Api(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
                     

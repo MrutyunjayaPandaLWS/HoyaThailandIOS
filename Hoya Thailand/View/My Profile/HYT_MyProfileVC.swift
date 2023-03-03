@@ -8,11 +8,19 @@
 import UIKit
 import Toast_Swift
 
-class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DatePickerDelegate, OtpDelegate {
-    func didTappedDOA(date: String) {
-        selectAnniversarydateLbl.text = date
+class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate {
+    
+    func acceptDate(_ vc: HYT_DatePickerVC) {
+        if vc.isComeFrom == "DOB"{
+            selectDateLbl.text = vc.selectedDate
+        }else{
+            selectAnniversarydateLbl.text = vc.selectedDate
+        }
     }
     
+    func declineDate(_ vc: HYT_DatePickerVC) {}
+    
+   
     func didTappedRoleBtn(item: HYT_DropDownVC) {
     }
     
@@ -133,7 +141,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DatePickerDelegate,
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         vc?.delegate = self
-        vc?.flags = "DOB"
+        vc?.isComeFrom = "DOB"
         present(vc!, animated: true)
     }
     
@@ -152,7 +160,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DatePickerDelegate,
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         vc?.delegate = self
-        vc?.flags = "DOA"
+        vc?.isComeFrom = "1"
         present(vc!, animated: true)
     }
     
@@ -205,7 +213,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DatePickerDelegate,
         let parameter : [String : Any] = [
             
                "ActionType": "6",
-               "CustomerId": "46"//customerTypeID
+               "CustomerId": "\(self.userId)"//customerTypeID
         ]
         
         self.VM.customerGeneralInfo(parameter: parameter)

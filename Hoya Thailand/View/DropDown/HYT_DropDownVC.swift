@@ -31,7 +31,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var flags = ""
     var genderList = ["Male","Female"]
     var promotionNameList = ["promotion-A","promotion-B","promotion-C","promotion-D","promotion-E"]
-    var accountTypeList = ["Store Owner","Individual"]
+    var accountTypeList = ["Store owner","Individual"]
     var roleList = ["Frontliner"]
     var salesRepresentativeList = ["SalesRepresentative-1","SalesRepresentative-2","SalesRepresentative-3"]
     var myRedeemptionStatus : [myredeemptionStatusModel] = [myredeemptionStatusModel(statusName: "Approved", statusID: 0),myredeemptionStatusModel(statusName: "Cancelled", statusID: 1)]
@@ -45,6 +45,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var locationId = ""
     var VM = HYT_DropdownVM()
     var salesRepId = 0
+    var accountTypeId = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,15 +61,15 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
         switch flags{
         case "gender":
             rowNumber = genderList.count
-            heightOfTableView.constant = CGFloat(30*rowNumber)
+            heightOfTableView.constant = CGFloat(45 * rowNumber)
             dropdownTableView.reloadData()
         case "promotionName":
             rowNumber = promotionNameList.count
-            heightOfTableView.constant = CGFloat(30*rowNumber)
+            heightOfTableView.constant = CGFloat(45 * rowNumber)
             dropdownTableView.reloadData()
         case "accountType":
             rowNumber = accountTypeList.count
-            heightOfTableView.constant = CGFloat(30*rowNumber)
+            heightOfTableView.constant = CGFloat(45 * rowNumber)
             dropdownTableView.reloadData()
         case "role":
             roleListApi()
@@ -99,7 +100,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     func getPromotionList_Api(){
         let parameter : [String : Any] = [
                 "ActionType": 1,
-                "CustomerId": 46,
+                "CustomerId": self.userId,
                 "Domain": "HOYA"
         ]
         
@@ -136,7 +137,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
         case "accountType":
             cell.nameLbl.text = accountTypeList[indexPath.row]
         case "role":
-            cell.nameLbl.text = self.VM.roleList[indexPath.row].attributeValue
+            cell.nameLbl.text = self.VM.roleListArray[indexPath.row].attributeValue
         case "sales":
             cell.nameLbl.text = self.VM.salesRepresentativeList[indexPath.row].attributeValue
         case "queryStatus":
@@ -151,9 +152,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
-    }
+   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch flags{
@@ -168,7 +167,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
             accountType = accountTypeList[indexPath.row]
             delegate?.didTappedAccountType(item: self)
         case "role":
-            roleName = self.VM.roleList[indexPath.row].attributeValue ?? "Select role"
+            roleName = self.VM.roleListArray[indexPath.row].attributeValue ?? "Select role"
             delegate?.didTappedRoleBtn(item: self)
         case "sales":
             salesRepresentativeName = self.VM.salesRepresentativeList[indexPath.row].attributeValue ?? "Select sales representative"

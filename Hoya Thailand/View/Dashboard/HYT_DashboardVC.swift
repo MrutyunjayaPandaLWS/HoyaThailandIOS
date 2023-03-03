@@ -55,12 +55,13 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewWillAppear(_ animated: Bool) {
         if customerTypeID != 54{
-              menuList = [                        MenuListModel(itemName: "Scan the QR / Upload Invoice", itemImage: "Group 8101", id: 2),
-                                                  MenuListModel(itemName: "My Earning", itemImage: "Group 8095", id: 3),
-                                                  MenuListModel(itemName: "Redeem the e-Voucher", itemImage: "Group 8099", id: 4),
-                                                  MenuListModel(itemName: "My Redemption", itemImage: "Group 8093", id: 5),
-                                                  MenuListModel(itemName: "Points Expiry Report", itemImage: "Group 8196", id: 6)
-                ]
+            menuList = [
+                                                MenuListModel(itemName: "Scan the QR / Upload Invoice", itemImage: "Group 8101", id: 2),
+                                                MenuListModel(itemName: "My Earning", itemImage: "Group 8095", id: 3),
+                                                MenuListModel(itemName: "Redeem the e-Voucher", itemImage: "Group 8099", id: 4),
+                                                MenuListModel(itemName: "My Redemption", itemImage: "Group 8093", id: 5),
+                                                MenuListModel(itemName: "Points Expiry Report", itemImage: "Group 8196", id: 6)
+            ]
         }else{
             menuList = [
                 MenuListModel(itemName: "My Staff", itemImage: "Group 8102", id: 1),
@@ -69,7 +70,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
                 MenuListModel(itemName: "My Promotions", itemImage: "Group 8098", id: 7),
                 MenuListModel(itemName: "My Earning", itemImage: "Group 8095", id: 3),
                 MenuListModel(itemName: "Points Expiry Report", itemImage: "Group 8196", id: 6)
-              ]
+            ]
         }
         tokendata()
         dashboardOffersApi()

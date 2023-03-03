@@ -12,30 +12,24 @@ protocol FilterProtocolDelegate{
     func didTappedFilterBtn(item: HYT_FilterVC)
 }
 
-class HYT_FilterVC: UIViewController, DatePickerDelegate, FilterStatusDelegate {
+class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate {
+    func acceptDate(_ vc: HYT_DatePickerVC) {
+        if vc.isComeFrom == "1"{
+            fromDate = vc.selectedDate
+            fromDateLbl.text = vc.selectedDate
+        }else{
+            toDate = vc.selectedDate
+            toDateLbl.text = vc.selectedDate
+        }
+    }
+    
+    func declineDate(_ vc: HYT_DatePickerVC) {}
+    
     func didTappedFilterStatus(item: HYT_DropDownVC) {
         statusName = item.statusName
         statusId = item.statusId
         selectPromotionNameLbl.text = statusName
     }
-    
-    func didTappedDOA(date: String) {
-        
-    }
-    
-    func didTappedFromDate(date: String) {
-        fromDate = date
-        fromDateLbl.text = date
-    }
-    
-    func didTappedToDate(date: String) {
-        toDate = date
-        toDateLbl.text = date
-    }
-    
-    func didTappedDOB(date: String) {
-    }
-    
     func didTappedPromotionName(item: HYT_DropDownVC) {
         selectPromotionNameLbl.text = item.promotionName
     }
@@ -69,7 +63,7 @@ class HYT_FilterVC: UIViewController, DatePickerDelegate, FilterStatusDelegate {
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         vc?.delegate = self
-        vc?.flags = "ToDate"
+        vc?.isComeFrom = "2"
         present(vc!, animated: true)
     }
     @IBAction func didtappedFromDateBtn(_ sender: UIButton) {
@@ -77,7 +71,7 @@ class HYT_FilterVC: UIViewController, DatePickerDelegate, FilterStatusDelegate {
         vc?.modalTransitionStyle = .crossDissolve
         vc?.modalPresentationStyle = .overFullScreen
         vc?.delegate = self
-        vc?.flags = "FromDate"
+        vc?.isComeFrom = "1"
         present(vc!, animated: true)
     }
     

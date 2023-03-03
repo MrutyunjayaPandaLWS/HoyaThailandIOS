@@ -915,13 +915,6 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		80448E9929A89A6D00EBD7BC /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
 		80448E9A29A89CAA00EBD7BC /* TokenModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,6 +1285,7 @@
 		80D7209929B07F7C0065A947 /* SupportVC */ = {
 			isa = PBXGroup;
 			children = (
+				803C910A29B06612007B622F /* ChatDetails */,
 				80B9408D299762E100CC22FA /* Query */,
 				80B940922997714500CC22FA /* Create Query */,
 			);
@@ -1326,10 +1320,8 @@
 				80E20541299B9BB100E3327F /* Storyboard */,
 				80E20534299B989600E3327F /* Extenssion1 */,
 				80FABD4E2994F3EC00061E01 /* Fonts */,
-				80FABD572994F7C200061E01 /* Design */,
 				809142BF2996787500212358 /* Constant */,
 				80E20532299B97D200E3327F /* Delegate */,
-				80448E9929A89A6D00EBD7BC /* Animation */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1461,7 +1453,6 @@
 			isa = PBXGroup;
 			children = (
 				80D7209929B07F7C0065A947 /* SupportVC */,
-				803C910A29B06612007B622F /* ChatDetails */,
 				800393A929A79DAA00542450 /* StoreOwner */,
 				8007D11429A4AB210042CA2D /* DropDown */,
 				80283C80299CD4D30014814E /* TabBarController */,
@@ -1497,13 +1488,6 @@
 				8011A6222995046C0033E740 /* galano-grotesque */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		80FABD572994F7C200061E01 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Design;
 			sourceTree = "<group>";
 		};
 		80FABD582994F7D100061E01 /* ViewModel */ = {

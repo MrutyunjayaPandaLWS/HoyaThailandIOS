@@ -34,7 +34,7 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     func myStaffListing_Api(){
         let parameter : [String : Any] = [
                 "ActionType": 2,
-                "CustomerId": 44//customerTypeID
+                "CustomerId": customerTypeID//customerTypeID
                 ]
         self.VM.myStaffListing_Api(parameter: parameter)
     }

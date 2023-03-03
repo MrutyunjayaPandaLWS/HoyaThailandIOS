@@ -87,7 +87,7 @@ class RestAPI_Requests {
     
     
     //MARK: - Check S_MobileNumberExistancy
-    func s_MobileNumberExistancy_Api(parameters: JSON, completion: @escaping (S_MobileNumberExistancyModel?, Error?) -> ()) -> URLSessionDataTask? {
+    func storeMobileNumberExistancy_Api(parameters: JSON, completion: @escaping (S_MobileNumberExistancyModel?, Error?) -> ()) -> URLSessionDataTask? {
         return client.load(path: ckeckUserMobileNumberExistancy_URLMethod, method: .post, params: parameters) { data, error in
             do{
                 if data != nil{

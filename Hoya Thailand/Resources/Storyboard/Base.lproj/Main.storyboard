@@ -372,12 +372,13 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-pc-rKo">
-                                                                <rect key="frame" x="297" y="17" width="12" height="6"/>
+                                                                <rect key="frame" x="292" y="12" width="25" height="16"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="12" id="CN1-0z-0WS"/>
-                                                                    <constraint firstAttribute="height" constant="6" id="z9v-Tg-yUm"/>
+                                                                    <constraint firstAttribute="width" constant="25" id="CN1-0z-0WS"/>
+                                                                    <constraint firstAttribute="height" constant="16" id="bN9-o6-O8o"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <color key="tintColor" red="0.20000000000000001" green="0.30196078431372547" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="eye (1)"/>
                                                                 <connections>
@@ -393,7 +394,7 @@
                                                             <constraint firstItem="yxo-eC-FNl" firstAttribute="top" secondItem="Uwz-cC-Bju" secondAttribute="top" id="ZsX-J3-J5K"/>
                                                             <constraint firstAttribute="bottom" secondItem="yxo-eC-FNl" secondAttribute="bottom" id="hLX-TO-n8J"/>
                                                             <constraint firstAttribute="height" constant="40" id="k0I-ZW-pMn"/>
-                                                            <constraint firstAttribute="trailing" secondItem="MQd-pc-rKo" secondAttribute="trailing" constant="24" id="s7s-yr-8wU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="MQd-pc-rKo" secondAttribute="trailing" constant="16" id="s7s-yr-8wU"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -403,7 +404,7 @@
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rh-qp-Zjq">
                                                         <rect key="frame" x="263" y="196" width="100" height="34"/>
-                                                        <color key="backgroundColor" name="Background color"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.33333333333333331" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="4Em-FT-mrg"/>
                                                             <constraint firstAttribute="width" constant="100" id="P87-4h-9hX"/>
@@ -3774,35 +3775,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-Zm-X6Q">
                                 <rect key="frame" x="20" y="176" width="353" height="500"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-Bw-gld">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-Bw-gld">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="500"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="fX6-G2-Wek"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HYT_DropDownTVCell" id="yXh-Kz-oXH" customClass="HYT_DropDownTVCell" customModule="Hoya_Thailand" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="353" height="14.333333015441895"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HYT_DropDownTVCell" rowHeight="45" id="yXh-Kz-oXH" customClass="HYT_DropDownTVCell" customModule="Hoya_Thailand" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="353" height="45"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXh-Kz-oXH" id="K1A-nt-Tzl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="14.333333015441895"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropdown list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6e-qA-U82">
-                                                            <rect key="frame" x="10" y="0.0" width="333" height="14.333333333333334"/>
+                                                            <rect key="frame" x="10" y="0.0" width="333" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="7RG-MZ-Goy"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR1-E4-Tsl">
+                                                            <rect key="frame" x="8" y="42" width="337" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="0.54981181496068054" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="zsb-bB-Dbj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="PR1-E4-Tsl" secondAttribute="trailing" constant="8" id="0To-xp-Agw"/>
                                                         <constraint firstAttribute="trailing" secondItem="F6e-qA-U82" secondAttribute="trailing" constant="10" id="6Na-ni-0Zr"/>
-                                                        <constraint firstAttribute="bottom" secondItem="F6e-qA-U82" secondAttribute="bottom" id="dMg-7a-p4Q"/>
+                                                        <constraint firstItem="PR1-E4-Tsl" firstAttribute="leading" secondItem="K1A-nt-Tzl" secondAttribute="leading" constant="8" id="hcz-Gi-P0D"/>
+                                                        <constraint firstItem="PR1-E4-Tsl" firstAttribute="top" secondItem="F6e-qA-U82" secondAttribute="bottom" constant="2" id="jOR-1U-0Z4"/>
                                                         <constraint firstItem="F6e-qA-U82" firstAttribute="top" secondItem="K1A-nt-Tzl" secondAttribute="top" id="oKf-Jh-6Ky"/>
                                                         <constraint firstItem="F6e-qA-U82" firstAttribute="leading" secondItem="K1A-nt-Tzl" secondAttribute="leading" constant="10" id="sEp-4L-HEP"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="lineLbl" destination="PR1-E4-Tsl" id="dIk-r0-FoG"/>
                                                     <outlet property="nameLbl" destination="F6e-qA-U82" id="59a-z3-IoY"/>
                                                 </connections>
                                             </tableViewCell>
@@ -3844,7 +3861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5y-mV-AL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14175" y="1289"/>
+            <point key="canvasLocation" x="14174.809160305344" y="1288.7323943661972"/>
         </scene>
         <!--Language Drop DownVC-->
         <scene sceneID="Lfb-hW-MUN">
@@ -6468,11 +6485,11 @@ UmFuZ2UgOiALA
             <objects>
                 <viewController storyboardIdentifier="HYT_RegisterVC" id="QGN-2G-mre" customClass="HYT_RegisterVC" customModule="Hoya_Thailand" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqA-55-RX3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsd-Ri-eWG">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="1227"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-0H-TFh">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
@@ -6581,10 +6598,10 @@ UmFuZ2UgOiALA
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIy-0F-jzC">
-                                        <rect key="frame" x="0.0" y="196" width="393" height="563"/>
+                                        <rect key="frame" x="0.0" y="196" width="393" height="1031"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNq-7J-TVC">
-                                                <rect key="frame" x="4" y="20" width="385" height="483"/>
+                                                <rect key="frame" x="4" y="20" width="385" height="951"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-tZ-Zz1">
                                                         <rect key="frame" x="0.0" y="10" width="385" height="946"/>
@@ -6746,6 +6763,9 @@ UmFuZ2UgOiALA
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="firstNameEditingDidEnd:" destination="QGN-2G-mre" eventType="editingDidEnd" id="4NP-pV-KRw"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" name="textFieldBackground color"/>
@@ -6782,6 +6802,9 @@ UmFuZ2UgOiALA
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="lastNameEditingDidEnt:" destination="QGN-2G-mre" eventType="editingDidEnd" id="yAT-fT-xxl"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" name="textFieldBackground color"/>
@@ -6804,7 +6827,7 @@ UmFuZ2UgOiALA
                                                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szw-Zi-Oel">
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szw-Zi-Oel">
                                                                 <rect key="frame" x="69.333333333333329" y="442" width="5.3333333333333286" height="12"/>
                                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -6894,7 +6917,7 @@ UmFuZ2UgOiALA
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select sales representative" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsE-oz-MIv">
                                                                         <rect key="frame" x="20" y="0.0" width="281" height="40"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
-                                                                        <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F7-2i-nE7">
@@ -6914,8 +6937,6 @@ UmFuZ2UgOiALA
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <connections>
                                                                             <action selector="didTappedSalesRepresentativeBtn:" destination="QGN-2G-mre" eventType="touchUpInside" id="Wf8-4c-cwc"/>
-                                                                            <action selector="didTappedSelectGenderBtn:" destination="hM0-0x-2Jx" eventType="touchUpInside" id="hl1-hH-sNO"/>
-                                                                            <action selector="didTappedSelectQueryTopicBtn:" destination="plf-Go-Lcm" eventType="touchUpInside" id="s7D-Vt-76Y"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -6959,6 +6980,9 @@ UmFuZ2UgOiALA
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="setPasswordEditingDidEnd:" destination="QGN-2G-mre" eventType="editingDidEnd" id="3WH-qp-nSy"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" name="textFieldBackground color"/>
@@ -6990,7 +7014,7 @@ UmFuZ2UgOiALA
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c97-dE-07p">
                                                                 <rect key="frame" x="20" y="896" width="345" height="40"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter id card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axK-OU-uRh">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter ID card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axK-OU-uRh">
                                                                         <rect key="frame" x="20" y="0.0" width="325" height="40"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
@@ -7050,7 +7074,7 @@ UmFuZ2UgOiALA
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <connections>
-                                                                            <action selector="didTappedSelectRoleBtn:" destination="QGN-2G-mre" eventType="touchUpInside" id="awH-ON-CiK"/>
+                                                                            <action selector="didTappedSelectRoleBtn:" destination="QGN-2G-mre" eventType="touchUpInside" id="Poa-KZ-Jbb"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -7081,19 +7105,13 @@ UmFuZ2UgOiALA
                                                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuE-4F-hgF">
-                                                                <rect key="frame" x="79.666666666666671" y="802" width="5.3333333333333286" height="12"/>
-                                                                <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
-                                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-NL-ap9">
                                                                 <rect key="frame" x="20" y="824" width="345" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS6-kD-Uf6">
                                                                         <rect key="frame" x="20" y="0.0" width="281" height="40"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
-                                                                        <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-R0-3Wt">
@@ -7136,16 +7154,10 @@ UmFuZ2UgOiALA
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-Vb-tMv">
-                                                                <rect key="frame" x="34" y="730" width="26" height="12"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-Vb-tMv">
+                                                                <rect key="frame" x="34" y="730" width="77" height="12"/>
                                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysn-kZ-xd1">
-                                                                <rect key="frame" x="62.000000000000007" y="730" width="4.3333333333333357" height="12"/>
-                                                                <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
-                                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nug-oT-Nvv">
@@ -7154,7 +7166,7 @@ UmFuZ2UgOiALA
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-CU-vH1">
                                                                         <rect key="frame" x="20" y="0.0" width="275" height="40"/>
                                                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
-                                                                        <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCm-Jm-Fat">
@@ -7174,9 +7186,6 @@ UmFuZ2UgOiALA
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <connections>
                                                                             <action selector="didTappedDOBBtn:" destination="QGN-2G-mre" eventType="touchUpInside" id="EcI-oz-UiQ"/>
-                                                                            <action selector="didTappedSalesRepresentativeBtn:" destination="QGN-2G-mre" eventType="touchUpInside" id="Vk2-69-hXV"/>
-                                                                            <action selector="didTappedSelectGenderBtn:" destination="hM0-0x-2Jx" eventType="touchUpInside" id="VFr-un-XjZ"/>
-                                                                            <action selector="didTappedSelectQueryTopicBtn:" destination="plf-Go-Lcm" eventType="touchUpInside" id="OkD-Nc-6dn"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -7224,7 +7233,6 @@ UmFuZ2UgOiALA
                                                             <constraint firstItem="4uH-sK-FGh" firstAttribute="top" secondItem="zWI-ny-3Kg" secondAttribute="bottom" constant="10" id="Efg-04-SLo"/>
                                                             <constraint firstItem="DHK-Lh-QZC" firstAttribute="top" secondItem="nug-oT-Nvv" secondAttribute="bottom" constant="10" id="FOv-HY-zZv"/>
                                                             <constraint firstItem="c97-dE-07p" firstAttribute="top" secondItem="Q8g-bP-5TM" secondAttribute="bottom" constant="10" id="GFJ-p1-fN0"/>
-                                                            <constraint firstItem="Ysn-kZ-xd1" firstAttribute="leading" secondItem="Bnw-Vb-tMv" secondAttribute="trailing" constant="2" id="GPK-Le-9a8"/>
                                                             <constraint firstItem="604-d4-eE1" firstAttribute="leading" secondItem="D1C-h1-uoa" secondAttribute="leading" id="GaP-s5-FOQ"/>
                                                             <constraint firstItem="g4j-6F-ygh" firstAttribute="top" secondItem="dfz-UQ-gvM" secondAttribute="bottom" constant="10" id="Id2-u5-Lfg"/>
                                                             <constraint firstItem="7mo-rZ-3rx" firstAttribute="top" secondItem="33w-DD-wbi" secondAttribute="bottom" constant="10" id="J68-kq-Nph"/>
@@ -7245,7 +7253,6 @@ UmFuZ2UgOiALA
                                                             <constraint firstItem="Bnw-Vb-tMv" firstAttribute="top" secondItem="g4j-6F-ygh" secondAttribute="bottom" constant="10" id="THe-Zx-PVq"/>
                                                             <constraint firstItem="TVF-zg-hcb" firstAttribute="leading" secondItem="DDI-6S-CG8" secondAttribute="leading" id="TQD-RU-DrX"/>
                                                             <constraint firstItem="iVE-o0-MJG" firstAttribute="top" secondItem="604-d4-eE1" secondAttribute="top" id="TRE-do-NuX"/>
-                                                            <constraint firstItem="DuE-4F-hgF" firstAttribute="top" secondItem="DHK-Lh-QZC" secondAttribute="top" id="UDA-YC-EgG"/>
                                                             <constraint firstAttribute="bottom" secondItem="c97-dE-07p" secondAttribute="bottom" constant="10" id="VIT-Ki-Poe"/>
                                                             <constraint firstItem="DHK-Lh-QZC" firstAttribute="leading" secondItem="Bnw-Vb-tMv" secondAttribute="leading" id="VXr-pM-Y99"/>
                                                             <constraint firstItem="Bnw-Vb-tMv" firstAttribute="leading" secondItem="dfz-UQ-gvM" secondAttribute="leading" id="Ve6-ad-98n"/>
@@ -7270,7 +7277,6 @@ UmFuZ2UgOiALA
                                                             <constraint firstItem="4uH-sK-FGh" firstAttribute="leading" secondItem="2ES-J7-IPG" secondAttribute="leading" id="fqb-tD-Og8"/>
                                                             <constraint firstItem="knK-Ff-M8C" firstAttribute="leading" secondItem="JA3-1d-K9n" secondAttribute="leading" id="g54-jH-NN3"/>
                                                             <constraint firstItem="DDI-6S-CG8" firstAttribute="top" secondItem="D1C-h1-uoa" secondAttribute="bottom" constant="10" id="gjg-cH-Srg"/>
-                                                            <constraint firstItem="Ysn-kZ-xd1" firstAttribute="top" secondItem="Bnw-Vb-tMv" secondAttribute="top" id="h2b-Sb-Mnn"/>
                                                             <constraint firstItem="D1C-h1-uoa" firstAttribute="leading" secondItem="0U4-tZ-Zz1" secondAttribute="leading" constant="34" id="hdo-mv-3A4"/>
                                                             <constraint firstItem="Ww0-kP-aUF" firstAttribute="leading" secondItem="zWI-ny-3Kg" secondAttribute="leading" id="irl-TW-wME"/>
                                                             <constraint firstItem="FD0-iR-es7" firstAttribute="top" secondItem="f1z-r6-AZY" secondAttribute="bottom" constant="10" id="j28-le-Tma"/>
@@ -7292,7 +7298,6 @@ UmFuZ2UgOiALA
                                                             <constraint firstItem="2ES-J7-IPG" firstAttribute="trailing" secondItem="7Ih-wn-Ljw" secondAttribute="trailing" id="uKc-JB-odd"/>
                                                             <constraint firstItem="szw-Zi-Oel" firstAttribute="leading" secondItem="zWI-ny-3Kg" secondAttribute="trailing" constant="2" id="ufB-da-60h"/>
                                                             <constraint firstItem="7mo-rZ-3rx" firstAttribute="leading" secondItem="Ww0-kP-aUF" secondAttribute="leading" id="vrL-L5-cmn"/>
-                                                            <constraint firstItem="DuE-4F-hgF" firstAttribute="leading" secondItem="DHK-Lh-QZC" secondAttribute="trailing" constant="2" id="wYc-pf-apf"/>
                                                             <constraint firstItem="7Ih-wn-Ljw" firstAttribute="top" secondItem="UXG-NO-Dhz" secondAttribute="bottom" constant="10" id="wll-63-XMZ"/>
                                                             <constraint firstItem="Q8g-bP-5TM" firstAttribute="leading" secondItem="dfz-UQ-gvM" secondAttribute="leading" id="yWW-JA-E23"/>
                                                             <constraint firstItem="2If-gJ-DXm" firstAttribute="top" secondItem="dfz-UQ-gvM" secondAttribute="top" id="ynE-vQ-tvE"/>
@@ -7310,7 +7315,7 @@ UmFuZ2UgOiALA
                                                 </constraints>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-ii-7hz">
-                                                <rect key="frame" x="0.0" y="503" width="393" height="60"/>
+                                                <rect key="frame" x="0.0" y="971" width="393" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuK-QU-sWb">
                                                         <rect key="frame" x="13.999999999999993" y="20" width="108.33333333333331" height="20"/>
@@ -7424,10 +7429,10 @@ UmFuZ2UgOiALA
                             <constraint firstItem="Jsd-Ri-eWG" firstAttribute="top" secondItem="IFo-R9-5SB" secondAttribute="top" id="eDw-iy-XLw"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="393" height="1320"/>
                     <connections>
                         <outlet property="accountTypeLbl" destination="D1C-h1-uoa" id="zx7-ju-NRu"/>
                         <outlet property="backToLoginLbl" destination="tEt-fj-2BA" id="AbR-Qa-ofu"/>
-                        <outlet property="dobStar" destination="Ysn-kZ-xd1" id="eq6-3s-sIu"/>
                         <outlet property="dobTitleLbl" destination="Bnw-Vb-tMv" id="Deb-po-EZg"/>
                         <outlet property="dobView" destination="nug-oT-Nvv" id="2kV-MT-KMh"/>
                         <outlet property="emailLbl" destination="zWI-ny-3Kg" id="DhN-Km-W7e"/>
@@ -7435,7 +7440,6 @@ UmFuZ2UgOiALA
                         <outlet property="firstNameLbl" destination="UXG-NO-Dhz" id="poJ-Mk-j8I"/>
                         <outlet property="firstNameTF" destination="0fe-YM-sn6" id="ioD-1p-24U"/>
                         <outlet property="firstNameTopConstraint" destination="Zfv-q0-UMb" id="z4L-GJ-pKu"/>
-                        <outlet property="genderStar" destination="DuE-4F-hgF" id="WRO-66-bLn"/>
                         <outlet property="genderTitleLbl" destination="DHK-Lh-QZC" id="1as-Ml-hbv"/>
                         <outlet property="genderTopView" destination="bmA-Jy-DoL" id="01O-mZ-ukt"/>
                         <outlet property="genderView" destination="tJ6-NL-ap9" id="u8x-jx-T3y"/>
@@ -7520,7 +7524,7 @@ UmFuZ2UgOiALA
                                             <constraint firstItem="cPw-1r-ywd" firstAttribute="top" secondItem="cZi-Z3-0aR" secondAttribute="top" id="gfQ-CJ-3pQ"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EN-Language" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-tj-apv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_img (1)" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-tj-apv">
                                         <rect key="frame" x="14" y="23" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="58o-bB-Orm"/>

@@ -56,10 +56,10 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     func myRedeemptionList_Api(){
         let parameter : [String : Any] = [
                 "ActionType": 52,
-                "ActorId": 45332,
+                "ActorId": self.userId,
                 "StartIndex": 1,
                 "NoOfRows": "",
-                "CustomerTypeID": "52",
+                "CustomerTypeID": self.customerTypeID,
                 "ObjCatalogueDetails": [
                     "JFromDate": fromDate,
                     "RedemptionTypeId": "-1",

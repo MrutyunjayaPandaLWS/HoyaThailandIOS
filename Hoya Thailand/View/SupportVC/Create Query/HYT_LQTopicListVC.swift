@@ -62,7 +62,7 @@ class HYT_LQTopicListVC: BaseViewController, UITableViewDelegate, UITableViewDat
         func helpTopicList_Api(){
             let parameter : [String : Any] = [
                     "ActionType": "4",
-                    "ActorId": "30",
+                    "ActorId": "\(self.userId)",
                     "IsActive": "true"
             ]
             self.VM.getHelpTopicList_Api(parameter: parameter)

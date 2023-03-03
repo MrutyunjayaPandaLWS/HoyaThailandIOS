@@ -11,7 +11,8 @@ class HYT_DropDownTVCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
     
-   
+    @IBOutlet weak var lineLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

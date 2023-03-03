@@ -49,7 +49,7 @@ class HYT_RegisterVM{
     //    MARK: - CHECK MOBILE NUMBER EXISTANCY
     func checkMobileNumberExistancyApi(parameter : JSON){
         self.VC?.startLoading()
-        requestAPIs.s_MobileNumberExistancy_Api(parameters: parameter) { result, error in
+        requestAPIs.storeMobileNumberExistancy_Api(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
                     
@@ -87,11 +87,12 @@ class HYT_RegisterVM{
                     if result?.lstAttributesDetails?.count != 0 {
                         DispatchQueue.main.async {
                             if String(result?.lstAttributesDetails?[0].attributeValue?.prefix(2) ?? "") != "-2"{
-                                self.VC?.view.makeToast("This storeId allready exists", duration: 2.0, position: .center)
+                               // self.VC?.view.makeToast("This storeId allready exists", duration: 2.0, position: .center)
                                 self.VC?.storeIdStatus = 1
                                 self.VC?.locationCode = "\(result?.lstAttributesDetails?[0].attributeId ?? 0)"
                                 self.VC?.selectSalesRepresentativeLbl.text = "Select sales representative"
                                 self.VC?.storeNameTF.text = result?.lstAttributesDetails?[0].attributeValue
+                                self.VC?.storeNameTF.textColor = .black
                                 self.VC?.checkStoreUserNameExistancy()
                                 self.VC?.stopLoading()
                             }else{
