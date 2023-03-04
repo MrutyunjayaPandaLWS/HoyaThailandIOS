@@ -15,6 +15,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     }
     
 
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var timmerLbl: UILabel!
     @IBOutlet weak var sendOtpView: UIView!
     @IBOutlet weak var submitOtpView: UIView!

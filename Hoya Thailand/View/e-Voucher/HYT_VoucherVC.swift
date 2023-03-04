@@ -69,6 +69,8 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     var fromDate = ""
     var toDate = ""
     var currentDate = ""
+    var startIndex = 1
+    var noOfElement = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +107,8 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                 
                     "ActionType": 6,
                     "ActorId": userId,
-                     "StartIndex": 1,
-                    "NoOfRows": "",
+                     "StartIndex": startIndex,
+                    "NoOfRows": "10",
                     "ObjCatalogueDetails": [
                         "CatalogueType": 4
                     ],
@@ -128,28 +130,48 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.VM.voucherList.count
+        print(self.VM.voucherListArray.count)
+        return self.VM.voucherListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_VoucherTVCell", for: indexPath) as! HYT_VoucherTVCell
         cell.selectionStyle = .none
         cell.delegate = self
-        cell.voucherNameLbl.text = self.VM.voucherList[indexPath.row].productName
-        cell.voucherImage.sd_setImage(with: URL(string: self.VM.voucherList[indexPath.row].productImage ?? ""), placeholderImage: UIImage(named: "ic_default_img (1)"))
-        cell.rangeValueLbl.text = "\(self.VM.voucherList[indexPath.row].min_points ?? "0") - \(self.VM.voucherList[indexPath.row].max_points ?? "0")"
-        cell.voucherDetails = self.VM.voucherList[indexPath.row]
+        cell.voucherNameLbl.text = self.VM.voucherListArray[indexPath.row].productName
+        cell.voucherImage.sd_setImage(with: URL(string: self.VM.voucherListArray[indexPath.row].productImage ?? ""), placeholderImage: UIImage(named: "ic_default_img (1)"))
+        cell.rangeValueLbl.text = "\(self.VM.voucherListArray[indexPath.row].min_points ?? "0") - \(self.VM.voucherListArray[indexPath.row].max_points ?? "0")"
+        cell.voucherDetails = self.VM.voucherListArray[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_VoucherDetailsVC") as? HYT_VoucherDetailsVC
         vc?.pointExpireDetails = self.VM.pointExpireDetails
-        vc?.productDetails = self.VM.voucherList[indexPath.row]
+        vc?.productDetails = self.VM.voucherListArray[indexPath.row]
         vc?.currentDate = currentDate
         navigationController?.pushViewController(vc!, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if tableView == voucherTableView{
+            if indexPath.row == (self.VM.voucherListArray.count - 1){
+                if noOfElement == 10{
+                    startIndex += 1
+                    getVoucherList_Api()
+                }else if noOfElement > 10{
+                    startIndex += 1
+                    getVoucherList_Api()
+                }else if noOfElement < 10{
+                    print("no need to reload data")
+                    return
+                }else{
+                    print("No data available")
+                    return
+                }
+            }
+        }
 
+    }
 
 }

@@ -21,6 +21,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         }
     }
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var securePasswordBtn: UIButton!
     @IBOutlet weak var languageLbl: UILabel!
     @IBOutlet weak var needHelpBtn: UIButton!

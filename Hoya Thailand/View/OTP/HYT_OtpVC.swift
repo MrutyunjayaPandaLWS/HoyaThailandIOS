@@ -37,10 +37,14 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
         if otpBtnStatus == 0{
             if newNumberTF.text?.count == 0{
                 self.view.makeToast("Enter mobile number", duration: 2.0, position: .center)
-            }else if newNumberTF.text?.count == 10{
-                checkMobileNumberExistancy()
-                getOtpBtn.setTitle("Submit", for: .normal)
-                otpBtnStatus = 1
+            }else if newNumberTF.text?.count == 9{
+                if  String(newNumberTF.text?.prefix(1) ?? "") == "9" || String(newNumberTF.text?.prefix(1) ?? "") == "8" || String(newNumberTF.text?.prefix(1) ?? "") == "7" || String(newNumberTF.text?.prefix(1) ?? "") == "6"{
+                    checkMobileNumberExistancy()
+                    getOtpBtn.setTitle("Submit", for: .normal)
+                    otpBtnStatus = 1
+                }else{
+                    self.view.makeToast("Enter valid mobile number", duration: 2.0, position: .center)
+                }
             }else{
                 self.view.makeToast("Enter valid mobile number", duration: 2.0, position: .center)
             }
@@ -55,7 +59,6 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
             }else{
                 self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
                 otpView.text = ""
-
             }
         }
         

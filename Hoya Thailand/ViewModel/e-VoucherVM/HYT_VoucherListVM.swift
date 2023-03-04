@@ -10,29 +10,39 @@ import Foundation
 class HYT_VoucherListVM{
     var requestAPIs = RestAPI_Requests()
     weak var VC: HYT_VoucherVC?
-    var voucherList = [ObjCatalogueList1]()
+    var voucherListArray = [ObjCatalogueList1]()
     var pointExpireDetails = [eVoucherPointExpModel]()
     func voucherListApi(parameter: JSON){
-        self.voucherList.removeAll()
+//        self.voucherListArray.removeAll()
         self.VC?.startLoading()
         requestAPIs.getVoucherListApi(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    self.voucherList = result?.objCatalogueList ?? []
                     DispatchQueue.main.async {
-                        if result?.objCatalogueList?.count != 0 && result?.objCatalogueList != nil {
-                            self.VC?.emptyMessageLbl.isHidden = true
-                            self.VC?.voucherTableView.reloadData()
-                            self.VC?.stopLoading()
+                        let voucherList = result?.objCatalogueList ?? []
+                        if voucherList.count != 0 && voucherList.isEmpty == false {
+                            self.voucherListArray += voucherList
+                            self.VC?.noOfElement = self.voucherListArray.count
+                            if self.voucherListArray.count != 0{
+                                self.VC?.emptyMessageLbl.isHidden = true
+                                self.VC?.voucherTableView.reloadData()
+                                self.VC?.stopLoading()
+                            }else{
+                                self.VC?.emptyMessageLbl.isHidden = false
+                                self.VC?.startIndex = 1
+                                self.VC?.noOfElement = 0
+                                self.VC?.voucherTableView.reloadData()
+                                self.VC?.emptyMessageLbl.text = "No data found"
+                                self.VC?.stopLoading()
+                            }
+                            
                         }else{
-                            self.VC?.emptyMessageLbl.isHidden = false
-                            self.VC?.voucherTableView.reloadData()
-                            self.VC?.emptyMessageLbl.text = "No data found"
                             self.VC?.stopLoading()
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.emptyMessageLbl.text = "No data found"
                         self.VC?.stopLoading()
                     }
                 }

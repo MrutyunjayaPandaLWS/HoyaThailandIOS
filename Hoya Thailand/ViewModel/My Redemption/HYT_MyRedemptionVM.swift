@@ -14,33 +14,44 @@ class HYT_MyRedemptionVM{
     weak var VC: HYT_MyRedemptionVC?
     var myRedeemptionList = [ObjCatalogueRedemReqList]()
     func myRedeemptionListApi(parameter: JSON){
-        self.myRedeemptionList.removeAll()
+//        self.myRedeemptionList.removeAll()
         self.VC?.startLoading()
         requestAPIs.myRedeemptionListApi(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    self.myRedeemptionList = result?.objCatalogueRedemReqList ?? []
-                    DispatchQueue.main.async {
-                        if result?.objCatalogueRedemReqList?.count != 0 && result?.objCatalogueRedemReqList != nil {
-                            self.VC?.emptyMessageLbl.isHidden = true
-                            self.VC?.myRedeemptionTableView.reloadData()
-                            self.VC?.stopLoading()
-                        }else{
-                            self.VC?.emptyMessageLbl.isHidden = false
-                            self.VC?.myRedeemptionTableView.reloadData()
-                            self.VC?.emptyMessageLbl.text = "No data found"
+                    let myRedeemptionListArray = result?.objCatalogueRedemReqList ?? []
+                    if myRedeemptionListArray.isEmpty == false || myRedeemptionListArray.count != 0 {
+                        self.myRedeemptionList = myRedeemptionListArray
+                        DispatchQueue.main.async {
+                            self.VC?.noOfElement = self.myRedeemptionList.count
+                            if self.myRedeemptionList.count != 0{
+                                self.VC?.emptyMessageLbl.isHidden = true
+                                self.VC?.myRedeemptionTableView.reloadData()
+                                self.VC?.stopLoading()
+                            }else{
+                                self.VC?.emptyMessageLbl.isHidden = false
+                                self.VC?.noOfElement = 0
+                                self.VC?.startIndex = 1
+                                self.VC?.myRedeemptionTableView.reloadData()
+                                self.VC?.emptyMessageLbl.text = "No data found"
+                                self.VC?.stopLoading()
+                            }
+                        }
+                    }else{
+                        DispatchQueue.main.async {
                             self.VC?.stopLoading()
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.emptyMessageLbl.text = "No data found"
                         self.VC?.stopLoading()
                     }
                 }
-            }
-            else{
+            }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
+                    self.VC?.emptyMessageLbl.text = "No data found"
                     print("My Redeemption error",error?.localizedDescription)
                 }
             }

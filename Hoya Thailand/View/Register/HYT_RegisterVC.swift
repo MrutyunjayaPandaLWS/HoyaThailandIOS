@@ -237,7 +237,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual"{
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -274,7 +274,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual"{
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -330,7 +330,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual" {
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -343,7 +343,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual" {
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -377,7 +377,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual"{
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -406,7 +406,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual"{
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -443,7 +443,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("Enter the store ID", duration: 2.0, position: .center)
         }else if storeNameTF.text?.count == 0 {
             self.view.makeToast("", duration: 2.0, position: .center)
-        }else if selectRoleLbl.text == "Select role" {
+        }else if selectRoleLbl.text == "Select role" && selectAccountType.text == "Individual"{
             self.view.makeToast("Select the Role", duration: 2.0, position: .center)
         }else if firstNameTF.text?.count == 0 {
             self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
@@ -559,7 +559,7 @@ extension HYT_RegisterVC{
                 "LocationCode": "",
                 "LoyaltyId": "",
                 "LocationId": locationCode,
-                "LocationName": "Banglore",
+                "LocationName": storeNameTF.text ?? "",
                 "CountryId": 17,
                 "CustomerTypeID": 60,
                 "FirstName": "\(firstNameTF.text ?? "")",
@@ -592,7 +592,7 @@ extension HYT_RegisterVC{
                     "LocationCode": "",
                     "LoyaltyId": "",  // LocationCode (if UserName check api is valid)
                     "LocationId": locationCode ,
-                    "LocationName": "Banglore", // Store Name.....(SEND LOCATION NAME HERE)
+                    "LocationName": storeNameTF.text ?? "", // Store Name.....(SEND LOCATION NAME HERE)
                     "CountryId": 17,
                     "CustomerTypeID": 60,
                     "FirstName": "\(firstNameTF.text ?? "")",

@@ -27,6 +27,8 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     var fromDate = ""
     var toDate = ""
     var statusId = ""
+    var startIndex = 1
+    var noOfElement = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
@@ -57,8 +59,8 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         let parameter : [String : Any] = [
                 "ActionType": 52,
                 "ActorId": self.userId,
-                "StartIndex": 1,
-                "NoOfRows": "",
+                "StartIndex": startIndex,
+                "NoOfRows": "10",
                 "CustomerTypeID": self.customerTypeID,
                 "ObjCatalogueDetails": [
                     "JFromDate": fromDate,
@@ -100,5 +102,26 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
 //    Height = 60
+    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if tableView == myRedeemptionTableView{
+            if indexPath.row != (self.VM.myRedeemptionList.count - 1){
+                if noOfElement == 10{
+                    startIndex += 1
+                    myRedeemptionList_Api()
+                }else if noOfElement > 10{
+                    startIndex += 1
+                    myRedeemptionList_Api()
+                }else if noOfElement < 10{
+                    print("no need to reload")
+                    return
+                }else{
+                    print("no more data available")
+                    return
+                }
+            }
+        }
+    }
     
 }
