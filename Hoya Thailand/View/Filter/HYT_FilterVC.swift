@@ -50,7 +50,7 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     var toDate = ""
     var flags = ""
     var statusName = ""
-    var statusId = 0
+    var statusId = -1
     override func viewDidLoad() {
         super.viewDidLoad()
         promotionNameViewHeight.constant = CGFloat(promotionNameHeight)

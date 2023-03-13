@@ -1,0 +1,201 @@
+/* 
+  Localizable.strings
+  Hoya Thailand
+
+  Created by syed on 09/03/23.
+  
+*/
+
+"language" = "En";
+"congratulations" = "Congratulations !";
+"noInternet" = "Please check your internet connection!";
+
+//Otp
+"otp_message" = "OTP has been sent to your registered mobile number.";
+"enterOtp" = "Enter OTP";
+"resendOtp" = "Resend OTP?";
+"submit" = "Submit";
+
+//Language dropdown
+"choose_language" = "Choose Your Language";
+
+//filter
+"filter" = "Filter";
+"fromDate" = "From Date"; //mark
+"toDate" = "To Date"; //mark
+"select_status" = "Select Status";
+"reset" = "Reset";
+"filter_toast_message" = "Select Date Range";
+
+
+
+
+//Login
+"login" = "Login";
+"Enter_a_valid_password" = "Enter a valid password"; //mark
+"Mobile_number_is_doesn't_exists" = "Mobile number is doesn't exists"; //mark
+"Password_is_incorrect" = "Password is incorrect"; //mark
+"loginInfo" = "Enter given details to login the account";
+"userId" = "Membership ID / Mobile Number";
+"userId_toast_message" = "Enter Membership ID / Mobile Number";
+"password" = "Password";
+"password_toast_message" = "Enter password";
+"forgot_password" = "Forgot Password";
+"register" = "Register";
+"don't_have_account" = "Don't have an Account?";
+"Need_Help" = "Need Help?";
+
+
+//Forgot Password
+"forgot_password" = "Forgot Password";
+"forgot_password_info" = "Enter the given details to Reset your Password";
+"forgot_password_toast_message" = "Enter the given details to Reset your Password";
+"sendOtp" = "Send OTP";
+"back_Login" = "Back to Login";
+"forgot_password_success_Message" = "Password has been sent to the registered Mobile Number.";
+
+//Reister
+"register" = "Register";
+"register_info" = "Enter the given details to register";
+"account_type" = "Account Type";
+"selectAccountType" = "Select account type"; //mark
+"stoeId" = "Store ID";
+"storeId_toast_message" = "Enter Store ID";
+"This_store_ID_already_exist" = "This store ID already exist"; //mark
+"storeName" = "Store Name";
+"storeName_toast_message" = "Enter Store Name";
+"role" = "Role";
+"select_role" = "Select role"; //mark
+"firstName" = "First Name";
+"firstName_toast_message" = "Enter First Name";
+"lastName" = "Last Name";
+"lastName_toast_message" = "Enter Last Name";
+"email" = "Email";
+"email_toast_message" = "Enter Email";
+"email_validation" = "This Email already exist try another email"; //mark
+"wrong_email_format" = "Enter a valid email"; //mark
+"mobileNumber" = "Mobile Number";
+"mobileNumber_toast_message" = "Enter Mobile Number";
+"mobileNumbervalidation" = "Please enter valid mobile number!";
+"mobile_number_alreadyExits" = "This mobile number already exist try another mobile number";//mark
+"wrong_idCard_message" = "Please enter valid ID card number!";
+"sales_representative" = "Sales Representative";
+"sales_representative_toast_message" = "Select Sales Representative";
+"setPassword" = "Set Password";
+"password_toast_message" = "Enter password";
+"DOB" = "DOB";
+"DOB_toast_message" = "Select DOB";
+"gender" = "Gender";
+"gender_toast_message" = "Select gender"; //mark
+"idCardNumber" = "ID Card Number";
+"idCardNumber_toast_message" = "Enter ID card number";
+"back_Login" = "Back to Login";
+"register_success_Message" = "You have registered successfully.";
+"registrationFailed" = "Registration Failed"; //mark
+//Help
+"membershipId" = "Membership ID";
+"membershipId_toast_message" = "Enter Membership ID";
+"queryTopic" = "Query Topic";
+"queryTopic_toast_message" = "Select Query Topic";
+"query_summery" = "Query Summary";
+"query_summery_toast_message" = "Enter Query Summary";
+"help" = "Help";
+"upload_a_proof" = "Upload a proof";
+"uploadImage" = "Upload Image";
+"querySubmit_success_message" = "Your query has been submitted successfully.";
+
+
+//Support-Query listing
+"query" = "Query"; //mark
+"newQuery" = "New Query";
+"newQueryInfo" = "Please submit your query using the form";
+"queryDetails" = "Query Details";
+"queryDetails_toast_message" = "Enter your query details";
+"browse_image" = "Browse Image";
+"submit_query" = "Submit Query";
+
+
+//Dashboard
+"points" = "Points";
+"hi" = "Hi"; //mark
+"role" = "Role";
+"membershipId" = "Membership ID";
+"scan_upload_invoice" = "Scan the QR / Upload Invoice";
+"myEarning" = "My Earnings";
+"redeem_Voucher" = "Redeem the e-Voucher";
+"myredeemption" = "My Redemption";
+"pointExpireReport" = "Points Expiry Report";
+"offerDetails" = "Offer Details";
+"My_Promotions" = "My Promotions"; //mark
+
+//Myprofile
+
+"date_of_Aniversary" = "Date of Anniversary";
+"date_of_aniversary_toast_message" = "select Date of Anniversary"; //mark
+"update" = "Update";
+"myProfile" = "My Profile";
+"general_info" = "General Information";
+"personal_info" = "Personal Information";
+"profile_update_success_message" = "Your profile has been updated successfully.";
+
+//promtionList
+"promotionList" = "Promotion List";
+"details" = "Details";
+"claim" = "Claim";
+"validUntli" = "Valid untill";
+
+//Promotion Details
+"promotionDetails" = "Promotion Details"; //mark
+"promotionValid" = "Promotion Valid till"; //mark
+"product" = "Product"; //mark
+"getBenefit" = "Get Benefits"; //mark
+"promotionDetails_info" = "When scan the QR or Upload the invoice"; //mark
+
+
+
+//my earnings
+
+"myEarnings" = "My Earnings";
+"promotionName" = "Promotion Name";
+"date" = "Date";
+"productName" = "Product Name";
+"invoiceNumer" = "Invoice Number";
+"point_will_expire" = "Points will expire on";
+"remarks" = "Remarks";
+"selectPromotionName" = "Select Promotion Name";
+
+//e-voucher
+"e_voucher" = "e-Vouchers";
+"availableBal" = "Available Balance";
+"willExpireon" = "will expire on";
+"range" = "Range"; //mark
+"redeem" = "Redeem";
+"status" = "Status";
+
+//My redemptions
+"voucherName" = "Voucher Name";
+"downloadVoucher" = "Download the voucher";
+
+
+//My staff
+"mystaff" = "My Staff";
+"Point_Balance" = "Point Balance";
+"Enrollment_Date" = "Enrollment Date";
+
+
+
+"View" = "View";
+"Offers" = "Offers";
+"Offer_Details" = "Offer Details";
+"Notifications" = "Notifications";
+"Redeem_the_e-Voucher" = "Redeem the e-Voucher";
+"Scan_Code" = "Scan Code";
+"Cancel" = "Cancel";
+"Quantity" = "Quantity";
+
+"Support" = "Support";
+"Home" = "Home";
+"Profile" = "Profile";
+"Valid_till" = "Valid till";
+
+

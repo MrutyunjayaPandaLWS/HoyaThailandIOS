@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol PromotionListDelegate{
     func didTappedPromotionDetails(item: HYT_PromotionListTVCell)
@@ -23,7 +24,7 @@ class HYT_PromotionListTVCell: UITableViewCell {
     var promotionData : LtyPrgBaseDetails?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,5 +39,10 @@ class HYT_PromotionListTVCell: UITableViewCell {
     
     @IBAction func didTappedClaimBtn(_ sender: UIButton) {
         delegate?.didTappedPromotionClaim(item: self)
+    }
+    
+    private func localization(){
+        detailsBtn.setTitle("details".localiz(), for: .normal)
+        claimBtn.setTitle("claim".localiz(), for: .normal)
     }
 }

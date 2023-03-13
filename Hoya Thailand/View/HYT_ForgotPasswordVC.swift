@@ -8,6 +8,7 @@
 import UIKit
 import DPOTPView
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDropDownDelegate {
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
@@ -41,11 +42,13 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
         membershipIdTF.delegate = self
         submitOtpView.isHidden = true
         resendBtn.isHidden = true
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         selectLanguageLbl.text = selectedLanguage
+        localization()
     }
 
     @IBAction func didTappedBackToLogin(_ sender: UIButton) {
@@ -62,7 +65,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     @IBAction func didTappedSubmit(_ sender: UIButton) {
         
         if otpView.text?.count == 0{
-            self.view.makeToast("Enter OTP", duration: 2.0, position: .center)
+            self.view.makeToast("enterOtp".localiz(), duration: 2.0, position: .center)
         }else if otpView.text?.count != 6{
             self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
         }else if sendotp == 0{
@@ -84,7 +87,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     }
     @IBAction func didTappedSendOtp(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0{
-            self.view.makeToast(" Enter the membership Id/Mobile number", duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
             checkmobileNumberExistancy()
             
@@ -125,5 +128,17 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
+    }
+    
+    private func localization(){
+        forgotPasswordLbl.text = "forgot_password".localiz()
+        forgotPWDescriptionLbl.text = "forgot_password_info".localiz()
+        membershipIdLbl.text = "userId".localiz()
+        membershipIdTF.placeholder = "userId_toast_message".localiz()
+        sendOtpBtn.setTitle("sendOtp".localiz(), for: .normal)
+        backToLoginLbl.text = "back_Login".localiz()
+        selectLanguageLbl.text = "language".localiz()
+        resendBtn.setTitle("resendOtp".localiz(), for: .normal)
+        submitBtn.setTitle("submit".localiz(), for: .normal)
     }
 }

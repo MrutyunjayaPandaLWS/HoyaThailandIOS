@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_VoucherDetailsVC: BaseViewController {
 
@@ -31,6 +32,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
         super.viewDidLoad()
         self.VM.VC = self
         amountTF.keyboardType = .numberPad
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +48,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
     @IBAction func didTappedRedeemBtn(_ sender: UIButton) {
         if amountTF.text?.count == 0{
             self.view.makeToast("Enter amount", duration: 2.0, position: .center)
-        }else if Int(productDetails?.min_points ?? "0") ?? 0 < Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.max_points ?? "0") ?? 0 > Int(amountTF.text ?? "") ?? 0{
+        }else if Int(productDetails?.minPoints ?? "0") ?? 0 <= Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.maxPoints ?? "0") ?? 0 >= Int(amountTF.text ?? "") ?? 0{
             
             let parameter : [String : Any] = [
                           "ActionType": 51,
@@ -55,7 +57,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
                           "CountryID": "\(productDetails?.countryID ?? 0)",
                           "lstCatalogueMobileApiJson": [
                             [
-                                "CatalogueId": "\(productDetails?.catalogueId ?? 0)",
+                                "CatalogueId": "\(productDetails?.catalogueID ?? 0)",
                                 "CountryCurrencyCode": "THB",
                                 "DeliveryType": "in_store",
                                 "HasPartialPayment": false,
@@ -66,9 +68,9 @@ class HYT_VoucherDetailsVC: BaseViewController {
                                 "ProductImage": "\(productDetails?.productImage ?? "")",
                                 "ProductName": "\(productDetails?.productName ?? "")",
                                 "RedemptionDate": currentDate,
-                                "RedemptionId": "\(productDetails?.redemptionId ?? 0)",
+                                "RedemptionId": "\(productDetails?.redemptionID ?? 0)",
                                 "Status": 0,
-                                "VendorId": "\(productDetails?.vendorId ?? 0)",
+                                "VendorId": "\(productDetails?.vendorID ?? 0)",
                                 "VendorName": "WOGI"
                             ]
                         ],
@@ -93,7 +95,14 @@ class HYT_VoucherDetailsVC: BaseViewController {
         voucherDetailsTextView.text = productDetails?.termsCondition
         voucherImage.sd_setImage(with: URL(string: productDetails?.productImage ?? ""), placeholderImage: UIImage(named: "ic_default_img (1)"))
         voucherName.text = productDetails?.productName
-        rangeAmountLbl.text = "\(productDetails?.min_points ?? "0") - \(productDetails?.max_points ?? "0")"
+        rangeAmountLbl.text = "\(productDetails?.minPoints ?? "0") - \(productDetails?.maxPoints ?? "0")"
+    }
+
+    func localization(){
+        titleLbl.text = "e_voucher".localiz()
+        availableBalanceTitle.text = "availableBal".localiz()
+        redeemBtn.setTitle("redeem".localiz(), for: .normal)
+        
     }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol LanguageDropDownDelegate{
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC )
@@ -21,6 +22,7 @@ class HYT_LanguageDropDownVC: BaseViewController, UITableViewDelegate, UITableVi
     ]
     var delegate: LanguageDropDownDelegate?
     var language = ""
+    var languageId = 0
     var VM = LanguageVM()
     
     override func viewDidLoad() {
@@ -70,8 +72,15 @@ class HYT_LanguageDropDownVC: BaseViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         language = languageList[indexPath.row].languageName
+        languageId = VM.languageList[indexPath.row].attributeId ?? 1
         UserDefaults.standard.set(language, forKey: "LanguageName")
-        UserDefaults.standard.set(language, forKey: "LanguageId")
+        UserDefaults.standard.set(languageId, forKey: "LanguageId")
+        if languageId == 1{
+            LanguageManager.shared.setLanguage(language: .en)
+        }else if languageId == 5{
+            LanguageManager.shared.setLanguage(language: .th)
+        }
+        
         delegate?.didtappedLanguageBtn(item: self)
         dismiss(animated: true)
     }

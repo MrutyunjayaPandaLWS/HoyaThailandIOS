@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Toast_Swift
+import LanguageManager_iOS
 
 
 class HYT_RegisterVM{
@@ -55,7 +56,7 @@ class HYT_RegisterVM{
                     
                     if result?.returnValue == 1{
                         DispatchQueue.main.async {
-                            self.VC?.view.makeToast("The Mobile number allready exists", duration: 2.0, position: .center)
+                            self.VC?.view.makeToast("mobile_number_alreadyExits".localiz(), duration: 2.0, position: .center)
                             self.VC?.mobileNumberExistancy = 1
                             self.VC?.stopLoading()
                         } 
@@ -90,14 +91,14 @@ class HYT_RegisterVM{
                                // self.VC?.view.makeToast("This storeId allready exists", duration: 2.0, position: .center)
                                 self.VC?.storeIdStatus = 1
                                 self.VC?.locationCode = "\(result?.lstAttributesDetails?[0].attributeId ?? 0)"
-                                self.VC?.selectSalesRepresentativeLbl.text = "Select sales representative"
+                                self.VC?.selectSalesRepresentativeLbl.text = "sales_representative_toast_message".localiz()
                                 self.VC?.storeNameTF.text = result?.lstAttributesDetails?[0].attributeValue
                                 self.VC?.storeNameTF.textColor = .black
                                 self.VC?.checkStoreUserNameExistancy()
                                 self.VC?.stopLoading()
                             }else{
                                 self.VC?.view.makeToast("Invalid Store Id", duration: 2.0, position: .center)
-                                self.VC?.selectSalesRepresentativeLbl.text = "Select sales representative"
+                                self.VC?.selectSalesRepresentativeLbl.text = "sales_representative_toast_message".localiz()
                                 self.VC?.storeIdStatus = 0
                                 self.VC?.stopLoading()
                             }   
@@ -198,7 +199,7 @@ class HYT_RegisterVM{
                     }else{
                         DispatchQueue.main.async {
                             self.VC?.idCardValidationStatus = 2
-                            self.VC?.view.makeToast("Enter a valid Idcard number", duration: 2.0, position: .center)
+                            self.VC?.view.makeToast("wrong_idCard_message".localiz(), duration: 2.0, position: .center)
                             self.VC?.stopLoading()
                         }
                     }
@@ -229,7 +230,7 @@ class HYT_RegisterVM{
                                 self.VC?.navigationController?.popViewController(animated: true)
                                 self.VC?.stopLoading()
                             }else{
-                                self.VC?.view.makeToast("Registration Failed", duration: 2.0, position: .center)
+                                self.VC?.view.makeToast("registrationFailed".localiz(), duration: 2.0, position: .center)
                                 self.VC?.stopLoading()
                             }
                             

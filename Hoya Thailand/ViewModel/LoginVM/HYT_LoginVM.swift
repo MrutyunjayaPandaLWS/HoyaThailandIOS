@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Toast_Swift
+import LanguageManager_iOS
 
 
 class HYT_LoginVM{
@@ -42,12 +43,12 @@ class HYT_LoginVM{
             }
             do{
                 let str = String(decoding: data, as: UTF8.self) as String?
-                 print(str, "- Mobile Number Exists")
+                 print(str, "- Mobile Number Existancy")
                 if str ?? "" != "1"{
                     DispatchQueue.main.async{
                         self.VC?.stopLoading()
                         self.VC?.mobileNumberExistancy = -1
-                        self.VC?.view.makeToast("Mobile number is doesn't exists", duration: 2.0, position: .center)
+                        self.VC?.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
                     }
                 }else{
                     DispatchQueue.main.async{
@@ -76,10 +77,10 @@ class HYT_LoginVM{
                             let data = result?.userList?[0]
                             if data?.result != 1{
                                 if self.VC?.mobileNumberExistancy != 1{
-                                    self.VC?.view.makeToast("Mobile number/membership Id is doesn't exists", duration: 2.0, position: .center)
+                                    self.VC?.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
                                     self.VC?.stopLoading()
                                 }else{
-                                    self.VC?.view.makeToast("Password is incorrect", duration: 2.0, position: .center)
+                                    self.VC?.view.makeToast("Password_is_incorrect".localiz(), duration: 2.0, position: .center)
                                     self.VC?.stopLoading()
                                 }
                             }else{

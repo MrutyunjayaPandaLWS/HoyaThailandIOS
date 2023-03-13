@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, S_PromotionListDelegate{
     
@@ -26,6 +27,7 @@ class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDat
         promotionListTV.delegate = self
         promotionListTV.dataSource = self
         emptyMessage.isHidden = true
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,9 +42,10 @@ class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDat
     
     func getPromotionList_Api(){
         let parameter : [String : Any] = [
-                "ActionType": 1,
-                "CustomerId": 46,
-                "Domain": "HOYA"
+
+                "ActionType": 6,
+                    "CustomerId": userId,
+                    "Domain": "HOYA"
         ]
         self.VM.prommtionsListApi(parameter: parameter)
     }
@@ -57,10 +60,14 @@ class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDat
         cell.selectionStyle = .none
         cell.promotionDetailsLbl.text = self.VM.promotionList[indexPath.row].programDesc
         cell.promotionsNameLbl.text = self.VM.promotionList[indexPath.row].programName
-        cell.validityDateLbl.text = "Validity until : \(self.VM.promotionList[indexPath.row].jEndDate?.dropLast(9) ?? "")"
+        cell.validityDateLbl.text = "\("validUntli".localiz()) : \(self.VM.promotionList[indexPath.row].jEndDate?.dropLast(9) ?? "")"
         cell.promotionData = self.VM.promotionList[indexPath.row]
         cell.delegate = self
         return cell
     }
 
+    private func localization(){
+        vcTitleLbl.text = "promotionList".localiz()
+    }
+    
 }

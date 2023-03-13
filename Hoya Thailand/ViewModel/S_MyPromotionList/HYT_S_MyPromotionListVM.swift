@@ -41,7 +41,7 @@ class HYT_S_MyPromotionListVM {
             else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("My Redeemption error",error?.localizedDescription)
+                    print("My promotion list error",error?.localizedDescription)
                 }
             }
         }

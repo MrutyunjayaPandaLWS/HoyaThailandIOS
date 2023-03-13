@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import Photos
+import LanguageManager_iOS
 
 class HYT_CreateQueryVC: BaseViewController,TopicListDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -37,15 +38,16 @@ class HYT_CreateQueryVC: BaseViewController,TopicListDelegate,UIImagePickerContr
         self.VM.VC = self
         imagePicker.delegate = self
         selectTopicLbl.text = queryName
+        localization()
     }
     
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
-        if selectTopicLbl.text == "Select query"{
-            self.view.makeToast("Select Query Topic", duration: 2.0, position: .center)
+        if selectTopicLbl.text == "queryTopic_toast_message".localiz(){
+            self.view.makeToast("queryTopic_toast_message".localiz(), duration: 2.0, position: .center)
         } else if querySummeryTF.text?.count == 0 {
-            self.view.makeToast("Enter query summery", duration: 2.0, position: .center)
+            self.view.makeToast("query_summery_toast_message".localiz(), duration: 2.0, position: .center)
         }else if queryDetailsTF.text?.count == 0 {
-            self.view.makeToast("Enter query details", duration: 2.0, position: .center)
+            self.view.makeToast("queryDetails_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
             newQuerySubmission()
             
@@ -188,6 +190,20 @@ extension HYT_CreateQueryVC{
                 }
             })
         }
+        
+    }
+    
+    private func localization(){
+        queryDescriptionLbl.text = "newQueryInfo".localiz()
+        selectTopicHeadingLbl.text = "queryTopic".localiz()
+        selectTopicLbl.text = "queryTopic_toast_message".localiz()
+        querySummeryLbl.text = "query_summery".localiz()
+        querySummeryTF.placeholder = "query_summery_toast_message".localiz()
+        queryDetailsHeadingLbl.text = "queryDetails".localiz()
+        queryDetailsTF.placeholder = "queryDetails_toast_message".localiz()
+        browseImageBtn.setTitle("browse_image".localiz(), for: .normal)
+        submitBtn.setTitle("submit_query".localiz(), for: .normal)
+        titleLbl.text = "query".localiz()
         
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDelegate{
     
@@ -19,6 +20,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
             UserDefaults.standard.set("TH", forKey: "LanguageName")
             UserDefaults.standard.synchronize()
         }
+        localization()
     }
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -47,12 +49,16 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         passwordTF.delegate = self
         passwordTF.isSecureTextEntry = true
         self.securePasswordBtn.setImage(UIImage(named: "close-eye"), for: .normal)
+        localization()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.VM.tokendata()
-        languageLbl.text = selectedLanguage
+        localization()
+        membershipIdTF.text = ""
+        passwordTF.text = ""
         
     }
     
@@ -66,17 +72,17 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
             print(membershipIdTF.text)
             mobileNumberExistancyApi()
         }else{
-            self.view.makeToast("Enter mobile number/membership id", duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
         }
         
     }
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
-            self.view.makeToast("Enter mobile number/membership id", duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count == 0{
-            self.view.makeToast("Enter password", duration: 2.0, position: .center)
+            self.view.makeToast("password_toast_message".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count != 6{
-            self.view.makeToast("Enter a valid password", duration: 2.0, position: .center)
+            self.view.makeToast("Enter_a_valid_password".localiz(), duration: 2.0, position: .center)
         }else{
             loginSubmissionApi()
         }
@@ -151,6 +157,21 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         return newString.length <= maxLength
     }
     
+    private func localization(){
+        loginLbl.text = "login".localiz()
+        loginInfoLbl.text = "loginInfo".localiz()
+        membershipIDLbl.text = "userId".localiz()
+        membershipIdTF.placeholder = "userId_toast_message".localiz()
+        passwordLbl.text = "password".localiz()
+        passwordTF.placeholder = "password_toast_message".localiz()
+        accountStatusLbl.text = "don't_have_account".localiz()
+        registerLbl.text = "register".localiz()
+        submitBtn.setTitle("submit".localiz(), for: .normal)
+        forgotPasswordBtn.setTitle("forgot_password".localiz(), for: .normal)
+        needHelpBtn.setTitle("Need_Help".localiz(), for: .normal)
+        languageLbl.text = "language".localiz()
+        
+    }
     
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 
 protocol myRedeemptionDelegate{
@@ -26,10 +27,11 @@ class HYT_MyRedemptionTVCell: UITableViewCell {
     @IBOutlet weak var pointsLbl: UILabel!
     var downloadVoucher:String = ""
     var delegate : myRedeemptionDelegate?
+    var productName = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +42,13 @@ class HYT_MyRedemptionTVCell: UITableViewCell {
 
     @IBAction func didTappedDownloadVoucher(_ sender: UIButton) {
         delegate?.downloadVoucher(item: self)
+    }
+    private func localization(){
+        voucherNameTitleLbl.text = "voucherName".localiz()
+//        pointsTitleLbl.text = "points".localiz()
+        dateTitleLbl.text = "date".localiz()
+        statusTitleLbl.text = "status".localiz()
+        downloadImageLbl.text = "downloadVoucher".localiz()
     }
     
 }

@@ -250,11 +250,11 @@ class RestAPI_Requests {
         }
     
     //MARK: - GET VOUCHER LIST
-        func getVoucherListApi(parameters: JSON, completion: @escaping (VoucherModels?, Error?) -> ()) -> URLSessionDataTask? {
+        func getVoucherListApi(parameters: JSON, completion: @escaping (VoucherModel?, Error?) -> ()) -> URLSessionDataTask? {
             return client.load(path: getVoucherList_URLMethod, method: .post, params: parameters) { data, error in
                 do{
                     if data != nil{
-                        let result1 =  try JSONDecoder().decode(VoucherModels.self, from: data as! Data)
+                        let result1 =  try JSONDecoder().decode(VoucherModel.self, from: data as! Data)
                         completion(result1, nil)
                     }
                 }catch{
@@ -463,4 +463,20 @@ class RestAPI_Requests {
             }
         }
     }
+    
+    //MARK: - profile image save API
+    func profileImageUpdate_API(parameters: JSON, completion: @escaping (ProfileIamgeUpadate?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: profileImageUpdate_URLMethod, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(ProfileIamgeUpadate?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
 }
+

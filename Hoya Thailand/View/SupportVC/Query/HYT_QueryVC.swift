@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,TopicListDelegate, FilterProtocolDelegate {
     func didTappedFilterBtn(item: HYT_FilterVC) {
@@ -40,11 +41,13 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         queryTableView.dataSource = self
         emptyMessage.isHidden = true
         backBtnWidth.constant = 0
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getQueryList_Api()
+        localization()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -98,18 +101,18 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_QueryTVCell", for: indexPath) as! HYT_QueryTVCell
         cell.selectionStyle = .none
         cell.queryRefNoLbl.text = self.VM.queryList[indexPath.row].customerTicketRefNo
-        cell.queryDateLbl.text = "\(self.VM.queryList[indexPath.row].jCreatedDate?.prefix(10) ?? "")"
+        cell.queryDateLbl.text = "\(self.VM.queryList[indexPath.row].jCreatedDate?.dropLast(9) ?? "")"
         cell.timeLbl.text = "\(self.VM.queryList[indexPath.row].jCreatedDate?.suffix(8) ?? "")"
         cell.queryStatusLbl.text = self.VM.queryList[indexPath.row].ticketStatus
         cell.querySummeryLbl.text = self.VM.queryList[indexPath.row].queryDetails
         if self.VM.queryList[indexPath.row].ticketStatus == "Pending"{
             cell.statusView.backgroundColor = pendingStatusColor
         }else if self.VM.queryList[indexPath.row].ticketStatus == "Resolved"{
-            cell.statusView.backgroundColor = approvedBgColor
+            cell.statusView.backgroundColor = approvedTextColor
         }else if self.VM.queryList[indexPath.row].ticketStatus == "Closed"{
-            cell.statusView.backgroundColor = cancelBgColor
+            cell.statusView.backgroundColor = cancelTextColor
         }else{
-            cell.statusView.backgroundColor = pendingStatusColor
+            cell.statusView.backgroundColor = cancelTextColor
         }
         
         
@@ -129,4 +132,9 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    private func localization(){
+        titleLbl.text = "query".localiz()
+        newQueryLbl.text = "newQuery".localiz()
+    }
+    
 }

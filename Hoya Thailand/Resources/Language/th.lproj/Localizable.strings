@@ -1,0 +1,199 @@
+/* 
+  Localizable.strings
+  Hoya Thailand
+
+  Created by syed on 09/03/23.
+  
+*/
+
+"language" = "Th";
+"congratulations" = "ยินดีด้วย!";
+"noInternet" = "กรุณาตรวจสอบสัญญาณอินเตอร์เน็ตของท่าน!";
+
+//Otp
+"otp_message" = "เลข OTP ได้ทำการส่งไปยังหมายเลขโทรศัพท์ที่ท่านลงทะเบียนไว้";
+"enterOtp" = "กรอกหมายเลข OTP ที่ท่านได้รับ";
+"resendOtp" = "ส่งเลข OTP อีกครั้ง?";
+"submit" = "ยืนยัน";
+
+//Language dropdown
+"choose_language" = "เลือกภาษา";
+
+//filter
+"filter" = "ตัวกรอง";
+"fromDate" = "From Date"; //mark
+"toDate" = "To Date"; //mark
+"select_status" = "กรุณาเลือกสถานะ";
+"reset" = "รีเซ็ต";
+"filter_toast_message" = "กรุณาเลือกเขตข้อมูล";
+
+
+
+
+//Login
+"login" = "กรุณาลงชื่อเข้าสู่ระบบ";
+"Enter_a_valid_password" = "Enter a valid password"; //mark
+"Mobile_number_is_doesn't_exists" = "Mobile number is doesn't exists"; //mark
+"Password_is_incorrect" = "Password is incorrect"; //mark
+"loginInfo" = "ป้อนรายละเอียดที่กำหนดเพื่อเข้าสู่ระบบบัญชี";
+"userId" = "หมายเลขสมาชิก / หมายเลขโทรศัพท์มือถือ";
+"userId_toast_message" = "กรุณากรอกหมายเลขสมาชิก / หมายเลขโทรศัพท์มือถือ";
+"password" = "รหัสผ่าน";
+"password_toast_message" = "กรุณากรอกรหัสผ่านของท่าน";
+"forgot_password" = "ลืมรหัสผ่าน";
+"register" = "ลงทะเบียน";
+"don't_have_account" = "คุณยังไม่ได้เป็นสมาชิกใช่ไหม?";
+"Need_Help" = "ต้องการความช่วยเหลือ?";
+
+
+//Forgot Password
+"forgot_password" = "ลืมรหัสผ่าน";
+"forgot_password_info" = "ป้อนรายละเอียดที่กำหนดเพื่อรีเซ็ตรหัสผ่านของคุณ";
+"forgot_password_toast_message" = "ป้อนรายละเอียดที่กำหนดเพื่อรีเซ็ตรหัสผ่านของคุณ";
+"sendOtp" = "ส่งเลข OTP";
+"back_Login" = "กลับไปหน้าลงชื่อเข้าใช้งาน";
+"forgot_password_success_Message" = "รหัสผ่านได้ถูกส่งไปยังหมายเลขโทรศัพท์ที่ท่านได้ทำการลงทะเบียนไว้.";
+
+//Reister
+"register" = "ลงทะเบียน";
+"register_info" = "กรอกรายละเอียดที่กำหนดเพื่อลงทะเบียน";
+"account_type" = "ประเภทบัญชี";
+"selectAccountType" = "Select account type"; //mark
+"stoeId" = "รหัสร้านค้า";
+"storeId_toast_message" = "กรุณากรอกรหัสร้านค้า";
+"This_store_ID_already_exist" = "This store ID already exist"; //mark
+"storeName" = "ชื่อร้านค้า";
+"storeName_toast_message" = "กรุณากรอกชื่อร้านค้า";
+"role" = "บทบาท";
+"select_role" = "Select role"; //mark
+"firstName" = "ชื่อ";
+"firstName_toast_message" = "กรุณากรอกชื่อ";
+"lastName" = "นามสกุล";
+"lastName_toast_message" = "กรุณากรอกนามสกุล";
+"email" = "อีเมล์";
+"email_toast_message" = "กรุณากรอกอีเมล์";
+"email_validation" = "This Email already exist try another email"; //mark
+"wrong_email_format" = "Enter a valid email"; //mark
+"mobileNumber" = "หมายเลขโทรศัพท์มือถือ";
+"mobileNumber_toast_message" = "กรุณากรอกหมายเลขโทรศัพท์มือถือ";
+"mobileNumbervalidation" = "โปรดป้อนหมายเลขโทรศัพท์มือถือที่ถูกต้อง!";
+"mobile_number_alreadyExits" = "This mobile number already exist try another mobile number";//mark
+"wrong_idCard_message" = "กรุณากรอกหมายเลขบัตรประชาชนที่ถูกต้อง!";
+"sales_representative" = "ตัวแทนฝ่ายขาย";
+"sales_representative_toast_message" = "เลือกตัวแทนฝ่ายขาย";
+"setPassword" = "ตั้งค่ารหัสผ่าน";
+"password_toast_message" = "กรุณากรอกรหัสผ่าน";
+"DOB" = "วัน เดือน ปี เกิด";
+"DOB_toast_message" = "เลือก วัน เดือน ปี เกิด";
+"gender" = "เพศ";
+"gender_toast_message" = "เพศ"; //mark
+"idCardNumber" = "หมายเลขบัตรประชาชน";
+"idCardNumber_toast_message" = "กรุณากรอกหมายเลขบัตรประชาชน";
+"back_Login" = "กลับไปหน้าลงชื่อเข้าใช้งาน";
+"register_success_Message" = "คุณลงทะเบียนสำเร็จ";
+"registrationFailed" = "Registration Failed"; //mark
+
+//Help
+"membershipId" = "หมายเลขสมาชิก";
+"membershipId_toast_message" = "กรุณากรอกหมายเลขสมาชิก";
+"queryTopic" = "หัวข้อของการแจ้งปัญหา";
+"queryTopic_toast_message" = "เลือกหัวข้อการแจ้งปัญหา";
+"query_summery" = "สรุปรายการแจ้งปัญหาทั้งหมด";
+"query_summery_toast_message" = "ป้อนค่าหัวเรื่องของปัญหาเพื่อใช้ในการค้นหา";
+"help" = "ช่วยเหลือ";
+"upload_a_proof" = "อัปโหลดหลักฐาน";
+"uploadImage" = "อัปโหลดรูปภาพ";
+"querySubmit_success_message" = "ส่งคำถามของคุณเรียบร้อยแล้ว";
+
+
+//Support-Query listing
+"query" = "Query"; //mark
+"newQuery" = "เพิ่มการแจ้งปัญหาใหม่";
+"newQueryInfo" = "โปรดยืนยันการแจ้งปัญหาของคุณโดยผ่านแบบฟอร์ม";
+"queryDetails" = "รายละเอียดของปัญหา";
+"queryDetails_toast_message" = "กรอกรายละเอียดปัญหาที่คุณพบ";
+"browse_image" = "เรียกดูรูปภาพ";
+"submit_query" = "ทำการยืนยันปัญหาที่ท่านแจ้งแล้ว";
+
+
+//Dashboard
+"points" = "คะแนน";
+"hi" = "Hi"; //mark
+"role" = "บทบาท";
+"membershipId" = "หมายเลขสมาชิก";
+"scan_upload_invoice" = "สแกน QR / อัพโหลดใบกำกับภาษี";
+"myEarning" = "รายได้ของฉัน";
+"redeem_Voucher" = "แลกบัตรกำนัลอิเล็กทรอนิกส์";
+"myredeemption" = "การแลกของฉัน";
+"pointExpireReport" = "รายงานของคะแนนที่หมดอายุ";
+"offerDetails" = "รายละเอียดข้อเสนอ";
+"My_Promotions" = "My Promotions"; //mark
+
+//Myprofile
+
+"date_of_Aniversary" = "วันครบรอบ";
+"date_of_aniversary_toast_message" = "วันครบรอบ"; //mark
+"update" = "ปรับปรุง";
+"myProfile" = "ประวัติของฉัน";
+"general_info" = "ข้อมูลทั่วไป";
+"personal_info" = "ข้อมูลส่วนตัว";
+"profile_update_success_message" = "ประวัติของคุณทำการปรับปรุงเรียบร้อยแล้ว";
+
+//promtionList
+"promotionList" = "รายการโปรโมชั่น";
+"details" = "รายละเอียด";
+"claim" = "การเคลม";
+"validUntli" = "ใช้ได้ถึงวันที่";
+
+//Promotion Details
+"promotionDetails" = "Promotion Details"; //mark
+"promotionValid" = "Promotion Valid till"; //mark
+"product" = "Product"; //mark
+"getBenefit" = "Get Benefits"; //mark
+"promotionDetails_info" = "When scan the QR or Upload the invoice"; //mark
+
+
+
+//my earnings
+
+"myEarnings" = "รายได้ของฉัน";
+"promotionName" = "ชื่อโปรโมชั่น";
+"date" = "วันที่";
+"productName" = "ชื่อสินค้า";
+"invoiceNumer" = "หมายเลขใบกำกับภาษี";
+"point_will_expire" = "คะแนนจะหมดอายุในวันที่";
+"remarks" = "หมายเหตุ";
+"selectPromotionName" = "เลือกชื่อโปรโมชัน";
+
+//e-voucher
+"e_voucher" = "บัตรกำนัลอิเล็กทรอนิกส์";
+"availableBal" = "ยอดคงเหลือ";
+"willExpireon" = "จะหมดอายุวันที่";
+"range" = "Range"; //mark
+"redeem" = "การแลก";
+"status" = "สถานะ";
+
+//My redemptions
+"voucherName" = "ชื่อบัตรกำนัล";
+"downloadVoucher" = "ดาวน์โหลดบัตรกำนัล";
+
+
+//My staff
+"mystaff" = "พนักงานของฉัน";
+"Point_Balance" = "ยอดคะแนนคงเหลือ";
+"Enrollment_Date" = "วันที่ลงทะเบียน";
+
+//offers
+
+"View" = "มุมมอง";
+"Offers" = "ข้อเสนอ";
+"Offer_Details" = "รายละเอียดข้อเสนอ";
+"Notifications" = "การแจ้งเตือน";
+"Redeem_the_e-Voucher" = "แลกบัตรกำนัลอิเล็กทรอนิกส์";
+"Scan_Code" = "สแกนรหัส";
+"Cancel" = "ยกเลิก";
+"Quantity" = "จำนวน";
+"Support" = "การสนับสนุน";
+"Home" = "หน้าหลัก";
+"Profile" = "ประวัติ";
+"Valid_till" = "ใช้ได้ถึง";

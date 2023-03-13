@@ -7,6 +7,7 @@
 
 import Foundation
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_HelpVM{
     weak var VC: HYT_HelpVC?
@@ -21,7 +22,7 @@ class HYT_HelpVM{
                         self.queryMessage = result?.returnMessage ?? ""
                         DispatchQueue.main.async {
                             if self.queryMessage.contains("Saved Successfully"){
-                                self.VC?.successMessagePopUp(message: "Your query has been submitted successfully")
+                                self.VC?.successMessagePopUp(message: "querySubmit_success_message".localiz())
                                 self.VC?.navigationController?.popViewController(animated: true)
                                 self.VC?.stopLoading()
                                 
@@ -108,10 +109,9 @@ class HYT_HelpVM{
         requestAPIs.retriveActorIdApi(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-
                     if result?.returnMessage != "0"{
                         DispatchQueue.main.async {
-                            self.VC?.actorId = result?.returnMessage ?? ""
+                            self.VC?.actorId = "\(result?.returnValue ?? 0)"
                             self.VC?.stopLoading()
                         }
                     }else{

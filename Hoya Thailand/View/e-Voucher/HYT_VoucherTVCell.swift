@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol RedeemVoucherDelegate{
     func didTappedRedeemVoucherBtn(item: HYT_VoucherTVCell)
@@ -24,6 +25,7 @@ class HYT_VoucherTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         amountTF.keyboardType = .numberPad
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,4 +37,7 @@ class HYT_VoucherTVCell: UITableViewCell {
         delegate?.didTappedRedeemVoucherBtn(item: self)
     }
     
+    func localization(){
+        redeemBtn.setTitle("redeem".localiz(), for: .normal)
+    }
 }

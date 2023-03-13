@@ -9,11 +9,16 @@ import UIKit
 import AVFoundation
 import Photos
 import SDWebImage
+import LanguageManager_iOS
 import ImageSlideshow
 
 class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate {
 
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
+        localization()
+        setUpMenuList()
+        dashboardMenuTableView.reloadData()
+        
     }
     
     
@@ -48,32 +53,16 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         topView.clipsToBounds = true
         topView.layer.cornerRadius = 24
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
-        profileImage.image = UIImage(named: "Image-3")
+//        profileImage.image = UIImage(named: "Image-3")
         imagePicker.delegate = self
+        dashboardOffersApi()
+        setUpMenuList()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if customerTypeID != 54{
-            menuList = [
-                                                MenuListModel(itemName: "Scan the QR / Upload Invoice", itemImage: "Group 8101", id: 2),
-                                                MenuListModel(itemName: "My Earning", itemImage: "Group 8095", id: 3),
-                                                MenuListModel(itemName: "Redeem the e-Voucher", itemImage: "Group 8099", id: 4),
-                                                MenuListModel(itemName: "My Redemption", itemImage: "Group 8093", id: 5),
-                                                MenuListModel(itemName: "Points Expiry Report", itemImage: "Group 8196", id: 6)
-            ]
-        }else{
-            menuList = [
-                MenuListModel(itemName: "My Staff", itemImage: "Group 8102", id: 1),
-                MenuListModel(itemName: "Redeem the e-Voucher", itemImage: "Group 8099", id: 4),
-                MenuListModel(itemName: "My Redemption", itemImage: "Group 8093", id: 5),
-                MenuListModel(itemName: "My Promotions", itemImage: "Group 8098", id: 7),
-                MenuListModel(itemName: "My Earning", itemImage: "Group 8095", id: 3),
-                MenuListModel(itemName: "Points Expiry Report", itemImage: "Group 8196", id: 6)
-            ]
-        }
+        setUpMenuList()
         tokendata()
-        dashboardOffersApi()
         
     }
     
@@ -118,6 +107,18 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         })
     }
     
+    func profileImageUpdateAPI(){
+        let parameter : [String : Any] = [
+            
+                "ActorId": userId,
+                "ObjCustomerJson": [
+                    "DisplayImage": strdata1,
+                    "LoyaltyId": loyaltyId
+                ]
+        ]
+        self.VM.profileaImageUpdateApi(parameter: parameter)
+        
+    }
     
     func dashboardApi(){
         let parameter : [String : Any] = [
@@ -216,7 +217,9 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
     
     @objc func didTap() {
         if self.VM.dashboardOffers.count > 0 {
-            offersSlideShow.presentFullScreenController(from: self)
+//            offersSlideShow.presentFullScreenController(from: self)
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_OffersVC") as? HYT_OffersVC
+            navigationController?.pushViewController(vc!, animated: true)
         }
     }
     
@@ -241,6 +244,7 @@ extension HYT_DashboardVC{
             let imageData = imagePicked.resized(withPercentage: 0.1)
             let imageData1: NSData = imageData!.pngData()! as NSData
             self.strdata1 = imageData1.base64EncodedString(options: .lineLength64Characters)
+            profileImageUpdateAPI()
         }
         dismiss(animated: true)
     }
@@ -362,6 +366,35 @@ extension HYT_DashboardVC{
             task.resume()
         }
         }
+    
+    private func localization(){
+        pointsTitleLbl.text = "points".localiz()
+        membershipIdTitleLbl.text = "membershipId".localiz()
+        roleTitleLbl.text = "role".localiz()
+        offersDetailsLbl.text = "offerDetails".localiz()
+    }
+    
+    func setUpMenuList(){
+        if customerTypeID != 54{
+            menuList = [
+                MenuListModel(itemName: "scan_upload_invoice".localiz(), itemImage: "Group 8101", id: 2),
+                MenuListModel(itemName: "myEarning".localiz(), itemImage: "Group 8095", id: 3),
+                MenuListModel(itemName: "redeem_Voucher".localiz(), itemImage: "Group 8099", id: 4),
+                MenuListModel(itemName: "myredeemption".localiz(), itemImage: "Group 8093", id: 5),
+                MenuListModel(itemName: "pointExpireReport".localiz(), itemImage: "Group 8196", id: 6)
+            ]
+        }else{
+            menuList = [
+                MenuListModel(itemName: "mystaff".localiz(), itemImage: "Group 8102", id: 1),
+                MenuListModel(itemName: "redeem_Voucher".localiz(), itemImage: "Group 8099", id: 4),
+                MenuListModel(itemName: "myredeemption".localiz(), itemImage: "Group 8093", id: 5),
+                MenuListModel(itemName: "My_Promotions".localiz(), itemImage: "Group 8098", id: 7),
+                MenuListModel(itemName: "myEarning".localiz(), itemImage: "Group 8095", id: 3),
+                MenuListModel(itemName: "pointExpireReport".localiz(), itemImage: "Group 8196", id: 6)
+            ]
+        }
+    }
+    
 }
 
 

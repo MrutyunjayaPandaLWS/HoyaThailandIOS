@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 protocol SuccessMessageDelegate{
     func goToLoginPage()
@@ -25,6 +26,7 @@ class HYT_SuccessMessageVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         messageLbl.text = successMessage
+        messageStatusLbl.text = "congratulations".localiz()
     }
     
     @IBAction func didTappedOkBtn(_ sender: UIButton) {

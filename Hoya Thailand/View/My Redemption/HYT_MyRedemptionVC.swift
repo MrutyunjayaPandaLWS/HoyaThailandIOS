@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate,myRedeemptionDelegate {
     func downloadVoucher(item: HYT_MyRedemptionTVCell) {
+        downloadImage(url: item.downloadVoucher, productName: item.productName)
         
     }
     
@@ -26,26 +28,31 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     var VM = HYT_MyRedemptionVM()
     var fromDate = ""
     var toDate = ""
-    var statusId = ""
+    var statusId = "-1"
     var startIndex = 1
     var noOfElement = 0
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
         myRedeemptionTableView.delegate = self
         myRedeemptionTableView.dataSource = self
         emptyMessageLbl.isHidden = true
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myRedeemptionList_Api()
+        localization()
     }
     
     @IBAction func didTappedFilterBtn(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_FilterVC") as? HYT_FilterVC
         vc?.modalPresentationStyle = .overFullScreen
         vc?.modalTransitionStyle = .crossDissolve
+        vc?.flags = "queryStatus"
         vc?.delegate = self
         present(vc!, animated: true)
     }
@@ -56,18 +63,35 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     
 //  MARK: - MR REDEEMPTION LIST API
     func myRedeemptionList_Api(){
-        let parameter : [String : Any] = [
-                "ActionType": 52,
-                "ActorId": self.userId,
-                "StartIndex": startIndex,
-                "NoOfRows": "10",
-                "CustomerTypeID": self.customerTypeID,
-                "ObjCatalogueDetails": [
-                    "JFromDate": fromDate,
-                    "RedemptionTypeId": "-1",
-                    "SelectedStatus": statusId,
-                    "JToDate": toDate
-                ]
+        let parameter : [String : Any] =
+//        [
+//                "ActionType": 52,
+//                "ActorId": self.userId,
+//                "StartIndex": startIndex,
+//                "NoOfRows": "10",
+//                "CustomerTypeID": self.customerTypeID,
+//                "ObjCatalogueDetails": [
+//                    "JFromDate": fromDate,
+//                    "RedemptionTypeId": "-1",
+//                    "SelectedStatus": statusId,
+//                    "JToDate": toDate
+//                ]
+//        ]
+        
+        [
+            "ActionType": 52,
+            "ActorId": userId,
+             "StartIndex": startIndex,
+            "NoOfRows": 10,
+            "ObjCatalogueDetails": [
+                "CatalogueType": 4,
+                "MerchantId": 1,
+        "JFromDate": fromDate,
+                "JToDate": toDate,
+                "RedemptionTypeId": "-1",
+                "SelectedStatus": statusId
+            ],
+            "Vendor":"WOGI"
         ]
         
         self.VM.myRedeemptionListApi(parameter: parameter)
@@ -94,9 +118,10 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
             cell.statusLbl.textColor = cancelTextColor
             cell.statusLbl.backgroundColor = cancelBgColor
         }
-        cell.pointsLbl.text = "\(myRedeemptionData.redeemedPoints ?? 0)"
-        cell.dateLbl.text = String(myRedeemptionData.jRedemptionDate?.prefix(10) ?? "")
+        cell.pointsLbl.text = "\(Int(myRedeemptionData.redemptionPoints ?? 0) ) \("points".localiz())"
+        cell.dateLbl.text = String(myRedeemptionData.jRedemptionDate?.dropLast(9) ?? "")
         cell.voucherNameLbl.text = myRedeemptionData.productName
+        cell.productName = myRedeemptionData.productName ?? "voucher"
         cell.delegate = self
         return cell
     }
@@ -121,6 +146,30 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
                     return
                 }
             }
+        }
+    }
+    
+    private func localization(){
+        titleLbl.text = "myredeemption".localiz()
+    }
+ 
+    func downloadImage(url: String,productName: String){
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+        if let url = URL(string: url) {
+            URLSession.shared.downloadTask(with: url) { location, response, error in
+                guard let location = location else {
+                    print("download error:", error ?? "")
+                    return
+                }
+                // move the downloaded file from the temporary location url to your app documents directory
+                do {
+                    try FileManager.default.moveItem(at: location, to: documents.appendingPathComponent(response?.suggestedFilename ?? url.lastPathComponent))
+                    print("downloaded")
+                } catch {
+                    print(error)
+                }
+            }.resume()
         }
     }
     

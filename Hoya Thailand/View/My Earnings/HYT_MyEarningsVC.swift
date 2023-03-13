@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate {
     func didTappedFilterBtn(item: HYT_FilterVC) {
@@ -40,6 +41,7 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myEarningList_Api()
+        localization()
     }
     
     @IBAction func didTappedFilterBtn(_ sender: UIButton) {
@@ -88,12 +90,16 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
             
         }
         
-        cell.pointsLbl.text = "\(self.VM.myEarningList[indexPath.row].creditedPoint ?? 0)"
+        cell.pointsLbl.text = "\(Int(self.VM.myEarningList[indexPath.row].creditedPoint ?? 0))"
         cell.invoiceNumberLbl.text = self.VM.myEarningList[indexPath.row].invoiceNo
         cell.productNameLbl.text = self.VM.myEarningList[indexPath.row].productName
         cell.dateLbl.text = String(self.VM.myEarningList[indexPath.row].trxnDate?.dropLast(9) ?? "")
         cell.promotionNameLbl.text = self.VM.myEarningList[indexPath.row].assessmentName
         return cell
+    }
+ 
+    private func localization(){
+        titleLbl.text = "myEarnings".localiz()
     }
     
 }

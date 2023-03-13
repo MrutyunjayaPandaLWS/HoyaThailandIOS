@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 
 protocol S_PromotionListDelegate{
@@ -21,7 +22,7 @@ class HYT_S_PromotionTVCell: UITableViewCell {
     var delegate : S_PromotionListDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,5 +33,9 @@ class HYT_S_PromotionTVCell: UITableViewCell {
 
     @IBAction func didTappedDetailsBtn(_ sender: UIButton) {
         delegate?.didTappedPromotionDetails(item: self)
+    }
+    
+    private func localization(){
+        detailsBtn.setTitle("details".localiz(), for: .normal)
     }
 }

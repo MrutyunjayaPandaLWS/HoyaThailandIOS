@@ -99,7 +99,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     func getPromotionList_Api(){
         let parameter : [String : Any] = [
-                "ActionType": 1,
+                "ActionType": 6,
                 "CustomerId": self.userId,
                 "Domain": "HOYA"
         ]

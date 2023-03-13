@@ -51,7 +51,7 @@ class HYT_DashboardVM{
                                 
                                 self.VC?.profileImage.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(profileImg)"), placeholderImage: UIImage(named: "ic_default_img"))
                                 UserDefaults.standard.setValue(result?.lstCustomerFeedBackJsonApi?[0].firstName, forKey: "FirstName")
-                                self.VC?.profileNameLbl.text = "Hi, \(result?.lstCustomerFeedBackJsonApi?[0].firstName ?? "")"
+                                self.VC?.profileNameLbl.text = "Hi, \(result?.lstCustomerFeedBackJsonApi?[0].firstName ?? "") \(result?.lstCustomerFeedBackJsonApi?[0].lastName ?? "")"
                                 self.VC?.membershipId.text = result?.lstCustomerFeedBackJsonApi?[0].loyaltyId ?? ""
                                 
                                 self.VC?.roleLbl.text = result?.lstCustomerFeedBackJsonApi?[0].customerType ?? ""
@@ -122,6 +122,37 @@ class HYT_DashboardVM{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
                     print("roleListin error",error?.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    
+    func profileaImageUpdateApi(parameter: JSON){
+        self.VC?.startLoading()
+        requestAPIs.profileImageUpdate_API(parameters: parameter) { result, error in
+            if error == nil{
+                if result != nil{
+                    DispatchQueue.main.async {
+                        if (result?.returnMessage == "1"){
+//                            self.VC?.profileImage.sd_setImage(with: URL(string: ""), placeholderImage: <#T##UIImage?#>)
+//                            self.VC?.dashboardApi()
+                            self.VC?.stopLoading()
+                            
+                        }else{
+                            self.VC?.ImageSetups()
+                            self.VC?.stopLoading()
+                        }
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self.VC?.stopLoading()
+                    }
+                }
+            }else{
+                DispatchQueue.main.async {
+                    self.VC?.stopLoading()
+                    print("profileImage update error",error?.localizedDescription)
                 }
             }
         }

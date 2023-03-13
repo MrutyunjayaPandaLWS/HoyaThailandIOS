@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,6 +21,7 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         myStaffTableView.delegate = self
         myStaffTableView.dataSource = self
         emptyMessageLbl.isHidden = true
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +36,7 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     func myStaffListing_Api(){
         let parameter : [String : Any] = [
                 "ActionType": 2,
-                "CustomerId": customerTypeID//customerTypeID
+                "CustomerId": userId//customerTypeID
                 ]
         self.VM.myStaffListing_Api(parameter: parameter)
     }
@@ -58,5 +60,9 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
             cell.statusLbl.text = "Closed"
         }
         return cell
+    }
+    
+    private func localization(){
+        titleLbl.text = "mystaff".localiz()
     }
 }

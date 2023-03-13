@@ -95,6 +95,7 @@ class HYT_VoucherListVM{
                     if result != nil{
                         DispatchQueue.main.async {
                             self.VC?.successMessagePopUp(message: "Your voucher redeemed successfully")
+                            
                             print("exception message - ",result?.exceptionMessage)
                             print("exceptionType - ",result?.exceptionType)
                             print("message - ",result?.message)

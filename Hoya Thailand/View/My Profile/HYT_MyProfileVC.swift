@@ -7,6 +7,7 @@
 
 import UIKit
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate {
     
@@ -52,6 +53,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     }
     
 
+    @IBOutlet weak var anniversaryDateLbl: UILabel!
     @IBOutlet weak var backBtnWidth: NSLayoutConstraint!
     @IBOutlet weak var salesRepresentativeTF: UITextField!
     @IBOutlet weak var salesRepresentativeLbl: UILabel!
@@ -114,6 +116,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         salesRepresentativeTF.isUserInteractionEnabled = false
         idCardNumberTF.isUserInteractionEnabled = false
         customerGeneralInfo()
+        localization()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -166,19 +169,21 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     
     @IBAction func didTappedUpdateBtn(_ sender: UIButton) {
         if firstNameTF.text?.count == 0{
-            self.view.makeToast("Enter the first name", duration: 2.0, position: .center)
+            self.view.makeToast("firstName_toast_message".localiz(), duration: 2.0, position: .center)
         }else if lastNameTF.text?.count == 0{
-            self.view.makeToast("Enter the last name", duration: 2.0, position: .center)
+            self.view.makeToast("lastName_toast_message".localiz(), duration: 2.0, position: .center)
         }else if mobileNumberTF.text?.count == 0{
-            self.view.makeToast("Enter the number", duration: 2.0, position: .center)
-        }else if emailTF.text?.count == 0 {
-            self.view.makeToast("Enter the email", duration: 2.0, position: .center)
-        }else if selectDateLbl.text == "Selcet DOB"{
-            self.view.makeToast("Select the DOB ", duration: 2.0, position: .center)
-        }else if selectGenderLbl.text == "Select gender"{
-            self.view.makeToast("Select the gender", duration: 2.0, position: .center)
-        }else if selectAnniversarydateLbl.text == "Select Date"{
-            self.view.makeToast("Select the Anversary Date", duration: 2.0, position: .center)
+            self.view.makeToast("mobileNumber_toast_message".localiz(), duration: 2.0, position: .center)
+        }
+//        else if emailTF.text?.count == 0 {
+//            self.view.makeToast("Enter the email", duration: 2.0, position: .center)
+//        }
+        else if selectDateLbl.text == "DOB_toast_message".localiz(){
+            self.view.makeToast("DOB_toast_message".localiz(), duration: 2.0, position: .center)
+        }else if selectGenderLbl.text == "gender_toast_message".localiz(){
+            self.view.makeToast("gender_toast_message".localiz(), duration: 2.0, position: .center)
+        }else if selectAnniversarydateLbl.text == "date_of_aniversary_toast_message".localiz(){
+            self.view.makeToast("date_of_aniversary_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
             profileUpdate_Api()
         }
@@ -221,26 +226,78 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     
 //    MARK: - PROFILE UPDATE API
     func profileUpdate_Api(){
-        let parameter : [String : Any] = [
-                "ActionType": "4",
-                "ActorId": userId,
-                "ObjCustomerJson": [
-                    "Address1": "",
-                    "CustomerId": customerTypeID,
-                    "FirstName": firstNameTF.text ?? "",
-                    "lastname": lastNameTF.text ?? "",
-                    "Email": emailTF.text ?? "",
-                    "JDOB": selectDateLbl.text ?? "",
-                    "Mobile": mobileNumberTF.text ?? "",
-                    "RegistrationSource": registerationNo
-                ],
-                "ObjCustomerDetails":[
-                    "IsNewProfilePicture":1,
-                    "Anniversary": selectAnniversarydateLbl.text ?? "",
-                    "Gender": selectGenderLbl.text ?? ""
-                ]
+        let parameter : [String : Any] =
+//        [
+//                "ActionType": "4",
+//                "ActorId": userId,
+//                "ObjCustomerJson": [
+//                    "Address1": "",
+//                    "CustomerId": customerTypeID,
+//                    "FirstName": firstNameTF.text ?? "",
+//                    "lastname": lastNameTF.text ?? "",
+//                    "Email": emailTF.text ?? "",
+//                    "JDOB": selectDateLbl.text ?? "",
+//                    "Mobile": mobileNumberTF.text ?? "",
+//                    "RegistrationSource": registerationNo
+//                ],
+//                "ObjCustomerDetails":[
+//                    "IsNewProfilePicture":1,
+//                    "Anniversary": selectAnniversarydateLbl.text ?? "",
+//                    "Gender": selectGenderLbl.text ?? ""
+//                ]
+//        ]
+        
+        [
+            "ActionType": "4",
+            "ActorId": userId,
+            "ObjCustomerJson": [
+                "Address1": "",
+                "CustomerId": customerTypeID,
+                "FirstName": firstNameTF.text ?? "",
+                "lastname":lastNameTF.text ?? "",
+                "Email": emailTF.text ?? "",
+                "DOB": selectDateLbl.text ?? "",
+                "Mobile": mobileNumberTF.text ?? "",
+                "RegistrationSource": registerationNo
+            ],
+            "ObjCustomerDetails": [
+                "IsNewProfilePicture":0,
+                "Anniversary":selectAnniversarydateLbl.text ?? "",
+                "Gender": selectGenderLbl.text ?? ""
+            ]
         ]
         
         self.VM.peofileUpdate(parameter: parameter)
+    }
+    
+    private func localization(){
+        titleLbl.text = "myProfile".localiz()
+        membershipIdLbl.text = "membershipId".localiz()
+        membershipIDTF.placeholder = "membershipId_toast_message".localiz()
+        roleLbl.text = "role".localiz()
+        roleTF.placeholder = "select_role".localiz()
+        storeNameLbl.text = "storeName".localiz()
+        storeNameTF.placeholder = "storeName_toast_message".localiz()
+        storeIDLbl.text = "stoeId".localiz()
+        storeIDTF.placeholder = "storeId_toast_message".localiz()
+        idCardNumberLbl.text = "idCardNumber".localiz()
+        idCardNumberTF.placeholder = "idCardNumber_toast_message".localiz()
+        salesRepresentativeLbl.text = "sales_representative".localiz()
+        salesRepresentativeTF.placeholder = "sales_representative_toast_message".localiz()
+        firstNameLbl.text = "firstName".localiz()
+        firstNameTF.placeholder = "firstName_toast_message".localiz()
+        lastNameLbl.text = "lastName".localiz()
+        lastNameTF.placeholder = "lastName_toast_message".localiz()
+        mobileNumberLbl.text = "mobileNumber".localiz()
+        mobileNumberTF.placeholder = "mobileNumber_toast_message".localiz()
+        emailLbl.text = "email".localiz()
+        emailTF.placeholder = "email_toast_message".localiz()
+        dateTitleLbl.text = "DOB".localiz()
+        selectDateLbl.text = "DOB_toast_message".localiz()
+        genderLbl.text = "gender".localiz()
+        selectGenderLbl.text = "gender_toast_message".localiz()
+        anniversaryDateLbl.text = "date_of_Aniversary".localiz()
+        selectAnniversarydateLbl.text = "date_of_aniversary_toast_message".localiz()
+        updateBtn.setTitle("update".localiz(), for: .normal)
     }
 }

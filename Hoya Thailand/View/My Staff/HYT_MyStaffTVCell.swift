@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_MyStaffTVCell: UITableViewCell {
 
@@ -21,13 +22,20 @@ class HYT_MyStaffTVCell: UITableViewCell {
     @IBOutlet weak var staffNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
+    }
+    
+    private func localization(){
+        pointBalanceLbl.text = "Point_Balance".localiz()
+        enrollmentDateLbl.text = "Enrollment_Date".localiz()
+        membershipIdTitleLbl.text = "membershipId".localiz()
+        statusTitleLbl.text = "status".localiz()
     }
 
 }

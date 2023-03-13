@@ -8,7 +8,7 @@
 import UIKit
 import DPOTPView
 import Toast_Swift
-
+import LanguageManager_iOS
 
 protocol RegisterOtpDelegate{
     func getRegistrationApi()
@@ -33,7 +33,7 @@ class HYT_RegisterOtpVC: BaseViewController {
         super.viewDidLoad()
         self.VM.VC = self
         self.VM1.VC1 = self
-        
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +41,7 @@ class HYT_RegisterOtpVC: BaseViewController {
         count = 60
         self.timmer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
         sendOtptoRegisterNumber()
+        localization()
     }
     
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
@@ -80,12 +81,7 @@ class HYT_RegisterOtpVC: BaseViewController {
         ]
         self.VM.getOtpApi(parameter: parameter)
     }
-    
- 
-    
 
-
-    
     @objc func update() {
         if(self.count > 1) {
             self.count = Int(self.count) - 1
@@ -94,5 +90,12 @@ class HYT_RegisterOtpVC: BaseViewController {
             self.timmer.invalidate()
             timmerLbl.text = "00:00"
         }
+    }
+    
+    func localization(){
+        resendOtpBtn.setTitle("resendOtp".localiz(), for: .normal)
+        sendOtpBtn.setTitle("sendOtp".localiz(), for: .normal)
+        enterOtpLbl.text = "enterOtp".localiz()
+        otpDescriptionLbl.text = "otp_message".localiz()
     }
 }

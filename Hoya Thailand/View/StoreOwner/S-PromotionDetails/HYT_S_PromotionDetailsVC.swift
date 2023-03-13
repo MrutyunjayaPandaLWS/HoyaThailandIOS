@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 
 class HYT_S_PromotionDetailsVC: BaseViewController , UITableViewDelegate, UITableViewDataSource{
@@ -31,6 +32,7 @@ class HYT_S_PromotionDetailsVC: BaseViewController , UITableViewDelegate, UITabl
         
         drawDottedLine(start: CGPoint(x: lineView1.bounds.minX, y: lineView1.bounds.minY), end: CGPoint(x: lineView1.bounds.maxX + 10, y: lineView1.bounds.minY), view: lineView1)
         drawDottedLine(start: CGPoint(x: lineView2.bounds.minX, y: lineView2.bounds.minY), end: CGPoint(x: lineView2.bounds.maxX + 10, y: lineView2.bounds.minY), view: lineView2)
+        localization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,4 +78,10 @@ class HYT_S_PromotionDetailsVC: BaseViewController , UITableViewDelegate, UITabl
         return 30
     }
     
+    private func localization(){
+        productTitleLbl.text = "product".localiz()
+        pointsTitleLbl.text = "points".localiz()
+        promotionsDateLbl.text = "promotionValid".localiz()
+        vcTitleLbl.text = "promotionDetails".localiz()
+    }
 }

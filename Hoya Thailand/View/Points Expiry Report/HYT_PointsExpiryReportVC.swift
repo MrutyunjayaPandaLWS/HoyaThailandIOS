@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate {
     func didTappedFilterBtn(item: HYT_FilterVC) {
@@ -41,6 +42,7 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        localization()
         getPointExpireReportDetails()
     }
     
@@ -83,5 +85,11 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    private func localization(){
+        pointsTitleLbl.text = "points".localiz()
+        dateLbl.text = "date".localiz()
+        pointsLbl.text = "points".localiz()
+        titleLbl.text = "pointExpireReport".localiz()
+    }
 
 }

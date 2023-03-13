@@ -1,0 +1,858 @@
+
+/* Class = "UILabel"; text = "Offer your patients the combined benefits of comfort and outstanding visual performance. HOYA single vision lenses can be personalized, as any prescription is uniquely cut into the lens. Correct near-sightedness, far-sightedness or astigmatism with pixel-perfect precision."; ObjectID = "032-uU-Xl2"; */
+"032-uU-Xl2.text" = "Offer your patients the combined benefits of comfort and outstanding visual performance. HOYA single vision lenses can be personalized, as any prescription is uniquely cut into the lens. Correct near-sightedness, far-sightedness or astigmatism with pixel-perfect precision.";
+
+/* Class = "UILabel"; text = "Query Summery"; ObjectID = "04i-06-hjC"; */
+"04i-06-hjC.text" = "Query Summery";
+
+/* Class = "UIButton"; normalTitle = "Send OTP"; ObjectID = "06C-BI-nXg"; */
+"06C-BI-nXg.normalTitle" = "Send OTP";
+
+/* Class = "UITextField"; placeholder = "Enter store Id"; ObjectID = "0Nz-x9-Zpb"; */
+"0Nz-x9-Zpb.placeholder" = "Enter store Id";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "0Pf-7o-YyX"; */
+"0Pf-7o-YyX.text" = "Product";
+
+/* Class = "UITextField"; placeholder = "Enter first name"; ObjectID = "0fe-YM-sn6"; */
+"0fe-YM-sn6.placeholder" = "Enter first name";
+
+/* Class = "UILabel"; text = "00 : 00"; ObjectID = "0i0-nO-6Vw"; */
+"0i0-nO-6Vw.text" = "00 : 00";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "0ip-lx-E6x"; */
+"0ip-lx-E6x.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Hoyalux ID myself"; ObjectID = "1IE-m2-JAC"; */
+"1IE-m2-JAC.text" = "Hoyalux ID myself";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "1Jp-y4-VNh"; */
+"1Jp-y4-VNh.text" = "Date";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "1b8-LF-dbr"; */
+"1b8-LF-dbr.text" = "Offers";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "1vg-nY-OB2"; */
+"1vg-nY-OB2.text" = "Gender";
+
+/* Class = "UILabel"; text = "Topic Name"; ObjectID = "2DL-yL-GKt"; */
+"2DL-yL-GKt.text" = "Topic Name";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "2If-gJ-DXm"; */
+"2If-gJ-DXm.text" = "*";
+
+/* Class = "UILabel"; text = "0 Points"; ObjectID = "2Z0-cc-Ncf"; */
+"2Z0-cc-Ncf.text" = "0 Points";
+
+/* Class = "UILabel"; text = "Approved"; ObjectID = "2wN-Hu-Qf6"; */
+"2wN-Hu-Qf6.text" = "Approved";
+
+/* Class = "UILabel"; text = "Enter OTP"; ObjectID = "3Pd-PS-yrQ"; */
+"3Pd-PS-yrQ.text" = "Enter OTP";
+
+/* Class = "UITextField"; placeholder = "write your query Details ..."; ObjectID = "3bD-3x-5Nb"; */
+"3bD-3x-5Nb.placeholder" = "write your query Details ...";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "3e0-uL-fYl"; */
+"3e0-uL-fYl.normalTitle" = "Submit";
+
+/* Class = "UITextField"; placeholder = "Enter Amount"; ObjectID = "42N-zj-Y1s"; */
+"42N-zj-Y1s.placeholder" = "Enter Amount";
+
+/* Class = "UILabel"; text = "0 Points"; ObjectID = "4Kw-Ni-tLJ"; */
+"4Kw-Ni-tLJ.text" = "0 Points";
+
+/* Class = "UILabel"; text = "Download the Voucher"; ObjectID = "4PC-Iy-Z6k"; */
+"4PC-Iy-Z6k.text" = "Download the Voucher";
+
+/* Class = "UITextField"; placeholder = "Enter New Number"; ObjectID = "4dE-4M-EMW"; */
+"4dE-4M-EMW.placeholder" = "Enter New Number";
+
+/* Class = "UILabel"; text = "Validity until :"; ObjectID = "5Nf-p3-2UJ"; */
+"5Nf-p3-2UJ.text" = "Validity until :";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "5Rh-qp-Zjq"; */
+"5Rh-qp-Zjq.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Active"; ObjectID = "5YJ-J7-6a3"; */
+"5YJ-J7-6a3.text" = "Active";
+
+/* Class = "UILabel"; text = "Store ID"; ObjectID = "604-d4-eE1"; */
+"604-d4-eE1.text" = "Store ID";
+
+/* Class = "UILabel"; text = "Hoyalux ID myself"; ObjectID = "6dm-ap-kkm"; */
+"6dm-ap-kkm.text" = "Hoyalux ID myself";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "6ey-Ja-hz8"; */
+"6ey-Ja-hz8.text" = "Points";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6lf-Dq-P4K"; */
+"6lf-Dq-P4K.text" = "Label";
+
+/* Class = "UILabel"; text = "Options Name"; ObjectID = "72m-Iw-uYx"; */
+"72m-Iw-uYx.text" = "Options Name";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "7Lg-fn-NPr"; */
+"7Lg-fn-NPr.placeholder" = "Enter email";
+
+/* Class = "UILabel"; text = "Sales Representative"; ObjectID = "7mo-rZ-3rx"; */
+"7mo-rZ-3rx.text" = "Sales Representative";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "85G-gn-nR6"; */
+"85G-gn-nR6.text" = "*";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "8yB-ee-6h0"; */
+"8yB-ee-6h0.text" = "Points";
+
+/* Class = "UITabBarItem"; title = "Support"; ObjectID = "9JH-N5-Reo"; */
+"9JH-N5-Reo.title" = "Support";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "9JS-E5-dmL"; */
+"9JS-E5-dmL.normalTitle" = "Filter";
+
+/* Class = "UILabel"; text = "ภาษาไทย"; ObjectID = "AiU-Qk-lMw"; */
+"AiU-Qk-lMw.text" = "ภาษาไทย";
+
+/* Class = "UILabel"; text = "0 - 0"; ObjectID = "AnJ-91-6AG"; */
+"AnJ-91-6AG.text" = "0 - 0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "AnT-z4-cpJ"; */
+"AnT-z4-cpJ.text" = "0";
+
+/* Class = "UILabel"; text = "New Number"; ObjectID = "Apg-dr-eS8"; */
+"Apg-dr-eS8.text" = "New Number";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "Az0-hY-Ll1"; */
+"Az0-hY-Ll1.text" = "iPhone";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "BRC-Eo-iXs"; */
+"BRC-Eo-iXs.text" = "iPhone";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Bae-Nz-onG"; */
+"Bae-Nz-onG.text" = "*";
+
+/* Class = "UILabel"; text = "Date Of Birth"; ObjectID = "Bnw-Vb-tMv"; */
+"Bnw-Vb-tMv.text" = "Date Of Birth";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "CCM-xE-Xo3"; */
+"CCM-xE-Xo3.text" = "0";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "COu-j2-Abm"; */
+"COu-j2-Abm.text" = "*";
+
+/* Class = "UILabel"; text = "Range : \v"; ObjectID = "Ctj-OW-2oe"; */
+"Ctj-OW-2oe.text" = "Range : \v";
+
+/* Class = "UILabel"; text = "Account Type"; ObjectID = "D1C-h1-uoa"; */
+"D1C-h1-uoa.text" = "Account Type";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "D1M-KR-p4P"; */
+"D1M-KR-p4P.title" = "Profile";
+
+/* Class = "UILabel"; text = "Select Language"; ObjectID = "D5u-Zo-1BN"; */
+"D5u-Zo-1BN.text" = "Select Language";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "DHK-Lh-QZC"; */
+"DHK-Lh-QZC.text" = "Gender";
+
+/* Class = "UILabel"; text = "Choose Your Language"; ObjectID = "DY0-za-1MJ"; */
+"DY0-za-1MJ.text" = "Choose Your Language";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "DeB-dh-z4U"; */
+"DeB-dh-z4U.text" = "00/00/0000";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "DkS-Qd-4uz"; */
+"DkS-Qd-4uz.text" = "0";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "Dv3-fE-G58"; */
+"Dv3-fE-G58.text" = "iPhone";
+
+/* Class = "UILabel"; text = "My Profile"; ObjectID = "E0D-4s-pWh"; */
+"E0D-4s-pWh.text" = "My Profile";
+
+/* Class = "UILabel"; text = "Invoice Number"; ObjectID = "E5V-fz-VOZ"; */
+"E5V-fz-VOZ.text" = "Invoice Number";
+
+/* Class = "UILabel"; text = "No Data Found"; ObjectID = "E8o-VU-Lu5"; */
+"E8o-VU-Lu5.text" = "No Data Found";
+
+/* Class = "UILabel"; text = "Our most premium personalized progressive lens"; ObjectID = "EYG-Mp-T7o"; */
+"EYG-Mp-T7o.text" = "Our most premium personalized progressive lens";
+
+/* Class = "UITextField"; placeholder = "Enter store name"; ObjectID = "Ebr-BR-JlM"; */
+"Ebr-BR-JlM.placeholder" = "Enter store name";
+
+/* Class = "UILabel"; text = "Please submit your query using this form"; ObjectID = "Eks-I4-YVW"; */
+"Eks-I4-YVW.text" = "Please submit your query using this form";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "EuL-Zj-1D2"; */
+"EuL-Zj-1D2.text" = "Status";
+
+/* Class = "UILabel"; text = "Dropdown list"; ObjectID = "F6e-qA-U82"; */
+"F6e-qA-U82.text" = "Dropdown list";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "Fqo-zy-b3L"; */
+"Fqo-zy-b3L.text" = "iPhone";
+
+/* Class = "UILabel"; text = "e-Vouchers"; ObjectID = "Fxr-1I-oaT"; */
+"Fxr-1I-oaT.text" = "e-Vouchers";
+
+/* Class = "UILabel"; text = "Select Date"; ObjectID = "G7w-96-o3K"; */
+"G7w-96-o3K.text" = "Select Date";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "GBQ-EE-23N"; */
+"GBQ-EE-23N.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Select role"; ObjectID = "GGS-Nx-nnq"; */
+"GGS-Nx-nnq.text" = "Select role";
+
+/* Class = "UILabel"; text = "Upload Code"; ObjectID = "GNm-uw-dwi"; */
+"GNm-uw-dwi.text" = "Upload Code";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "GTZ-fe-IJI"; */
+"GTZ-fe-IJI.text" = "Last Name";
+
+/* Class = "UILabel"; text = "Enter OTP"; ObjectID = "GV8-P2-rKy"; */
+"GV8-P2-rKy.text" = "Enter OTP";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "GlB-it-bor"; */
+"GlB-it-bor.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "My Redemption"; ObjectID = "H91-S5-iUb"; */
+"H91-S5-iUb.text" = "My Redemption";
+
+/* Class = "UILabel"; text = "No Query Found"; ObjectID = "ILE-UD-13C"; */
+"ILE-UD-13C.text" = "No Query Found";
+
+/* Class = "UILabel"; text = "No Data Found"; ObjectID = "IQj-9k-Akr"; */
+"IQj-9k-Akr.text" = "No Data Found";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "IsC-XV-Lvt"; */
+"IsC-XV-Lvt.text" = "00/00/0000";
+
+/* Class = "UILabel"; text = "Sales Representative"; ObjectID = "IxE-Mn-W7p"; */
+"IxE-Mn-W7p.text" = "Sales Representative";
+
+/* Class = "UILabel"; text = "Store Name"; ObjectID = "JA3-1d-K9n"; */
+"JA3-1d-K9n.text" = "Store Name";
+
+/* Class = "UILabel"; text = "Select Topic to Lodge a Query"; ObjectID = "JZA-ad-leq"; */
+"JZA-ad-leq.text" = "Select Topic to Lodge a Query";
+
+/* Class = "UILabel"; text = "Select Your Topic"; ObjectID = "JZt-jl-45h"; */
+"JZt-jl-45h.text" = "Select Your Topic";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "K06-4M-RBq"; */
+"K06-4M-RBq.text" = "Last Name";
+
+/* Class = "UILabel"; text = "Query Topic"; ObjectID = "K1Q-xt-MR2"; */
+"K1Q-xt-MR2.text" = "Query Topic";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "KnG-Kz-c4I"; */
+"KnG-Kz-c4I.normalTitle" = "Details";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "KpR-lF-8j9"; */
+"KpR-lF-8j9.text" = "Product";
+
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "Kwo-jE-VUf"; */
+"Kwo-jE-VUf.configuration.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Kwo-jE-VUf"; */
+"Kwo-jE-VUf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "L37-vL-N16"; */
+"L37-vL-N16.text" = "Points";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "LEY-oI-uVY"; */
+"LEY-oI-uVY.text" = "Register";
+
+/* Class = "UILabel"; text = "Offers not availble"; ObjectID = "Lz0-Mk-fBt"; */
+"Lz0-Mk-fBt.text" = "Offers not availble";
+
+/* Class = "UILabel"; text = "Range : 0 - 0"; ObjectID = "MBt-JA-H25"; */
+"MBt-JA-H25.text" = "Range : 0 - 0";
+
+/* Class = "UITextField"; placeholder = "Enter Id card number"; ObjectID = "MES-II-YcM"; */
+"MES-II-YcM.placeholder" = "Enter Id card number";
+
+/* Class = "UILabel"; text = "Promotion List"; ObjectID = "Min-CD-GIR"; */
+"Min-CD-GIR.text" = "Promotion List";
+
+/* Class = "UILabel"; text = "EN"; ObjectID = "MwU-MF-AaH"; */
+"MwU-MF-AaH.text" = "EN";
+
+/* Class = "UILabel"; text = "Role"; ObjectID = "My0-Yp-toJ"; */
+"My0-Yp-toJ.text" = "Role";
+
+/* Class = "UILabel"; text = "Support"; ObjectID = "MzG-vP-6wT"; */
+"MzG-vP-6wT.text" = "Support";
+
+/* Class = "UITextField"; placeholder = "Enter Amount"; ObjectID = "Mzh-cv-Ljz"; */
+"Mzh-cv-Ljz.placeholder" = "Enter Amount";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "NJD-qN-GxN"; */
+"NJD-qN-GxN.text" = "Points";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "NZz-NU-Drc"; */
+"NZz-NU-Drc.text" = "Product";
+
+/* Class = "UILabel"; text = "Offer Details"; ObjectID = "Nos-l6-3LS"; */
+"Nos-l6-3LS.text" = "Offer Details";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Nrs-pB-hWD"; */
+"Nrs-pB-hWD.text" = "Password";
+
+/* Class = "UILabel"; text = "Membership ID"; ObjectID = "NwR-gf-Wbb"; */
+"NwR-gf-Wbb.text" = "Membership ID";
+
+/* Class = "UILabel"; text = "Select DOB"; ObjectID = "O40-1o-dnH"; */
+"O40-1o-dnH.text" = "Select DOB";
+
+/* Class = "UILabel"; text = "Query Summary"; ObjectID = "OXn-pq-Trz"; */
+"OXn-pq-Trz.text" = "Query Summary";
+
+/* Class = "UIButton"; normalTitle = "Resend OTP?"; ObjectID = "Oft-Nt-HEA"; */
+"Oft-Nt-HEA.normalTitle" = "Resend OTP?";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "Ojw-GV-sQ6"; */
+"Ojw-GV-sQ6.text" = "00/00/0000";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "P5d-nD-k3z"; */
+"P5d-nD-k3z.text" = "Product Name";
+
+/* Class = "UILabel"; text = "Resolved"; ObjectID = "Pl2-NW-9Rx"; */
+"Pl2-NW-9Rx.text" = "Resolved";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "PvJ-s0-gx7"; */
+"PvJ-s0-gx7.normalTitle" = "Forgot Password?";
+
+/* Class = "UILabel"; text = "EN"; ObjectID = "Q0n-8K-1RH"; */
+"Q0n-8K-1RH.text" = "EN";
+
+/* Class = "UILabel"; text = "ID Card Number"; ObjectID = "Q8g-bP-5TM"; */
+"Q8g-bP-5TM.text" = "ID Card Number";
+
+/* Class = "UITextField"; placeholder = "write your query ..."; ObjectID = "QEH-OD-qd7"; */
+"QEH-OD-qd7.placeholder" = "write your query ...";
+
+/* Class = "UILabel"; text = "No Promotion Found"; ObjectID = "QmV-WX-2Af"; */
+"QmV-WX-2Af.text" = "No Promotion Found";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "Qpk-ds-ar0"; */
+"Qpk-ds-ar0.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Claim request has been submitted successfully"; ObjectID = "RMs-TG-hGo"; */
+"RMs-TG-hGo.text" = "Claim request has been submitted successfully";
+
+/* Class = "UILabel"; text = "Membership ID"; ObjectID = "RNE-Jz-1mD"; */
+"RNE-Jz-1mD.text" = "Membership ID";
+
+/* Class = "UILabel"; text = "Select sales representative"; ObjectID = "RsE-oz-MIv"; */
+"RsE-oz-MIv.text" = "Select sales representative";
+
+/* Class = "UITextField"; placeholder = "Set password"; ObjectID = "STU-nS-jgp"; */
+"STU-nS-jgp.placeholder" = "Set password";
+
+/* Class = "UILabel"; text = "Claim Details"; ObjectID = "SXg-sp-cTL"; */
+"SXg-sp-cTL.text" = "Claim Details";
+
+/* Class = "UILabel"; text = "No Promotion Found"; ObjectID = "Svo-c0-4uH"; */
+"Svo-c0-4uH.text" = "No Promotion Found";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "TFF-vZ-FIS"; */
+"TFF-vZ-FIS.text" = "iPhone";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "THV-wR-kWd"; */
+"THV-wR-kWd.text" = "00:00:00";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "TJY-q1-JRc"; */
+"TJY-q1-JRc.text" = "0";
+
+/* Class = "UILabel"; text = "Select DOB"; ObjectID = "U3F-CU-vH1"; */
+"U3F-CU-vH1.text" = "Select DOB";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "UXG-NO-Dhz"; */
+"UXG-NO-Dhz.text" = "First Name";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Udh-KP-nhg"; */
+"Udh-KP-nhg.text" = "*";
+
+/* Class = "UILabel"; text = "00 : 00"; ObjectID = "V78-jw-e0x"; */
+"V78-jw-e0x.text" = "00 : 00";
+
+/* Class = "UILabel"; text = "Available Balance"; ObjectID = "VW1-qA-6cQ"; */
+"VW1-qA-6cQ.text" = "Available Balance";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "VWd-lD-lff"; */
+"VWd-lD-lff.text" = "Register";
+
+/* Class = "UILabel"; text = "To Date"; ObjectID = "WKt-iG-Euh"; */
+"WKt-iG-Euh.text" = "To Date";
+
+/* Class = "UILabel"; text = "Enrollment Date"; ObjectID = "WKu-SZ-CG1"; */
+"WKu-SZ-CG1.text" = "Enrollment Date";
+
+/* Class = "UILabel"; text = "Store Name"; ObjectID = "WOd-V7-CrP"; */
+"WOd-V7-CrP.text" = "Store Name";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "Wh8-7f-MPa"; */
+"Wh8-7f-MPa.text" = "*";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "Ww0-kP-aUF"; */
+"Ww0-kP-aUF.text" = "Mobile Number";
+
+/* Class = "UILabel"; text = "Scan Code"; ObjectID = "XYp-Hu-ewg"; */
+"XYp-Hu-ewg.text" = "Scan Code";
+
+/* Class = "UITextField"; placeholder = "Enter first name"; ObjectID = "Xe9-Hp-Vlk"; */
+"Xe9-Hp-Vlk.placeholder" = "Enter first name";
+
+/* Class = "UILabel"; text = "Membership ID"; ObjectID = "XmI-E4-ZwM"; */
+"XmI-E4-ZwM.text" = "Membership ID";
+
+/* Class = "UITextField"; placeholder = "Enter invoice number"; ObjectID = "Xqi-S7-ysw"; */
+"Xqi-S7-ysw.placeholder" = "Enter invoice number";
+
+/* Class = "UITextField"; placeholder = "Enter role"; ObjectID = "Y9j-3J-zG9"; */
+"Y9j-3J-zG9.placeholder" = "Enter role";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "YAU-P6-bwg"; */
+"YAU-P6-bwg.text" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Get OTP"; ObjectID = "YAp-dD-iSN"; */
+"YAp-dD-iSN.normalTitle" = "Get OTP";
+
+/* Class = "UITextField"; placeholder = "Enter membership Id"; ObjectID = "YRx-Dg-QfP"; */
+"YRx-Dg-QfP.placeholder" = "Enter membership Id";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "YUw-D7-M3x"; */
+"YUw-D7-M3x.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "Enter Membership ID / Mobile Number"; ObjectID = "Yhk-7O-day"; */
+"Yhk-7O-day.placeholder" = "Enter Membership ID / Mobile Number";
+
+/* Class = "UILabel"; text = "Promotion Details"; ObjectID = "ZLN-Is-Xas"; */
+"ZLN-Is-Xas.text" = "Promotion Details";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "ZNE-GW-1FT"; */
+"ZNE-GW-1FT.text" = "Points";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "ZQR-UM-FPp"; */
+"ZQR-UM-FPp.text" = "iPhone";
+
+/* Class = "UILabel"; text = "when Scan the QR / Upload the Invoices"; ObjectID = "ZYa-Qt-0lk"; */
+"ZYa-Qt-0lk.text" = "when Scan the QR / Upload the Invoices";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "Zi6-g9-g1w"; */
+"Zi6-g9-g1w.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Select topic"; ObjectID = "ZsI-SK-Wnl"; */
+"ZsI-SK-Wnl.text" = "Select topic";
+
+/* Class = "UILabel"; text = "Ticket Details :"; ObjectID = "a5B-Vw-vkG"; */
+"a5B-Vw-vkG.text" = "Ticket Details :";
+
+/* Class = "UILabel"; text = "10% Discount on all frames"; ObjectID = "aIC-Zs-QHP"; */
+"aIC-Zs-QHP.text" = "10% Discount on all frames";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "aNK-ff-3JU"; */
+"aNK-ff-3JU.text" = "0";
+
+/* Class = "UILabel"; text = "OTP has sent to your registered mobile number"; ObjectID = "agX-Pc-Hhj"; */
+"agX-Pc-Hhj.text" = "OTP has sent to your registered mobile number";
+
+/* Class = "UILabel"; text = "Offer your patients the combined benefits of comfort and outstanding visual performance. HOYA single vision lenses can be personalized, as any prescription is uniquely cut into the lens. Correct near-sightedness, far-sightedness or astigmatism with pixel-perfect precision."; ObjectID = "aiZ-xC-2st"; */
+"aiZ-xC-2st.text" = "Offer your patients the combined benefits of comfort and outstanding visual performance. HOYA single vision lenses can be personalized, as any prescription is uniquely cut into the lens. Correct near-sightedness, far-sightedness or astigmatism with pixel-perfect precision.";
+
+/* Class = "UIButton"; normalTitle = "Claim"; ObjectID = "aqV-L8-Bc2"; */
+"aqV-L8-Bc2.normalTitle" = "Claim";
+
+/* Class = "UITextField"; placeholder = "Enter ID card number"; ObjectID = "axK-OU-uRh"; */
+"axK-OU-uRh.placeholder" = "Enter ID card number";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "axz-LZ-z8Y"; */
+"axz-LZ-z8Y.text" = "*";
+
+/* Class = "UILabel"; text = "Back to Login"; ObjectID = "b41-9a-bdQ"; */
+"b41-9a-bdQ.text" = "Back to Login";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "bIy-qY-rH9"; */
+"bIy-qY-rH9.text" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Browse Image"; ObjectID = "beP-ih-26A"; */
+"beP-ih-26A.normalTitle" = "Browse Image";
+
+/* Class = "UIButton"; normalTitle = "Redeem"; ObjectID = "boW-fo-T7G"; */
+"boW-fo-T7G.normalTitle" = "Redeem";
+
+/* Class = "UIButton"; normalTitle = "Resend OTP"; ObjectID = "bs8-ut-8f9"; */
+"bs8-ut-8f9.normalTitle" = "Resend OTP";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "bv7-Dw-scx"; */
+"bv7-Dw-scx.text" = "*";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "bzB-8O-EcK"; */
+"bzB-8O-EcK.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Store ID"; ObjectID = "cD8-Ov-7aC"; */
+"cD8-Ov-7aC.text" = "Store ID";
+
+/* Class = "UISegmentedControl"; cbl-Q2-SH3.segmentTitles[0] = "Upload Code"; ObjectID = "cbl-Q2-SH3"; */
+"cbl-Q2-SH3.segmentTitles[0]" = "Upload Code";
+
+/* Class = "UISegmentedControl"; cbl-Q2-SH3.segmentTitles[1] = "Scan Code"; ObjectID = "cbl-Q2-SH3"; */
+"cbl-Q2-SH3.segmentTitles[1]" = "Scan Code";
+
+/* Class = "UILabel"; text = "Hi, iPhone"; ObjectID = "cft-Tr-ROO"; */
+"cft-Tr-ROO.text" = "Hi, iPhone";
+
+/* Class = "UILabel"; text = "Available Balance"; ObjectID = "cjj-df-3ug"; */
+"cjj-df-3ug.text" = "Available Balance";
+
+/* Class = "UILabel"; text = "Promotion valid till"; ObjectID = "dBX-TP-xFV"; */
+"dBX-TP-xFV.text" = "Promotion valid till";
+
+/* Class = "UIButton"; normalTitle = "Claim"; ObjectID = "dDI-Eq-VXU"; */
+"dDI-Eq-VXU.normalTitle" = "Claim";
+
+/* Class = "UITextField"; placeholder = "Enter Membership ID"; ObjectID = "dLD-BB-mta"; */
+"dLD-BB-mta.placeholder" = "Enter Membership ID";
+
+/* Class = "UILabel"; text = "Set Password"; ObjectID = "dfz-UQ-gvM"; */
+"dfz-UQ-gvM.text" = "Set Password";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "dzh-Ad-2c6"; */
+"dzh-Ad-2c6.text" = "Filter";
+
+/* Class = "UITextField"; placeholder = "Enter product name"; ObjectID = "eAs-9P-8J7"; */
+"eAs-9P-8J7.placeholder" = "Enter product name";
+
+/* Class = "UIButton"; normalTitle = "View"; ObjectID = "eCK-Gv-lVz"; */
+"eCK-Gv-lVz.normalTitle" = "View";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "eKW-yM-qlY"; */
+"eKW-yM-qlY.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "eLd-PD-Fdw"; */
+"eLd-PD-Fdw.text" = "0";
+
+/* Class = "UILabel"; text = "Valid till"; ObjectID = "eWD-uX-4dS"; */
+"eWD-uX-4dS.text" = "Valid till";
+
+/* Class = "UIButton"; normalTitle = "Submit Query"; ObjectID = "eea-ox-NVs"; */
+"eea-ox-NVs.normalTitle" = "Submit Query";
+
+/* Class = "UITextField"; placeholder = "Enter email"; ObjectID = "efj-Y2-EUt"; */
+"efj-Y2-EUt.placeholder" = "Enter email";
+
+/* Class = "UITextField"; placeholder = "Enter Query Summery"; ObjectID = "elk-W2-Q2J"; */
+"elk-W2-Q2J.placeholder" = "Enter Query Summery";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "emk-Zn-bdO"; */
+"emk-Zn-bdO.text" = "0:00";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "f1z-r6-AZY"; */
+"f1z-r6-AZY.text" = "*";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "fAq-xQ-OoZ"; */
+"fAq-xQ-OoZ.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "fCP-2r-Asq"; */
+"fCP-2r-Asq.text" = "00/00/0000";
+
+/* Class = "UILabel"; text = "Get Benefits"; ObjectID = "fLI-Te-g45"; */
+"fLI-Te-g45.text" = "Get Benefits";
+
+/* Class = "UILabel"; text = "Upload a proof"; ObjectID = "fMj-WI-ceN"; */
+"fMj-WI-ceN.text" = "Upload a proof";
+
+/* Class = "UILabel"; text = "Role"; ObjectID = "fOO-vn-YEG"; */
+"fOO-vn-YEG.text" = "Role";
+
+/* Class = "UILabel"; text = "Points Expiry Report"; ObjectID = "fvQ-a0-oQW"; */
+"fvQ-a0-oQW.text" = "Points Expiry Report";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gLC-C6-w0W"; */
+"gLC-C6-w0W.text" = "Label";
+
+/* Class = "UILabel"; text = "Promotion List"; ObjectID = "gRc-Tz-lhf"; */
+"gRc-Tz-lhf.text" = "Promotion List";
+
+/* Class = "UILabel"; text = "e-Vouchers"; ObjectID = "gUl-cM-BCP"; */
+"gUl-cM-BCP.text" = "e-Vouchers";
+
+/* Class = "UILabel"; text = "Help"; ObjectID = "ge3-sW-dDo"; */
+"ge3-sW-dDo.text" = "Help";
+
+/* Class = "UILabel"; text = "DOB"; ObjectID = "grq-TL-fBh"; */
+"grq-TL-fBh.text" = "DOB";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "gx0-WB-EAp"; */
+"gx0-WB-EAp.text" = "00/00/0000";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "hLL-cB-G1X"; */
+"hLL-cB-G1X.text" = "Email";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "hQf-a8-r1f"; */
+"hQf-a8-r1f.text" = "Points";
+
+/* Class = "UILabel"; text = "10% Discount on all frames"; ObjectID = "hjk-09-skT"; */
+"hjk-09-skT.text" = "10% Discount on all frames";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "hwR-wL-am8"; */
+"hwR-wL-am8.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "iVE-o0-MJG"; */
+"iVE-o0-MJG.text" = "*";
+
+/* Class = "UILabel"; text = "Unable to upload the invoice"; ObjectID = "ilT-sy-hIh"; */
+"ilT-sy-hIh.text" = "Unable to upload the invoice";
+
+/* Class = "UILabel"; text = "Promotion Details"; ObjectID = "ioH-Ii-wrR"; */
+"ioH-Ii-wrR.text" = "Promotion Details";
+
+/* Class = "UILabel"; text = "Membership ID"; ObjectID = "jGN-oE-b6u"; */
+"jGN-oE-b6u.text" = "Membership ID";
+
+/* Class = "UILabel"; text = "0 Points"; ObjectID = "jHE-Sy-hab"; */
+"jHE-Sy-hab.text" = "0 Points";
+
+/* Class = "UILabel"; text = "Select "; ObjectID = "jV4-ME-8na"; */
+"jV4-ME-8na.text" = "Select ";
+
+/* Class = "UILabel"; text = "will Expire on : 00-00-0000"; ObjectID = "jrh-f9-X83"; */
+"jrh-f9-X83.text" = "will Expire on : 00-00-0000";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "k30-5Y-AYh"; */
+"k30-5Y-AYh.normalTitle" = "Details";
+
+/* Class = "UITextField"; placeholder = "Enter Membership ID / Mobile Number"; ObjectID = "kPU-K3-gco"; */
+"kPU-K3-gco.placeholder" = "Enter Membership ID / Mobile Number";
+
+/* Class = "UILabel"; text = "Role"; ObjectID = "knK-Ff-M8C"; */
+"knK-Ff-M8C.text" = "Role";
+
+/* Class = "UILabel"; text = "Enter the given details to register"; ObjectID = "kzF-Mk-VQf"; */
+"kzF-Mk-VQf.text" = "Enter the given details to register";
+
+/* Class = "UILabel"; text = "Validity until : 00-00-0000"; ObjectID = "l7J-N9-fyr"; */
+"l7J-N9-fyr.text" = "Validity until : 00-00-0000";
+
+/* Class = "UITextField"; placeholder = "Enter sales representative"; ObjectID = "lQJ-ee-uX3"; */
+"lQJ-ee-uX3.placeholder" = "Enter sales representative";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "lRr-ph-RxS"; */
+"lRr-ph-RxS.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Select account type"; ObjectID = "ld8-2e-avg"; */
+"ld8-2e-avg.text" = "Select account type";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "lda-G7-2bQ"; */
+"lda-G7-2bQ.text" = "Date";
+
+/* Class = "UILabel"; text = "Offer Details"; ObjectID = "ll2-T6-zfW"; */
+"ll2-T6-zfW.text" = "Offer Details";
+
+/* Class = "UILabel"; text = "Enter OTP"; ObjectID = "mSB-cD-NAb"; */
+"mSB-cD-NAb.text" = "Enter OTP";
+
+/* Class = "UILabel"; text = "will Expire on : 00/00/0000"; ObjectID = "mTZ-H6-fS8"; */
+"mTZ-H6-fS8.text" = "will Expire on : 00/00/0000";
+
+/* Class = "UILabel"; text = "Our most premium personalized progressive lens"; ObjectID = "n9G-52-BDU"; */
+"n9G-52-BDU.text" = "Our most premium personalized progressive lens";
+
+/* Class = "UITextField"; placeholder = "Enter store ID"; ObjectID = "o0o-Wh-ibt"; */
+"o0o-Wh-ibt.placeholder" = "Enter store ID";
+
+/* Class = "UILabel"; text = "Claim"; ObjectID = "o8c-aC-nsG"; */
+"o8c-aC-nsG.text" = "Claim";
+
+/* Class = "UIButton"; normalTitle = "Resend Otp"; ObjectID = "oLl-WQ-9cA"; */
+"oLl-WQ-9cA.normalTitle" = "Resend Otp";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "ogQ-Td-b2x"; */
+"ogQ-Td-b2x.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Congratulations !"; ObjectID = "ohO-cb-TXk"; */
+"ohO-cb-TXk.text" = "Congratulations !";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "pRY-4F-imK"; */
+"pRY-4F-imK.text" = "00/00/0000";
+
+/* Class = "UITextField"; placeholder = "Enter quantity"; ObjectID = "pp7-hW-5MM"; */
+"pp7-hW-5MM.placeholder" = "Enter quantity";
+
+/* Class = "UILabel"; text = "My Earnings"; ObjectID = "q0l-OX-tZf"; */
+"q0l-OX-tZf.text" = "My Earnings";
+
+/* Class = "UILabel"; text = "Point Balance"; ObjectID = "qFY-HZ-Qbv"; */
+"qFY-HZ-Qbv.text" = "Point Balance";
+
+/* Class = "UILabel"; text = "Membership ID / Mobile Number"; ObjectID = "qR6-7H-whg"; */
+"qR6-7H-whg.text" = "Membership ID / Mobile Number";
+
+/* Class = "UILabel"; text = "Enter given details to login the account"; ObjectID = "qVZ-3R-cQC"; */
+"qVZ-3R-cQC.text" = "Enter given details to login the account";
+
+/* Class = "UIButton"; configuration.title = "Ok"; ObjectID = "qwL-iM-vLf"; */
+"qwL-iM-vLf.configuration.title" = "Ok";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qwL-iM-vLf"; */
+"qwL-iM-vLf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "EN"; ObjectID = "qyB-8f-VdG"; */
+"qyB-8f-VdG.text" = "EN";
+
+/* Class = "UILabel"; text = "Quantity"; ObjectID = "qyP-2t-YO9"; */
+"qyP-2t-YO9.text" = "Quantity";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "r5t-5V-awk"; */
+"r5t-5V-awk.text" = "Forgot Password";
+
+/* Class = "UILabel"; text = "ID Card Number"; ObjectID = "rme-dG-2cY"; */
+"rme-dG-2cY.text" = "ID Card Number";
+
+/* Class = "UILabel"; text = "From Date"; ObjectID = "roi-5Q-gcJ"; */
+"roi-5Q-gcJ.text" = "From Date";
+
+/* Class = "UITextField"; placeholder = "Enter mobile number"; ObjectID = "rpu-qN-YEK"; */
+"rpu-qN-YEK.placeholder" = "Enter mobile number";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "rpz-t4-9XP"; */
+"rpz-t4-9XP.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Optician"; ObjectID = "rr8-W4-OvA"; */
+"rr8-W4-OvA.text" = "Optician";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "s0v-W5-iQA"; */
+"s0v-W5-iQA.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Date of Anniversary"; ObjectID = "sO7-Fr-sYl"; */
+"sO7-Fr-sYl.text" = "Date of Anniversary";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "sQR-Sr-vQw"; */
+"sQR-Sr-vQw.text" = "Product";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "sk0-wh-01O"; */
+"sk0-wh-01O.text" = "English";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "skw-vP-Z3b"; */
+"skw-vP-Z3b.title" = "Home";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "soF-NO-EDl"; */
+"soF-NO-EDl.text" = "Points";
+
+/* Class = "UITextField"; placeholder = "Enter last name"; ObjectID = "syX-Gp-ftX"; */
+"syX-Gp-ftX.placeholder" = "Enter last name";
+
+/* Class = "UILabel"; text = "*"; ObjectID = "szw-Zi-Oel"; */
+"szw-Zi-Oel.text" = "*";
+
+/* Class = "UILabel"; text = "Back to Login"; ObjectID = "tEt-fj-2BA"; */
+"tEt-fj-2BA.text" = "Back to Login";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tGW-yx-6Sb"; */
+"tGW-yx-6Sb.text" = "Label";
+
+/* Class = "UILabel"; text = "Query"; ObjectID = "trx-NT-zaR"; */
+"trx-NT-zaR.text" = "Query";
+
+/* Class = "UIButton"; normalTitle = "General Information"; ObjectID = "uEm-cA-NxE"; */
+"uEm-cA-NxE.normalTitle" = "General Information";
+
+/* Class = "UILabel"; text = "Select gender"; ObjectID = "uG2-14-zXx"; */
+"uG2-14-zXx.text" = "Select gender";
+
+/* Class = "UIButton"; normalTitle = "Need Help ?"; ObjectID = "uLa-nd-kBY"; */
+"uLa-nd-kBY.normalTitle" = "Need Help ?";
+
+/* Class = "UITextField"; placeholder = "Write Query here ..."; ObjectID = "ucu-JB-aSO"; */
+"ucu-JB-aSO.placeholder" = "Write Query here ...";
+
+/* Class = "UITextField"; placeholder = "Enter last name"; ObjectID = "udE-cY-GBU"; */
+"udE-cY-GBU.placeholder" = "Enter last name";
+
+/* Class = "UILabel"; text = "Select Query Topic"; ObjectID = "uhZ-eA-cNh"; */
+"uhZ-eA-cNh.text" = "Select Query Topic";
+
+/* Class = "UILabel"; text = "Query"; ObjectID = "ujk-tr-sFA"; */
+"ujk-tr-sFA.text" = "Query";
+
+/* Class = "UILabel"; text = "My Staff"; ObjectID = "v0O-ad-RNa"; */
+"v0O-ad-RNa.text" = "My Staff";
+
+/* Class = "UILabel"; text = "Select gender"; ObjectID = "vS6-kD-Uf6"; */
+"vS6-kD-Uf6.text" = "Select gender";
+
+/* Class = "UILabel"; text = "00-00-0000"; ObjectID = "veK-re-pAu"; */
+"veK-re-pAu.text" = "00-00-0000";
+
+/* Class = "UILabel"; text = "Voucher Name"; ObjectID = "vmu-rX-mVb"; */
+"vmu-rX-mVb.text" = "Voucher Name";
+
+/* Class = "UILabel"; text = "Promotion valid till"; ObjectID = "vol-wy-e33"; */
+"vol-wy-e33.text" = "Promotion valid till";
+
+/* Class = "UILabel"; text = "Let's get started"; ObjectID = "wBn-go-Tdd"; */
+"wBn-go-Tdd.text" = "Let's get started";
+
+/* Class = "UIButton"; normalTitle = "Redeem"; ObjectID = "wtw-Mj-ffj"; */
+"wtw-Mj-ffj.normalTitle" = "Redeem";
+
+/* Class = "UILabel"; text = "Upload Image"; ObjectID = "x6V-qz-hqq"; */
+"x6V-qz-hqq.text" = "Upload Image";
+
+/* Class = "UILabel"; text = "iPhone"; ObjectID = "x8T-yQ-Jde"; */
+"x8T-yQ-Jde.text" = "iPhone";
+
+/* Class = "UILabel"; text = "Query Details"; ObjectID = "xSm-kW-aUP"; */
+"xSm-kW-aUP.text" = "Query Details";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "xZm-3u-tIp"; */
+"xZm-3u-tIp.text" = "Mobile Number";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "xe2-ke-FSQ"; */
+"xe2-ke-FSQ.text" = "Welcome";
+
+/* Class = "UILabel"; text = "Don't have an Account?"; ObjectID = "xeB-zO-oKC"; */
+"xeB-zO-oKC.text" = "Don't have an Account?";
+
+/* Class = "UITextField"; placeholder = "Enter mobile number"; ObjectID = "xeL-bn-m3x"; */
+"xeL-bn-m3x.placeholder" = "Enter mobile number";
+
+/* Class = "UIButton"; normalTitle = "Personal Information"; ObjectID = "xqY-x5-tA2"; */
+"xqY-x5-tA2.normalTitle" = "Personal Information";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "yGA-5m-xfS"; */
+"yGA-5m-xfS.text" = "First Name";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "yRl-BA-wEH"; */
+"yRl-BA-wEH.text" = "00/00/0000";
+
+/* Class = "UITextField"; placeholder = "Enter store name"; ObjectID = "yXY-LK-zF4"; */
+"yXY-LK-zF4.placeholder" = "Enter store name";
+
+/* Class = "UILabel"; text = "Enter the given details to Reset your password"; ObjectID = "ybW-0Q-ES4"; */
+"ybW-0Q-ES4.text" = "Enter the given details to Reset your password";
+
+/* Class = "UILabel"; text = "Membership ID / Mobile Number"; ObjectID = "yh7-zZ-N9Q"; */
+"yh7-zZ-N9Q.text" = "Membership ID / Mobile Number";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "yiy-Yr-zaS"; */
+"yiy-Yr-zaS.text" = "English";
+
+/* Class = "UILabel"; text = "Validity until : 00-00-0000"; ObjectID = "ynq-oN-eDz"; */
+"ynq-oN-eDz.text" = "Validity until : 00-00-0000";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "yxo-eC-FNl"; */
+"yxo-eC-FNl.placeholder" = "Enter Password";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "zWI-ny-3Kg"; */
+"zWI-ny-3Kg.text" = "Email";
+
+/* Class = "UILabel"; text = "New query"; ObjectID = "zeQ-2x-wbl"; */
+"zeQ-2x-wbl.text" = "New query";
+
+/* Class = "UILabel"; text = "Claim"; ObjectID = "zfL-PK-PtC"; */
+"zfL-PK-PtC.text" = "Claim";

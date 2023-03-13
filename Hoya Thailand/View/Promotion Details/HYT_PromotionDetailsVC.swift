@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import LanguageManager_iOS
 
 class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -91,5 +92,10 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 30
     }
+
+    private func localization(){
+        
+    }
+    
     
 }

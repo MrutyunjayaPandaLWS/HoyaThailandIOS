@@ -35,13 +35,14 @@ class HYT_ProfileVM{
                             self.VC?.selectDateLbl.text = String(self.generalInfo[0].jdob?.dropLast(9) ?? "Select DOB")
                             self.VC?.selectAnniversarydateLbl.text = String(self.generalInfo[0].jAnniversary?.dropLast(9) ?? "Select Date")
                             self.VC?.registerationNo = self.generalInfo[0].registrationSource ?? 0
+                            self.VC?.idCardNumberTF.text = self.generalInfo[0].identificationNo
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.stopLoading()
                         }
-                        if result?.lstCustomerIdentityInfo?.count != 0{
-                            self.VC?.idCardNumberTF.text = result?.lstCustomerIdentityInfo?[0].identityNo
-                        }
+//                        if result?.lstCustomerIdentityInfo?.count != 0{
+//                            self.VC?.idCardNumberTF.text = result?.lstCustomerIdentityInfo?[0]
+//                        }
                     }
                 }else{
                     DispatchQueue.main.async {

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class HYT_MyEarningsTVCell: UITableViewCell {
 
+    @IBOutlet weak var remarksLbl: UILabel!
     @IBOutlet weak var productStatus: UILabel!
     @IBOutlet weak var expireDateTitleLbl: UILabel!
     @IBOutlet weak var expiredateLbl: UILabel!
@@ -26,7 +28,7 @@ class HYT_MyEarningsTVCell: UITableViewCell {
     @IBOutlet weak var promotionNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        localization()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,5 +36,13 @@ class HYT_MyEarningsTVCell: UITableViewCell {
 
     }
     
-    
+    private func localization(){
+        productNameTitleLbl.text = "productName".localiz()
+        promotionNameTitleLbl.text = "promotionName".localiz()
+        invoiceNumberTitleLbl.text = "invoiceNumer".localiz()
+        remarksLbl.text = "remarks".localiz()
+        dateTitleLbl.text = "date".localiz()
+        pointsTitleLbl.text = "points".localiz()
+        expireDateTitleLbl.text = "point_will_expire".localiz()
+    }
 }

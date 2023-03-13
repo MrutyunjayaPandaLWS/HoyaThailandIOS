@@ -8,6 +8,7 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.8.3)
   - IQKeyboardManagerSwift (6.5.10)
+  - LanguageManager-iOS (1.2.5)
   - lottie-ios (4.1.0)
   - SDWebImage (5.14.3):
     - SDWebImage/Core (= 5.14.3)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - DPOTPView
   - ImageSlideshow/Alamofire
   - IQKeyboardManagerSwift
+  - LanguageManager-iOS
   - lottie-ios
   - SDWebImage
   - Toast-Swift (~> 5.0.1)
@@ -31,6 +33,7 @@ SPEC REPOS:
     - DPOTPView
     - ImageSlideshow
     - IQKeyboardManagerSwift
+    - LanguageManager-iOS
     - lottie-ios
     - SDWebImage
     - Toast-Swift
@@ -41,10 +44,11 @@ SPEC CHECKSUMS:
   DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
   ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  LanguageManager-iOS: 049345fe4d1c5fbe22af93d438540917f4936359
   lottie-ios: a6f86a8f141484c7d4ed1b8b206ad0aa76fec0bd
   SDWebImage: 9c36e66c8ce4620b41a7407698dda44211a96764
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 1ef976b766e4651f2f1961e9aa8d7bf2caf57e29
+PODFILE CHECKSUM: f3844668cf0c1a90caa21f280a184e3cadc8a0bf
 
 COCOAPODS: 1.11.3

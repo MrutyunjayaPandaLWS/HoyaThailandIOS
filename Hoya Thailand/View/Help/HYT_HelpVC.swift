@@ -9,6 +9,7 @@ import UIKit
 import Toast_Swift
 import AVFoundation
 import Photos
+import LanguageManager_iOS
 
 class HYT_HelpVC: BaseViewController, TopicListDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -44,13 +45,14 @@ var VM = HYT_HelpVM()
         self.VM.VC = self
     
         imagePicker.delegate = self
+        localization()
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+        localization()
     }
 
     @IBAction func didTappedSelectQueryTopicBtn(_ sender: UIButton) {
@@ -62,13 +64,13 @@ var VM = HYT_HelpVM()
     }
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
-            self.view.makeToast("Enter mebership Id", duration: 2.0, position: .center)
-        }else if selectQueryTopicLbl.text == "Select Query Topic"{
-            self.view.makeToast("Select Query Topic", duration: 2.0, position: .center)
+            self.view.makeToast("membershipId_toast_message".localiz(), duration: 2.0, position: .center)
+        }else if selectQueryTopicLbl.text == "queryTopic_toast_message".localiz(){
+            self.view.makeToast("queryTopic_toast_message".localiz(), duration: 2.0, position: .center)
         } else if querySummeryTF.text?.count == 0 {
-            self.view.makeToast("Enter query summery", duration: 2.0, position: .center)
+            self.view.makeToast("query_summery_toast_message".localiz(), duration: 2.0, position: .center)
         }else if mobileNumberExistancy == -1{
-            self.view.makeToast("Enter a valid mobile number/ membershipID", duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
             newQuerySubmission()
         }
@@ -232,4 +234,18 @@ extension HYT_HelpVC{
         }
         
     }
+    
+    private func localization(){
+        titleLbl.text = "help".localiz()
+        membershipIdLbl.text = "membershipId".localiz()
+        membershipIdTF.placeholder = "membershipId_toast_message".localiz()
+        queryTopicTitleLbl.text = "queryTopic".localiz()
+        selectQueryTopicLbl.text = "queryTopic_toast_message".localiz()
+        querySummeryLbl.text = "query_summery".localiz()
+        querySummeryTF.placeholder = "query_summery_toast_message".localiz()
+        uploadImageLbl.text = "uploadImage".localiz()
+        submitBtn.setTitle("submit".localiz(), for: .normal)
+        uploadImageTitleLbl.text = "upload_a_proof".localiz()
+    }
+    
 }
