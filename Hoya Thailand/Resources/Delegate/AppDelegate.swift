@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         URLCache.shared.diskCapacity = 0
         URLCache.shared.memoryCapacity = 0
         RunLoop.current.run(until: Date(timeIntervalSinceNow: 4.0))
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
         tokendata()
         
         let isUserLoggedIn: Bool = UserDefaults.standard.bool(forKey: "UserLoginStatus")

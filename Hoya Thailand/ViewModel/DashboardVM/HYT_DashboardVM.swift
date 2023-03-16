@@ -49,7 +49,13 @@ class HYT_DashboardVM{
                                 let profileImg = String(result?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "").dropFirst(2)
                                 print("\(PROMO_IMG1)\(profileImg), ProfilImage")
                                 
-                                self.VC?.profileImage.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(profileImg)"), placeholderImage: UIImage(named: "ic_default_img"))
+                                if profileImg.count == 0{
+                                    self.VC?.profileImage.image = UIImage(named: "ic_default_img")
+                                }else{
+                                    self.VC?.profileImage.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(profileImg)"), placeholderImage: UIImage(named: "ic_default_img"))
+                                }
+                                
+                               
                                 UserDefaults.standard.setValue(result?.lstCustomerFeedBackJsonApi?[0].firstName, forKey: "FirstName")
                                 self.VC?.profileNameLbl.text = "Hi, \(result?.lstCustomerFeedBackJsonApi?[0].firstName ?? "") \(result?.lstCustomerFeedBackJsonApi?[0].lastName ?? "")"
                                 self.VC?.membershipId.text = result?.lstCustomerFeedBackJsonApi?[0].loyaltyId ?? ""

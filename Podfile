@@ -12,7 +12,15 @@ pod 'DPOTPView'
 pod 'lottie-ios'
 pod 'Toast-Swift', '~> 5.0.1'
 pod "ImageSlideshow/Alamofire"
- pod 'Alamofire', '~> 4.0'
+pod 'Alamofire', '~> 4.0'
+pod 'LanguageManager-iOS'
+pod 'Firebase/Core'
+
+
+
+
+
+
 
 
   # Pods for Hoya Thailand

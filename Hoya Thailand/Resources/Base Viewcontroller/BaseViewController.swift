@@ -82,6 +82,14 @@ class BaseViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "\(buttonalert)", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func lottieAnimation( animationView: LottieAnimationView){
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.5
+        animationView.play()
+
+    }
 
 
 }

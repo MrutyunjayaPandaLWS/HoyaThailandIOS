@@ -5437,19 +5437,19 @@ UmFuZ2UgOiALA
                                 <rect key="frame" x="24" y="236" width="345" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-sp-cTL">
-                                        <rect key="frame" x="120" y="30" width="105.33333333333331" height="16"/>
+                                        <rect key="frame" x="125.66666666666666" y="30" width="94" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="16"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invoice Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5V-fz-VOZ">
-                                        <rect key="frame" x="33.999999999999993" y="68" width="92.333333333333314" height="12"/>
+                                        <rect key="frame" x="34" y="70.666666666666686" width="85" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-GF-ucO">
-                                        <rect key="frame" x="20" y="90" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="94.666666666666686" width="305" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter invoice number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-S7-ysw">
                                                 <rect key="frame" x="20" y="0.0" width="285" height="40"/>
@@ -5472,13 +5472,13 @@ UmFuZ2UgOiALA
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-nD-k3z">
-                                        <rect key="frame" x="33.999999999999993" y="142" width="92.333333333333314" height="12"/>
+                                        <rect key="frame" x="34" y="146.66666666666669" width="85" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-BW-e1Y">
-                                        <rect key="frame" x="20" y="164" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="170.66666666666669" width="305" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter product name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAs-9P-8J7">
                                                 <rect key="frame" x="20" y="0.0" width="285" height="40"/>
@@ -5501,13 +5501,13 @@ UmFuZ2UgOiALA
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-2t-YO9">
-                                        <rect key="frame" x="33.999999999999993" y="216" width="92.333333333333314" height="12"/>
+                                        <rect key="frame" x="34" y="222.66666666666669" width="85" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGe-M0-hhd">
-                                        <rect key="frame" x="20" y="238" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="246.66666666666669" width="305" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-hW-5MM">
                                                 <rect key="frame" x="20" y="0.0" width="285" height="40"/>
@@ -5643,29 +5643,36 @@ UmFuZ2UgOiALA
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-aI-yMc">
-                                <rect key="frame" x="20" y="219" width="353" height="483"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="613"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-PY-pEy" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="71.666666666666686" y="241" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="116297-scanner"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWC-Ik-wd6">
                                 <rect key="frame" x="30" y="139" width="333" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az0-hY-Ll1">
-                                        <rect key="frame" x="10" y="10" width="313" height="16"/>
+                                        <rect key="frame" x="10" y="10" width="313" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="16"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GCv-AM-Eez">
-                                        <rect key="frame" x="84.333333333333329" y="36" width="164.33333333333337" height="12"/>
+                                        <rect key="frame" x="95.666666666666671" y="34" width="141.66666666666663" height="14"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validity until :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nf-p3-2UJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="14"/>
                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00-00-0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veK-re-pAu">
-                                                <rect key="frame" x="89.333333333333329" y="0.0" width="74.999999999999986" height="12"/>
+                                                <rect key="frame" x="78.666666666666671" y="0.0" width="63.000000000000014" height="14"/>
                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5789,7 +5796,7 @@ UmFuZ2UgOiALA
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-PK-PtC">
-                                        <rect key="frame" x="54" y="23" width="329" height="14"/>
+                                        <rect key="frame" x="54" y="22" width="329" height="16.333333333333329"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesqueAlt-SemiBold" family="GalanoGrotesqueAlt-SemiBold" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -5811,24 +5818,28 @@ UmFuZ2UgOiALA
                             <constraint firstItem="VGU-FJ-8Rm" firstAttribute="top" secondItem="4d6-8I-rur" secondAttribute="top" id="1Fm-6E-n1h"/>
                             <constraint firstItem="MuA-qx-JKG" firstAttribute="top" secondItem="4d6-8I-rur" secondAttribute="top" id="2EV-up-WTX"/>
                             <constraint firstItem="H9b-gd-u7w" firstAttribute="centerY" secondItem="dvd-AY-Fzv" secondAttribute="centerY" id="49E-BE-jAX"/>
+                            <constraint firstItem="f1q-aI-yMc" firstAttribute="top" secondItem="MuA-qx-JKG" secondAttribute="bottom" id="6mf-b7-vly"/>
                             <constraint firstItem="VGU-FJ-8Rm" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" id="7f2-gE-QdN"/>
+                            <constraint firstItem="lSh-PY-pEy" firstAttribute="width" secondItem="4d6-8I-rur" secondAttribute="width" multiplier="0.636132" id="8Kl-aZ-Dd3"/>
                             <constraint firstItem="MuA-qx-JKG" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" id="C7J-wk-X6y"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="VGU-FJ-8Rm" secondAttribute="trailing" id="Cab-Cd-tAn"/>
                             <constraint firstItem="MuA-qx-JKG" firstAttribute="height" secondItem="4d6-8I-rur" secondAttribute="height" multiplier="0.0790514" id="Fav-8N-4YV"/>
-                            <constraint firstItem="f1q-aI-yMc" firstAttribute="top" secondItem="EWC-Ik-wd6" secondAttribute="bottom" constant="20" id="JHR-Q2-W1D"/>
+                            <constraint firstItem="lSh-PY-pEy" firstAttribute="height" secondItem="4d6-8I-rur" secondAttribute="height" multiplier="0.329381" id="Hdk-f0-DC0"/>
                             <constraint firstItem="Hbk-Ls-vaP" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" constant="20" id="OBM-8D-3x8"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="bottom" secondItem="Hbk-Ls-vaP" secondAttribute="bottom" constant="30" id="QuZ-CW-aae"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="bottom" secondItem="VGU-FJ-8Rm" secondAttribute="bottom" id="VVg-gT-3ff"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="H9b-gd-u7w" secondAttribute="trailing" constant="24" id="Wnd-Ip-wOn"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="Hbk-Ls-vaP" secondAttribute="trailing" constant="20" id="Zbr-De-n2W"/>
+                            <constraint firstItem="lSh-PY-pEy" firstAttribute="centerX" secondItem="dvd-AY-Fzv" secondAttribute="centerX" id="gv0-jW-kUb"/>
                             <constraint firstItem="EWC-Ik-wd6" firstAttribute="top" secondItem="MuA-qx-JKG" secondAttribute="bottom" constant="20" id="hYZ-nH-MQX"/>
                             <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="EWC-Ik-wd6" secondAttribute="trailing" constant="30" id="iaw-MG-MFE"/>
                             <constraint firstItem="MuA-qx-JKG" firstAttribute="trailing" secondItem="4d6-8I-rur" secondAttribute="trailing" id="l3p-vj-A0z"/>
-                            <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="f1q-aI-yMc" secondAttribute="trailing" constant="20" id="njh-MT-udC"/>
+                            <constraint firstItem="4d6-8I-rur" firstAttribute="trailing" secondItem="f1q-aI-yMc" secondAttribute="trailing" id="njh-MT-udC"/>
                             <constraint firstItem="H9b-gd-u7w" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" constant="24" id="o0K-4F-IaV"/>
-                            <constraint firstItem="Hbk-Ls-vaP" firstAttribute="top" secondItem="f1q-aI-yMc" secondAttribute="bottom" constant="40" id="xGR-4e-nxM"/>
+                            <constraint firstItem="lSh-PY-pEy" firstAttribute="centerY" secondItem="dvd-AY-Fzv" secondAttribute="centerY" constant="-60" id="pcf-l8-yQ7"/>
+                            <constraint firstItem="Hbk-Ls-vaP" firstAttribute="top" secondItem="f1q-aI-yMc" secondAttribute="bottom" constant="10" id="xGR-4e-nxM"/>
                             <constraint firstItem="EWC-Ik-wd6" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" constant="30" id="yTn-Jx-iwX"/>
-                            <constraint firstItem="f1q-aI-yMc" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" constant="20" id="yU8-N2-FsH"/>
+                            <constraint firstItem="f1q-aI-yMc" firstAttribute="leading" secondItem="4d6-8I-rur" secondAttribute="leading" id="yU8-N2-FsH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -5845,8 +5856,10 @@ UmFuZ2UgOiALA
                         <outlet property="quantityTF" destination="pp7-hW-5MM" id="mJy-UB-Mfy"/>
                         <outlet property="scanBarcodeView" destination="f1q-aI-yMc" id="ned-lE-iXI"/>
                         <outlet property="scanCodeLbl" destination="XYp-Hu-ewg" id="9QQ-DX-hfs"/>
+                        <outlet property="scannerAnimationView" destination="lSh-PY-pEy" id="lKj-sm-AvG"/>
                         <outlet property="submitBtn" destination="lRr-ph-RxS" id="fQT-Uw-qiR"/>
                         <outlet property="uploadCodeLbl" destination="GNm-uw-dwi" id="gEz-ch-yRk"/>
+                        <outlet property="userDetailsView" destination="EWC-Ik-wd6" id="ft8-tT-917"/>
                         <outlet property="validityDateLbl" destination="veK-re-pAu" id="p6K-XZ-h4d"/>
                         <outlet property="validityDateTitle" destination="5Nf-p3-2UJ" id="vcy-lG-0a0"/>
                         <outlet property="viewTitle" destination="zfL-PK-PtC" id="yrp-jm-elk"/>
@@ -7491,7 +7504,7 @@ UmFuZ2UgOiALA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8e-I4-dGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7915.2671755725187" y="660.56338028169023"/>
+            <point key="canvasLocation" x="7993" y="873"/>
         </scene>
         <!--Home-->
         <scene sceneID="Al3-tn-7Nc">

@@ -100,15 +100,14 @@
 		803C912329B06668007B622F /* senderImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803C911729B06667007B622F /* senderImageTableViewCell.xib */; };
 		803C912429B06668007B622F /* senderInfoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803C911829B06667007B622F /* senderInfoImageTableViewCell.xib */; };
 		803C912529B06668007B622F /* senderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C911929B06668007B622F /* senderImageTableViewCell.swift */; };
+		803FE3C929B8947100D6E18E /* LtyPrgBaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FE3C729B8947100D6E18E /* LtyPrgBaseDetails.swift */; };
+		803FE3CA29B8947100D6E18E /* PromotionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FE3C829B8947100D6E18E /* PromotionListModel.swift */; };
 		804190F829ADBE5400CDFFA5 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804190F629ADBE5300CDFFA5 /* ProductListModel.swift */; };
 		804190F929ADBE5400CDFFA5 /* LsrProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804190F729ADBE5400CDFFA5 /* LsrProductDetails.swift */; };
 		804190FD29ADBFF100CDFFA5 /* HYT_PromotionDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804190FC29ADBFF100CDFFA5 /* HYT_PromotionDetailsVM.swift */; };
 		8041910329ADD46000CDFFA5 /* PointExpireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041910129ADD45F00CDFFA5 /* PointExpireModel.swift */; };
 		8041910429ADD46000CDFFA5 /* eVoucherPointExpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041910229ADD45F00CDFFA5 /* eVoucherPointExpModel.swift */; };
 		8041910D29ADDB4700CDFFA5 /* HYT_ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041910C29ADDB4700CDFFA5 /* HYT_ProfileVM.swift */; };
-		8041911129ADE11F00CDFFA5 /* LstCustomerJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041910E29ADE11E00CDFFA5 /* LstCustomerJson.swift */; };
-		8041911229ADE11F00CDFFA5 /* GeneralInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041910F29ADE11F00CDFFA5 /* GeneralInfoModel.swift */; };
-		8041911329ADE11F00CDFFA5 /* LstCustomerIdentityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041911029ADE11F00CDFFA5 /* LstCustomerIdentityInfo.swift */; };
 		8041911629ADE7EC00CDFFA5 /* ProfileUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041911529ADE7EC00CDFFA5 /* ProfileUpdateModel.swift */; };
 		8041911A29AE002D00CDFFA5 /* OffersBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041911829AE002D00CDFFA5 /* OffersBannerModel.swift */; };
 		8041911B29AE002D00CDFFA5 /* LstPromotionJsonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041911929AE002D00CDFFA5 /* LstPromotionJsonList.swift */; };
@@ -142,8 +141,13 @@
 		8050E3182997AD6A00F8B692 /* HYT_VoucherTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050E3172997AD6A00F8B692 /* HYT_VoucherTVCell.swift */; };
 		8059197E299BB59600F7B45B /* HYT_LanguageDropDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059197D299BB59600F7B45B /* HYT_LanguageDropDownVC.swift */; };
 		80591980299BB5B300F7B45B /* HYT_LanguageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059197F299BB5B300F7B45B /* HYT_LanguageTVCell.swift */; };
+		8065F5E429BA1411009D1F40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8065F5E629BA1411009D1F40 /* Localizable.strings */; };
+		806CBA2429C1E4F000AC135E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 806CBA2329C1E4F000AC135E /* GoogleService-Info.plist */; };
+		806CBA2729C1ED5300AC135E /* 116297-scanner.json in Resources */ = {isa = PBXBuildFile; fileRef = 806CBA2629C1ED5300AC135E /* 116297-scanner.json */; };
 		806DE2D229AF81E30029DA6A /* HYT_VoucherDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DE2D129AF81E30029DA6A /* HYT_VoucherDetailsVM.swift */; };
 		806DE2D429AF85560029DA6A /* HYT_OtpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DE2D329AF85560029DA6A /* HYT_OtpVM.swift */; };
+		80721F6D29BEDF9400010156 /* HYT_OffersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80721F6C29BEDF9400010156 /* HYT_OffersVM.swift */; };
+		80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80721F6F29BEE96900010156 /* ProfileIamgeUpadate.swift */; };
 		8072F517299B551A0057AF9E /* HYT_RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072F516299B551A0057AF9E /* HYT_RegisterVC.swift */; };
 		808317632997B820000374DA /* HYT_VoucherDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808317622997B820000374DA /* HYT_VoucherDetailsVC.swift */; };
 		808317662997BB02000374DA /* HYT_ClaimDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808317652997BB02000374DA /* HYT_ClaimDetailsVC.swift */; };
@@ -153,6 +157,11 @@
 		80866495299617C2008EAEB7 /* HYT_MyEarningsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80866494299617C2008EAEB7 /* HYT_MyEarningsVC.swift */; };
 		8086649829961854008EAEB7 /* HYT_MyEarningsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086649629961854008EAEB7 /* HYT_MyEarningsTVCell.swift */; };
 		8086649929961854008EAEB7 /* HYT_MyEarningsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8086649729961854008EAEB7 /* HYT_MyEarningsTVCell.xib */; };
+		808DFBE129BC436F004960EC /* LstCustomerJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBDE29BC436D004960EC /* LstCustomerJson.swift */; };
+		808DFBE229BC436F004960EC /* LstCustomerOfficalInfoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */; };
+		808DFBE329BC436F004960EC /* GeneralInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBE029BC436F004960EC /* GeneralInfoModel.swift */; };
+		808DFBEE29BC4D6E004960EC /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBEC29BC4D6D004960EC /* VoucherModel.swift */; };
+		808DFBEF29BC4D6E004960EC /* ObjCatalogueList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */; };
 		809142BE299673A800212358 /* HYT_MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809142BD299673A800212358 /* HYT_MyProfileVC.swift */; };
 		809142C12996788F00212358 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809142C02996788F00212358 /* Colors.swift */; };
 		80979E99299CB7FF0029948E /* UiViewControllerExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80979E98299CB7FF0029948E /* UiViewControllerExtenssion.swift */; };
@@ -185,12 +194,8 @@
 		80B940942997718100CC22FA /* HYT_CreateQueryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B940932997718100CC22FA /* HYT_CreateQueryVC.swift */; };
 		80BAFFD629964D1200984104 /* HYT_MyStaffTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAFFD529964D1200984104 /* HYT_MyStaffTVCell.swift */; };
 		80C4895A29ACA9DE006AA8C7 /* HYT_MyRedemptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4895929ACA9DE006AA8C7 /* HYT_MyRedemptionVM.swift */; };
-		80C4896329ACCFAF006AA8C7 /* LtyPrgBaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4896129ACCFAE006AA8C7 /* LtyPrgBaseDetails.swift */; };
-		80C4896429ACCFAF006AA8C7 /* PromotionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4896229ACCFAF006AA8C7 /* PromotionListModel.swift */; };
 		80C4896729ACD028006AA8C7 /* HYT_PromotionListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4896629ACD028006AA8C7 /* HYT_PromotionListVM.swift */; };
 		80C4896E29ACDCF8006AA8C7 /* HYT_VoucherListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4896D29ACDCF8006AA8C7 /* HYT_VoucherListVM.swift */; };
-		80C4897029ACDDB0006AA8C7 /* VoucherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4896F29ACDDB0006AA8C7 /* VoucherModels.swift */; };
-		80C4897429ACDDE5006AA8C7 /* ObjCatalogueList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4897229ACDDE4006AA8C7 /* ObjCatalogueList1.swift */; };
 		80D1E9EE2996597600BEA77B /* HYT_HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1E9ED2996597600BEA77B /* HYT_HelpVC.swift */; };
 		80D7209329B071490065A947 /* ChatListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7209129B071490065A947 /* ChatListModels.swift */; };
 		80D7209429B071490065A947 /* ObjQueryResponseJsonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7209229B071490065A947 /* ObjQueryResponseJsonList.swift */; };
@@ -316,15 +321,14 @@
 		803C911729B06667007B622F /* senderImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = senderImageTableViewCell.xib; sourceTree = "<group>"; };
 		803C911829B06667007B622F /* senderInfoImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = senderInfoImageTableViewCell.xib; sourceTree = "<group>"; };
 		803C911929B06668007B622F /* senderImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = senderImageTableViewCell.swift; sourceTree = "<group>"; };
+		803FE3C729B8947100D6E18E /* LtyPrgBaseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LtyPrgBaseDetails.swift; sourceTree = "<group>"; };
+		803FE3C829B8947100D6E18E /* PromotionListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionListModel.swift; sourceTree = "<group>"; };
 		804190F629ADBE5300CDFFA5 /* ProductListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
 		804190F729ADBE5400CDFFA5 /* LsrProductDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LsrProductDetails.swift; sourceTree = "<group>"; };
 		804190FC29ADBFF100CDFFA5 /* HYT_PromotionDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_PromotionDetailsVM.swift; sourceTree = "<group>"; };
 		8041910129ADD45F00CDFFA5 /* PointExpireModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointExpireModel.swift; sourceTree = "<group>"; };
 		8041910229ADD45F00CDFFA5 /* eVoucherPointExpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eVoucherPointExpModel.swift; sourceTree = "<group>"; };
 		8041910C29ADDB4700CDFFA5 /* HYT_ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_ProfileVM.swift; sourceTree = "<group>"; };
-		8041910E29ADE11E00CDFFA5 /* LstCustomerJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerJson.swift; sourceTree = "<group>"; };
-		8041910F29ADE11F00CDFFA5 /* GeneralInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoModel.swift; sourceTree = "<group>"; };
-		8041911029ADE11F00CDFFA5 /* LstCustomerIdentityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerIdentityInfo.swift; sourceTree = "<group>"; };
 		8041911529ADE7EC00CDFFA5 /* ProfileUpdateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUpdateModel.swift; sourceTree = "<group>"; };
 		8041911829AE002D00CDFFA5 /* OffersBannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersBannerModel.swift; sourceTree = "<group>"; };
 		8041911929AE002D00CDFFA5 /* LstPromotionJsonList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstPromotionJsonList.swift; sourceTree = "<group>"; };
@@ -358,8 +362,16 @@
 		8050E3172997AD6A00F8B692 /* HYT_VoucherTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherTVCell.swift; sourceTree = "<group>"; };
 		8059197D299BB59600F7B45B /* HYT_LanguageDropDownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_LanguageDropDownVC.swift; sourceTree = "<group>"; };
 		8059197F299BB5B300F7B45B /* HYT_LanguageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_LanguageTVCell.swift; sourceTree = "<group>"; };
+		8065F5E229BA1408009D1F40 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
+		8065F5E329BA140E009D1F40 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8065F5E529BA1411009D1F40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8065F5E729BA1420009D1F40 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		806CBA2329C1E4F000AC135E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		806CBA2629C1ED5300AC135E /* 116297-scanner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "116297-scanner.json"; sourceTree = "<group>"; };
 		806DE2D129AF81E30029DA6A /* HYT_VoucherDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherDetailsVM.swift; sourceTree = "<group>"; };
 		806DE2D329AF85560029DA6A /* HYT_OtpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_OtpVM.swift; sourceTree = "<group>"; };
+		80721F6C29BEDF9400010156 /* HYT_OffersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_OffersVM.swift; sourceTree = "<group>"; };
+		80721F6F29BEE96900010156 /* ProfileIamgeUpadate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileIamgeUpadate.swift; sourceTree = "<group>"; };
 		8072F516299B551A0057AF9E /* HYT_RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RegisterVC.swift; sourceTree = "<group>"; };
 		808317622997B820000374DA /* HYT_VoucherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherDetailsVC.swift; sourceTree = "<group>"; };
 		808317652997BB02000374DA /* HYT_ClaimDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_ClaimDetailsVC.swift; sourceTree = "<group>"; };
@@ -369,6 +381,11 @@
 		80866494299617C2008EAEB7 /* HYT_MyEarningsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyEarningsVC.swift; sourceTree = "<group>"; };
 		8086649629961854008EAEB7 /* HYT_MyEarningsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyEarningsTVCell.swift; sourceTree = "<group>"; };
 		8086649729961854008EAEB7 /* HYT_MyEarningsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HYT_MyEarningsTVCell.xib; sourceTree = "<group>"; };
+		808DFBDE29BC436D004960EC /* LstCustomerJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerJson.swift; sourceTree = "<group>"; };
+		808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerOfficalInfoJson.swift; sourceTree = "<group>"; };
+		808DFBE029BC436F004960EC /* GeneralInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoModel.swift; sourceTree = "<group>"; };
+		808DFBEC29BC4D6D004960EC /* VoucherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
+		808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjCatalogueList1.swift; path = ../../../../../../Downloads/codegen_640c15d56906f/ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		809142BD299673A800212358 /* HYT_MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyProfileVC.swift; sourceTree = "<group>"; };
 		809142C02996788F00212358 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		80979E98299CB7FF0029948E /* UiViewControllerExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtenssion.swift; sourceTree = "<group>"; };
@@ -401,12 +418,8 @@
 		80B940932997718100CC22FA /* HYT_CreateQueryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_CreateQueryVC.swift; sourceTree = "<group>"; };
 		80BAFFD529964D1200984104 /* HYT_MyStaffTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyStaffTVCell.swift; sourceTree = "<group>"; };
 		80C4895929ACA9DE006AA8C7 /* HYT_MyRedemptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyRedemptionVM.swift; sourceTree = "<group>"; };
-		80C4896129ACCFAE006AA8C7 /* LtyPrgBaseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LtyPrgBaseDetails.swift; sourceTree = "<group>"; };
-		80C4896229ACCFAF006AA8C7 /* PromotionListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionListModel.swift; sourceTree = "<group>"; };
 		80C4896629ACD028006AA8C7 /* HYT_PromotionListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_PromotionListVM.swift; sourceTree = "<group>"; };
 		80C4896D29ACDCF8006AA8C7 /* HYT_VoucherListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherListVM.swift; sourceTree = "<group>"; };
-		80C4896F29ACDDB0006AA8C7 /* VoucherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModels.swift; sourceTree = "<group>"; };
-		80C4897229ACDDE4006AA8C7 /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		80D1E9ED2996597600BEA77B /* HYT_HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_HelpVC.swift; sourceTree = "<group>"; };
 		80D7209129B071490065A947 /* ChatListModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListModels.swift; sourceTree = "<group>"; };
 		80D7209229B071490065A947 /* ObjQueryResponseJsonList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjQueryResponseJsonList.swift; sourceTree = "<group>"; };
@@ -796,20 +809,10 @@
 		8041910529ADDA7300CDFFA5 /* ProfileModels */ = {
 			isa = PBXGroup;
 			children = (
+				805660F429BC409B00D0799C /* GenerelInfoModels */,
 				8041911429ADE7DC00CDFFA5 /* ProfileUpdate */,
-				8041910629ADDA7E00CDFFA5 /* GeneralInfoModels */,
 			);
 			path = ProfileModels;
-			sourceTree = "<group>";
-		};
-		8041910629ADDA7E00CDFFA5 /* GeneralInfoModels */ = {
-			isa = PBXGroup;
-			children = (
-				8041910F29ADE11F00CDFFA5 /* GeneralInfoModel.swift */,
-				8041911029ADE11F00CDFFA5 /* LstCustomerIdentityInfo.swift */,
-				8041910E29ADE11E00CDFFA5 /* LstCustomerJson.swift */,
-			);
-			path = GeneralInfoModels;
 			sourceTree = "<group>";
 		};
 		8041910B29ADDB2F00CDFFA5 /* ProfileVM */ = {
@@ -973,6 +976,16 @@
 			path = "e-Voucher";
 			sourceTree = "<group>";
 		};
+		805660F429BC409B00D0799C /* GenerelInfoModels */ = {
+			isa = PBXGroup;
+			children = (
+				808DFBE029BC436F004960EC /* GeneralInfoModel.swift */,
+				808DFBDE29BC436D004960EC /* LstCustomerJson.swift */,
+				808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */,
+			);
+			path = GenerelInfoModels;
+			sourceTree = "<group>";
+		};
 		8059197C299BB54100F7B45B /* Language DropDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +993,38 @@
 				8059197F299BB5B300F7B45B /* HYT_LanguageTVCell.swift */,
 			);
 			path = "Language DropDown";
+			sourceTree = "<group>";
+		};
+		8065F5CC29BA0D6A009D1F40 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				8065F5E629BA1411009D1F40 /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		806CBA2529C1ED3400AC135E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				806CBA2629C1ED5300AC135E /* 116297-scanner.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		80721F6B29BEDF7400010156 /* OffersVM */ = {
+			isa = PBXGroup;
+			children = (
+				80721F6C29BEDF9400010156 /* HYT_OffersVM.swift */,
+			);
+			path = OffersVM;
+			sourceTree = "<group>";
+		};
+		80721F6E29BEE95600010156 /* ProfileImageUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				80721F6F29BEE96900010156 /* ProfileIamgeUpadate.swift */,
+			);
+			path = ProfileImageUpdate;
 			sourceTree = "<group>";
 		};
 		8072F515299B54D20057AF9E /* Register */ = {
@@ -1215,8 +1260,8 @@
 		80C4896029ACCF8E006AA8C7 /* PromotionListModel */ = {
 			isa = PBXGroup;
 			children = (
-				80C4896229ACCFAF006AA8C7 /* PromotionListModel.swift */,
-				80C4896129ACCFAE006AA8C7 /* LtyPrgBaseDetails.swift */,
+				803FE3C829B8947100D6E18E /* PromotionListModel.swift */,
+				803FE3C729B8947100D6E18E /* LtyPrgBaseDetails.swift */,
 			);
 			path = PromotionListModel;
 			sourceTree = "<group>";
@@ -1241,9 +1286,9 @@
 		80C4897129ACDDD3006AA8C7 /* VoucherModels */ = {
 			isa = PBXGroup;
 			children = (
+				808DFBEC29BC4D6D004960EC /* VoucherModel.swift */,
+				808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */,
 				8041910029ADD44F00CDFFA5 /* Point Expire */,
-				80C4896F29ACDDB0006AA8C7 /* VoucherModels.swift */,
-				80C4897229ACDDE4006AA8C7 /* ObjCatalogueList1.swift */,
 			);
 			path = VoucherModels;
 			sourceTree = "<group>";
@@ -1314,6 +1359,8 @@
 		80E20533299B97E300E3327F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				806CBA2529C1ED3400AC135E /* Animation */,
+				8065F5CC29BA0D6A009D1F40 /* Language */,
 				804667A529A8B15B006B70A9 /* Base Viewcontroller */,
 				80448E8029A8996300EBD7BC /* Networks */,
 				80E20542299B9C6B00E3327F /* Database */,
@@ -1444,6 +1491,7 @@
 				80FABD592994F7DA00061E01 /* Models */,
 				80FABD4D2994F07200061E01 /* View */,
 				80FABD402994EFA000061E01 /* Assets.xcassets */,
+				806CBA2329C1E4F000AC135E /* GoogleService-Info.plist */,
 				80FABD452994EFA000061E01 /* Info.plist */,
 			);
 			path = "Hoya Thailand";
@@ -1493,6 +1541,7 @@
 		80FABD582994F7D100061E01 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				80721F6B29BEDF7400010156 /* OffersVM */,
 				80B6554D29AA320400E474B9 /* DashboardVM */,
 				80D7209A29B07FDA0065A947 /* SupportVM */,
 				8039AE8129AF2448003E8281 /* RegisterOtpVM */,
@@ -1518,6 +1567,7 @@
 		80FABD592994F7DA00061E01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				80721F6E29BEE95600010156 /* ProfileImageUpdate */,
 				80D7208F29B0712A0065A947 /* Chat Models */,
 				80F8CAF329AF478400FEE039 /* Voucher Redeemptions */,
 				8039AE8429AF302A003E8281 /* Register */,
@@ -1602,6 +1652,7 @@
 			knownRegions = (
 				en,
 				Base,
+				th,
 			);
 			mainGroup = 80FABD282994EF9B00061E01;
 			productRefGroup = 80FABD322994EF9B00061E01 /* Products */;
@@ -1653,10 +1704,13 @@
 				8011A6522995046C0033E740 /* Galano Grotesque Light.otf in Resources */,
 				803C912329B06668007B622F /* senderImageTableViewCell.xib in Resources */,
 				8011A6782995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf in Resources */,
+				8065F5E429BA1411009D1F40 /* Localizable.strings in Resources */,
 				8011A6622995046C0033E740 /* Galano Grotesque Alt Italic.otf in Resources */,
+				806CBA2429C1E4F000AC135E /* GoogleService-Info.plist in Resources */,
 				8011A6752995046C0033E740 /* Galano Grotesque Italic.otf in Resources */,
 				8011A6792995046C0033E740 /* Galano Grotesque Alt Semi Bold Italic.otf in Resources */,
 				8011A6502995046C0033E740 /* Galano Grotesque Alt Semi Bold.otf in Resources */,
+				806CBA2729C1ED5300AC135E /* 116297-scanner.json in Resources */,
 				803C912029B06668007B622F /* senderInfoTableViewCell.xib in Resources */,
 				8011A6632995046C0033E740 /* Galano Grotesque Extra Bold Italic.otf in Resources */,
 				8086649929961854008EAEB7 /* HYT_MyEarningsTVCell.xib in Resources */,
@@ -1730,6 +1784,7 @@
 				80FABD4C2994F06A00061E01 /* HYT_WelcomeVC.swift in Sources */,
 				80448E8A29A899FD00EBD7BC /* Reachability.swift in Sources */,
 				8041912829AE198A00CDFFA5 /* HYT_S_PromotionDetailsVM.swift in Sources */,
+				808DFBE129BC436F004960EC /* LstCustomerJson.swift in Sources */,
 				800CE67429A9CB08005CC793 /* SalsRepresentativeModel.swift in Sources */,
 				8007D11829A4AB6C0042CA2D /* HYT_DropDownTVCell.swift in Sources */,
 				803C911D29B06668007B622F /* senderInfoTableViewCell.swift in Sources */,
@@ -1758,18 +1813,19 @@
 				80B6554929AA2B2300E474B9 /* DashBoardModels.swift in Sources */,
 				80F0147B2997919F000BD64C /* HYT_PromotionListVC.swift in Sources */,
 				804190F929ADBE5400CDFFA5 /* LsrProductDetails.swift in Sources */,
+				808DFBEF29BC4D6E004960EC /* ObjCatalogueList1.swift in Sources */,
 				80591980299BB5B300F7B45B /* HYT_LanguageTVCell.swift in Sources */,
 				80E2053D299B98D400E3327F /* ImageExtension.swift in Sources */,
 				80B6554729AA2B2300E474B9 /* ObjCustomerDashboardList.swift in Sources */,
 				80E2054C299BACEF00E3327F /* HYT_PointsExpiryReportTVCell.swift in Sources */,
 				8039AE8329AF2473003E8281 /* HYT_RegisterOtpVM.swift in Sources */,
+				808DFBE329BC436F004960EC /* GeneralInfoModel.swift in Sources */,
 				8039AE8729AF3051003E8281 /* RegistrationModel.swift in Sources */,
 				804667A729A8B167006B70A9 /* BaseViewController.swift in Sources */,
 				800393AC29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift in Sources */,
 				800A8B3429A8D63C00D3A39C /* StoreId_Existancy.swift in Sources */,
 				80845AA929974F1D00C7846F /* HYT_OffersVC.swift in Sources */,
 				800A8B3D29A8E93000D3A39C /* UserList.swift in Sources */,
-				8041911229ADE11F00CDFFA5 /* GeneralInfoModel.swift in Sources */,
 				8041910329ADD46000CDFFA5 /* PointExpireModel.swift in Sources */,
 				809FAA23299B707500783420 /* HYT_DashboardVC.swift in Sources */,
 				80448E9629A89A1B00EBD7BC /* ServiceError.swift in Sources */,
@@ -1780,14 +1836,13 @@
 				806DE2D429AF85560029DA6A /* HYT_OtpVM.swift in Sources */,
 				803C910D29B06636007B622F /* HR_Chatvc2ViewController.swift in Sources */,
 				804190FD29ADBFF100CDFFA5 /* HYT_PromotionDetailsVM.swift in Sources */,
-				80C4897029ACDDB0006AA8C7 /* VoucherModels.swift in Sources */,
 				803C911A29B06668007B622F /* senderInfoImageTableViewCell.swift in Sources */,
 				804361AC299C999000F2C741 /* HYT_DashboardMenuTVCell.swift in Sources */,
 				8007D11629A4AB4A0042CA2D /* HYT_DropDownVC.swift in Sources */,
-				80C4896329ACCFAF006AA8C7 /* LtyPrgBaseDetails.swift in Sources */,
 				800393AE29A79E0F00542450 /* HYT_S_PromotionDetailsTVCell.swift in Sources */,
 				8072F517299B551A0057AF9E /* HYT_RegisterVC.swift in Sources */,
 				80448E9829A89A1B00EBD7BC /* RequestMethod.swift in Sources */,
+				808DFBEE29BC4D6E004960EC /* VoucherModel.swift in Sources */,
 				80C4895A29ACA9DE006AA8C7 /* HYT_MyRedemptionVM.swift in Sources */,
 				800A8B3829A8D89C00D3A39C /* HYT_RegisterVM.swift in Sources */,
 				80E59A6929964000002DC995 /* HYT_FilterVC.swift in Sources */,
@@ -1812,9 +1867,9 @@
 				80E2053E299B98D400E3327F /* GrandientExtension.swift in Sources */,
 				80448EA029A89FA700EBD7BC /* LanguageModels.swift in Sources */,
 				8007D11B29A4AB980042CA2D /* HYT_DatePickerVC.swift in Sources */,
-				8041911329ADE11F00CDFFA5 /* LstCustomerIdentityInfo.swift in Sources */,
 				80448E8229A899B300EBD7BC /* ApiUrls.swift in Sources */,
 				80F8CAF529AF47AE00FEE039 /* VoucherRedeemptionModel.swift in Sources */,
+				80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */,
 				800CE67329A9CB08005CC793 /* LstAttributesDetails3.swift in Sources */,
 				800CE67C29A9DDCD005CC793 /* String+Extenssion.swift in Sources */,
 				809142C12996788F00212358 /* Colors.swift in Sources */,
@@ -1840,6 +1895,7 @@
 				80448E9229A89A1B00EBD7BC /* RestAPI_Requests.swift in Sources */,
 				804667AD29A8C7BD006B70A9 /* HYT_DropdownVM.swift in Sources */,
 				80B6554A29AA2B2300E474B9 /* LstPromotionListJsonApi.swift in Sources */,
+				808DFBE229BC436F004960EC /* LstCustomerOfficalInfoJson.swift in Sources */,
 				8039AE7829AF08CC003E8281 /* RetriveActorIdModel.swift in Sources */,
 				8041912029AE072100CDFFA5 /* LstCustomerEntityMapping.swift in Sources */,
 				8039AE7F29AF184E003E8281 /* IdcardValidationModel.swift in Sources */,
@@ -1854,8 +1910,9 @@
 				8050E3182997AD6A00F8B692 /* HYT_VoucherTVCell.swift in Sources */,
 				80448E9429A89A1B00EBD7BC /* URLMethods.swift in Sources */,
 				80448E9329A89A1B00EBD7BC /* URLExtension.swift in Sources */,
-				8041911129ADE11F00CDFFA5 /* LstCustomerJson.swift in Sources */,
+				803FE3C929B8947100D6E18E /* LtyPrgBaseDetails.swift in Sources */,
 				80B940912997633000CC22FA /* HYT_QueryTVCell.swift in Sources */,
+				803FE3CA29B8947100D6E18E /* PromotionListModel.swift in Sources */,
 				80E20540299B98D400E3327F /* NotificationExtension.swift in Sources */,
 				80B9408F299762FF00CC22FA /* HYT_QueryVC.swift in Sources */,
 				80448EA129A89FA700EBD7BC /* LstAttributesDetails.swift in Sources */,
@@ -1872,13 +1929,12 @@
 				80FABD352994EF9B00061E01 /* AppDelegate.swift in Sources */,
 				800CE66E29A9C244005CC793 /* LstAttributesDetails2.swift in Sources */,
 				80FABD372994EF9B00061E01 /* SceneDelegate.swift in Sources */,
-				80C4896429ACCFAF006AA8C7 /* PromotionListModel.swift in Sources */,
 				80448E9729A89A1B00EBD7BC /* URLRequest.swift in Sources */,
 				80B6553F29AA1ABC00E474B9 /* HYT_HelpVM.swift in Sources */,
+				80721F6D29BEDF9400010156 /* HYT_OffersVM.swift in Sources */,
 				802B185429AF6D6B001FE248 /* MyRedeemptionModel.swift in Sources */,
 				8059197E299BB59600F7B45B /* HYT_LanguageDropDownVC.swift in Sources */,
 				800CE66F29A9C244005CC793 /* RoleListingModels.swift in Sources */,
-				80C4897429ACDDE5006AA8C7 /* ObjCatalogueList1.swift in Sources */,
 				80FABD3F2994EF9B00061E01 /* Hoya_Thailand.xcdatamodeld in Sources */,
 				8041911F29AE072100CDFFA5 /* MyStaffListModel.swift in Sources */,
 				80866495299617C2008EAEB7 /* HYT_MyEarningsVC.swift in Sources */,
@@ -1888,10 +1944,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8065F5E629BA1411009D1F40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8065F5E529BA1411009D1F40 /* en */,
+				8065F5E729BA1420009D1F40 /* th */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		80FABD3A2994EF9B00061E01 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				80FABD3B2994EF9B00061E01 /* Base */,
+				8065F5E229BA1408009D1F40 /* th */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1900,6 +1966,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				80FABD432994EFA000061E01 /* Base */,
+				8065F5E329BA140E009D1F40 /* th */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1911,6 +1978,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1971,6 +2039,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2027,11 +2096,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hoya Thailand/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scanning QR Codes requires Camera access for redeeming points.Allow Camera access?";
@@ -2050,7 +2118,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thailand_DEV;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2063,11 +2130,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hoya Thailand/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scanning QR Codes requires Camera access for redeeming points.Allow Camera access?";
@@ -2086,7 +2152,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thailand_DEV;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
