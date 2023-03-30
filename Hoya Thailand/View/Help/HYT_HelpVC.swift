@@ -56,11 +56,17 @@ var VM = HYT_HelpVM()
     }
 
     @IBAction func didTappedSelectQueryTopicBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LQTopicListVC") as? HYT_LQTopicListVC
-        vc?.modalTransitionStyle = .crossDissolve
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.delegate = self
-        present(vc!, animated: true)
+        if membershipIdTF.text?.count == 0{
+            self.view.makeToast("Enter membershipID",duration: 2.0,position: .center)
+        }else{
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LQTopicListVC") as? HYT_LQTopicListVC
+            vc?.modalTransitionStyle = .crossDissolve
+            vc?.modalPresentationStyle = .overFullScreen
+            vc?.delegate = self
+            present(vc!, animated: true)
+        }
+       
+
     }
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
@@ -135,7 +141,7 @@ var VM = HYT_HelpVM()
                 "ImageUrl": strdata1,
                 "IsQueryFromMobile": "true",
                 "LoyaltyID": membershipIdTF.text ?? "",
-                "QueryDetails": "",
+                "QueryDetails": querySummeryTF.text ?? "",
                 "QuerySummary": querySummeryTF.text ?? "",
                 "SourceType": "1"
 

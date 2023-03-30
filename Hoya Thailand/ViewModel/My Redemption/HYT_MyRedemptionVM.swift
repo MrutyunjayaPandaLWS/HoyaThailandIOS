@@ -29,11 +29,9 @@ class HYT_MyRedemptionVM{
                                 self.VC?.myRedeemptionTableView.reloadData()
                                 self.VC?.stopLoading()
                             }else{
-                                self.VC?.emptyMessageLbl.isHidden = false
                                 self.VC?.noOfElement = 0
                                 self.VC?.startIndex = 1
                                 self.VC?.myRedeemptionTableView.reloadData()
-                                self.VC?.emptyMessageLbl.text = "No data found"
                                 self.VC?.stopLoading()
                             }
                         }

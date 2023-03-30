@@ -118,7 +118,7 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                     "ObjCatalogueDetails": [
                         "CatalogueType": 4
                     ],
-//                    "Vendor":"WOGI"
+                    "Vendor":"WOGI"
             ]
         
         self.VM.voucherListApi(parameter: parameter)

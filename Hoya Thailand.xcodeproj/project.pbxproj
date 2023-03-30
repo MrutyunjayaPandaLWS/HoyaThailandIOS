@@ -95,7 +95,6 @@
 		8039AE8029AF184E003E8281 /* LstAttributesDetails7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE7E29AF184E003E8281 /* LstAttributesDetails7.swift */; };
 		8039AE8329AF2473003E8281 /* HYT_RegisterOtpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE8229AF2473003E8281 /* HYT_RegisterOtpVM.swift */; };
 		8039AE8729AF3051003E8281 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE8629AF3051003E8281 /* RegistrationModel.swift */; };
-		803C011229CECCCC0081B050 /* ObjCatalogueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C010F29CECCC50081B050 /* ObjCatalogueList.swift */; };
 		803C011329CECCCC0081B050 /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011029CECCC90081B050 /* VoucherModel.swift */; };
 		803C011429CECCCC0081B050 /* ObjCatalogueFixedPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */; };
 		803C011829CEDB140081B050 /* GeneralInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011529CEDB0E0081B050 /* GeneralInfoModel.swift */; };
@@ -237,6 +236,7 @@
 		80FABD412994EFA000061E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FABD402994EFA000061E01 /* Assets.xcassets */; };
 		80FABD442994EFA000061E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80FABD422994EFA000061E01 /* LaunchScreen.storyboard */; };
 		80FABD4C2994F06A00061E01 /* HYT_WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FABD4B2994F06A00061E01 /* HYT_WelcomeVC.swift */; };
+		84ABCDC929D5832000ADA78E /* ObjCatalogueList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -328,7 +328,6 @@
 		8039AE7E29AF184E003E8281 /* LstAttributesDetails7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstAttributesDetails7.swift; sourceTree = "<group>"; };
 		8039AE8229AF2473003E8281 /* HYT_RegisterOtpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RegisterOtpVM.swift; sourceTree = "<group>"; };
 		8039AE8629AF3051003E8281 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
-		803C010F29CECCC50081B050 /* ObjCatalogueList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjCatalogueList.swift; path = ../../../../../../Downloads/codegen_641e94f03a272/ObjCatalogueList.swift; sourceTree = "<group>"; };
 		803C011029CECCC90081B050 /* VoucherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueFixedPoints.swift; sourceTree = "<group>"; };
 		803C011529CEDB0E0081B050 /* GeneralInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoModel.swift; sourceTree = "<group>"; };
@@ -475,6 +474,7 @@
 		80FABD432994EFA000061E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80FABD452994EFA000061E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80FABD4B2994F06A00061E01 /* HYT_WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_WelcomeVC.swift; sourceTree = "<group>"; };
+		84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		87923BA223A219E37D1A4445 /* Pods-Hoya Thailand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.release.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.release.xcconfig"; sourceTree = "<group>"; };
 		B48E97C8B1B9570E59690D7B /* Pods-Hoya Thailand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.debug.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1375,7 +1375,7 @@
 			children = (
 				803C011029CECCC90081B050 /* VoucherModel.swift */,
 				803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */,
-				803C010F29CECCC50081B050 /* ObjCatalogueList.swift */,
+				84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */,
 				8041910029ADD44F00CDFFA5 /* Point Expire */,
 			);
 			path = VoucherModels;
@@ -1877,6 +1877,7 @@
 				800A8B3C29A8E93000D3A39C /* LoginSubmissionModel.swift in Sources */,
 				80FABD4C2994F06A00061E01 /* HYT_WelcomeVC.swift in Sources */,
 				802122F529D2F90800B72AEF /* SalesReturnValidationModel.swift in Sources */,
+				84ABCDC929D5832000ADA78E /* ObjCatalogueList1.swift in Sources */,
 				80448E8A29A899FD00EBD7BC /* Reachability.swift in Sources */,
 				8041912829AE198A00CDFFA5 /* HYT_S_PromotionDetailsVM.swift in Sources */,
 				800CE67429A9CB08005CC793 /* SalsRepresentativeModel.swift in Sources */,
@@ -1966,7 +1967,6 @@
 				80448E8229A899B300EBD7BC /* ApiUrls.swift in Sources */,
 				80F8CAF529AF47AE00FEE039 /* VoucherRedeemptionModel.swift in Sources */,
 				80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */,
-				803C011229CECCCC0081B050 /* ObjCatalogueList.swift in Sources */,
 				800CE67329A9CB08005CC793 /* LstAttributesDetails3.swift in Sources */,
 				800CE67C29A9DDCD005CC793 /* String+Extenssion.swift in Sources */,
 				809142C12996788F00212358 /* Colors.swift in Sources */,

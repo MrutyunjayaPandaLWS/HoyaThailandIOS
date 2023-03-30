@@ -9311,7 +9311,7 @@ UmFuZ2UgOiALA
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lje-Hm-EJe">
                                 <rect key="frame" x="0.0" y="765.33333333333337" width="393" height="52.666666666666629"/>
                                 <subviews>
-                                    <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Query here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-JB-aSO">
+                                    <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write query details ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-JB-aSO">
                                         <rect key="frame" x="12" y="6" width="330.33333333333331" height="42.666666666666664"/>
                                         <color key="backgroundColor" name="textFieldBackground color"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

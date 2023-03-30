@@ -13,11 +13,13 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     func accept(_ vc: HYT_TermAndConditionsVC) {
         termAndCondBtn.setImage(UIImage(named: "check-box"), for: .normal)
         tcStatus = 1
+        textfieldsStatus = 1
     }
     
     func decline(_ vc: HYT_TermAndConditionsVC) {
         termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
         tcStatus = 0
+        textfieldsStatus = 1
     }
     
     
@@ -54,6 +56,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     var mobileNumberExistancy = -1
     var VM = HYT_LoginVM()
     var tcStatus = 0
+    var textfieldsStatus = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
@@ -69,10 +72,14 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         super.viewWillAppear(animated)
         self.VM.tokendata()
         localization()
-        membershipIdTF.text = ""
-        passwordTF.text = ""
-        termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
-        tcStatus = 0
+        if textfieldsStatus == 1{
+            textfieldsStatus = 1
+        }else{
+            membershipIdTF.text = ""
+            passwordTF.text = ""
+            termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
+            tcStatus = 0
+        }
         
     }
     

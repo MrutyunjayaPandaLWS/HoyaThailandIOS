@@ -38,8 +38,6 @@ class HYT_VoucherListVM{
                             
                         }else{
                             self.VC?.stopLoading()
-                            self.VC?.emptyMessageLbl.isHidden = false
-                            self.VC?.emptyMessageLbl.text = "No data found"
                         }
                     }
                 }else{

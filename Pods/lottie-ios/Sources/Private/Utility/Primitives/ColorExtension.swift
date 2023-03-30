@@ -95,11 +95,14 @@ extension LottieColor: AnyInitializable {
 }
 
 extension LottieColor {
+
   static var clearColor: CGColor {
-    .rgba(0, 0, 0, 0)
+    CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0, 0, 0, 0])!
   }
 
   var cgColorValue: CGColor {
-    .rgba(CGFloat(r), CGFloat(g), CGFloat(b), CGFloat(a))
+    // TODO: Fix color spaces
+    let colorspace = CGColorSpaceCreateDeviceRGB()
+    return CGColor(colorSpace: colorspace, components: [CGFloat(r), CGFloat(g), CGFloat(b), CGFloat(a)]) ?? LottieColor.clearColor
   }
 }

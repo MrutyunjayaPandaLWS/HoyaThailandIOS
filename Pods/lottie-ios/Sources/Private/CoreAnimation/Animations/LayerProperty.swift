@@ -10,32 +10,19 @@ import QuartzCore
 /// Supported key paths and their expected value types are described
 /// at https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html#//apple_ref/doc/uid/TP40004514-CH11-SW1
 /// and https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html
-struct LayerProperty<ValueRepresentation> {
+struct LayerProperty<ValueRepresentation: Equatable> {
   /// The `CALayer` KVC key path that this value should be assigned to
   let caLayerKeypath: String
 
-  /// Whether or not the given value is the default value for this property
+  /// The default value of this property on a `CALayer`
   ///  - If the keyframe values are just equal to the default value,
   ///    then we can improve performance a bit by just not creating
   ///    a CAAnimation (since it would be redundant).
-  let isDefaultValue: (ValueRepresentation?) -> Bool
+  let defaultValue: ValueRepresentation?
 
   /// A description of how this property can be customized dynamically
   /// at runtime using `AnimationView.setValueProvider(_:keypath:)`
   let customizableProperty: CustomizableProperty<ValueRepresentation>?
-}
-
-extension LayerProperty where ValueRepresentation: Equatable {
-  init(
-    caLayerKeypath: String,
-    defaultValue: ValueRepresentation?,
-    customizableProperty: CustomizableProperty<ValueRepresentation>?)
-  {
-    self.init(
-      caLayerKeypath: caLayerKeypath,
-      isDefaultValue: { $0 == defaultValue },
-      customizableProperty: customizableProperty)
-  }
 }
 
 // MARK: - CustomizableProperty
@@ -136,16 +123,6 @@ extension LayerProperty {
     .init(
       caLayerKeypath: #keyPath(CALayer.opacity),
       defaultValue: 1,
-      customizableProperty: nil /* currently unsupported */ )
-  }
-
-  static var transform: LayerProperty<CATransform3D> {
-    .init(
-      caLayerKeypath: #keyPath(CALayer.transform),
-      isDefaultValue: { transform in
-        guard let transform = transform else { return false }
-        return CATransform3DIsIdentity(transform)
-      },
       customizableProperty: nil /* currently unsupported */ )
   }
 }
