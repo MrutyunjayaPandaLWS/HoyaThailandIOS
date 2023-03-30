@@ -10,8 +10,8 @@ import LanguageManager_iOS
 
 class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate,myRedeemptionDelegate {
     func downloadVoucher(item: HYT_MyRedemptionTVCell) {
-        downloadImage(url: item.downloadVoucher, productName: item.productName)
-        
+//        downloadImage(url: item.downloadVoucher, productName: item.productName)
+        downloadImage1(url: item.downloadVoucher, productName: item.productName)
     }
     
     func didTappedFilterBtn(item: HYT_FilterVC) {
@@ -80,7 +80,7 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         
         [
             "ActionType": 52,
-            "ActorId": userId,
+            "ActorId": customerTypeID,
              "StartIndex": startIndex,
             "NoOfRows": 10,
             "ObjCatalogueDetails": [
@@ -164,12 +164,25 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
                 }
                 // move the downloaded file from the temporary location url to your app documents directory
                 do {
-                    try FileManager.default.moveItem(at: location, to: documents.appendingPathComponent(response?.suggestedFilename ?? url.lastPathComponent))
+                    try FileManager.default.moveItem(at: location, to: documents.appendingPathComponent(productName))
                     print("downloaded")
                 } catch {
                     print(error)
                 }
             }.resume()
+        }
+    }
+    
+    func downloadImage1(url: String,productName: String){
+        let imagestring = String(url)
+
+        DispatchQueue.main.async {
+                if let url = URL(string: imagestring),
+                let data = try? Data(contentsOf: url),
+                let image = UIImage(data: data) {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                self.view.makeToast("Voucher is downloaded",duration: 2.0,position: .center)
+            }
         }
     }
     

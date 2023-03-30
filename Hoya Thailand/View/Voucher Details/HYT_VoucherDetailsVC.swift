@@ -48,42 +48,49 @@ class HYT_VoucherDetailsVC: BaseViewController {
     @IBAction func didTappedRedeemBtn(_ sender: UIButton) {
         if amountTF.text?.count == 0{
             self.view.makeToast("Enter amount", duration: 2.0, position: .center)
-        }else if Int(productDetails?.minPoints ?? "0") ?? 0 <= Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.maxPoints ?? "0") ?? 0 >= Int(amountTF.text ?? "") ?? 0{
-            
-            let parameter : [String : Any] = [
-                          "ActionType": 51,
-                          "ActorId": userId,
-                          "CountryCode": "THA",
-                          "CountryID": "\(productDetails?.countryID ?? 0)",
-                          "lstCatalogueMobileApiJson": [
-                            [
-                                "CatalogueId": "\(productDetails?.catalogueID ?? 0)",
-                                "CountryCurrencyCode": "THB",
-                                "DeliveryType": "in_store",
-                                "HasPartialPayment": false,
-                                "NoOfPointsDebit": "\(amountTF.text ?? "0")",
-                                "NoOfQuantity": 1,
-                                "PointsRequired": "\(amountTF.text ?? "0")",
-                                "ProductCode": "\(productDetails?.productCode ?? "0")",
-                                "ProductImage": "\(productDetails?.productImage ?? "")",
-                                "ProductName": "\(productDetails?.productName ?? "")",
-                                "RedemptionDate": currentDate,
-                                "RedemptionId": "\(productDetails?.redemptionID ?? 0)",
-                                "Status": 0,
-                                "VendorId": "\(productDetails?.vendorID ?? 0)",
-                                "VendorName": "WOGI"
-                            ]
-                        ],
-                          "ReceiverName": firstName ?? "",
-                          "ReceiverEmail": customerEmail ?? "",
-                          "ReceiverMobile": customerMobileNumber ?? "",
-                          "SourceMode": 4
-                    
+        }else if Int(productDetails?.min_points ?? "0") ?? 0 <= Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.max_points ?? "0") ?? 0 >= Int(amountTF.text ?? "") ?? 0{
+            var redeemValue = Int(amountTF.text ?? "0")
+            if redeemValue == 0{
+                self.view.makeToast("Redeem value shouldn't be 0", duration: 2.0, position: .center)
+                amountTF.text = ""
+            }else{
+                let parameter : [String : Any] = [
+                              "ActionType": 51,
+                              "ActorId": userId,
+                              "CountryCode": "THA",
+                              "CountryID": "\(productDetails?.countryID ?? 0)",
+                              "lstCatalogueMobileApiJson": [
+                                [
+                                    "CatalogueId": "\(productDetails?.catalogueId ?? 0)",
+                                    "CountryCurrencyCode": "THB",
+                                    "DeliveryType": "in_store",
+                                    "HasPartialPayment": false,
+                                    "NoOfPointsDebit": "\(amountTF.text ?? "0")",
+                                    "NoOfQuantity": 1,
+                                    "PointsRequired": "\(amountTF.text ?? "0")",
+                                    "ProductCode": "\(productDetails?.productCode ?? "0")",
+                                    "ProductImage": "\(productDetails?.productImage ?? "")",
+                                    "ProductName": "\(productDetails?.productName ?? "")",
+                                    "RedemptionDate": currentDate,
+                                    "RedemptionId": "\(productDetails?.redemptionId ?? 0)",
+                                    "Status": 0,
+                                    "VendorId": "\(productDetails?.vendorId ?? 0)",
+                                    "VendorName": "WOGI"
+                                ]
+                            ],
+                              "ReceiverName": firstName ?? "",
+                              "ReceiverEmail": customerEmail ?? "",
+                              "ReceiverMobile": customerMobileNumber ?? "",
+                              "SourceMode": 4
+                        
 
-            ]
-            self.VM.voucherRedeemptionApi(parameter: parameter)
+                ]
+                self.VM.voucherRedeemptionApi(parameter: parameter)
+            }
+
         }else{
             self.view.makeToast("Enter amount between min & max range", duration: 2.0, position: .center)
+            amountTF.text = ""
         }
     }
     
@@ -95,7 +102,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
         voucherDetailsTextView.text = productDetails?.termsCondition
         voucherImage.sd_setImage(with: URL(string: productDetails?.productImage ?? ""), placeholderImage: UIImage(named: "ic_default_img (1)"))
         voucherName.text = productDetails?.productName
-        rangeAmountLbl.text = "\(productDetails?.minPoints ?? "0") - \(productDetails?.maxPoints ?? "0")"
+        rangeAmountLbl.text = "\(productDetails?.min_points ?? "0") - \(productDetails?.max_points ?? "0")"
     }
 
     func localization(){

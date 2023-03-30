@@ -10,7 +10,17 @@ import Toast_Swift
 import UIKit
 import LanguageManager_iOS
 
-class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, LanguageDropDownDelegate,DateSelectedDelegate,UITextFieldDelegate, SuccessMessageDelegate {
+class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, LanguageDropDownDelegate,DateSelectedDelegate,UITextFieldDelegate, SuccessMessageDelegate,CheckBoxSelectDelegate {
+    
+    func accept(_ vc: HYT_TermAndConditionsVC) {
+        termAndCondBtn.setImage(UIImage(named: "check-box"), for: .normal)
+        termsAndCondStatus = 1
+    }
+    
+    func decline(_ vc: HYT_TermAndConditionsVC) {
+        termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
+        termsAndCondStatus = 0
+    }
     
     func acceptDate(_ vc: HYT_DatePickerVC) {
         if vc.isComeFrom == "DOB"{
@@ -41,6 +51,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     
     func didTappedRoleBtn(item: HYT_DropDownVC) {
         selectRoleLbl.text = item.roleName
+        roleId = item.roleId
     }
     
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
@@ -111,9 +122,11 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
         
     }
     
+    @IBOutlet weak var termAndCondLbl: UILabel!
     @IBOutlet weak var dobView: UIView!
 //    @IBOutlet weak var dobStar: UILabel!
     
+    @IBOutlet weak var termAndCondBtn: UIButton!
     @IBOutlet weak var genderTopView: NSLayoutConstraint!
     @IBOutlet weak var genderView: UIView!
     @IBOutlet weak var firstNameTopConstraint: NSLayoutConstraint!
@@ -158,13 +171,16 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     var emailExistancy = 0
     var storeIdExistancy = 1
     var locationCode: String = ""
+    var storeCode: String = ""
+    var storeId: String = ""
+    var roleId: Int = 0
     var storeUserNameExistancy = 0
     var idCardValidationStatus = 2
     var salesRep_Id = 0
     var dob:String = ""
     var validationMobileNo = 0
     var accountTypeId = -1
-    
+    var termsAndCondStatus = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,6 +190,8 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
         setPasswordTF.delegate  = self
         idCardNumberTF.delegate = self
         storeNameTF.isUserInteractionEnabled = false
+        termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
+        termsAndCondStatus = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -294,9 +312,15 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("password_toast_message".localiz(), duration: 2.0, position: .center)
         }else if idCardNumberTF.text?.count == 0 {
             self.view.makeToast("idCardNumber_toast_message".localiz(), duration: 2.0, position: .center)
-        }else if storeUserNameExistancy == 1 {
-            self.view.makeToast("This_store_ID_already_exist".localiz(), duration: 2.0, position: .center)
-        }else if emailExistancy == 1 && self.emailTF.text!.count != 0  {
+        }
+//        else if storeUserNameExistancy == 1 {
+//            self.view.makeToast("This_store_ID_already_exist".localiz(), duration: 2.0, position: .center)
+//        }
+        else if storeUserNameExistancy == 1 && selectAccountType.text == "Individual"{
+            self.view.makeToast("This store user name already exist", duration: 2.0, position: .center)
+        }else if storeUserNameExistancy == 0 && selectAccountType.text == "Store owner"{
+            self.view.makeToast("This store user name is not exists", duration: 2.0, position: .center)
+        } else if emailExistancy == 1 && self.emailTF.text!.count != 0  {
             self.view.makeToast("email_validation".localiz(), duration: 2.0, position: .center)
         }else if validationMobileNo == 0 {
             self.view.makeToast("mobileNumbervalidation".localiz(), duration: 2.0, position: .center)
@@ -304,6 +328,8 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
             self.view.makeToast("mobile_number_alreadyExits".localiz(), duration: 2.0, position: .center)
         }else if idCardValidationStatus != 1 {
             self.view.makeToast("wrong_idCard_message".localiz(), duration: 2.0, position: .center)
+        }else if termsAndCondStatus == 0{
+            self.view.makeToast("Accept the term & condition",duration: 2.0,position: .center)
         }else{
             
             if selectAccountType.text  == "Individual"{
@@ -477,6 +503,13 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     }
     
     
+    @IBAction func selectTermAndConditionBtn(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "HYT_TermAndConditionsVC") as! HYT_TermAndConditionsVC
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     //   MARK: - CHECK ID CARD VALIDATION API
         func checkIdcardNumber(){
             let parameter : [String : Any] = [
@@ -558,12 +591,12 @@ extension HYT_RegisterVC{
             "ObjCustomerJson": [
                 "UserId": salesRep_Id,
                 "RegType": "\(selectAccountType.text ?? "")",
-                "LocationCode": "BNG",
-                "LoyaltyId": locationCode,
-                "LocationId":  "10129",
+                "LocationCode": storeCode,// store code
+                "LoyaltyId": storeCode,// store code // atribute name
+                "LocationId":  storeId,// store id
                 "LocationName": storeNameTF.text ?? "",
                 "CountryId": 17,
-                "CustomerTypeID": 60,
+                "CustomerTypeID": roleId, // if store owner -54 else individual -
                 "FirstName": "\(firstNameTF.text ?? "")",
                 "LastName": "\(lastNameTF.text ?? "")",
                 "MobilePrefix": "+66",
@@ -574,7 +607,7 @@ extension HYT_RegisterVC{
                 "Gender": "\(selectGenderLbl.text ?? "")",
                 "IdentificationNo": "\(idCardNumberTF.text ?? "")",
                 "RegistrationSource": 3,
-                "Title": "",
+                "Title": "Mr.",
                 "Zip": "",
                 "Email": "\(emailTF.text ?? "")",
                 "LanguageID": selectedLanguageId,
@@ -591,12 +624,12 @@ extension HYT_RegisterVC{
                 "ObjCustomerJson": [
                     "UserId": salesRep_Id, // Sales Representative userid
                     "RegType": "\(selectAccountType.text ?? "")",
-                    "LocationCode": "BNG",
-                    "LoyaltyId": locationCode,  // LocationCode (if UserName check api is valid)
-                    "LocationId": "10129",
+                    "LocationCode": storeCode,
+                    "LoyaltyId": storeCode,  // LocationCode (if UserName check api is valid)
+                    "LocationId": storeId,
                     "LocationName": storeNameTF.text ?? "", // Store Name.....(SEND LOCATION NAME HERE)
                     "CountryId": 17,
-                    "CustomerTypeID": 60,
+                    "CustomerTypeID": 54,
                     "FirstName": "\(firstNameTF.text ?? "")",
                     "LastName": "\(lastNameTF.text ?? "")",
                     "MobilePrefix": "+66",
@@ -607,7 +640,7 @@ extension HYT_RegisterVC{
                     "Gender": "",
                     "IdentificationNo": "\(idCardNumberTF.text ?? "")",
                     "RegistrationSource": 3,
-                    "Title": "",
+                    "Title": "Mr.",
                     "Zip": "",
                     "Email": "\(emailTF.text ?? "")",
                     "LanguageID": selectedLanguageId,

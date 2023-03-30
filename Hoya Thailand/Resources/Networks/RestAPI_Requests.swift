@@ -478,5 +478,67 @@ class RestAPI_Requests {
             }
         }
     }
+    
+
+    //MARK: - PRODUCT VALIDATION API - CLAIM PRODUCT
+    func productNumberValidation_API(parameters: JSON, completion: @escaping (ProductValidationModels?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: productValidation_URLMethod, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(ProductValidationModels?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    //MARK: - INVOICE NUMBER VALIDATION save API
+    func invoiceNumberValidation_API(parameters: JSON, completion: @escaping (InvoiceNumberValidationModels?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: invoiceNumberValidation_URLMethod, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(InvoiceNumberValidationModels?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
+
+    //MARK: - CHECK SALES RETURN SATUS
+    func checkSalesReturnStatus_API(parameters: JSON, completion: @escaping (SalesReturnValidationModel?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: salesReturn_URLMethod, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(SalesReturnValidationModel?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
+    
+    //MARK: - CLAIM SUBMISSION API
+    func claimSubmission_API(parameters: JSON, completion: @escaping (ClaimSubmissionModel?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: claimSubmission_URLMethod, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(ClaimSubmissionModel?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
 }
 

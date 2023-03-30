@@ -22,6 +22,12 @@ class HYT_PointExpireReportVM{
                     DispatchQueue.main.async {
                         if result?.lstPointsExpiryDetails?.count != 0{
                             self.VC?.emptyMessage.isHidden = true
+                            self.VC?.pointsLbl.isHidden = false
+                            self.VC?.pointsTitleLbl.isHidden = false
+                            self.VC?.pointLbl.isHidden = false
+                            self.VC?.dateLbl.isHidden = false
+                            self.VC?.lineView1.isHidden = false
+                            self.VC?.lineView3.isHidden = false
                             self.VC?.pointsExpireReportTV.reloadData()
                             for list in self.pointExpireReportList {
                                 self.totalPointExpire += list.pointsGoingtoExpire ?? 0
@@ -31,7 +37,12 @@ class HYT_PointExpireReportVM{
                         }else{
                             self.VC?.emptyMessage.isHidden = false
                             self.VC?.emptyMessage.text = "No data found"
-                            self.VC?.pointsLbl.text = "0"
+                            self.VC?.pointsLbl.isHidden = true
+                            self.VC?.pointsTitleLbl.isHidden = true
+                            self.VC?.pointLbl.isHidden = true
+                            self.VC?.dateLbl.isHidden = true
+                            self.VC?.lineView1.isHidden = true
+                            self.VC?.lineView3.isHidden = true
                             self.totalPointExpire = 0
                             self.VC?.pointsExpireReportTV.reloadData()
                             self.VC?.stopLoading()

@@ -15,6 +15,7 @@ protocol OtpDelegate{
 
 class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
 
+    @IBOutlet weak var otpBtnTopConstraints: NSLayoutConstraint!  // 134
     @IBOutlet weak var resendBtn: UIButton!
     @IBOutlet weak var getOtpBtn: UIButton!
     @IBOutlet weak var otpView: DPOTPView!
@@ -31,6 +32,10 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
         self.VM.VC = self
         newNumberTF.delegate = self
         resendBtn.isHidden = true
+        otpView.isHidden = true
+        enterOtpLbl.isHidden = true
+        timerLbl.isHidden = true
+        otpBtnTopConstraints.constant = CGFloat(20)
     }
     
     @IBAction func didTappedGetOtp(_ sender: UIButton) {
@@ -40,7 +45,6 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
             }else if newNumberTF.text?.count == 9{
                 if  String(newNumberTF.text?.prefix(1) ?? "") == "9" || String(newNumberTF.text?.prefix(1) ?? "") == "8" || String(newNumberTF.text?.prefix(1) ?? "") == "7" || String(newNumberTF.text?.prefix(1) ?? "") == "6"{
                     checkMobileNumberExistancy()
-                    getOtpBtn.setTitle("Submit", for: .normal)
                     otpBtnStatus = 1
                 }else{
                     self.view.makeToast("Enter valid mobile number", duration: 2.0, position: .center)

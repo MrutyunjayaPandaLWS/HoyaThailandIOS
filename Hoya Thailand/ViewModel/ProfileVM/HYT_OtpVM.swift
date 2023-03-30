@@ -21,6 +21,11 @@ class HYT_OtpVM{
                     if result != nil{
                         DispatchQueue.main.async {
                             self.timmer.invalidate()
+                            self.VC?.otpView.isHidden = false
+                            self.VC?.enterOtpLbl.isHidden = false
+                            self.VC?.timerLbl.isHidden = false
+                            self.VC?.otpBtnTopConstraints.constant = CGFloat(124)
+                            self.VC?.getOtpBtn.setTitle("Submit", for: .normal)
                             self.count = 60
                             self.timmer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
 //                            self.VC?.sendotp = 1

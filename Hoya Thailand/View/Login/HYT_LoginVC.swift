@@ -9,7 +9,17 @@ import UIKit
 import Toast_Swift
 import LanguageManager_iOS
 
-class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDelegate{
+class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDelegate,CheckBoxSelectDelegate{
+    func accept(_ vc: HYT_TermAndConditionsVC) {
+        termAndCondBtn.setImage(UIImage(named: "check-box"), for: .normal)
+        tcStatus = 1
+    }
+    
+    func decline(_ vc: HYT_TermAndConditionsVC) {
+        termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
+        tcStatus = 0
+    }
+    
     
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
         languageLbl.text = item.language
@@ -23,6 +33,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         localization()
     }
     
+    @IBOutlet weak var termAndCondBtn: UIButton!
+    @IBOutlet weak var termAndCondLbl: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var securePasswordBtn: UIButton!
     @IBOutlet weak var languageLbl: UILabel!
@@ -41,7 +53,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     
     var mobileNumberExistancy = -1
     var VM = HYT_LoginVM()
-    
+    var tcStatus = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
@@ -59,6 +71,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         localization()
         membershipIdTF.text = ""
         passwordTF.text = ""
+        termAndCondBtn.setImage(UIImage(named: "check-box-empty"), for: .normal)
+        tcStatus = 0
         
     }
     
@@ -83,6 +97,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
             self.view.makeToast("password_toast_message".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count != 6{
             self.view.makeToast("Enter_a_valid_password".localiz(), duration: 2.0, position: .center)
+        }else if tcStatus == 0{
+            self.view.makeToast("Accept the term & condition",duration: 2.0,position: .center)
         }else{
             loginSubmissionApi()
         }
@@ -116,6 +132,13 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_ForgotPasswordVC") as? HYT_ForgotPasswordVC
         navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    @IBAction func selectTermAndCondBtn(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_TermAndConditionsVC") as! HYT_TermAndConditionsVC
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     func mobileNumberExistancyApi(){
         let parameter : [String : Any] = [

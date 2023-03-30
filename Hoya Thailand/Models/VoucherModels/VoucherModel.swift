@@ -7,7 +7,7 @@ struct VoucherModel : Codable {
 	let objCatalogueCategoryList : String?
 	let objCatalogueRedemReqList : String?
 	let catalogueImageGallery : String?
-	let objCatalogueFixedPoints : String?
+	let objCatalogueFixedPoints : [ObjCatalogueFixedPoints]?
 	let locationCites : String?
 	let objCustShippingAddressDetails : String?
 	let lstCatalogueProductAvailableCity : String?
@@ -38,7 +38,7 @@ struct VoucherModel : Codable {
 		objCatalogueCategoryList = try values.decodeIfPresent(String.self, forKey: .objCatalogueCategoryList)
 		objCatalogueRedemReqList = try values.decodeIfPresent(String.self, forKey: .objCatalogueRedemReqList)
 		catalogueImageGallery = try values.decodeIfPresent(String.self, forKey: .catalogueImageGallery)
-		objCatalogueFixedPoints = try values.decodeIfPresent(String.self, forKey: .objCatalogueFixedPoints)
+		objCatalogueFixedPoints = try values.decodeIfPresent([ObjCatalogueFixedPoints].self, forKey: .objCatalogueFixedPoints)
 		locationCites = try values.decodeIfPresent(String.self, forKey: .locationCites)
 		objCustShippingAddressDetails = try values.decodeIfPresent(String.self, forKey: .objCustShippingAddressDetails)
 		lstCatalogueProductAvailableCity = try values.decodeIfPresent(String.self, forKey: .lstCatalogueProductAvailableCity)

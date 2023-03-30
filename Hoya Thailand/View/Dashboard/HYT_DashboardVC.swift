@@ -193,7 +193,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
     func ImageSetups(){
         self.sourceArray.removeAll()
         if self.VM.dashboardOffers.count > 0 {
-            for image in self.self.VM.dashboardOffers {
+            for image in self.VM.dashboardOffers {
                 print("\(PROMO_IMG1)\(image.proImage ?? ""), offerImgUrl")
                 let imageURL = image.proImage ?? ""
                 let filteredURLArray = imageURL.dropFirst(3)
@@ -204,7 +204,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             offersSlideShow.slideshowInterval = 3.0
             offersSlideShow.zoomEnabled = true
             offersSlideShow.contentScaleMode = .scaleToFill
-            offersSlideShow.pageControl.currentPageIndicatorTintColor = UIColor(red: 230/255, green: 27/255, blue: 34/255, alpha: 1)
+            offersSlideShow.pageControl.currentPageIndicatorTintColor = primaryColor // UIColor(red: 230/255, green: 27/255, blue: 34/255, alpha: 1)
             offersSlideShow.pageControl.pageIndicatorTintColor = UIColor.lightGray
         }else{
             offersSlideShow.setImageInputs([

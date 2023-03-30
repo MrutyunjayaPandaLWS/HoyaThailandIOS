@@ -107,8 +107,10 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         personalInformationView.isHidden = true
         generalInformationView.isHidden = false
         updateBtn.isHidden = true
-        personalInfoBtn.titleLabel?.textColor = .lightGray
+        personalInfoLineLbl.backgroundColor = .lightGray
         generalInfoLineLbl.backgroundColor = primaryColor
+        personalInfoBtn.setTitleColor(.lightGray, for: .normal)
+        generalInfoBtn.setTitleColor(primaryColor, for: .normal)
         membershipIDTF.isUserInteractionEnabled = false
         roleTF.isUserInteractionEnabled = false
         storeIDTF.isUserInteractionEnabled = false
@@ -195,8 +197,8 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         generalInformationView.isHidden = true
         personalInfoLineLbl.backgroundColor = primaryColor
         generalInfoLineLbl.backgroundColor = primaryColor2
-        generalInfoBtn.titleLabel?.textColor = .lightGray
-        personalInfoBtn.titleLabel?.textColor = primaryColor
+        personalInfoBtn.setTitleColor(primaryColor, for: .normal)
+        generalInfoBtn.setTitleColor(.lightGray, for: .normal)
         updateBtn.isHidden = false
         
     }
@@ -206,9 +208,8 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         generalInformationView.isHidden = false
         personalInfoLineLbl.backgroundColor = primaryColor2
         generalInfoLineLbl.backgroundColor = primaryColor
-//        generalInfoBtn.titleLabel?.textColor = primaryColor
-        generalInfoBtn.titleLabel?.textColor = primaryColor
-        personalInfoBtn.titleLabel?.textColor = .lightGray
+        personalInfoBtn.setTitleColor(.lightGray, for: .normal)
+        generalInfoBtn.setTitleColor(primaryColor, for: .normal)
         updateBtn.isHidden = true
 
     }

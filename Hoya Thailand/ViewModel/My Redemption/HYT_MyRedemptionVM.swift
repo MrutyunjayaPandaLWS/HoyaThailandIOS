@@ -39,11 +39,14 @@ class HYT_MyRedemptionVM{
                         }
                     }else{
                         DispatchQueue.main.async {
+                            self.VC?.emptyMessageLbl.isHidden = false
+                            self.VC?.emptyMessageLbl.text = "No data found"
                             self.VC?.stopLoading()
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.emptyMessageLbl.isHidden = false
                         self.VC?.emptyMessageLbl.text = "No data found"
                         self.VC?.stopLoading()
                     }
@@ -51,6 +54,7 @@ class HYT_MyRedemptionVM{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
+                    self.VC?.emptyMessageLbl.isHidden = false
                     self.VC?.emptyMessageLbl.text = "No data found"
                     print("My Redeemption error",error?.localizedDescription)
                 }

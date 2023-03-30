@@ -37,6 +37,8 @@ class HYT_RegisterOtpVC: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        resendOtpBtn.isHidden = true
+        
         timmer.invalidate()
         count = 60
         self.timmer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
@@ -64,6 +66,7 @@ class HYT_RegisterOtpVC: BaseViewController {
         timmer.invalidate()
         count = 60
         self.timmer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        resendOtpBtn.isHidden = true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         dismiss(animated: true)
@@ -89,12 +92,13 @@ class HYT_RegisterOtpVC: BaseViewController {
         }else{
             self.timmer.invalidate()
             timmerLbl.text = "00:00"
+            resendOtpBtn.isHidden = false
         }
     }
     
     func localization(){
         resendOtpBtn.setTitle("resendOtp".localiz(), for: .normal)
-        sendOtpBtn.setTitle("sendOtp".localiz(), for: .normal)
+        sendOtpBtn.setTitle("submit".localiz(), for: .normal)
         enterOtpLbl.text = "enterOtp".localiz()
         otpDescriptionLbl.text = "otp_message".localiz()
     }

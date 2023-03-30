@@ -38,10 +38,13 @@ class HYT_VoucherListVM{
                             
                         }else{
                             self.VC?.stopLoading()
+                            self.VC?.emptyMessageLbl.isHidden = false
+                            self.VC?.emptyMessageLbl.text = "No data found"
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.emptyMessageLbl.isHidden = false
                         self.VC?.emptyMessageLbl.text = "No data found"
                         self.VC?.stopLoading()
                     }
@@ -50,6 +53,8 @@ class HYT_VoucherListVM{
             else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
+                    self.VC?.emptyMessageLbl.isHidden = false
+                    self.VC?.emptyMessageLbl.text = "No data found"
                     print("My Redeemption error",error?.localizedDescription)
                 }
             }

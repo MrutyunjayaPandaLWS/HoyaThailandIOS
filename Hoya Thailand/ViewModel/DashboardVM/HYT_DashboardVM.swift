@@ -49,10 +49,10 @@ class HYT_DashboardVM{
                                 let profileImg = String(result?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "").dropFirst(2)
                                 print("\(PROMO_IMG1)\(profileImg), ProfilImage")
                                 
-                                if profileImg.count == 0{
-                                    self.VC?.profileImage.image = UIImage(named: "ic_default_img")
+                                if profileImg.count == 0 || profileImg == nil{
+                                    self.VC?.profileImage.image = UIImage(named: "ic_default_img (1)")
                                 }else{
-                                    self.VC?.profileImage.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(profileImg)"), placeholderImage: UIImage(named: "ic_default_img"))
+                                    self.VC?.profileImage.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(profileImg)"), placeholderImage: UIImage(named: "ic_default_img (1)"))
                                 }
                                 
                                
@@ -104,12 +104,12 @@ class HYT_DashboardVM{
         requestAPIs.dashboardOffers(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    self.dashboardOffers = result?.lstPromotionJsonList ?? []
                     DispatchQueue.main.async {
                         if result?.lstPromotionJsonList?.count != 0{
-                            self.VC?.ImageSetups()
+                            self.dashboardOffers = result?.lstPromotionJsonList ?? []
                             let gestureRecognizer = UITapGestureRecognizer(target: self.VC.self, action: #selector(self.VC!.didTap))
                             self.VC!.offersSlideShow.addGestureRecognizer(gestureRecognizer)
+                            self.VC?.ImageSetups()
                             self.VC?.stopLoading()
                             
                         }else{

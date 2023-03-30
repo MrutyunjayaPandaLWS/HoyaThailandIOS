@@ -5,7 +5,7 @@ struct GeneralInfoModel : Codable {
 	let lstCustomerJson : [LstCustomerJson]?
 	let lstVehicleJson : [String]?
 	let lstCustomerOfficalInfoJson : [LstCustomerOfficalInfoJson]?
-	let lstCustomerIdentityInfo : String?
+	let lstCustomerIdentityInfo : [LstCustomerIdentityInfo]?
 	let customerBasicInfoList : String?
 	let objCustomer : String?
 	let objCustomerDetails : String?
@@ -45,8 +45,8 @@ struct GeneralInfoModel : Codable {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		lstCustomerJson = try values.decodeIfPresent([LstCustomerJson].self, forKey: .lstCustomerJson)
 		lstVehicleJson = try values.decodeIfPresent([String].self, forKey: .lstVehicleJson)
-		lstCustomerOfficalInfoJson = try values.decodeIfPresent([LstCustomerOfficalInfoJson].self, forKey: .lstCustomerOfficalInfoJson)
-		lstCustomerIdentityInfo = try values.decodeIfPresent(String.self, forKey: .lstCustomerIdentityInfo)
+        lstCustomerOfficalInfoJson = try values.decodeIfPresent([LstCustomerOfficalInfoJson].self, forKey: .lstCustomerOfficalInfoJson)
+		lstCustomerIdentityInfo = try values.decodeIfPresent([LstCustomerIdentityInfo].self, forKey: .lstCustomerIdentityInfo)
 		customerBasicInfoList = try values.decodeIfPresent(String.self, forKey: .customerBasicInfoList)
 		objCustomer = try values.decodeIfPresent(String.self, forKey: .objCustomer)
 		objCustomerDetails = try values.decodeIfPresent(String.self, forKey: .objCustomerDetails)

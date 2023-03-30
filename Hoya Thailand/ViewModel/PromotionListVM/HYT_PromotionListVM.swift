@@ -34,6 +34,8 @@ class HYT_PromotionListVM{
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.emptyMessage.isHidden = false
+                        self.VC?.emptyMessage.text = "No data found"
                         self.VC?.stopLoading()
                     }
                 }
@@ -41,6 +43,8 @@ class HYT_PromotionListVM{
             else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
+                    self.VC?.emptyMessage.isHidden = false
+                    self.VC?.emptyMessage.text = "No data found"
                     print("My Redeemption error",error?.localizedDescription)
                 }
             }

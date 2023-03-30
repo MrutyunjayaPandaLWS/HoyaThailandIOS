@@ -75,11 +75,19 @@
 		8011A6782995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8011A64C2995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf */; };
 		8011A6792995046C0033E740 /* Galano Grotesque Alt Semi Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8011A64D2995046C0033E740 /* Galano Grotesque Alt Semi Bold Italic.otf */; };
 		8011A67A2995046C0033E740 /* Galano Grotesque DEMO Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8011A64E2995046C0033E740 /* Galano Grotesque DEMO Bold.otf */; };
+		802122EF29D2F7F400B72AEF /* ProductValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122ED29D2F7F300B72AEF /* ProductValidation.swift */; };
+		802122F029D2F7F400B72AEF /* ProductValidationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122EE29D2F7F400B72AEF /* ProductValidationModels.swift */; };
+		802122F429D2F90800B72AEF /* SalesReturnValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122F229D2F90600B72AEF /* SalesReturnValidation.swift */; };
+		802122F529D2F90800B72AEF /* SalesReturnValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122F329D2F90800B72AEF /* SalesReturnValidationModel.swift */; };
+		802122F829D2FD0000B72AEF /* HYT_ClaimDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122F729D2FD0000B72AEF /* HYT_ClaimDetailsVM.swift */; };
+		802122FB29D3203000B72AEF /* ClaimSubmissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802122FA29D3203000B72AEF /* ClaimSubmissionModel.swift */; };
 		80280FFB2997C63E006C2521 /* HYT_MyRedemptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80280FFA2997C63E006C2521 /* HYT_MyRedemptionVC.swift */; };
 		80280FFD2997C661006C2521 /* HYT_MyRedemptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80280FFC2997C661006C2521 /* HYT_MyRedemptionTVCell.swift */; };
 		80283C82299CD5540014814E /* HYT_TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80283C81299CD5540014814E /* HYT_TabBarVC.swift */; };
 		802B185429AF6D6B001FE248 /* MyRedeemptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B185229AF6D6A001FE248 /* MyRedeemptionModel.swift */; };
 		802B185529AF6D6B001FE248 /* ObjCatalogueRedemReqList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B185329AF6D6B001FE248 /* ObjCatalogueRedemReqList.swift */; };
+		802B283029D1802A00268E9B /* InvoiceNumberValidationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B282E29D1802900268E9B /* InvoiceNumberValidationModels.swift */; };
+		802B283129D1802A00268E9B /* InvoiceNumeberValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B282F29D1802A00268E9B /* InvoiceNumeberValidation.swift */; };
 		8036947B299D19BE00ED1BE8 /* HYT_RegisterOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036947A299D19BE00ED1BE8 /* HYT_RegisterOtpVC.swift */; };
 		8039AE7829AF08CC003E8281 /* RetriveActorIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE7729AF08CC003E8281 /* RetriveActorIdModel.swift */; };
 		8039AE7B29AF117E003E8281 /* StoreUserNameExistancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE7A29AF117E003E8281 /* StoreUserNameExistancyModel.swift */; };
@@ -87,6 +95,13 @@
 		8039AE8029AF184E003E8281 /* LstAttributesDetails7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE7E29AF184E003E8281 /* LstAttributesDetails7.swift */; };
 		8039AE8329AF2473003E8281 /* HYT_RegisterOtpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE8229AF2473003E8281 /* HYT_RegisterOtpVM.swift */; };
 		8039AE8729AF3051003E8281 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039AE8629AF3051003E8281 /* RegistrationModel.swift */; };
+		803C011229CECCCC0081B050 /* ObjCatalogueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C010F29CECCC50081B050 /* ObjCatalogueList.swift */; };
+		803C011329CECCCC0081B050 /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011029CECCC90081B050 /* VoucherModel.swift */; };
+		803C011429CECCCC0081B050 /* ObjCatalogueFixedPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */; };
+		803C011829CEDB140081B050 /* GeneralInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011529CEDB0E0081B050 /* GeneralInfoModel.swift */; };
+		803C011929CEDB140081B050 /* LstCustomerJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011629CEDB120081B050 /* LstCustomerJson.swift */; };
+		803C011A29CEDB140081B050 /* LstCustomerIdentityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011729CEDB140081B050 /* LstCustomerIdentityInfo.swift */; };
+		803C011C29CEEFDC0081B050 /* LstCustomerOfficalInfoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C011B29CEEFDB0081B050 /* LstCustomerOfficalInfoJson.swift */; };
 		803C910D29B06636007B622F /* HR_Chatvc2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C910C29B06635007B622F /* HR_Chatvc2ViewController.swift */; };
 		803C911A29B06668007B622F /* senderInfoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C910E29B06661007B622F /* senderInfoImageTableViewCell.swift */; };
 		803C911B29B06668007B622F /* otherInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C910F29B06661007B622F /* otherInfoTableViewCell.swift */; };
@@ -137,6 +152,7 @@
 		804667A729A8B167006B70A9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804667A629A8B167006B70A9 /* BaseViewController.swift */; };
 		804667AA29A8BE1F006B70A9 /* HYT_LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804667A929A8BE1F006B70A9 /* HYT_LoginVM.swift */; };
 		804667AD29A8C7BD006B70A9 /* HYT_DropdownVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804667AC29A8C7BD006B70A9 /* HYT_DropdownVM.swift */; };
+		80477DD729D43C2500522942 /* HYT_TermAndConditionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80477DD629D43C2500522942 /* HYT_TermAndConditionsVC.swift */; };
 		8050E3162997AD4A00F8B692 /* HYT_VoucherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050E3152997AD4A00F8B692 /* HYT_VoucherVC.swift */; };
 		8050E3182997AD6A00F8B692 /* HYT_VoucherTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050E3172997AD6A00F8B692 /* HYT_VoucherTVCell.swift */; };
 		8059197E299BB59600F7B45B /* HYT_LanguageDropDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059197D299BB59600F7B45B /* HYT_LanguageDropDownVC.swift */; };
@@ -149,6 +165,7 @@
 		80721F6D29BEDF9400010156 /* HYT_OffersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80721F6C29BEDF9400010156 /* HYT_OffersVM.swift */; };
 		80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80721F6F29BEE96900010156 /* ProfileIamgeUpadate.swift */; };
 		8072F517299B551A0057AF9E /* HYT_RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072F516299B551A0057AF9E /* HYT_RegisterVC.swift */; };
+		807F54F629D4397E007BA3FF /* TandC-Johnson samriddhi.html in Resources */ = {isa = PBXBuildFile; fileRef = 807F54F529D4397E007BA3FF /* TandC-Johnson samriddhi.html */; };
 		808317632997B820000374DA /* HYT_VoucherDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808317622997B820000374DA /* HYT_VoucherDetailsVC.swift */; };
 		808317662997BB02000374DA /* HYT_ClaimDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808317652997BB02000374DA /* HYT_ClaimDetailsVC.swift */; };
 		80845AA929974F1D00C7846F /* HYT_OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80845AA829974F1D00C7846F /* HYT_OffersVC.swift */; };
@@ -157,11 +174,6 @@
 		80866495299617C2008EAEB7 /* HYT_MyEarningsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80866494299617C2008EAEB7 /* HYT_MyEarningsVC.swift */; };
 		8086649829961854008EAEB7 /* HYT_MyEarningsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086649629961854008EAEB7 /* HYT_MyEarningsTVCell.swift */; };
 		8086649929961854008EAEB7 /* HYT_MyEarningsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8086649729961854008EAEB7 /* HYT_MyEarningsTVCell.xib */; };
-		808DFBE129BC436F004960EC /* LstCustomerJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBDE29BC436D004960EC /* LstCustomerJson.swift */; };
-		808DFBE229BC436F004960EC /* LstCustomerOfficalInfoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */; };
-		808DFBE329BC436F004960EC /* GeneralInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBE029BC436F004960EC /* GeneralInfoModel.swift */; };
-		808DFBEE29BC4D6E004960EC /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBEC29BC4D6D004960EC /* VoucherModel.swift */; };
-		808DFBEF29BC4D6E004960EC /* ObjCatalogueList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */; };
 		809142BE299673A800212358 /* HYT_MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809142BD299673A800212358 /* HYT_MyProfileVC.swift */; };
 		809142C12996788F00212358 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809142C02996788F00212358 /* Colors.swift */; };
 		80979E99299CB7FF0029948E /* UiViewControllerExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80979E98299CB7FF0029948E /* UiViewControllerExtenssion.swift */; };
@@ -296,11 +308,19 @@
 		8011A64C2995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Galano Grotesque Semi Bold Italic.otf"; sourceTree = "<group>"; };
 		8011A64D2995046C0033E740 /* Galano Grotesque Alt Semi Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Galano Grotesque Alt Semi Bold Italic.otf"; sourceTree = "<group>"; };
 		8011A64E2995046C0033E740 /* Galano Grotesque DEMO Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Galano Grotesque DEMO Bold.otf"; sourceTree = "<group>"; };
+		802122ED29D2F7F300B72AEF /* ProductValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductValidation.swift; sourceTree = "<group>"; };
+		802122EE29D2F7F400B72AEF /* ProductValidationModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductValidationModels.swift; sourceTree = "<group>"; };
+		802122F229D2F90600B72AEF /* SalesReturnValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReturnValidation.swift; sourceTree = "<group>"; };
+		802122F329D2F90800B72AEF /* SalesReturnValidationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReturnValidationModel.swift; sourceTree = "<group>"; };
+		802122F729D2FD0000B72AEF /* HYT_ClaimDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_ClaimDetailsVM.swift; sourceTree = "<group>"; };
+		802122FA29D3203000B72AEF /* ClaimSubmissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaimSubmissionModel.swift; sourceTree = "<group>"; };
 		80280FFA2997C63E006C2521 /* HYT_MyRedemptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyRedemptionVC.swift; sourceTree = "<group>"; };
 		80280FFC2997C661006C2521 /* HYT_MyRedemptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyRedemptionTVCell.swift; sourceTree = "<group>"; };
 		80283C81299CD5540014814E /* HYT_TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_TabBarVC.swift; sourceTree = "<group>"; };
 		802B185229AF6D6A001FE248 /* MyRedeemptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRedeemptionModel.swift; sourceTree = "<group>"; };
 		802B185329AF6D6B001FE248 /* ObjCatalogueRedemReqList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueRedemReqList.swift; sourceTree = "<group>"; };
+		802B282E29D1802900268E9B /* InvoiceNumberValidationModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceNumberValidationModels.swift; sourceTree = "<group>"; };
+		802B282F29D1802A00268E9B /* InvoiceNumeberValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceNumeberValidation.swift; sourceTree = "<group>"; };
 		8036947A299D19BE00ED1BE8 /* HYT_RegisterOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RegisterOtpVC.swift; sourceTree = "<group>"; };
 		8039AE7729AF08CC003E8281 /* RetriveActorIdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetriveActorIdModel.swift; sourceTree = "<group>"; };
 		8039AE7A29AF117E003E8281 /* StoreUserNameExistancyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreUserNameExistancyModel.swift; sourceTree = "<group>"; };
@@ -308,6 +328,13 @@
 		8039AE7E29AF184E003E8281 /* LstAttributesDetails7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstAttributesDetails7.swift; sourceTree = "<group>"; };
 		8039AE8229AF2473003E8281 /* HYT_RegisterOtpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RegisterOtpVM.swift; sourceTree = "<group>"; };
 		8039AE8629AF3051003E8281 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		803C010F29CECCC50081B050 /* ObjCatalogueList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjCatalogueList.swift; path = ../../../../../../Downloads/codegen_641e94f03a272/ObjCatalogueList.swift; sourceTree = "<group>"; };
+		803C011029CECCC90081B050 /* VoucherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
+		803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueFixedPoints.swift; sourceTree = "<group>"; };
+		803C011529CEDB0E0081B050 /* GeneralInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoModel.swift; sourceTree = "<group>"; };
+		803C011629CEDB120081B050 /* LstCustomerJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerJson.swift; sourceTree = "<group>"; };
+		803C011729CEDB140081B050 /* LstCustomerIdentityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerIdentityInfo.swift; sourceTree = "<group>"; };
+		803C011B29CEEFDB0081B050 /* LstCustomerOfficalInfoJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerOfficalInfoJson.swift; sourceTree = "<group>"; };
 		803C910C29B06635007B622F /* HR_Chatvc2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HR_Chatvc2ViewController.swift; sourceTree = "<group>"; };
 		803C910E29B06661007B622F /* senderInfoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = senderInfoImageTableViewCell.swift; sourceTree = "<group>"; };
 		803C910F29B06661007B622F /* otherInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -358,6 +385,7 @@
 		804667A629A8B167006B70A9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		804667A929A8BE1F006B70A9 /* HYT_LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_LoginVM.swift; sourceTree = "<group>"; };
 		804667AC29A8C7BD006B70A9 /* HYT_DropdownVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_DropdownVM.swift; sourceTree = "<group>"; };
+		80477DD629D43C2500522942 /* HYT_TermAndConditionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_TermAndConditionsVC.swift; sourceTree = "<group>"; };
 		8050E3152997AD4A00F8B692 /* HYT_VoucherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherVC.swift; sourceTree = "<group>"; };
 		8050E3172997AD6A00F8B692 /* HYT_VoucherTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherTVCell.swift; sourceTree = "<group>"; };
 		8059197D299BB59600F7B45B /* HYT_LanguageDropDownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_LanguageDropDownVC.swift; sourceTree = "<group>"; };
@@ -373,6 +401,7 @@
 		80721F6C29BEDF9400010156 /* HYT_OffersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_OffersVM.swift; sourceTree = "<group>"; };
 		80721F6F29BEE96900010156 /* ProfileIamgeUpadate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileIamgeUpadate.swift; sourceTree = "<group>"; };
 		8072F516299B551A0057AF9E /* HYT_RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RegisterVC.swift; sourceTree = "<group>"; };
+		807F54F529D4397E007BA3FF /* TandC-Johnson samriddhi.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "TandC-Johnson samriddhi.html"; sourceTree = "<group>"; };
 		808317622997B820000374DA /* HYT_VoucherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_VoucherDetailsVC.swift; sourceTree = "<group>"; };
 		808317652997BB02000374DA /* HYT_ClaimDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_ClaimDetailsVC.swift; sourceTree = "<group>"; };
 		80845AA829974F1D00C7846F /* HYT_OffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_OffersVC.swift; sourceTree = "<group>"; };
@@ -381,11 +410,6 @@
 		80866494299617C2008EAEB7 /* HYT_MyEarningsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyEarningsVC.swift; sourceTree = "<group>"; };
 		8086649629961854008EAEB7 /* HYT_MyEarningsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyEarningsTVCell.swift; sourceTree = "<group>"; };
 		8086649729961854008EAEB7 /* HYT_MyEarningsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HYT_MyEarningsTVCell.xib; sourceTree = "<group>"; };
-		808DFBDE29BC436D004960EC /* LstCustomerJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerJson.swift; sourceTree = "<group>"; };
-		808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstCustomerOfficalInfoJson.swift; sourceTree = "<group>"; };
-		808DFBE029BC436F004960EC /* GeneralInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoModel.swift; sourceTree = "<group>"; };
-		808DFBEC29BC4D6D004960EC /* VoucherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
-		808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjCatalogueList1.swift; path = ../../../../../../Downloads/codegen_640c15d56906f/ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		809142BD299673A800212358 /* HYT_MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_MyProfileVC.swift; sourceTree = "<group>"; };
 		809142C02996788F00212358 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		80979E98299CB7FF0029948E /* UiViewControllerExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtenssion.swift; sourceTree = "<group>"; };
@@ -672,6 +696,40 @@
 			path = "galano-grotesque";
 			sourceTree = "<group>";
 		};
+		802122EC29D2F7DD00B72AEF /* ProductValidation */ = {
+			isa = PBXGroup;
+			children = (
+				802122EE29D2F7F400B72AEF /* ProductValidationModels.swift */,
+				802122ED29D2F7F300B72AEF /* ProductValidation.swift */,
+			);
+			path = ProductValidation;
+			sourceTree = "<group>";
+		};
+		802122F129D2F8F100B72AEF /* SalesReturnValidationModels */ = {
+			isa = PBXGroup;
+			children = (
+				802122F329D2F90800B72AEF /* SalesReturnValidationModel.swift */,
+				802122F229D2F90600B72AEF /* SalesReturnValidation.swift */,
+			);
+			path = SalesReturnValidationModels;
+			sourceTree = "<group>";
+		};
+		802122F629D2FCD900B72AEF /* ClaimDetailsVM */ = {
+			isa = PBXGroup;
+			children = (
+				802122F729D2FD0000B72AEF /* HYT_ClaimDetailsVM.swift */,
+			);
+			path = ClaimDetailsVM;
+			sourceTree = "<group>";
+		};
+		802122F929D3200300B72AEF /* ClaimSubmissionModels */ = {
+			isa = PBXGroup;
+			children = (
+				802122FA29D3203000B72AEF /* ClaimSubmissionModel.swift */,
+			);
+			path = ClaimSubmissionModels;
+			sourceTree = "<group>";
+		};
 		80280FF92997C624006C2521 /* My Redemption */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +745,26 @@
 				80283C81299CD5540014814E /* HYT_TabBarVC.swift */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		802B282A29D17F9800268E9B /* CliamsModels */ = {
+			isa = PBXGroup;
+			children = (
+				802122F929D3200300B72AEF /* ClaimSubmissionModels */,
+				802122F129D2F8F100B72AEF /* SalesReturnValidationModels */,
+				802122EC29D2F7DD00B72AEF /* ProductValidation */,
+				802B282B29D17FB300268E9B /* InvoiceNumberValidation */,
+			);
+			path = CliamsModels;
+			sourceTree = "<group>";
+		};
+		802B282B29D17FB300268E9B /* InvoiceNumberValidation */ = {
+			isa = PBXGroup;
+			children = (
+				802B282E29D1802900268E9B /* InvoiceNumberValidationModels.swift */,
+				802B282F29D1802A00268E9B /* InvoiceNumeberValidation.swift */,
+			);
+			path = InvoiceNumberValidation;
 			sourceTree = "<group>";
 		};
 		8039AE7629AF08B5003E8281 /* Retrive ActorId */ = {
@@ -967,6 +1045,14 @@
 			path = DropdownVM;
 			sourceTree = "<group>";
 		};
+		80477DD529D43BD800522942 /* Term & Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				80477DD629D43C2500522942 /* HYT_TermAndConditionsVC.swift */,
+			);
+			path = "Term & Conditions";
+			sourceTree = "<group>";
+		};
 		8050E3142997AD1400F8B692 /* e-Voucher */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,9 +1065,10 @@
 		805660F429BC409B00D0799C /* GenerelInfoModels */ = {
 			isa = PBXGroup;
 			children = (
-				808DFBE029BC436F004960EC /* GeneralInfoModel.swift */,
-				808DFBDE29BC436D004960EC /* LstCustomerJson.swift */,
-				808DFBDF29BC436E004960EC /* LstCustomerOfficalInfoJson.swift */,
+				803C011529CEDB0E0081B050 /* GeneralInfoModel.swift */,
+				803C011729CEDB140081B050 /* LstCustomerIdentityInfo.swift */,
+				803C011629CEDB120081B050 /* LstCustomerJson.swift */,
+				803C011B29CEEFDB0081B050 /* LstCustomerOfficalInfoJson.swift */,
 			);
 			path = GenerelInfoModels;
 			sourceTree = "<group>";
@@ -1286,8 +1373,9 @@
 		80C4897129ACDDD3006AA8C7 /* VoucherModels */ = {
 			isa = PBXGroup;
 			children = (
-				808DFBEC29BC4D6D004960EC /* VoucherModel.swift */,
-				808DFBED29BC4D6D004960EC /* ObjCatalogueList1.swift */,
+				803C011029CECCC90081B050 /* VoucherModel.swift */,
+				803C011129CECCCB0081B050 /* ObjCatalogueFixedPoints.swift */,
+				803C010F29CECCC50081B050 /* ObjCatalogueList.swift */,
 				8041910029ADD44F00CDFFA5 /* Point Expire */,
 			);
 			path = VoucherModels;
@@ -1500,6 +1588,7 @@
 		80FABD4D2994F07200061E01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				80477DD529D43BD800522942 /* Term & Conditions */,
 				80D7209929B07F7C0065A947 /* SupportVC */,
 				800393A929A79DAA00542450 /* StoreOwner */,
 				8007D11429A4AB210042CA2D /* DropDown */,
@@ -1541,6 +1630,8 @@
 		80FABD582994F7D100061E01 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				807F54F529D4397E007BA3FF /* TandC-Johnson samriddhi.html */,
+				802122F629D2FCD900B72AEF /* ClaimDetailsVM */,
 				80721F6B29BEDF7400010156 /* OffersVM */,
 				80B6554D29AA320400E474B9 /* DashboardVM */,
 				80D7209A29B07FDA0065A947 /* SupportVM */,
@@ -1567,6 +1658,7 @@
 		80FABD592994F7DA00061E01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				802B282A29D17F9800268E9B /* CliamsModels */,
 				80721F6E29BEE95600010156 /* ProfileImageUpdate */,
 				80D7208F29B0712A0065A947 /* Chat Models */,
 				80F8CAF329AF478400FEE039 /* Voucher Redeemptions */,
@@ -1701,6 +1793,7 @@
 				8011A6722995046C0033E740 /* Galano Grotesque Alt Heavy Italic.otf in Resources */,
 				8011A6662995046C0033E740 /* Galano Grotesque Alt Bold.otf in Resources */,
 				8011A6702995046C0033E740 /* More Free Fonts on fontshmonts.com.url in Resources */,
+				807F54F629D4397E007BA3FF /* TandC-Johnson samriddhi.html in Resources */,
 				8011A6522995046C0033E740 /* Galano Grotesque Light.otf in Resources */,
 				803C912329B06668007B622F /* senderImageTableViewCell.xib in Resources */,
 				8011A6782995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf in Resources */,
@@ -1779,12 +1872,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B46D29299B92540069F52F /* HYT_LQTopicListVC.swift in Sources */,
+				802122F029D2F7F400B72AEF /* ProductValidationModels.swift in Sources */,
 				80FABD392994EF9B00061E01 /* HYT_LoginVC.swift in Sources */,
 				800A8B3C29A8E93000D3A39C /* LoginSubmissionModel.swift in Sources */,
 				80FABD4C2994F06A00061E01 /* HYT_WelcomeVC.swift in Sources */,
+				802122F529D2F90800B72AEF /* SalesReturnValidationModel.swift in Sources */,
 				80448E8A29A899FD00EBD7BC /* Reachability.swift in Sources */,
 				8041912829AE198A00CDFFA5 /* HYT_S_PromotionDetailsVM.swift in Sources */,
-				808DFBE129BC436F004960EC /* LstCustomerJson.swift in Sources */,
 				800CE67429A9CB08005CC793 /* SalsRepresentativeModel.swift in Sources */,
 				8007D11829A4AB6C0042CA2D /* HYT_DropDownTVCell.swift in Sources */,
 				803C911D29B06668007B622F /* senderInfoTableViewCell.swift in Sources */,
@@ -1797,6 +1891,7 @@
 				8039AE8029AF184E003E8281 /* LstAttributesDetails7.swift in Sources */,
 				80B6554C29AA2B2300E474B9 /* LstCustomerFeedBackJsonApi.swift in Sources */,
 				808317632997B820000374DA /* HYT_VoucherDetailsVC.swift in Sources */,
+				802122F829D2FD0000B72AEF /* HYT_ClaimDetailsVM.swift in Sources */,
 				80B6553C29AA19A700E474B9 /* NewQueryModel.swift in Sources */,
 				804190F829ADBE5400CDFFA5 /* ProductListModel.swift in Sources */,
 				8041912C29AE1DD200CDFFA5 /* FilterQueryStatusModel.swift in Sources */,
@@ -1808,18 +1903,19 @@
 				803C911F29B06668007B622F /* otherImageTableViewCell.swift in Sources */,
 				80283C82299CD5540014814E /* HYT_TabBarVC.swift in Sources */,
 				803C912129B06668007B622F /* otherInfoImageTableViewCell.swift in Sources */,
+				802B283129D1802A00268E9B /* InvoiceNumeberValidation.swift in Sources */,
+				803C011829CEDB140081B050 /* GeneralInfoModel.swift in Sources */,
 				80E20547299BA74A00E3327F /* HYT_PromotionDetailsVC.swift in Sources */,
 				802B185529AF6D6B001FE248 /* ObjCatalogueRedemReqList.swift in Sources */,
 				80B6554929AA2B2300E474B9 /* DashBoardModels.swift in Sources */,
 				80F0147B2997919F000BD64C /* HYT_PromotionListVC.swift in Sources */,
 				804190F929ADBE5400CDFFA5 /* LsrProductDetails.swift in Sources */,
-				808DFBEF29BC4D6E004960EC /* ObjCatalogueList1.swift in Sources */,
 				80591980299BB5B300F7B45B /* HYT_LanguageTVCell.swift in Sources */,
 				80E2053D299B98D400E3327F /* ImageExtension.swift in Sources */,
+				802B283029D1802A00268E9B /* InvoiceNumberValidationModels.swift in Sources */,
 				80B6554729AA2B2300E474B9 /* ObjCustomerDashboardList.swift in Sources */,
 				80E2054C299BACEF00E3327F /* HYT_PointsExpiryReportTVCell.swift in Sources */,
 				8039AE8329AF2473003E8281 /* HYT_RegisterOtpVM.swift in Sources */,
-				808DFBE329BC436F004960EC /* GeneralInfoModel.swift in Sources */,
 				8039AE8729AF3051003E8281 /* RegistrationModel.swift in Sources */,
 				804667A729A8B167006B70A9 /* BaseViewController.swift in Sources */,
 				800393AC29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift in Sources */,
@@ -1837,12 +1933,12 @@
 				803C910D29B06636007B622F /* HR_Chatvc2ViewController.swift in Sources */,
 				804190FD29ADBFF100CDFFA5 /* HYT_PromotionDetailsVM.swift in Sources */,
 				803C911A29B06668007B622F /* senderInfoImageTableViewCell.swift in Sources */,
+				803C011A29CEDB140081B050 /* LstCustomerIdentityInfo.swift in Sources */,
 				804361AC299C999000F2C741 /* HYT_DashboardMenuTVCell.swift in Sources */,
 				8007D11629A4AB4A0042CA2D /* HYT_DropDownVC.swift in Sources */,
 				800393AE29A79E0F00542450 /* HYT_S_PromotionDetailsTVCell.swift in Sources */,
 				8072F517299B551A0057AF9E /* HYT_RegisterVC.swift in Sources */,
 				80448E9829A89A1B00EBD7BC /* RequestMethod.swift in Sources */,
-				808DFBEE29BC4D6E004960EC /* VoucherModel.swift in Sources */,
 				80C4895A29ACA9DE006AA8C7 /* HYT_MyRedemptionVM.swift in Sources */,
 				800A8B3829A8D89C00D3A39C /* HYT_RegisterVM.swift in Sources */,
 				80E59A6929964000002DC995 /* HYT_FilterVC.swift in Sources */,
@@ -1870,6 +1966,7 @@
 				80448E8229A899B300EBD7BC /* ApiUrls.swift in Sources */,
 				80F8CAF529AF47AE00FEE039 /* VoucherRedeemptionModel.swift in Sources */,
 				80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */,
+				803C011229CECCCC0081B050 /* ObjCatalogueList.swift in Sources */,
 				800CE67329A9CB08005CC793 /* LstAttributesDetails3.swift in Sources */,
 				800CE67C29A9DDCD005CC793 /* String+Extenssion.swift in Sources */,
 				809142C12996788F00212358 /* Colors.swift in Sources */,
@@ -1882,23 +1979,27 @@
 				80B6554B29AA2B2300E474B9 /* ObjActivityDetailsJsonList.swift in Sources */,
 				80A8C21229AC804200082829 /* HYT_QueryListVM.swift in Sources */,
 				80E2054A299BACD600E3327F /* HYT_PointsExpiryReportVC.swift in Sources */,
+				802122F429D2F90800B72AEF /* SalesReturnValidation.swift in Sources */,
 				80448E8929A899FD00EBD7BC /* Reach.swift in Sources */,
 				80845AAE299754B700C7846F /* HYT_OffersDetailsVC.swift in Sources */,
+				80477DD729D43C2500522942 /* HYT_TermAndConditionsVC.swift in Sources */,
 				80448E8529A899DB00EBD7BC /* MyCommonFunctionalUtilities.swift in Sources */,
+				802122FB29D3203000B72AEF /* ClaimSubmissionModel.swift in Sources */,
 				80A8C20D29AC7B9300082829 /* ObjCustomerAllQueryJsonList.swift in Sources */,
 				800393A829A7988F00542450 /* HYT_S_PromotionVC.swift in Sources */,
 				80D1E9EE2996597600BEA77B /* HYT_HelpVC.swift in Sources */,
 				80E2053C299B98D400E3327F /* LabelExtension.swift in Sources */,
 				80A8C21529AC896500082829 /* HYT_NewQuerySubmissionVM.swift in Sources */,
 				800AAE2629A5E770005C9886 /* HYT_ProductListTVCell.swift in Sources */,
+				803C011929CEDB140081B050 /* LstCustomerJson.swift in Sources */,
 				80F0147D299791BD000BD64C /* HYT_PromotionListTVCell.swift in Sources */,
 				80448E9229A89A1B00EBD7BC /* RestAPI_Requests.swift in Sources */,
 				804667AD29A8C7BD006B70A9 /* HYT_DropdownVM.swift in Sources */,
 				80B6554A29AA2B2300E474B9 /* LstPromotionListJsonApi.swift in Sources */,
-				808DFBE229BC436F004960EC /* LstCustomerOfficalInfoJson.swift in Sources */,
 				8039AE7829AF08CC003E8281 /* RetriveActorIdModel.swift in Sources */,
 				8041912029AE072100CDFFA5 /* LstCustomerEntityMapping.swift in Sources */,
 				8039AE7F29AF184E003E8281 /* IdcardValidationModel.swift in Sources */,
+				803C011C29CEEFDC0081B050 /* LstCustomerOfficalInfoJson.swift in Sources */,
 				800CE67A29A9DBC8005CC793 /* EmailExistancymodel.swift in Sources */,
 				80280FFD2997C661006C2521 /* HYT_MyRedemptionTVCell.swift in Sources */,
 				80280FFB2997C63E006C2521 /* HYT_MyRedemptionVC.swift in Sources */,
@@ -1912,8 +2013,10 @@
 				80448E9329A89A1B00EBD7BC /* URLExtension.swift in Sources */,
 				803FE3C929B8947100D6E18E /* LtyPrgBaseDetails.swift in Sources */,
 				80B940912997633000CC22FA /* HYT_QueryTVCell.swift in Sources */,
+				803C011329CECCCC0081B050 /* VoucherModel.swift in Sources */,
 				803FE3CA29B8947100D6E18E /* PromotionListModel.swift in Sources */,
 				80E20540299B98D400E3327F /* NotificationExtension.swift in Sources */,
+				803C011429CECCCC0081B050 /* ObjCatalogueFixedPoints.swift in Sources */,
 				80B9408F299762FF00CC22FA /* HYT_QueryVC.swift in Sources */,
 				80448EA129A89FA700EBD7BC /* LstAttributesDetails.swift in Sources */,
 				804667AA29A8BE1F006B70A9 /* HYT_LoginVM.swift in Sources */,
@@ -1930,6 +2033,7 @@
 				800CE66E29A9C244005CC793 /* LstAttributesDetails2.swift in Sources */,
 				80FABD372994EF9B00061E01 /* SceneDelegate.swift in Sources */,
 				80448E9729A89A1B00EBD7BC /* URLRequest.swift in Sources */,
+				802122EF29D2F7F400B72AEF /* ProductValidation.swift in Sources */,
 				80B6553F29AA1ABC00E474B9 /* HYT_HelpVM.swift in Sources */,
 				80721F6D29BEDF9400010156 /* HYT_OffersVM.swift in Sources */,
 				802B185429AF6D6B001FE248 /* MyRedeemptionModel.swift in Sources */,

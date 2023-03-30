@@ -31,7 +31,11 @@ class HYT_ProfileVM{
                             self.VC?.lastNameTF.text = self.generalInfo[0].lastName
                             self.VC?.mobileNumberTF.text = self.generalInfo[0].mobile
                             self.VC?.emailTF.text = self.generalInfo[0].email
-                            self.VC?.selectGenderLbl.text = self.generalInfo[0].gender
+                            if self.generalInfo[0].gender?.count == 0 || self.generalInfo[0].gender == nil{
+                                
+                            }else{
+                                self.VC?.selectGenderLbl.text = self.generalInfo[0].gender
+                            }
                             self.VC?.selectDateLbl.text = String(self.generalInfo[0].jdob?.dropLast(9) ?? "Select DOB")
                             self.VC?.selectAnniversarydateLbl.text = String(self.generalInfo[0].jAnniversary?.dropLast(9) ?? "Select Date")
                             self.VC?.registerationNo = self.generalInfo[0].registrationSource ?? 0

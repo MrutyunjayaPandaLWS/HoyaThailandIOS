@@ -16,6 +16,7 @@ class HYT_DropdownVM{
     var salesRepresentativeList = [LstAttributesDetails3]()
     var queryStatusList = [LstAttributesDetails5]()
     var promotionList = [LtyPrgBaseDetails]()
+    var promotionProductList = [LsrProductDetails]()
     
     func roleListinApi(parameter: JSON){
         self.roleListArray.removeAll()
@@ -159,4 +160,41 @@ class HYT_DropdownVM{
         }
     }
 
+    
+    func productListApi(parameter: JSON){
+        self.promotionProductList.removeAll()
+        self.VC?.startLoading()
+        requestAPIs.getPromotionDetailsProductList(parameters: parameter) { result, error in
+            if error == nil{
+                if result != nil{
+                    self.promotionProductList = result?.lsrProductDetails ?? []
+                    DispatchQueue.main.async {
+                        if result?.lsrProductDetails?.count != 0{
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionProductList.count)
+                            self.VC?.rowNumber = self.promotionProductList.count
+                            self.VC?.dropdownTableView.reloadData()
+                            self.VC?.stopLoading()
+                        }else{
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionProductList.count)
+                            self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionProductList.count)
+                            self.VC?.dropdownTableView.reloadData()
+                            self.VC?.stopLoading()
+                        }
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self.VC?.stopLoading()
+                    }
+                }
+            }
+            else{
+                DispatchQueue.main.async {
+                    self.VC?.stopLoading()
+                    print("My Redeemption error",error?.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    
 }

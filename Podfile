@@ -14,7 +14,7 @@ pod 'Toast-Swift', '~> 5.0.1'
 pod "ImageSlideshow/Alamofire"
 pod 'Alamofire', '~> 4.0'
 pod 'LanguageManager-iOS'
-pod 'Firebase/Core'
+pod 'Firebase/CoreOnly'
 
 
 

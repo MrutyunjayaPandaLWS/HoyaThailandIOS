@@ -91,7 +91,7 @@
 "idCardNumber_toast_message" = "กรุณากรอกหมายเลขบัตรประชาชน";
 "back_Login" = "กลับไปหน้าลงชื่อเข้าใช้งาน";
 "register_success_Message" = "คุณลงทะเบียนสำเร็จ";
-"registrationFailed" = "Registration Failed"; //mark
+"registrationFailed" = "This storeID already registered, please try other storeID"; //mark
 
 //Help
 "membershipId" = "หมายเลขสมาชิก";

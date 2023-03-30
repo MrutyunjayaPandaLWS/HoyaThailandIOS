@@ -18,6 +18,7 @@ class HYT_PromotionListVC: BaseViewController, UITableViewDelegate, UITableViewD
     
     func didTappedPromotionClaim(item: HYT_PromotionListTVCell) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_ClaimDetailsVC") as? HYT_ClaimDetailsVC
+        vc?.promotionData = item.promotionData
         navigationController?.pushViewController(vc!, animated: true)
         
     }

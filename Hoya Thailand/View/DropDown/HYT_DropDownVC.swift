@@ -29,6 +29,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var delegate1: FilterStatusDelegate?
     var rowNumber = 0
     var flags = ""
+    var progrmaId = 0
     var genderList = ["Male","Female"]
     var promotionNameList = ["promotion-A","promotion-B","promotion-C","promotion-D","promotion-E"]
     var accountTypeList = ["Store owner","Individual"]
@@ -39,6 +40,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var promotionName = ""
     var accountType = ""
     var roleName = ""
+    var roleId = 0
     var salesRepresentativeName = ""
     var statusName: String = ""
     var statusId:Int = 0
@@ -81,6 +83,8 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
             getPromotionList_Api()
         case "myRedeemption":
             rowNumber = myRedeemptionStatus.count
+        case "productList":
+            getProductList_Api()
             
         default:
             print("invalid flags")
@@ -122,6 +126,19 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
         self.VM.queryStatusListing(parameter: parameter)
     }
     
+    func getProductList_Api(){
+        let parameter : [String : Any] = [
+                "ActorId":userId,
+                 "SearchText": "",
+                "LoyaltyProgramId":progrmaId ?? 0,
+                "ProductDetails":[
+                    "ActionType": 20
+                ]
+        ]
+        
+        self.VM.productListApi(parameter: parameter)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rowNumber
     }
@@ -146,6 +163,8 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
             cell.nameLbl.text = self.VM.promotionList[indexPath.row].programName
         case "myRedeemption":
             cell.nameLbl.text = myRedeemptionStatus[indexPath.row].statusName
+        case "productList":
+            cell.nameLbl.text = self.VM.promotionProductList[indexPath.row].productName
         default:
             print("invalid code")
         }
@@ -167,6 +186,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
             accountType = accountTypeList[indexPath.row]
             delegate?.didTappedAccountType(item: self)
         case "role":
+            roleId = self.VM.roleListArray[indexPath.row].attributeId ?? 0
             roleName = self.VM.roleListArray[indexPath.row].attributeValue ?? "Select role"
             delegate?.didTappedRoleBtn(item: self)
         case "sales":
@@ -181,10 +201,15 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
         case "promotionList":
             statusName = self.VM.promotionList[indexPath.row].programName ?? ""
             statusId = self.VM.promotionList[indexPath.row].programId ?? 0
+            delegate?.didTappedPromotionName(item: self)
             delegate1?.didTappedFilterStatus(item: self)
         case "myRedeemption":
             statusName = self.myRedeemptionStatus[indexPath.row].statusName ?? ""
             statusId = self.myRedeemptionStatus[indexPath.row].statusID ?? 0
+            delegate1?.didTappedFilterStatus(item: self)
+        case "productList":
+            statusName = self.VM.promotionProductList[indexPath.row].productName ?? ""
+            statusId = self.VM.promotionProductList[indexPath.row].productId ?? 0
             delegate1?.didTappedFilterStatus(item: self)
         default:
             print("invalid flags")

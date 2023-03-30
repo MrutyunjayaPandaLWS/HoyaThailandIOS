@@ -91,7 +91,7 @@
 "idCardNumber_toast_message" = "Enter ID card number";
 "back_Login" = "Back to Login";
 "register_success_Message" = "You have registered successfully.";
-"registrationFailed" = "Registration Failed"; //mark
+"registrationFailed" = "This storeID already registered, please try other storeID"; //mark
 //Help
 "membershipId" = "Membership ID";
 "membershipId_toast_message" = "Enter Membership ID";

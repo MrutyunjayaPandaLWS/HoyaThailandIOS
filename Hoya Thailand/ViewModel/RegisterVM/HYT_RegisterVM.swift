@@ -91,12 +91,15 @@ class HYT_RegisterVM{
                                // self.VC?.view.makeToast("This storeId allready exists", duration: 2.0, position: .center)
                                 self.VC?.storeIdStatus = 1
                                 self.VC?.locationCode = "\(result?.lstAttributesDetails?[0].attributeId ?? 0)"
+                                self.VC?.storeId = "\(result?.lstAttributesDetails?[0].attributeId ?? 0)"
+                                self.VC?.storeCode = "\(result?.lstAttributesDetails?[0].attributeNames ?? "")"
                                 self.VC?.selectSalesRepresentativeLbl.text = "sales_representative_toast_message".localiz()
                                 self.VC?.storeNameTF.text = result?.lstAttributesDetails?[0].attributeValue
                                 self.VC?.storeNameTF.textColor = .black
                                 self.VC?.checkStoreUserNameExistancy()
                                 self.VC?.stopLoading()
                             }else{
+                                self.VC?.storeNameTF.text = ""
                                 self.VC?.view.makeToast("Invalid Store Id", duration: 2.0, position: .center)
                                 self.VC?.selectSalesRepresentativeLbl.text = "sales_representative_toast_message".localiz()
                                 self.VC?.storeIdStatus = 0
@@ -161,11 +164,16 @@ class HYT_RegisterVM{
                     
                     if result?.returnValue == 1{
                         DispatchQueue.main.async {
-                            self.VC?.view.makeToast("Store User Name already register used different store id", duration: 2.0, position: .center)
+                            if self.VC?.selectAccountType.text == "Individual"{
+                                self.VC?.view.makeToast("This store User Name already registered", duration: 2.0, position: .center)
+                            }
                             self.VC?.storeUserNameExistancy = 1
                             self.VC?.stopLoading()
                         }
                     }else{
+                        if self.VC?.selectAccountType.text == "Store owner"{
+                            self.VC?.view.makeToast("The store user name is not exist", duration: 2.0, position: .center)
+                        }
                         self.VC?.storeUserNameExistancy = 0
                         self.VC?.stopLoading()
                     }
@@ -225,6 +233,7 @@ class HYT_RegisterVM{
                 if error == nil{
                     if result != nil{
                         DispatchQueue.main.async {
+                            print(result?.returnMessage)
                             if String(result?.returnMessage?.prefix(1) ?? "") == "1"{
                                 self.VC?.popMessage()
                                 self.VC?.navigationController?.popViewController(animated: true)
