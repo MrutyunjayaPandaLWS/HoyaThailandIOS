@@ -69,7 +69,10 @@ class HYT_RegisterOtpVC: BaseViewController {
         resendOtpBtn.isHidden = true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: true)
+        let touch = touches.first
+        if touch?.view == self.view{
+                    dismiss(animated: true)
+        }
     }
     
     func sendOtptoRegisterNumber(){

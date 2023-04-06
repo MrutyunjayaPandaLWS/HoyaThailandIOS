@@ -316,10 +316,10 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
 //        else if storeUserNameExistancy == 1 {
 //            self.view.makeToast("This_store_ID_already_exist".localiz(), duration: 2.0, position: .center)
 //        }
-        else if storeUserNameExistancy == 1 && selectAccountType.text == "Individual"{
+        else if storeUserNameExistancy == 1 && selectAccountType.text == "Store owner"{
             self.view.makeToast("This store user name already exist", duration: 2.0, position: .center)
-        }else if storeUserNameExistancy == 0 && selectAccountType.text == "Store owner"{
-            self.view.makeToast("This store user name is not exists", duration: 2.0, position: .center)
+        }else if storeUserNameExistancy == 0 && selectAccountType.text == "Individual"{
+            self.view.makeToast("This store user name is not register", duration: 2.0, position: .center)
         } else if emailExistancy == 1 && self.emailTF.text!.count != 0  {
             self.view.makeToast("email_validation".localiz(), duration: 2.0, position: .center)
         }else if validationMobileNo == 0 {

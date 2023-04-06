@@ -74,6 +74,7 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     var fromDate = ""
     var toDate = ""
     var currentDate = ""
+    var tomorrowDate = ""
     var startIndex = 1
     var noOfElement = 0
     
@@ -107,6 +108,21 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         NSLog("%@", dateString)
         print("current date",dateString)
         currentDate = dateString
+    }
+    
+    func tomorrowdate(){
+        var tomorrow: Date {
+            return Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+        }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+
+        let dateOutDefault = dateFormatter.string(from: tomorrow as Date)
+        print("tomorrow date", dateOutDefault)
+        expireDateLbl.text = "will Expire on : \( dateOutDefault)"
+        self.tomorrowDate = "\(dateOutDefault)"
+        
     }
     func getVoucherList_Api(){
             let parameter : [String : Any] = [
@@ -156,6 +172,7 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         vc?.pointExpireDetails = self.VM.pointExpireDetails
         vc?.productDetails = self.VM.voucherListArray[indexPath.row]
         vc?.currentDate = currentDate
+        vc?.tomorrowDate = self.tomorrowDate
         navigationController?.pushViewController(vc!, animated: true)
     }
     

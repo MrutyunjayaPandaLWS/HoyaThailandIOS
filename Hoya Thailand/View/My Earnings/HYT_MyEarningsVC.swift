@@ -79,9 +79,12 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_MyEarningsTVCell", for: indexPath) as! HYT_MyEarningsTVCell
         cell.selectionStyle = .none
-        if self.VM.myEarningList[indexPath.row].salesReturn == 0 {
+        if self.VM.myEarningList[indexPath.row].remarks?.count != 0 {
             cell.expireDateView.constant = 40
-            cell.productStatus.text = "Point Credit"
+            let value = self.VM.myEarningList[indexPath.row].remarks?.split(separator: "(")
+            let value2 = value?[1].split(separator: "-")
+            print(value,"&",value2 , "&",value?[1],value2?[0])
+            cell.productStatus.text = "\(value2?[0] ?? "")"
             cell.pointsView.backgroundColor = primaryColor
         }else{
             cell.expireDateView.constant = 0

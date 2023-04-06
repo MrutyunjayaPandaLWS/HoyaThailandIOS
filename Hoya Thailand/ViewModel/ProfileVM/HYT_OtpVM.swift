@@ -26,6 +26,8 @@ class HYT_OtpVM{
                             self.VC?.timerLbl.isHidden = false
                             self.VC?.otpBtnTopConstraints.constant = CGFloat(124)
                             self.VC?.getOtpBtn.setTitle("Submit", for: .normal)
+                            self.VC?.newNumberTF.isUserInteractionEnabled = false
+                            self.VC?.otpBtnStatus = 1
                             self.count = 60
                             self.timmer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
 //                            self.VC?.sendotp = 1
@@ -76,8 +78,10 @@ class HYT_OtpVM{
                             self.VC?.stopLoading()
                         }
                     }else{
-                        self.VC?.sendOtptoRegisterNumber()
-                        self.VC?.stopLoading()
+                        DispatchQueue.main.async {
+                            self.VC?.sendOtptoRegisterNumber()
+                            self.VC?.stopLoading()
+                        }
                     }
                     
                 }else{

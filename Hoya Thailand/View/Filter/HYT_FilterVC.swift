@@ -115,9 +115,12 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: true)
-    }
+//    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first
+//        if touch?.view == self.view{
+//                    dismiss(animated: true)
+//        }
+//    }
 
 }

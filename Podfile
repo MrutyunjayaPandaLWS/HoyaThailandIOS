@@ -20,9 +20,6 @@ pod 'Firebase/CoreOnly'
 
 
 
-
-
-
   # Pods for Hoya Thailand
 
 

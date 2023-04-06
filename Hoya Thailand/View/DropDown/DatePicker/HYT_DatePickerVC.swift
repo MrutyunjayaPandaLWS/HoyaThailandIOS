@@ -35,15 +35,14 @@ class HYT_DatePickerVC: UIViewController {
         // Do any additional setup after loading the view.
         datePickerView.maximumDate = Calendar.current.date(byAdding: .year, value: 0, to: Date())
     }
-    override func touchesBegan(_ touchscreen: Set<UITouch>, with event: UIEvent?)
-    {
-        let touch = touchscreen.first
-        if touch?.view != self.presentingViewController
-        {
-            self.dismiss(animated: true, completion: nil)
-
+  
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.view == self.view{
+                    dismiss(animated: true)
         }
     }
+    
     @IBAction func didTappedOkBtn(_ sender: UIButton) {
         let today = Date() //Jun 21, 2017, 7:18 PM
         let sevenDaysBeforeToday = Calendar.current.date(byAdding: .year, value: -18, to: today)!

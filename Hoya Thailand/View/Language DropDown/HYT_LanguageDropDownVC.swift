@@ -38,9 +38,12 @@ class HYT_LanguageDropDownVC: BaseViewController, UITableViewDelegate, UITableVi
         languageListApi()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first
+//        if touch?.view == self.view{
+//                    dismiss(animated: true)
+//        }
+//    }
     
     
     @IBAction func didTappedCloseBtn(_ sender: UIButton) {

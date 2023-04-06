@@ -3,4 +3,70 @@
    uuid = "B8C7BF74-2648-41A5-867A-E787D5C6A6F8"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "814921E2-C2DA-4517-9006-5DF4C8F879DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "expirePointsDetailsApi(parameter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "814921E2-C2DA-4517-9006-5DF4C8F879DB - eb7b885d3cdc23e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "814921E2-C2DA-4517-9006-5DF4C8F879DB - e7e782291921f385"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hoya_Thailand.PointExpireModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C9A5DAF-5CC8-41AB-89DA-268561BA76FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "expirePointsDetailsApi(parameter:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

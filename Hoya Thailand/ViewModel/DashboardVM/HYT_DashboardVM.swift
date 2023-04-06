@@ -121,6 +121,9 @@ class HYT_DashboardVM{
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.ImageSetups()
+                        let gestureRecognizer = UITapGestureRecognizer(target: self.VC.self, action: #selector(self.VC!.didTap))
+                        self.VC!.offersSlideShow.addGestureRecognizer(gestureRecognizer)
                         self.VC?.stopLoading()
                     }
                 }

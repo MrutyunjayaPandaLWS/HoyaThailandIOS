@@ -28,6 +28,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
     var productDetails : ObjCatalogueList1?
     var VM = HYT_VoucherDetailsVM()
     var currentDate = ""
+    var tomorrowDate = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
@@ -40,7 +41,13 @@ class HYT_VoucherDetailsVC: BaseViewController {
         availableBalanceLbl.text = "\(redeemablePointBal)"
         if pointExpireDetails.count != 0{
             pointsLbl.text = "\(pointExpireDetails[0].attributeId ?? 0) Points"
-            expireDateLbl.text = "will Expire on : \(pointExpireDetails[0].attributeNames ?? "0")"
+            if pointExpireDetails[0].attributeNames?.count != 0{
+                expireDateLbl.text = "will Expire on : \(pointExpireDetails[0].attributeNames ?? "")"
+            }else{
+                expireDateLbl.text = "will Expire on :\(tomorrowDate)"
+            }
+        }else{
+            expireDateLbl.text = "will Expire on : \(tomorrowDate)"
         }
         setUpdata()
     }
@@ -49,7 +56,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
         if amountTF.text?.count == 0{
             self.view.makeToast("Enter amount", duration: 2.0, position: .center)
         }else if Int(productDetails?.min_points ?? "0") ?? 0 <= Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.max_points ?? "0") ?? 0 >= Int(amountTF.text ?? "") ?? 0{
-            var redeemValue = Int(amountTF.text ?? "0")
+            let redeemValue = Int(amountTF.text ?? "0")
             if redeemValue == 0{
                 self.view.makeToast("Redeem value shouldn't be 0", duration: 2.0, position: .center)
                 amountTF.text = ""

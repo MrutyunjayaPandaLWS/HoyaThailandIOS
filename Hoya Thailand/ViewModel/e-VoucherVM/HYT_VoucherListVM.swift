@@ -67,16 +67,22 @@ class HYT_VoucherListVM{
                 if result != nil{
                     self.pointExpireDetails = result?.lstAttributesDetails ?? []
                     DispatchQueue.main.async {
-                        if result?.lstAttributesDetails?.count != 0 {
+                        if result?.lstAttributesDetails?.count != 0 && result?.lstAttributesDetails != nil{
                             self.VC?.pointsLbl.text = "\(result?.lstAttributesDetails?[0].attributeId ?? 0) Points"
-                            self.VC?.expireDateLbl.text = "will Expire on : \(result?.lstAttributesDetails?[0].attributeNames ?? "")"
+                            if result?.lstAttributesDetails?[0].attributeNames?.count != 0{
+                                self.VC?.expireDateLbl.text = "will Expire on : \(result?.lstAttributesDetails?[0].attributeNames ?? "")"
+                            }else{
+                                self.VC?.tomorrowdate()
+                            }
                             self.VC?.stopLoading()
                         }else{
+                            self.VC?.tomorrowdate()
                             self.VC?.stopLoading()
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
+                        self.VC?.tomorrowdate()
                         self.VC?.stopLoading()
                     }
                 }

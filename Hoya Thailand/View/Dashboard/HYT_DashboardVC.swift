@@ -55,6 +55,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
 //        profileImage.image = UIImage(named: "Image-3")
         imagePicker.delegate = self
+        tokendata()
         dashboardOffersApi()
         setUpMenuList()
         
@@ -81,6 +82,9 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         
     }
     @IBAction func didTappedNotificationBtn(_ sender: UIButton) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "HistoryNotificationsViewController") as? HistoryNotificationsViewController
+        navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func didTappedLanguageBtn(_ sender: UIButton) {

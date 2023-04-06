@@ -107,8 +107,10 @@ class HYT_RegisterVM{
                             }   
                         }
                     }else{
-                        self.VC?.storeIdStatus = 0
-                        self.VC?.stopLoading()
+                        DispatchQueue.main.async {
+                            self.VC?.storeIdStatus = 0
+                            self.VC?.stopLoading()
+                        }
                     }
 
                 }else{
@@ -138,8 +140,10 @@ class HYT_RegisterVM{
                             self.VC?.stopLoading()
                         }
                     }else{
-                        self.VC?.emailExistancy = 0
-                        self.VC?.stopLoading()
+                        DispatchQueue.main.async {
+                            self.VC?.emailExistancy = 0
+                            self.VC?.stopLoading()
+                        }
                     }
                     
                 }else{
@@ -161,21 +165,25 @@ class HYT_RegisterVM{
         requestAPIs.checkStoreUserNameExistancy(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    
+                    print("userNameExistancy",result?.returnValue)
                     if result?.returnValue == 1{
                         DispatchQueue.main.async {
-                            if self.VC?.selectAccountType.text == "Individual"{
+                            if self.VC?.selectAccountType.text == "Store owner"{
                                 self.VC?.view.makeToast("This store User Name already registered", duration: 2.0, position: .center)
                             }
                             self.VC?.storeUserNameExistancy = 1
                             self.VC?.stopLoading()
                         }
                     }else{
-                        if self.VC?.selectAccountType.text == "Store owner"{
-                            self.VC?.view.makeToast("The store user name is not exist", duration: 2.0, position: .center)
+                        DispatchQueue.main.async {
+                            if self.VC?.selectAccountType.text == "Individual"{
+                                
+                                self.VC?.view.makeToast("The store user name is not registered", duration: 2.0, position: .center)
+                            }
+                            self.VC?.storeUserNameExistancy = 0
+                            self.VC?.stopLoading()
                         }
-                        self.VC?.storeUserNameExistancy = 0
-                        self.VC?.stopLoading()
+                       
                     }
                     
                 }else{

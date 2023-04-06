@@ -14,6 +14,8 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var myStaffTableView: UITableView!
+    let activeColor = #colorLiteral(red: 0.05882352941, green: 0.7137254902, blue: 0.03529411765, alpha: 1)
+    let inActiveColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.8965411543)
     var VM = HYT_MyStaffVM()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,11 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.VM.myStaffList.count == 0{
+            emptyMessageLbl.isHidden = false
+        }else{
+            emptyMessageLbl.isHidden = true
+        }
         return self.VM.myStaffList.count
     }
     
@@ -56,8 +63,10 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         cell.staffNameLbl.text = self.VM.myStaffList[indexPath.row].customerFirstName
         if self.VM.myStaffList[indexPath.row].status == 1{
             cell.statusLbl.text = "Active"
+            cell.statusLbl.textColor = activeColor
         }else if self.VM.myStaffList[indexPath.row].status == 0{
-            cell.statusLbl.text = "Closed"
+            cell.statusLbl.text = "Inactive"
+            cell.statusLbl.textColor = inActiveColor
         }
         return cell
     }
