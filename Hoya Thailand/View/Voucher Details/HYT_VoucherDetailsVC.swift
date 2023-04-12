@@ -24,6 +24,7 @@ class HYT_VoucherDetailsVC: BaseViewController {
     @IBOutlet weak var voucherName: UILabel!
     @IBOutlet weak var voucherImage: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
+    var totalRedeemPoint = 0
     var pointExpireDetails = [eVoucherPointExpModel]()
     var productDetails : ObjCatalogueList1?
     var VM = HYT_VoucherDetailsVM()
@@ -34,11 +35,13 @@ class HYT_VoucherDetailsVC: BaseViewController {
         self.VM.VC = self
         amountTF.keyboardType = .numberPad
         localization()
+        voucherDetailsTextView.isEditable = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        availableBalanceLbl.text = "\(redeemablePointBal)"
+        dashboardApi()
+//        availableBalanceLbl.text = "\(redeemablePointBal)"
         if pointExpireDetails.count != 0{
             pointsLbl.text = "\(pointExpireDetails[0].attributeId ?? 0) Points"
             if pointExpireDetails[0].attributeNames?.count != 0{
@@ -53,12 +56,16 @@ class HYT_VoucherDetailsVC: BaseViewController {
     }
     
     @IBAction func didTappedRedeemBtn(_ sender: UIButton) {
+        let EnterAmount = Int(amountTF.text ?? "0")
         if amountTF.text?.count == 0{
             self.view.makeToast("Enter amount", duration: 2.0, position: .center)
         }else if Int(productDetails?.min_points ?? "0") ?? 0 <= Int(amountTF.text ?? "") ?? 0 && Int(productDetails?.max_points ?? "0") ?? 0 >= Int(amountTF.text ?? "") ?? 0{
             let redeemValue = Int(amountTF.text ?? "0")
             if redeemValue == 0{
                 self.view.makeToast("Redeem value shouldn't be 0", duration: 2.0, position: .center)
+                amountTF.text = ""
+            }else  if totalRedeemPoint < EnterAmount!{
+                self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                 amountTF.text = ""
             }else{
                 let parameter : [String : Any] = [
@@ -103,6 +110,13 @@ class HYT_VoucherDetailsVC: BaseViewController {
     
     @IBAction func didTappedBackBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func dashboardApi(){
+        let parameter : [String : Any] = [
+                "ActorId": userId
+        ]
+        self.VM.dashBoardApi(parameter: parameter)
     }
     
     func setUpdata(){

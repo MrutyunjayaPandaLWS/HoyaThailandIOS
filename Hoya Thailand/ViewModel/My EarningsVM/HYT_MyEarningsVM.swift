@@ -45,6 +45,9 @@ class HYT_MyEarningsVM{
                 }
             }  
         }
+        DispatchQueue.main.async {
+            self.VC?.stopLoading()
+        }
     }
 
 }

@@ -35,6 +35,7 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
         otpView.isHidden = true
         enterOtpLbl.isHidden = true
         timerLbl.isHidden = true
+        newNumberTF.keyboardType = .numberPad
         otpBtnTopConstraints.constant = CGFloat(20)
         newNumberTF.isUserInteractionEnabled = true
     }

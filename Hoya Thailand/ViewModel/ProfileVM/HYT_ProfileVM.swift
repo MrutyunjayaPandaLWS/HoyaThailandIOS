@@ -22,24 +22,26 @@ class HYT_ProfileVM{
                     self.generalInfo = result?.lstCustomerJson ?? []
                     DispatchQueue.main.async {
                         if result?.lstCustomerJson?.count != 0{
-                            self.VC?.membershipIDTF.text = self.generalInfo[0].loyaltyId
-                            self.VC?.roleTF.text = self.generalInfo[0].customerType
-                            self.VC?.storeIDTF.text = self.generalInfo[0].locationCode
-                            self.VC?.storeNameTF.text = self.generalInfo[0].locationName
-                            self.VC?.salesRepresentativeTF.text = self.generalInfo[0].user
-                            self.VC?.firstNameTF.text = self.generalInfo[0].firstName
-                            self.VC?.lastNameTF.text = self.generalInfo[0].lastName
-                            self.VC?.mobileNumberTF.text = self.generalInfo[0].mobile
-                            self.VC?.emailTF.text = self.generalInfo[0].email
+                            self.VC?.membershipIDTF.text = self.generalInfo[0].loyaltyId ?? ""
+                            self.VC?.roleTF.text = self.generalInfo[0].customerType ?? ""
+                            self.VC?.storeIDTF.text = self.generalInfo[0].locationCode ?? ""
+                            self.VC?.storeNameTF.text = self.generalInfo[0].locationName ?? "-"
+                            self.VC?.salesRepresentativeTF.text = self.generalInfo[0].user ?? ""
+                            self.VC?.firstNameTF.text = self.generalInfo[0].firstName ?? ""
+                            self.VC?.lastNameTF.text = self.generalInfo[0].lastName ?? ""
+                            self.VC?.mobileNumberTF.text = self.generalInfo[0].mobile ?? ""
+                            self.VC?.emailTF.text = self.generalInfo[0].email ?? ""
                             if self.generalInfo[0].gender?.count == 0 || self.generalInfo[0].gender == nil{
-                                
+                                self.VC?.selectGenderLbl.text = "Select gender"
                             }else{
-                                self.VC?.selectGenderLbl.text = self.generalInfo[0].gender
+                                self.VC?.selectGenderLbl.text = self.generalInfo[0].gender ?? "-"
                             }
-                            self.VC?.selectDateLbl.text = String(self.generalInfo[0].jdob?.dropLast(9) ?? "Select DOB")
-                            self.VC?.selectAnniversarydateLbl.text = String(self.generalInfo[0].jAnniversary?.dropLast(9) ?? "Select Date")
+                            let DOB = self.generalInfo[0].jdob?.split(separator: " ")
+                            self.VC?.selectDateLbl.text = String(DOB?[0] ?? "Select DOB")
+                            let DOA = self.generalInfo[0].jAnniversary?.split(separator: " ")
+                            self.VC?.selectAnniversarydateLbl.text = String(DOA?[0] ?? "Select Date")
                             self.VC?.registerationNo = self.generalInfo[0].registrationSource ?? 0
-                            self.VC?.idCardNumberTF.text = self.generalInfo[0].identificationNo
+                            self.VC?.idCardNumberTF.text = self.generalInfo[0].identificationNo ?? "-"
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.stopLoading()

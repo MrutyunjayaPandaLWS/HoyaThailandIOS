@@ -79,12 +79,15 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_MyEarningsTVCell", for: indexPath) as! HYT_MyEarningsTVCell
         cell.selectionStyle = .none
-        if self.VM.myEarningList[indexPath.row].remarks?.count != 0 {
+        if self.VM.myEarningList[indexPath.row].remarks?.contains("Reward Adjustment") == true{
+            cell.expireDateView.constant = 0
+            cell.productStatus.text = "Reward Adjustment"
+            cell.pointsView.backgroundColor = primaryColor
+        }else if self.VM.myEarningList[indexPath.row].remarks?.contains("Loyalty Program") == true{
             cell.expireDateView.constant = 40
-            let value = self.VM.myEarningList[indexPath.row].remarks?.split(separator: "(")
-            let value2 = value?[1].split(separator: "-")
-            print(value,"&",value2 , "&",value?[1],value2?[0])
-            cell.productStatus.text = "\(value2?[0] ?? "")"
+            let expDate = self.VM.myEarningList[indexPath.row].pointExpiryDate?.split(separator: " ")
+            cell.expiredateLbl.text = "\(expDate?[0] ?? "")"
+            cell.productStatus.text = "Point credited"
             cell.pointsView.backgroundColor = primaryColor
         }else{
             cell.expireDateView.constant = 0
@@ -94,10 +97,11 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
         }
         
         cell.pointsLbl.text = "\(Int(self.VM.myEarningList[indexPath.row].creditedPoint ?? 0))"
-        cell.invoiceNumberLbl.text = self.VM.myEarningList[indexPath.row].invoiceNo
-        cell.productNameLbl.text = self.VM.myEarningList[indexPath.row].productName
-        cell.dateLbl.text = String(self.VM.myEarningList[indexPath.row].trxnDate?.dropLast(9) ?? "")
-        cell.promotionNameLbl.text = self.VM.myEarningList[indexPath.row].assessmentName
+        cell.invoiceNumberLbl.text = self.VM.myEarningList[indexPath.row].invoiceNo ?? "-"
+        cell.productNameLbl.text = self.VM.myEarningList[indexPath.row].productName ?? "-"
+        let date = self.VM.myEarningList[indexPath.row].trxnDate?.split(separator: " ")
+        cell.dateLbl.text = String(date?[0] ?? "-")
+        cell.promotionNameLbl.text = self.VM.myEarningList[indexPath.row].assessmentName ?? "-"
         return cell
     }
  

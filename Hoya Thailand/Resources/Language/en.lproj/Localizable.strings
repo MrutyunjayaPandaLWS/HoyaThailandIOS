@@ -33,7 +33,7 @@
 //Login
 "login" = "Login";
 "Enter_a_valid_password" = "Enter a valid password"; //mark
-"Mobile_number_is_doesn't_exists" = "Mobile number is doesn't exists"; //mark
+"Mobile_number_is_doesn't_exists" = "Membership ID / Mobile number is doesn't exists"; //mark
 "Password_is_incorrect" = "Password is incorrect"; //mark
 "loginInfo" = "Enter given details to login the account";
 "userId" = "Membership ID / Mobile Number";

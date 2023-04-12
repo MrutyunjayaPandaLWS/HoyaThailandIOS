@@ -75,7 +75,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     @IBOutlet weak var personalInfoLineLbl: UILabel!
     @IBOutlet weak var personalInfoBtn: UIButton!
     @IBOutlet weak var updateBtn: UIButton!
-    @IBOutlet weak var personalInformationTopHeight: NSLayoutConstraint!
+//    @IBOutlet weak var personalInformationTopHeight: NSLayoutConstraint!
     @IBOutlet weak var personalInformationView: UIView!
     @IBOutlet weak var generalInformationView: UIView!
     
@@ -103,7 +103,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        personalInformationTopHeight.constant = 20
+//        personalInformationTopHeight.constant = 20
         personalInformationView.isHidden = true
         generalInformationView.isHidden = false
         updateBtn.isHidden = true
@@ -260,12 +260,12 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
                 "DOB": selectDateLbl.text ?? "",
                 "Mobile": mobileNumberTF.text ?? "",
                 "RegistrationSource": registerationNo
-            ],
+            ] as [String : Any],
             "ObjCustomerDetails": [
                 "IsNewProfilePicture":0,
                 "Anniversary":selectAnniversarydateLbl.text ?? "",
                 "Gender": selectGenderLbl.text ?? ""
-            ]
+            ] as [String : Any]
         ]
         
         self.VM.peofileUpdate(parameter: parameter)

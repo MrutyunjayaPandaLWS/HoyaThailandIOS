@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49B97B80E6E60D1DD1A2CD9A /* Pods_Hoya_Thailand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2642075948A1A0128A052CEF /* Pods_Hoya_Thailand.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		800393A629A7986700542450 /* HYT_S_PromotionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393A529A7986600542450 /* HYT_S_PromotionTVCell.swift */; };
 		800393A829A7988F00542450 /* HYT_S_PromotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393A729A7988F00542450 /* HYT_S_PromotionVC.swift */; };
 		800393AC29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393AB29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift */; };
@@ -243,11 +242,12 @@
 		84E5C7D829DE9925004D5025 /* HistoryNotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */; };
 		84E5C7DC29DE99B1004D5025 /* NotificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */; };
 		84E5C7DD29DE99B1004D5025 /* LstPushHistoryJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */; };
-		F842C571F7B1C5A2FF0AEAF5 /* Pods_Hoya_Thailand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8443584E29DD822A005C6FB8 /* Pods_Hoya_Thailand.framework */; };
+		F8012B4BA950FDC4CD1E152D /* Pods_Hoya_Thailand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25362235308BA973D5DFCE1F /* Pods_Hoya_Thailand.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2642075948A1A0128A052CEF /* Pods_Hoya_Thailand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hoya_Thailand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.debug.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.debug.xcconfig"; sourceTree = "<group>"; };
+		25362235308BA973D5DFCE1F /* Pods_Hoya_Thailand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hoya_Thailand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		800393A529A7986600542450 /* HYT_S_PromotionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionTVCell.swift; sourceTree = "<group>"; };
 		800393A729A7988F00542450 /* HYT_S_PromotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionVC.swift; sourceTree = "<group>"; };
 		800393AB29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionDetailsVC.swift; sourceTree = "<group>"; };
@@ -485,7 +485,6 @@
 		8443584829DD7B27005C6FB8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8443584A29DD81F3005C6FB8 /* libnetwork.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnetwork.tbd; path = usr/lib/libnetwork.tbd; sourceTree = SDKROOT; };
 		8443584C29DD820D005C6FB8 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
-		8443584E29DD822A005C6FB8 /* Pods_Hoya_Thailand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Hoya_Thailand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		84E5C7D029DE9582004D5025 /* HistoryNotificationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		84E5C7D129DE9583004D5025 /* HistoryNotificationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryNotificationsTableViewCell.xib; sourceTree = "<group>"; };
@@ -493,8 +492,7 @@
 		84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewModel.swift; sourceTree = "<group>"; };
 		84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModels.swift; sourceTree = "<group>"; };
 		84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstPushHistoryJson.swift; sourceTree = "<group>"; };
-		87923BA223A219E37D1A4445 /* Pods-Hoya Thailand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.release.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.release.xcconfig"; sourceTree = "<group>"; };
-		B48E97C8B1B9570E59690D7B /* Pods-Hoya Thailand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.debug.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.debug.xcconfig"; sourceTree = "<group>"; };
+		C7FD8CACC8BBB5FDDDD553DE /* Pods-Hoya Thailand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.release.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,8 +500,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B97B80E6E60D1DD1A2CD9A /* Pods_Hoya_Thailand.framework in Frameworks */,
-				F842C571F7B1C5A2FF0AEAF5 /* Pods_Hoya_Thailand.framework in Frameworks */,
+				F8012B4BA950FDC4CD1E152D /* Pods_Hoya_Thailand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1708,12 +1705,11 @@
 		841119C4FF4F1A4470A2DDBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8443584E29DD822A005C6FB8 /* Pods_Hoya_Thailand.framework */,
 				8443584C29DD820D005C6FB8 /* Network.framework */,
 				8443584A29DD81F3005C6FB8 /* libnetwork.tbd */,
 				8443584829DD7B27005C6FB8 /* CFNetwork.framework */,
 				8443584629DD7AC0005C6FB8 /* libswiftWebKit.tbd */,
-				2642075948A1A0128A052CEF /* Pods_Hoya_Thailand.framework */,
+				25362235308BA973D5DFCE1F /* Pods_Hoya_Thailand.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1748,8 +1744,8 @@
 		F71EDD0365E35BF0A9228A4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B48E97C8B1B9570E59690D7B /* Pods-Hoya Thailand.debug.xcconfig */,
-				87923BA223A219E37D1A4445 /* Pods-Hoya Thailand.release.xcconfig */,
+				12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */,
+				C7FD8CACC8BBB5FDDDD553DE /* Pods-Hoya Thailand.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1761,11 +1757,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80FABD482994EFA000061E01 /* Build configuration list for PBXNativeTarget "Hoya Thailand" */;
 			buildPhases = (
-				7A2D581A9822604A92113412 /* [CP] Check Pods Manifest.lock */,
+				860F631B9022466BFE49CEE3 /* [CP] Check Pods Manifest.lock */,
 				80FABD2D2994EF9B00061E01 /* Sources */,
 				80FABD2E2994EF9B00061E01 /* Frameworks */,
 				80FABD2F2994EF9B00061E01 /* Resources */,
-				346F126F16D9A001168F4310 /* [CP] Embed Pods Frameworks */,
+				09247CB1E4B2EB14D61DDEA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1880,7 +1876,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		346F126F16D9A001168F4310 /* [CP] Embed Pods Frameworks */ = {
+		09247CB1E4B2EB14D61DDEA4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1897,7 +1893,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A2D581A9822604A92113412 /* [CP] Check Pods Manifest.lock */ = {
+		860F631B9022466BFE49CEE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2256,7 +2252,7 @@
 		};
 		80FABD492994EFA000061E01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B48E97C8B1B9570E59690D7B /* Pods-Hoya Thailand.debug.xcconfig */;
+			baseConfigurationReference = 12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2295,7 +2291,7 @@
 		};
 		80FABD4A2994EFA000061E01 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87923BA223A219E37D1A4445 /* Pods-Hoya Thailand.release.xcconfig */;
+			baseConfigurationReference = C7FD8CACC8BBB5FDDDD553DE /* Pods-Hoya Thailand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

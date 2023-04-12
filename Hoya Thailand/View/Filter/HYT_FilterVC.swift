@@ -33,7 +33,7 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     func didTappedPromotionName(item: HYT_DropDownVC) {
         selectPromotionNameLbl.text = item.promotionName
     }
-
+    
     @IBOutlet weak var bottomConstraints: NSLayoutConstraint!
     @IBOutlet weak var toDateLbl: UILabel!
     @IBOutlet weak var fromDateLbl: UILabel!
@@ -55,7 +55,7 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         super.viewDidLoad()
         promotionNameViewHeight.constant = CGFloat(promotionNameHeight)
         bottomConstraints.constant = CGFloat(bottomConstraintsValue)
-        
+        selectPromotionNameLbl.text = "Select Status"
     }
     
     @IBAction func didTappedTodateBtn(_ sender: UIButton) {
@@ -83,27 +83,65 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         vc?.flags = flags
         present(vc!, animated: true)
     }
-   
+    
     
     @IBAction func didTappedResetBtn(_ sender: UIButton) {
-        selectPromotionNameLbl.text = "Select"
+        selectPromotionNameLbl.text = "Select Status"
         fromDateLbl.text = "From Date"
         toDateLbl.text = "To Date"
         fromDate = ""
         toDate = ""
     }
-
+    
     @IBAction func didTappedFilterBtn(_ sender: UIButton) {
         
-        if fromDateLbl.text == "From Date" || toDateLbl.text == "To Date"{
-            self.view.makeToast("Select date", duration: 2.0, position: .center)
-        }else if fromDate > toDate {
-            self.view.makeToast("invalid date range", duration: 2.0, position: .center)
+        //        if fromDateLbl.text == "From Date" && toDateLbl.text == "To Date" && selectPromotionNameLbl.text == "Select"{
+        //            if fromDate > toDate {
+        //                self.view.makeToast("invalid date range", duration: 2.0, position: .center)
+        //            }else{
+        //                delegate?.didTappedFilterBtn(item: self)
+        //                dismiss(animated: true)
+        //            }
+        //        } else{
+        //            self.view.makeToast("Select date or Status or both", duration: 2.0, position: .center)
+        //        }
+        //
+        
+        if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text == "Select Status"{
+            self.view.makeToast("Select date Date Range", duration: 2.0, position: .center)
+        }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != "Select Status"{
+            
+            delegate?.didTappedFilterBtn(item: self)
+            dismiss(animated: true)
+            
+        }else if self.fromDateLbl.text != "From Date" && self.toDateLbl.text == "To Date"{
+            
+            self.view.makeToast("Select ToDate", duration: 2.0, position: .center)
+            
+        }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text != "To Date"{
+            
+            self.view.makeToast("Select From Date", duration: 2.0, position: .center)
+            
+        }else if self.fromDateLbl.text != "From Date" && self.toDateLbl.text != "To Date" && self.selectPromotionNameLbl.text == "Select Status" || self.selectPromotionNameLbl.text != "Select Status"{
+            
+            if toDate < fromDate{
+                
+                self.view.makeToast("ToDate should be lower than FromDate", duration: 2.0, position: .center)
+                
+            }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != "Select Status"{
+                
+                delegate?.didTappedFilterBtn(item: self)
+                dismiss(animated: true)
+            }else{
+                delegate?.didTappedFilterBtn(item: self)
+                dismiss(animated: true)
+            }
+            
         }else{
+            
             delegate?.didTappedFilterBtn(item: self)
             dismiss(animated: true)
         }
-        
         
     }
     
@@ -115,12 +153,12 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-//    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first
-//        if touch?.view == self.view{
-//                    dismiss(animated: true)
-//        }
-//    }
-
+    //
+    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //        let touch = touches.first
+    //        if touch?.view == self.view{
+    //                    dismiss(animated: true)
+    //        }
+    //    }
+    
 }

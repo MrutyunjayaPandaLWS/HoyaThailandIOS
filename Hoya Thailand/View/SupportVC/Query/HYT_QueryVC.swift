@@ -100,11 +100,12 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_QueryTVCell", for: indexPath) as! HYT_QueryTVCell
         cell.selectionStyle = .none
-        cell.queryRefNoLbl.text = self.VM.queryList[indexPath.row].customerTicketRefNo
-        cell.queryDateLbl.text = "\(self.VM.queryList[indexPath.row].jCreatedDate?.dropLast(9) ?? "")"
-        cell.timeLbl.text = "\(self.VM.queryList[indexPath.row].jCreatedDate?.suffix(8) ?? "")"
-        cell.queryStatusLbl.text = self.VM.queryList[indexPath.row].ticketStatus
-        cell.querySummeryLbl.text = self.VM.queryList[indexPath.row].queryDetails
+        cell.queryRefNoLbl.text = self.VM.queryList[indexPath.row].customerTicketRefNo ?? "-"
+        let queryDate = self.VM.queryList[indexPath.row].jCreatedDate?.split(separator: " ")
+        cell.queryDateLbl.text = "\(queryDate?[0] ?? "-")"
+        cell.timeLbl.text = "\(queryDate?[1] ?? "-")"
+        cell.queryStatusLbl.text = self.VM.queryList[indexPath.row].ticketStatus ?? ""
+        cell.querySummeryLbl.text = self.VM.queryList[indexPath.row].queryDetails ?? "-"
         if self.VM.queryList[indexPath.row].ticketStatus == "Pending"{
             cell.statusView.backgroundColor = pendingStatusColor
         }else if self.VM.queryList[indexPath.row].ticketStatus == "Resolved"{

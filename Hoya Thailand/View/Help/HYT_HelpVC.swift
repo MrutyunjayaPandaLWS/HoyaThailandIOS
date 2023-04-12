@@ -158,7 +158,7 @@ extension HYT_HelpVC{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imagePicked = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             queryImage.image = imagePicked.resized(withPercentage: 0.5)
-            queryImage.contentMode = .scaleToFill
+            queryImage.contentMode = .scaleAspectFit
             let imageData = imagePicked.resized(withPercentage: 0.1)
             let imageData1: NSData = imageData!.pngData()! as NSData
             self.strdata1 = imageData1.base64EncodedString(options: .lineLength64Characters)

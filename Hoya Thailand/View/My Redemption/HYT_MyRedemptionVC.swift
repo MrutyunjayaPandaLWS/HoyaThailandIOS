@@ -80,7 +80,7 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         
         [
             "ActionType": 52,
-            "ActorId": customerTypeID,
+            "ActorId": userId,
              "StartIndex": startIndex,
             "NoOfRows": 10,
             "ObjCatalogueDetails": [
@@ -106,22 +106,28 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_MyRedemptionTVCell", for: indexPath) as! HYT_MyRedemptionTVCell
         cell.selectionStyle = .none
         var myRedeemptionData = self.VM.myRedeemptionList[indexPath.row]
-        if myRedeemptionData.status == 0 {
+        if myRedeemptionData.redemptionStatus == 1 {
             cell.downloadVoucherViewHeight.constant = 60
             cell.statusLbl.text = "Approved"
             cell.statusLbl.textColor = approvedTextColor
             cell.statusLbl.backgroundColor = approvedBgColor
             cell.downloadVoucher = myRedeemptionData.productImage ?? ""
-        }else{
+        }else if myRedeemptionData.redemptionStatus == 0{
             cell.downloadVoucherViewHeight.constant = 0
-            cell.statusLbl.text = "Cancel"
+            cell.statusLbl.text = "Pending"
+            cell.statusLbl.textColor = pendingStatusColor
+            cell.statusLbl.backgroundColor = pendingBGColor
+        }else if myRedeemptionData.redemptionStatus == 5{
+            cell.downloadVoucherViewHeight.constant = 0
+            cell.statusLbl.text = "Reject"
             cell.statusLbl.textColor = cancelTextColor
             cell.statusLbl.backgroundColor = cancelBgColor
         }
         cell.pointsLbl.text = "\(Int(myRedeemptionData.redemptionPoints ?? 0) ) \("points".localiz())"
-        cell.dateLbl.text = String(myRedeemptionData.jRedemptionDate?.dropLast(9) ?? "")
-        cell.voucherNameLbl.text = myRedeemptionData.productName
-        cell.productName = myRedeemptionData.productName ?? "voucher"
+        let redeemptionDate = myRedeemptionData.jRedemptionDate?.split(separator: " ")
+        cell.dateLbl.text = String(redeemptionDate?[0] ?? "-")
+        cell.voucherNameLbl.text = myRedeemptionData.productName ?? "-"
+        cell.productName = myRedeemptionData.productName ?? "-"
         cell.delegate = self
         return cell
     }
@@ -174,16 +180,23 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func downloadImage1(url: String,productName: String){
-        let imagestring = String(url)
+        if url.count != 0{
+            self.startLoading()
+            let imagestring = String(url)
 
-        DispatchQueue.main.async {
-                if let url = URL(string: imagestring),
-                let data = try? Data(contentsOf: url),
-                let image = UIImage(data: data) {
-                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                self.view.makeToast("Voucher is downloaded",duration: 2.0,position: .center)
+            DispatchQueue.main.async {
+                    if let url = URL(string: imagestring),
+                    let data = try? Data(contentsOf: url),
+                    let image = UIImage(data: data) {
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    self.view.makeToast("Voucher is downloaded",duration: 2.0,position: .center)
+                        self.stopLoading()
+                }
             }
+        }else{
+            self.view.makeToast("Voucher file isn't available",duration: 2.0,position: .center)
         }
+
     }
     
 }

@@ -34,9 +34,9 @@ class HYT_DashboardVM{
                                 print(result?.objCustomerDashboardList?[0].notificationCount ?? "", "NotificationCount")
                                 print(result?.objCustomerDashboardList?[0].redeemablePointsBalance ?? "", "totalpoints")
 
-                                self.VC?.pointsLbl.text = "\(result?.objCustomerDashboardList?[0].redeemablePointsBalance ?? 0)"
+                                self.VC?.pointsLbl.text = "\(Int(result?.objCustomerDashboardList?[0].totalRedeemed ?? 0))"
 
-                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].redeemablePointsBalance ?? "", forKey: "TotalPoints")
+                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].totalRedeemed ?? "", forKey: "TotalPoints")
                                 UserDefaults.standard.synchronize()
                                    
                             }

@@ -26,6 +26,7 @@ class HYT_OffersDetailsVC: UIViewController {
         bottomView.clipsToBounds = true
         bottomView.layer.cornerRadius = 40
         bottomView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        productDetailsTextView.isEditable = false
         setup()
     }
     

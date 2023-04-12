@@ -73,7 +73,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         self.VM.tokendata()
         localization()
         if textfieldsStatus == 1{
-            textfieldsStatus = 1
+            textfieldsStatus = 0
         }else{
             membershipIdTF.text = ""
             passwordTF.text = ""
@@ -100,6 +100,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
             self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
+        }else if self.mobileNumberExistancy != 1{
+            self.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count == 0{
             self.view.makeToast("password_toast_message".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count != 6{

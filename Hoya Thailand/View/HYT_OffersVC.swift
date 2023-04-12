@@ -56,10 +56,16 @@ class HYT_OffersVC: BaseViewController, UITableViewDelegate, UITableViewDataSour
         cell.selectionStyle = .none
         cell.delegate = self
         cell.offersData = self.VM.offersListArray[indexPath.row]
-        cell.offersName.text = self.VM.offersListArray[indexPath.row].promotionName
-        cell.validDate.text = "\(self.VM.offersListArray[indexPath.row].validTo?.dropLast(9) ?? "00/00/00")"
-        cell.offersImage.sd_setImage(with: URL(string: PROMO_IMG1 + (self.VM.offersListArray[indexPath.row].proImage?.dropFirst(3) ?? "")), placeholderImage: UIImage(named: "ic_default_img (1)"))
-        cell.discountLbl.text = self.VM.offersListArray[indexPath.row].proShortDesc
+        cell.offersName.text = self.VM.offersListArray[indexPath.row].promotionName ?? "-"
+        let validDate = self.VM.offersListArray[indexPath.row].validTo?.split(separator: " ")
+        cell.validDate.text = "\(validDate?[0] ?? "-")"
+        if self.VM.offersListArray[indexPath.row].proImage?.count != 0{
+            cell.offersImage.sd_setImage(with: URL(string: PROMO_IMG1 + (self.VM.offersListArray[indexPath.row].proImage?.dropFirst(3) ?? "")), placeholderImage: UIImage(named: "ic_default_img (1)"))
+        }else{
+            cell.offersImage.image = UIImage(named: "ic_default_img (1)")
+        }
+        
+        cell.discountLbl.text = self.VM.offersListArray[indexPath.row].proShortDesc ?? "-"
         return cell
     }
     

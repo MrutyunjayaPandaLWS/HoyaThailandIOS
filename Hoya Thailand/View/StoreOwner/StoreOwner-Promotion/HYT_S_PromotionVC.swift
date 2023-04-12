@@ -58,9 +58,10 @@ class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_S_PromotionTVCell", for: indexPath) as! HYT_S_PromotionTVCell
         cell.selectionStyle = .none
-        cell.promotionDetailsLbl.text = self.VM.promotionList[indexPath.row].programDesc
-        cell.promotionsNameLbl.text = self.VM.promotionList[indexPath.row].programName
-        cell.validityDateLbl.text = "\("validUntli".localiz()) : \(self.VM.promotionList[indexPath.row].jEndDate?.dropLast(9) ?? "")"
+        cell.promotionDetailsLbl.text = self.VM.promotionList[indexPath.row].programDesc ?? "-"
+        cell.promotionsNameLbl.text = self.VM.promotionList[indexPath.row].programName ?? "-"
+        let validityDate = self.VM.promotionList[indexPath.row].jEndDate?.split(separator: " ")
+        cell.validityDateLbl.text = "\("validUntli".localiz()) : \(validityDate?[0] ?? "-")"
         cell.promotionData = self.VM.promotionList[indexPath.row]
         cell.delegate = self
         return cell

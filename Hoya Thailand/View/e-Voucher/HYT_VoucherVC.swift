@@ -13,12 +13,16 @@ import LanguageManager_iOS
 class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,RedeemVoucherDelegate {
     
     func didTappedRedeemVoucherBtn(item: HYT_VoucherTVCell) {
+        let EnterAmount = Int(item.amountTF.text ?? "0")
         if item.amountTF.text?.count == 0{
             self.view.makeToast("Enter amount", duration: 2.0, position: .center)
         }else if Int(item.voucherDetails?.min_points ?? "0") ?? 0 <= Int(item.amountTF.text ?? "") ?? 0 && Int(item.voucherDetails?.max_points ?? "0") ?? 0 >= Int(item.amountTF.text ?? "") ?? 0{
             var redeemValue = Int(item.amountTF.text ?? "0")
             if redeemValue == 0{
                 self.view.makeToast("Redeem value shouldn't be 0", duration: 2.0, position: .center)
+                item.amountTF.text = ""
+            }else if totalRedeemPoint < EnterAmount!{
+                self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                 item.amountTF.text = ""
             }else{
                 let parameter : [String : Any] = [
@@ -77,6 +81,7 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     var tomorrowDate = ""
     var startIndex = 1
     var noOfElement = 0
+    var totalRedeemPoint = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,16 +89,17 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         emptyMessageLbl.isHidden = true
         voucherTableView.delegate = self
         voucherTableView.dataSource = self
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        balanceLbl.text = "\(redeemablePointBal)"
         getVoucherList_Api()
         getPointExpire_Api()
         currentdate()
         localization()
+        dashboardApi()
     }
     
     @IBAction func didtappedBackBtn(_ sender: UIButton) {
@@ -149,7 +155,12 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         self.VM.expirePointsDetailsApi(parameter: parameter)
     }
     
-
+    func dashboardApi(){
+        let parameter : [String : Any] = [
+                "ActorId": userId
+        ]
+        self.VM.dashBoardApi(parameter: parameter)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(self.VM.voucherListArray.count)
