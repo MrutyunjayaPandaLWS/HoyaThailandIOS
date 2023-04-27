@@ -9,10 +9,19 @@ import UIKit
 import LanguageManager_iOS
 
 class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,TopicListDelegate, FilterProtocolDelegate {
+    func didTappedResetFilterBtn(item: HYT_FilterVC) {
+        fromDate = ""
+        toDate = ""
+        programId = ""
+        programName = ""
+        getQueryList_Api()
+    }
+    
     func didTappedFilterBtn(item: HYT_FilterVC) {
         fromDate = item.fromDate
         toDate = item.toDate
-        programId = "\(item.statusId)"
+        programId = item.statusId
+        programName = item.statusName
         getQueryList_Api()
     }
     
@@ -33,6 +42,7 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     var fromDate = ""
     var toDate = ""
     var programId = ""
+    var programName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +65,18 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         fromDate = ""
         toDate = ""
         programId = ""
+        programName = ""
     }
-    
+
     @IBAction func didTappedFilterBtn(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_FilterVC") as? HYT_FilterVC
         vc?.modalPresentationStyle = .overFullScreen
         vc?.modalTransitionStyle = .crossDissolve
         vc?.flags = "queryStatus"
+        vc?.statusId = programId
+        vc?.statusName = programName
+        vc?.fromDate = fromDate
+        vc?.toDate = toDate
         vc?.delegate = self
         present(vc!, animated: true)
     }

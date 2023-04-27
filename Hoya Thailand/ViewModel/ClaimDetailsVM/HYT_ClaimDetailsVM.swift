@@ -28,15 +28,19 @@ class HYT_ClaimDetailsVM{
 //                                self.VC?.stopLoading()
 //                            }
                             self.VC?.stopLoading()
-                            self.VC?.productValidationApi(productId: self.VC?.productCode ?? 0)
+//                            self.VC?.productValidationApi(productId: self.VC?.productCode ?? 0)
+                            self.VC?.combineValidationApi()
                         }else{
-                            self.VC?.scanCodeStatus = -1
-                            self.VC?.view.makeToast("Invoice number already exist",duration: 2.0,position: .center)
-                            if self.VC?.flags == "scanned"{
-                                self.VC?.reStartScan()
-                            }else{
-                                self.VC?.stopLoading()
-                            }
+//                            self.VC?.scanCodeStatus = -1
+//                            self.VC?.view.makeToast("Invoice number already exist",duration: 2.0,position: .center)
+//                            if self.VC?.flags == "scanned"{
+//                                self.VC?.reStartScan()
+//                            }else{
+//                                self.VC?.stopLoading()
+//                            }
+                            
+                            self.VC?.stopLoading()
+                            self.VC?.hoyaValidationApi()
                         }
                     }
                 }else{
@@ -65,11 +69,12 @@ class HYT_ClaimDetailsVM{
                         if result?.lstAttributesDetails?[0].attributeId == 1{
                             self.VC?.stopLoading()
                             self.VC?.productCodeStatus = 1
-//                            self.VC?.invoiceSalesReturnValidation()
+//                            self.VC?.combineValidationApi()
 //                            if self.VC?.flags == "scanned"{
 //                                self.VC?.timmer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.VC?.goToUploadCode), userInfo: nil, repeats: false)
 //                            }
-                            self.VC?.checkInvoiceAndProductStatus()
+//                            self.VC?.hoyaValidationApi()
+                            self.VC?.invoiceNumberCheckApi(invoiceNumber: self.VC?.invoiceNumberTF.text ?? "")
                         }else{
                             self.VC?.productCodeStatus = -1
                             self.VC?.view.makeToast("Summitted Len Design is not available",duration: 2.0,position: .center)
@@ -94,21 +99,26 @@ class HYT_ClaimDetailsVM{
         }
     }
     
-    //    MARK: - CHECK SALES RETURN STATUS API
-    func salesReturnValidationApi(parameter: JSON){
+    //    MARK: - COMBINE INVOICE NUMBER AND PRODUCT VALIDATION API
+    func combine_Inv_Pro_Validation(parameter: JSON){
         self.VC?.startLoading()
         requestAPIs.checkSalesReturnStatus_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?[0].attributeId == 1{
-                            self.VC?.salesReturnStatus = 1
+//                            self.VC?.salesReturnStatus = 1
                             self.VC?.stopLoading()
-                            self.VC?.claimSubmission_Api()
+//                            self.VC?.claimSubmission_Api()
+                            self.VC?.view.makeToast("This combination already exixts",duration: 2.0,position: .center)
+                            
                         }else{
-                            self.VC?.salesReturnStatus = -1
-                            self.VC?.view.makeToast("Invalid claim request",duration: 2.0,position: .center)
+//                            self.VC?.salesReturnStatus = -1
+//                            self.VC?.view.makeToast("Invalid claim request",duration: 2.0,position: .center)
 //                            self.VC?.reStartScan()
+                            self.VC?.stopLoading()
+                            self.VC?.hoyaValidationApi()
+                            
                         }
                     }
                 }else{
@@ -157,7 +167,7 @@ class HYT_ClaimDetailsVM{
         }
     }
     
-    func checkInvAndProductNameValidationApi(paramters: JSON){
+    func hoyaValidationApi(paramters: JSON){
         self.VC?.startLoading()
         let urlString = "https://hoyatserv.loyltwo3ks.com/Mobile/ValidateAInvoiceNumber"
         let url = URL(string: urlString)!
@@ -192,7 +202,7 @@ class HYT_ClaimDetailsVM{
                     }else{
                         self.VC?.productAndInvoiceValidation = "true"
                             self.VC?.stopLoading()
-                            self.VC?.invoiceSalesReturnValidation()
+                            self.VC?.claimSubmission_Api()
                     }
                 }
             }catch{

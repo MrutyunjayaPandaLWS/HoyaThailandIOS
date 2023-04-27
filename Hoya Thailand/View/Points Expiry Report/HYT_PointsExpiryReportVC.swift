@@ -9,6 +9,12 @@ import UIKit
 import LanguageManager_iOS
 
 class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate {
+    func didTappedResetFilterBtn(item: HYT_FilterVC) {
+        fromDate = ""
+        toDate = ""
+        getPointExpireReportDetails()
+    }
+    
     func didTappedFilterBtn(item: HYT_FilterVC) {
         fromDate = item.fromDate
         toDate = item.toDate
@@ -52,6 +58,8 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
         vc?.modalPresentationStyle = .overFullScreen
         vc?.promotionNameHeight = 0
         vc?.bottomConstraintsValue = 0
+        vc?.fromDate = fromDate
+        vc?.toDate = toDate
         vc?.delegate = self
         present(vc!, animated: true)
     }

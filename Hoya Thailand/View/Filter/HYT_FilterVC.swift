@@ -10,6 +10,7 @@ import Toast_Swift
 
 protocol FilterProtocolDelegate{
     func didTappedFilterBtn(item: HYT_FilterVC)
+    func didTappedResetFilterBtn(item: HYT_FilterVC)
 }
 
 class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate {
@@ -27,7 +28,7 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     
     func didTappedFilterStatus(item: HYT_DropDownVC) {
         statusName = item.statusName
-        statusId = item.statusId
+        statusId = "\(item.statusId)"
         selectPromotionNameLbl.text = statusName
     }
     func didTappedPromotionName(item: HYT_DropDownVC) {
@@ -50,12 +51,20 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     var toDate = ""
     var flags = ""
     var statusName = ""
-    var statusId = -1
+    var statusId = "-1"
     override func viewDidLoad() {
         super.viewDidLoad()
         promotionNameViewHeight.constant = CGFloat(promotionNameHeight)
         bottomConstraints.constant = CGFloat(bottomConstraintsValue)
-        selectPromotionNameLbl.text = "Select Status"
+        if statusName != ""{
+            selectPromotionNameLbl.text = statusName
+        }
+        if fromDate != ""{
+            fromDateLbl.text = fromDate
+        }
+        if toDate != ""{
+            toDateLbl.text = toDate
+        }
     }
     
     @IBAction func didTappedTodateBtn(_ sender: UIButton) {
@@ -91,6 +100,8 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         toDateLbl.text = "To Date"
         fromDate = ""
         toDate = ""
+        statusName = ""
+        delegate?.didTappedResetFilterBtn(item: self)
     }
     
     @IBAction func didTappedFilterBtn(_ sender: UIButton) {

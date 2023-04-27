@@ -23,6 +23,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
 
     
 
+    @IBOutlet weak var emptyMessage: UILabel!
     @IBOutlet weak var heightOfTableView: NSLayoutConstraint!
     @IBOutlet weak var dropdownTableView: UITableView!
     var delegate: DropdownDelegate?
@@ -30,7 +31,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var rowNumber = 0
     var flags = ""
     var progrmaId = 0
-    var genderList = ["Male","Female"]
+    var genderList = ["Male","Female","Don't want to show"]
     var promotionNameList = ["promotion-A","promotion-B","promotion-C","promotion-D","promotion-E"]
     var accountTypeList = ["Store owner","Individual"]
     var roleList = ["Frontliner"]

@@ -16,6 +16,8 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
             selectDateLbl.text = vc.selectedDate
         }else{
             selectAnniversarydateLbl.text = vc.selectedDate
+            aniversaryDate = vc.selectedDate
+            
         }
     }
     
@@ -95,6 +97,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     @IBOutlet weak var firstNameLbl: UILabel!
     var registerationNo : Int = 0
     var backbtnWidth = 0
+    var aniversaryDate = ""
     var VM = HYT_ProfileVM()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -263,7 +266,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
             ] as [String : Any],
             "ObjCustomerDetails": [
                 "IsNewProfilePicture":0,
-                "Anniversary":selectAnniversarydateLbl.text ?? "",
+                "Anniversary": aniversaryDate,
                 "Gender": selectGenderLbl.text ?? ""
             ] as [String : Any]
         ]

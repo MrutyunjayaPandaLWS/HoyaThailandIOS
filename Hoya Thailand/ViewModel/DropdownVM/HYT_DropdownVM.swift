@@ -35,12 +35,14 @@ class HYT_DropdownVM{
                         if self.roleListArray.count != 0{
                             self.VC?.heightOfTableView.constant = CGFloat(45 * self.roleListArray.count)
                             self.VC?.rowNumber = self.roleListArray.count
-                            
-                            
+                            self.VC?.dropdownTableView.isHidden = false
+                            self.VC?.emptyMessage.isHidden = true
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                             
                         }else{
+                            self.VC?.dropdownTableView.isHidden = true
+                            self.VC?.emptyMessage.isHidden = false
                             self.VC?.stopLoading()
                         }
                     }
@@ -70,10 +72,14 @@ class HYT_DropdownVM{
                         if result?.lstAttributesDetails?.count != 0{
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.salesRepresentativeList.count)
                             self.VC?.rowNumber = self.salesRepresentativeList.count
+                            self.VC?.dropdownTableView.isHidden = false
+                            self.VC?.emptyMessage.isHidden = true
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                             
                         }else{
+                            self.VC?.dropdownTableView.isHidden = true
+                            self.VC?.emptyMessage.isHidden = false
                             self.VC?.stopLoading()
                         }
                     }
@@ -103,9 +109,13 @@ class HYT_DropdownVM{
                         if result?.lstAttributesDetails?.count != 0{
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.queryStatusList.count)
                             self.VC?.rowNumber = self.queryStatusList.count
+                            self.VC?.dropdownTableView.isHidden = false
+                            self.VC?.emptyMessage.isHidden = true
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                         }else{
+                            self.VC?.dropdownTableView.isHidden = true
+                            self.VC?.emptyMessage.isHidden = false
                             self.VC?.stopLoading()
                         }
                     }
@@ -136,12 +146,16 @@ class HYT_DropdownVM{
                         if result?.ltyPrgBaseDetails?.count != 0 && result?.ltyPrgBaseDetails != nil{
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
                             self.VC?.rowNumber = self.promotionList.count
+                            self.VC?.dropdownTableView.isHidden = false
+                            self.VC?.emptyMessage.isHidden = true
                             self.VC?.dropdownTableView.reloadData()
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionList.count)
                             self.VC?.dropdownTableView.reloadData()
+                            self.VC?.dropdownTableView.isHidden = true
+                            self.VC?.emptyMessage.isHidden = false
                             self.VC?.stopLoading()
                         }
                     }
@@ -178,6 +192,8 @@ class HYT_DropdownVM{
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionProductList.count)
                             self.VC?.heightOfTableView.constant = CGFloat(45*self.promotionProductList.count)
                             self.VC?.dropdownTableView.reloadData()
+                            self.VC?.dropdownTableView.isHidden = true
+                            self.VC?.emptyMessage.isHidden = false
                             self.VC?.stopLoading()
                         }
                     }

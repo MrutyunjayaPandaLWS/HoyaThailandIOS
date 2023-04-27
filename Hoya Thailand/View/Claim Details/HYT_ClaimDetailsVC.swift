@@ -129,7 +129,8 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
         }else if productAndInvoiceValidation == "false"{
             self.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
         }else{
-            invoiceNumberCheckApi(invoiceNumber: invoiceNumberTF.text ?? "")
+//            invoiceNumberCheckApi(invoiceNumber: invoiceNumberTF.text ?? "")
+            productValidationApi(productId: productCode)
         }
         
     }
@@ -310,6 +311,7 @@ extension HYT_ClaimDetailsVC{
              })
     }
     
+//    MARK: - LWS - INVOICE NUMBER VALIDATION API
     func invoiceNumberCheckApi(invoiceNumber: String){
         let parameter : [String : Any] = [
                 "ActionType": 168,
@@ -319,6 +321,8 @@ extension HYT_ClaimDetailsVC{
         self.VM.invoiceNumberValidationApi(parameter: parameter)
     }
     
+    
+//    MARK: LWS - PRODUCT VALIDATION API
     func productValidationApi(productId: Int){
         
         let parameter : [String : Any] = [
@@ -330,8 +334,8 @@ extension HYT_ClaimDetailsVC{
         self.VM.productValidationApi(parameter: parameter)
     }
     
-    
-    func invoiceSalesReturnValidation(){
+//    MARK: - COMBINATION VALIDATION API
+    func combineValidationApi(){
         let parameter : [String : Any] = [
             
                 "ActionType": 170,
@@ -339,16 +343,17 @@ extension HYT_ClaimDetailsVC{
                 "MobilePrefix": productNameTF.text ?? "" // SEND PRODUCTNAME HERE
              
         ]
-        self.VM.claimSubmissionApi(parameter: parameter)
+        self.VM.combine_Inv_Pro_Validation(parameter: parameter)
     }
     
+//    MARK: - CLAIM SUBMISSION API
     func claimSubmission_Api(){
         let parameter : [String : Any] = [
             "ActorId": userId,
             "LoyaltyId": loyaltyId,
             "InvoiceNumber": invoiceNumberTF.text ?? "",
             "ProductCode": productNameTF.text ?? "",
-            "SellingPrice": "",
+            "SellingPrice": 1,
             "LoyaltyProgramId": 6,
             "VoucherImagePath": "",
             "Domain": "Hoya",
@@ -357,12 +362,14 @@ extension HYT_ClaimDetailsVC{
         self.VM.claimSubmissionApi(parameter: parameter)
     }
     
-    func checkInvoiceAndProductStatus(){
+//    MARK: - HOYA VALIDATION
+    func hoyaValidationApi(){
         let parameter : [String : Any] = [
+            "Country": "Thailand",
             "InvoiceNo":invoiceNumberTF.text ?? "",
             "LenDesign": productNameTF.text ?? "",
             "Quantity": quantityTF.text ?? ""
         ]
-        self.VM.checkInvAndProductNameValidationApi(paramters: parameter)
+        self.VM.hoyaValidationApi(paramters: parameter)
     }
 }

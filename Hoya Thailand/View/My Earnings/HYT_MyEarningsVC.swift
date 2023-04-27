@@ -9,11 +9,19 @@ import UIKit
 import LanguageManager_iOS
 
 class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate {
+    func didTappedResetFilterBtn(item: HYT_FilterVC) {
+        fromDate = ""
+        toDate = ""
+        promotionName = ""
+        promotionId = ""
+        myEarningList_Api()
+    }
+    
     func didTappedFilterBtn(item: HYT_FilterVC) {
         fromDate = item.fromDate
         toDate = item.toDate
         promotionName = item.statusName
-        promotionId = "\(item.statusId)"
+        promotionId = item.statusId
         myEarningList_Api()
     }
     
@@ -49,6 +57,10 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
         vc?.modalPresentationStyle = .overFullScreen
         vc?.modalTransitionStyle = .crossDissolve
         vc?.flags = "promotionList"
+        vc?.fromDate = fromDate
+        vc?.toDate = toDate
+        vc?.statusId = promotionId
+        vc?.statusName = promotionName
         vc?.delegate = self
         present(vc!, animated: true)
     }

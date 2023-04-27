@@ -9,6 +9,14 @@ import UIKit
 import LanguageManager_iOS
 
 class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate,myRedeemptionDelegate {
+    func didTappedResetFilterBtn(item: HYT_FilterVC) {
+        fromDate = ""
+        toDate = ""
+        statusId = "-1"
+        statusName = ""
+        myRedeemptionList_Api()
+    }
+    
     func downloadVoucher(item: HYT_MyRedemptionTVCell) {
 //        downloadImage(url: item.downloadVoucher, productName: item.productName)
         downloadImage1(url: item.downloadVoucher, productName: item.productName)
@@ -17,7 +25,8 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     func didTappedFilterBtn(item: HYT_FilterVC) {
         fromDate = item.fromDate
         toDate = item.toDate
-        statusId = "\(item.statusId)"
+        statusId = item.statusId
+        statusName = item.statusName
         myRedeemptionList_Api()
     }
     
@@ -28,6 +37,7 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
     var VM = HYT_MyRedemptionVM()
     var fromDate = ""
     var toDate = ""
+    var statusName = ""
     var statusId = "-1"
     var startIndex = 1
     var noOfElement = 0
@@ -53,6 +63,10 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         vc?.modalPresentationStyle = .overFullScreen
         vc?.modalTransitionStyle = .crossDissolve
         vc?.flags = "queryStatus"
+        vc?.fromDate = fromDate
+        vc?.toDate = toDate
+        vc?.statusId = statusId
+        vc?.statusName = statusName
         vc?.delegate = self
         present(vc!, animated: true)
     }
