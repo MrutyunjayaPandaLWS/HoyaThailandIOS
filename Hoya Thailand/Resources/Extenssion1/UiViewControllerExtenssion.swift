@@ -13,11 +13,13 @@ import Lottie
 extension UIViewController{
     
     func successMessagePopUp(message: String){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
-        vc?.modalTransitionStyle = .crossDissolve
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.successMessage = message
-        present(vc!, animated: true)
+        DispatchQueue.main.async {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+            vc?.modalTransitionStyle = .crossDissolve
+            vc?.modalPresentationStyle = .overFullScreen
+            vc?.successMessage = message
+            self.present(vc!, animated: true)
+        }
     }
     
     func drawDottedLine(start p0: CGPoint, end p1: CGPoint, view: UIView) {

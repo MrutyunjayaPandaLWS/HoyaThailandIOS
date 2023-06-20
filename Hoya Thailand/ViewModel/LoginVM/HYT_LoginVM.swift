@@ -48,7 +48,7 @@ class HYT_LoginVM{
                     DispatchQueue.main.async{
                         self.VC?.stopLoading()
                         self.VC?.mobileNumberExistancy = -1
-                        self.VC?.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
+                        self.VC?.view.makeToast("Mobile_number_is_doesn't_exists1".localiz(), duration: 2.0, position: .center)
                     }
                 }else{
                     DispatchQueue.main.async{
@@ -77,34 +77,48 @@ class HYT_LoginVM{
                             let data = result?.userList?[0]
                             if data?.result != 1{
                                 if self.VC?.mobileNumberExistancy != 1{
-                                    self.VC?.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
+                                    self.VC?.view.makeToast("Mobile_number_is_doesn't_exists1".localiz(), duration: 2.0, position: .center)
                                     self.VC?.stopLoading()
                                 }else{
                                     self.VC?.view.makeToast("Password_is_incorrect".localiz(), duration: 2.0, position: .center)
                                     self.VC?.stopLoading()
                                 }
                             }else{
-                                
-                                self.VC?.stopLoading()
-                                UserDefaults.standard.set(data?.customerTypeID, forKey: "customerTypeID")
-                                UserDefaults.standard.set(data?.userName, forKey: "userName")
-                                UserDefaults.standard.set(data?.userId, forKey: "userId")
-                                UserDefaults.standard.set(data?.merchantName, forKey: "merchantName")
-                                UserDefaults.standard.set(data?.merchantEmailID, forKey: "merchantEmailID")
-                                UserDefaults.standard.set(data?.merchantMobileNo, forKey: "merchantMobileNo")
-                                UserDefaults.standard.set(data?.mobile, forKey: "mobile")
-                                UserDefaults.standard.set(data?.email, forKey: "email")
-                                UserDefaults.standard.set(data?.custAccountNumber, forKey: "custAccountNumber")
-                                UserDefaults.standard.set(data?.userImage, forKey: "userImage")
-                                UserDefaults.standard.set(data?.locationName, forKey: "locationName")
-                                UserDefaults.standard.set(true, forKey: "UserLoginStatus")
-                                if #available(iOS 13.0, *) {
-                                    let sceneDelegate = self.VC?.view.window!.windowScene!.delegate as! SceneDelegate
-                                    sceneDelegate.setHomeAsRootViewController()
-                                } else {
-                                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                    appDelegate.setHomeAsRootViewController()
+                                if data?.isUserActive == 1{
+                                    if data?.verifiedStatus == 4 {
+                                        self.VC?.stopLoading()
+                                            self.VC?.view.makeToast("account_Pending_error".localiz(), duration: 2.0, position: .center)
+                                    }else if data?.verifiedStatus == 2 {
+                                        self.VC?.stopLoading()
+                                            self.VC?.view.makeToast("account_login_error".localiz(), duration: 2.0, position: .center)
+                                    }else{
+                                        
+                                        self.VC?.stopLoading()
+                                        UserDefaults.standard.set(data?.customerTypeID, forKey: "customerTypeID")
+                                        UserDefaults.standard.set(data?.userName, forKey: "userName")
+                                        UserDefaults.standard.set(data?.userId, forKey: "userId")
+                                        UserDefaults.standard.set(data?.merchantName, forKey: "merchantName")
+                                        UserDefaults.standard.set(data?.merchantEmailID, forKey: "merchantEmailID")
+                                        UserDefaults.standard.set(data?.merchantMobileNo, forKey: "merchantMobileNo")
+                                        UserDefaults.standard.set(data?.mobile, forKey: "mobile")
+                                        UserDefaults.standard.set(data?.email, forKey: "email")
+                                        UserDefaults.standard.set(data?.custAccountNumber, forKey: "custAccountNumber")
+                                        UserDefaults.standard.set(data?.userImage, forKey: "userImage")
+                                        UserDefaults.standard.set(data?.locationName, forKey: "locationName")
+                                        UserDefaults.standard.set(true, forKey: "UserLoginStatus")
+                                        if #available(iOS 13.0, *) {
+                                            let sceneDelegate = self.VC?.view.window!.windowScene!.delegate as! SceneDelegate
+                                            sceneDelegate.setHomeAsRootViewController()
+                                        } else {
+                                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                                            appDelegate.setHomeAsRootViewController()
+                                        }
+                                    }
+                                }else{
+                                    self.VC?.stopLoading()
+                                    self.VC?.view.makeToast("account_Deactivate_error".localiz(), duration: 2.0, position: .center)
                                 }
+
                             }
                         }
                     }

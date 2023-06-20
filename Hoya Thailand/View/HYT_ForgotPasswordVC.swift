@@ -13,6 +13,7 @@ import LanguageManager_iOS
 class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDropDownDelegate {
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
         selectLanguageLbl.text = item.language
+        localization()
     }
     
 
@@ -70,8 +71,9 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
             self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
         }else if sendotp == 0{
             self.view.makeToast("Resend OTP", duration: 2.0, position: .center)
-        }else if otpView.text == "123456" {
-        //else if otpView.text == self.VM.otpNumber{
+        }
+//        else if otpView.text == "123456" {
+        else if otpView.text == self.VM.otpNumber{
             self.VM.sendPasswordToMobileNumberApi()
         }else{
             self.view.makeToast("Wrong OTP", duration: 2.0, position: .center)
@@ -87,7 +89,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     }
     @IBAction func didTappedSendOtp(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0{
-            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message_1".localiz(), duration: 2.0, position: .center)
         }else{
             checkmobileNumberExistancy()
             
@@ -133,8 +135,8 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     private func localization(){
         forgotPasswordLbl.text = "forgot_password".localiz()
         forgotPWDescriptionLbl.text = "forgot_password_info".localiz()
-        membershipIdLbl.text = "userId".localiz()
-        membershipIdTF.placeholder = "userId_toast_message".localiz()
+        membershipIdLbl.text = "userId_1".localiz()
+        membershipIdTF.placeholder = "userId_toast_message_1".localiz()
         sendOtpBtn.setTitle("sendOtp".localiz(), for: .normal)
         backToLoginLbl.text = "back_Login".localiz()
         selectLanguageLbl.text = "language".localiz()

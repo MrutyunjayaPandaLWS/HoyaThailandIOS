@@ -15,7 +15,7 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var lineView4: UIView!
     @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+//    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var productListTableView: UITableView!
     @IBOutlet weak var pointsTitle: UILabel!
     @IBOutlet weak var productNameTitle: UILabel!
@@ -48,11 +48,13 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
         promotionDate.text = String(promotionDetailsData?.jEndDate?.prefix(10) ?? "")
         userName.text = promotionDetailsData?.programName
         promotionDetails.text = promotionDetailsData?.programDesc
+        localization()
         getProductList_Api()
     }
     
     @IBAction func didTappedClaimBtn(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_ClaimDetailsVC") as? HYT_ClaimDetailsVC
+        vc?.promotionData = promotionDetailsData
         navigationController?.pushViewController(vc!, animated: true)
     }
     
@@ -76,7 +78,7 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rowNumber = self.VM.promotionProductList.count
-        tableViewHeight.constant = CGFloat(30*rowNumber)
+//        tableViewHeight.constant = CGFloat(30*rowNumber)
         return rowNumber
     }
     
@@ -89,12 +91,17 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 30
+//    }
 
     private func localization(){
-        
+//        productNameTitle.text = "Lens Design".localiz()
+//        pointsTitle.text = "points".localiz()
+//        promotionDate.text = "promotionValid".localiz()
+        titleLbl.text = "promotionDetails".localiz()
+        claimBtn.setTitle("claim".localiz(), for: .normal)
+        promotionValidDateLbl.text = "promotionValid".localiz()
     }
     
     

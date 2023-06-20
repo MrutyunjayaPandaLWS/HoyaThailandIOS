@@ -10,10 +10,15 @@ import LanguageManager_iOS
 
 protocol RedeemVoucherDelegate{
     func didTappedRedeemVoucherBtn(item: HYT_VoucherTVCell)
+    func didTappedSelectAmountbtn(item: HYT_VoucherTVCell)
 }
 
 class HYT_VoucherTVCell: UITableViewCell {
 
+    @IBOutlet weak var enterAmountView: UIView!
+    @IBOutlet weak var selectAmountLbl: UILabel!
+    @IBOutlet weak var dropdownIconView: UIView!
+    @IBOutlet weak var dropDownBtn: UIButton!
     @IBOutlet weak var redeemBtn: UIButton!
     @IBOutlet weak var rangeValueLbl: UILabel!
     @IBOutlet weak var rangeLbl: UILabel!
@@ -22,6 +27,8 @@ class HYT_VoucherTVCell: UITableViewCell {
     @IBOutlet weak var voucherImage: UIImageView!
     var delegate: RedeemVoucherDelegate?
     var voucherDetails : ObjCatalogueList1?
+    var vouchersdata = [ObjCatalogueList1]()
+    var selectedPoints = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         amountTF.keyboardType = .numberPad
@@ -40,4 +47,9 @@ class HYT_VoucherTVCell: UITableViewCell {
     func localization(){
         redeemBtn.setTitle("redeem".localiz(), for: .normal)
     }
+    
+    @IBAction func didTappedAmountBtn(_ sender: Any) {
+        delegate?.didTappedSelectAmountbtn(item: self)
+    }
+    
 }

@@ -41,7 +41,7 @@ extension Notification.Name{
     
     static let navigateToProductList = Notification.Name(rawValue: "navigateToProductList")
     static let navigateToDashboard = Notification.Name(rawValue: "navigateToDashboard")
-    
+    static let SHOWDATA23 = Notification.Name(rawValue: "SHOWDATA23")
     
     
     

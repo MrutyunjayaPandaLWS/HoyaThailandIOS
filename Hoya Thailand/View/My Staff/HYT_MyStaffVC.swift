@@ -73,5 +73,6 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     private func localization(){
         titleLbl.text = "mystaff".localiz()
+        emptyMessageLbl.text = "No data found!".localiz()
     }
 }

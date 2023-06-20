@@ -72,15 +72,13 @@ class HYT_ProfileVM{
         requestAPIs.profileUpdate(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    DispatchQueue.main.async {
-                        if result?.returnMessage == "1" {
+                    if ((result?.returnMessage?.contains("1")) != nil){
                             self.VC?.successMessagePopUp(message: "Your profile has been updated successfully")
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.view.makeToast("Profile isn't Update", duration: 2.0, position: .center)
                             self.VC?.stopLoading()
                         }
-                    }
                 }else{
                     DispatchQueue.main.async {
                         self.VC?.stopLoading()
@@ -96,4 +94,29 @@ class HYT_ProfileVM{
         }
     }
     
+    func deleteAccount(parameters: JSON, completion: @escaping (DeleteAccountModels?) -> ()) {
+        self.VC?.startLoading()
+        self.requestAPIs.deleteAccountApi(parameters: parameters) { (result, error) in
+            if error == nil {
+                if result != nil {
+                    DispatchQueue.main.async {
+                        completion(result)
+                        self.VC?.stopLoading()
+                    }
+                } else {
+                    print("No Response")
+                    DispatchQueue.main.async {
+                        self.VC?.stopLoading()
+                    }
+                }
+            }else{
+                print("ERROR_Login \(error)")
+                DispatchQueue.main.async {
+                    self.VC?.stopLoading()
+                }
+                
+            }
+            
+        }
+    }
 }

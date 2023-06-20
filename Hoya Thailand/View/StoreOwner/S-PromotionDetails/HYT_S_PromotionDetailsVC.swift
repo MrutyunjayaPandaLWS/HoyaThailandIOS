@@ -74,14 +74,14 @@ class HYT_S_PromotionDetailsVC: BaseViewController , UITableViewDelegate, UITabl
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 30
+//    }
     
     private func localization(){
-        productTitleLbl.text = "product".localiz()
-        pointsTitleLbl.text = "points".localiz()
-        promotionsDateLbl.text = "promotionValid".localiz()
+//        productTitleLbl.text = "Lens Design".localiz()
+//        pointsTitleLbl.text = "points".localiz()
+//        promotionsDateLbl.text = "promotionValid".localiz()
         vcTitleLbl.text = "promotionDetails".localiz()
     }
 }

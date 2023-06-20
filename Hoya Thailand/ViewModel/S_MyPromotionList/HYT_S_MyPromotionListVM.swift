@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import LanguageManager_iOS
 
 class HYT_S_MyPromotionListVM {
     weak var VC : HYT_S_PromotionVC?
@@ -27,7 +27,7 @@ class HYT_S_MyPromotionListVM {
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.emptyMessage.isHidden = false
-                            self.VC?.emptyMessage.text = "No data found"
+                            self.VC?.emptyMessage.text = "No data found!".localiz()
                             self.VC?.promotionListTV.reloadData()
                             self.VC?.stopLoading()
                         }

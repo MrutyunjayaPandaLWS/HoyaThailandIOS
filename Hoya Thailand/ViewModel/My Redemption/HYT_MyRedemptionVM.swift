@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import LanguageManager_iOS
 
 class HYT_MyRedemptionVM{
     
@@ -21,7 +21,7 @@ class HYT_MyRedemptionVM{
                 if result != nil{
                     let myRedeemptionListArray = result?.objCatalogueRedemReqList ?? []
                     if myRedeemptionListArray.isEmpty == false || myRedeemptionListArray.count != 0 {
-                        self.myRedeemptionList = myRedeemptionListArray
+                        self.myRedeemptionList = self.myRedeemptionList + myRedeemptionListArray
                         DispatchQueue.main.async {
                             self.VC?.noOfElement = self.myRedeemptionList.count
                             if self.myRedeemptionList.count != 0{
@@ -31,21 +31,29 @@ class HYT_MyRedemptionVM{
                             }else{
                                 self.VC?.noOfElement = 0
                                 self.VC?.startIndex = 1
+                                self.VC?.emptyMessageLbl.isHidden = false
+                                self.VC?.emptyMessageLbl.text = "No data found!".localiz()
                                 self.VC?.myRedeemptionTableView.reloadData()
                                 self.VC?.stopLoading()
                             }
                         }
                     }else{
                         DispatchQueue.main.async {
-                            self.VC?.emptyMessageLbl.isHidden = false
-                            self.VC?.emptyMessageLbl.text = "No data found"
+                            if self.myRedeemptionList.count == 0{
+                                self.VC?.noOfElement = 0
+                                self.VC?.startIndex = 1
+                                self.VC?.emptyMessageLbl.isHidden = false
+                                self.VC?.emptyMessageLbl.text = "No data found!".localiz()
+                                self.VC?.myRedeemptionTableView.reloadData()
+                            }
                             self.VC?.stopLoading()
                         }
                     }
                 }else{
                     DispatchQueue.main.async {
                         self.VC?.emptyMessageLbl.isHidden = false
-                        self.VC?.emptyMessageLbl.text = "No data found"
+                        self.VC?.emptyMessageLbl.text = "No data found!".localiz()
+                        self.VC?.myRedeemptionTableView.reloadData()
                         self.VC?.stopLoading()
                     }
                 }
@@ -53,7 +61,7 @@ class HYT_MyRedemptionVM{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
                     self.VC?.emptyMessageLbl.isHidden = false
-                    self.VC?.emptyMessageLbl.text = "No data found"
+                    self.VC?.emptyMessageLbl.text = "No data found!".localiz()
                     print("My Redeemption error",error?.localizedDescription)
                 }
             }

@@ -2,6 +2,7 @@
 
 import Foundation
 struct ObjCatalogueList1 : Codable {
+    var selectedAmount = 0
 	let catalogueId : Int?
 	let catalogueName : Int?
 	let productName : String?

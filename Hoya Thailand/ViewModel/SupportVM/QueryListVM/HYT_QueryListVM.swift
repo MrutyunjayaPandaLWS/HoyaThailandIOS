@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import LanguageManager_iOS
+
 class HYT_QueryListVM{
     
     weak var VC: HYT_QueryVC?
@@ -27,7 +29,7 @@ class HYT_QueryListVM{
                         }else{
                             self.VC?.emptyMessage.isHidden = false
                             self.VC?.queryTableView.reloadData()
-                            self.VC?.emptyMessage.text = "No query found"
+                            self.VC?.emptyMessage.text = "No data found!".localiz()
                             self.VC?.stopLoading()
                         }
                     }

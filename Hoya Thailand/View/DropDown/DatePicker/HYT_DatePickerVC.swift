@@ -49,7 +49,7 @@ class HYT_DatePickerVC: UIViewController {
         print(sevenDaysBeforeToday)
         if isComeFrom == "DOB"{
             if datePickerView.date > sevenDaysBeforeToday{
-                let alert = UIAlertController(title: "", message: "It seems you are less than 18 years of age. You can apply for HOYO membership only if you are 18 years and above", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "", message: "It seems you are less than 18 years of age. You can apply for HOYA membership only if you are 18 years and above", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }else{

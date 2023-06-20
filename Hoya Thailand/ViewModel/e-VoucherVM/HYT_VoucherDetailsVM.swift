@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
-
-class HYT_VoucherDetailsVM{
+class HYT_VoucherDetailsVM: SuccessMessageDelegate{
+    func goToLoginPage(item: HYT_SuccessMessageVC) {
+        self.VC?.navigationController?.popToRootViewController(animated: true)
+    }
+    
     var requestAPIs = RestAPI_Requests()
     weak var VC: HYT_VoucherDetailsVC?
     
@@ -19,15 +23,26 @@ class HYT_VoucherDetailsVM{
             requestAPIs.voucherRedeemption(parameters: parameter){ result, error in
                 if error == nil{
                     if result != nil{
-                        DispatchQueue.main.async {
-                            self.VC?.successMessagePopUp(message: "Your voucher redeemed successfully")
-                            self.VC?.dashboardApi()
-                            print("exception message - ",result?.exceptionMessage)
-                            print("exceptionType - ",result?.exceptionType)
-                            print("message - ",result?.message)
-                            print("stackTrace -",result?.stackTrace)
-                            self.VC?.navigationController?.popViewController(animated: true)
-                            self.VC?.stopLoading()
+                        let message = result?.returnMessage?.split(separator: "-")
+                        let message1 = message?[1].split(separator: "-")
+                        print(message1?[0] ?? "")
+                        if  Int(message1?[0] ?? "0")! > 0{
+                            DispatchQueue.main.async {
+                                //                            self.VC?.successMessagePopUp(message: "Your voucher redeemed successfully")
+                                let vc = self.VC?.storyboard?.instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+                                vc?.modalTransitionStyle = .crossDissolve
+                                vc?.modalPresentationStyle = .overFullScreen
+                                vc?.successMessage = "Your voucher redeemed successfully".localiz()
+                                vc?.delegate = self
+                                self.VC?.present(vc!, animated: true)
+                                self.VC?.dashboardApi()
+                                self.VC?.stopLoading()
+                            }
+                        }else{
+                            DispatchQueue.main.async {
+                                self.VC?.view.makeToast("something_went_wrong".localiz(),duration: 2.0,position: .center)
+                                self.VC?.stopLoading()
+                            }
                         }
                     }else{
                         DispatchQueue.main.async {
@@ -41,9 +56,6 @@ class HYT_VoucherDetailsVM{
                         print("Voucher Redeemption error",error?.localizedDescription)
                     }
                 }
-            }
-            DispatchQueue.main.async {
-                self.VC?.stopLoading()
             }
         }
     
@@ -61,9 +73,9 @@ class HYT_VoucherDetailsVM{
                     }
                    let dashboardDetails = result?.objCustomerDashboardList ?? []
                     if dashboardDetails.count != 0 {
-                                self.VC?.availableBalanceLbl.text = "\(Int(result?.objCustomerDashboardList?[0].totalRedeemed ?? 0))"
-                        self.VC?.totalRedeemPoint = Int(result?.objCustomerDashboardList?[0].totalRedeemed ?? 0)
-                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].totalRedeemed ?? "", forKey: "TotalPoints")
+                                self.VC?.availableBalanceLbl.text = "\(Int(result?.objCustomerDashboardList?[0].overAllPoints ?? 0))"
+                        self.VC?.totalRedeemPoint = Int(result?.objCustomerDashboardList?[0].overAllPoints ?? 0)
+                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].overAllPoints ?? "", forKey: "TotalPoints")
                                 UserDefaults.standard.synchronize()
                                    
                             }

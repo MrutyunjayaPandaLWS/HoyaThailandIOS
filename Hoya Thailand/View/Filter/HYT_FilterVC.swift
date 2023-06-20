@@ -47,17 +47,30 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     var delegate: FilterProtocolDelegate?
     var promotionNameHeight = 38
     var bottomConstraintsValue = 30
+    var  tagName = 0
     var fromDate = ""
     var toDate = ""
     var flags = ""
     var statusName = ""
     var statusId = "-1"
+    var statusTitle = "Select Status"
     override func viewDidLoad() {
         super.viewDidLoad()
         promotionNameViewHeight.constant = CGFloat(promotionNameHeight)
         bottomConstraints.constant = CGFloat(bottomConstraintsValue)
         if statusName != ""{
             selectPromotionNameLbl.text = statusName
+        }else{
+            if tagName == 0{
+                selectPromotionNameLbl.text = "Select Status"
+                statusTitle = "Select Status"
+            }else if tagName == 1{
+                selectPromotionNameLbl.text = "Select Promotion Name"
+                statusTitle = "Select Promotion Name"
+            }else if tagName == 2{
+                selectPromotionNameLbl.text = "Select Promotion Name"
+                statusTitle = "Select Promotion Name"
+            }
         }
         if fromDate != ""{
             fromDateLbl.text = fromDate
@@ -95,7 +108,7 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     
     
     @IBAction func didTappedResetBtn(_ sender: UIButton) {
-        selectPromotionNameLbl.text = "Select Status"
+        selectPromotionNameLbl.text = statusTitle
         fromDateLbl.text = "From Date"
         toDateLbl.text = "To Date"
         fromDate = ""
@@ -118,9 +131,9 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
         //        }
         //
         
-        if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text == "Select Status"{
-            self.view.makeToast("Select date Date Range", duration: 2.0, position: .center)
-        }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != "Select Status"{
+        if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text == statusTitle{
+            self.view.makeToast("\(statusTitle) or Date Range or both", duration: 2.0, position: .center)
+        }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != statusTitle{
             
             delegate?.didTappedFilterBtn(item: self)
             dismiss(animated: true)
@@ -133,13 +146,13 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
             
             self.view.makeToast("Select From Date", duration: 2.0, position: .center)
             
-        }else if self.fromDateLbl.text != "From Date" && self.toDateLbl.text != "To Date" && self.selectPromotionNameLbl.text == "Select Status" || self.selectPromotionNameLbl.text != "Select Status"{
+        }else if self.fromDateLbl.text != "From Date" && self.toDateLbl.text != "To Date" && self.selectPromotionNameLbl.text == statusTitle || self.selectPromotionNameLbl.text != statusTitle{
             
             if toDate < fromDate{
                 
                 self.view.makeToast("ToDate should be lower than FromDate", duration: 2.0, position: .center)
                 
-            }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != "Select Status"{
+            }else if self.fromDateLbl.text == "From Date" && self.toDateLbl.text == "To Date" && self.selectPromotionNameLbl.text != statusTitle{
                 
                 delegate?.didTappedFilterBtn(item: self)
                 dismiss(animated: true)

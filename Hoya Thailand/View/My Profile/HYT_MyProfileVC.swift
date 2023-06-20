@@ -9,11 +9,76 @@ import UIKit
 import Toast_Swift
 import LanguageManager_iOS
 
-class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate {
+class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate, SuccessMessageDelegate, popMessage2Delegate {
+
+    func didTappedOKBtn(item: SuccessMessage2 ) {
+        if item.flags == "1"{
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            if #available(iOS 13.0, *){
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.setInitialViewAsRootViewController()
+            }else{
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setInitialViewAsRootViewController()
+            }
+
+        }else if item.flags == "0"{
+            
+            let parameters : [String : Any] = [
+            "ActionType": 1,
+            "userid":"\(self.userId)"
+        ] as [String : Any]
+        print(parameters)
+            self.VM.deleteAccount(parameters: parameters) { response in
+                DispatchQueue.main.async {
+                    print(response?.returnMessage ?? "-1")
+                    if response?.returnMessage ?? "-1" == "1"{
+                        DispatchQueue.main.async{
+                            DispatchQueue.main.async{
+                                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+                                vc!.delegate = self
+                                vc!.successMessage = "Account_deleted_successfully".localiz()
+                                vc!.itsComeFrom = "0"
+                                vc!.modalPresentationStyle = .overCurrentContext
+                                vc!.modalTransitionStyle = .crossDissolve
+                                self.present(vc!, animated: true, completion: nil)
+                                }
+                            }
+                    }else{
+                        DispatchQueue.main.async{
+                            
+                            }
+                    }
+                  self.stopLoading()
+                    }
+            }
+        }
+
+    }
+    
+    func goToLoginPage(item: HYT_SuccessMessageVC) {
+        if item.itsComeFrom == "0"{
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            if #available(iOS 13.0, *){
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.setInitialViewAsRootViewController()
+            }else{
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setInitialViewAsRootViewController()
+            }
+
+        }
+    }
+    
     
     func acceptDate(_ vc: HYT_DatePickerVC) {
         if vc.isComeFrom == "DOB"{
             selectDateLbl.text = vc.selectedDate
+            DOB = vc.selectedDate
         }else{
             selectAnniversarydateLbl.text = vc.selectedDate
             aniversaryDate = vc.selectedDate
@@ -49,12 +114,17 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     
     func didTappedGenderBtn(item: HYT_DropDownVC) {
         selectGenderLbl.text = item.genderName
+        gender =  item.genderName
     }
     
     func didTappedAccountType(item: HYT_DropDownVC) {
     }
     
 
+    @IBOutlet weak var logoutLbl: UILabel!
+    
+    @IBOutlet weak var deleteAccountLbl: UILabel!
+    @IBOutlet weak var logoutView: UIView!
     @IBOutlet weak var anniversaryDateLbl: UILabel!
     @IBOutlet weak var backBtnWidth: NSLayoutConstraint!
     @IBOutlet weak var salesRepresentativeTF: UITextField!
@@ -98,15 +168,19 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     var registerationNo : Int = 0
     var backbtnWidth = 0
     var aniversaryDate = ""
+    var gender = ""
+    var DOB = ""
     var VM = HYT_ProfileVM()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
+        logoutView.layer.maskedCorners =  [.layerMinXMaxYCorner]
         backBtnWidth.constant = CGFloat(backbtnWidth)
     }
 
     override func viewWillAppear(_ animated: Bool) {
 //        personalInformationTopHeight.constant = 20
+        self.logoutView.isHidden = true
         personalInformationView.isHidden = true
         generalInformationView.isHidden = false
         updateBtn.isHidden = true
@@ -123,6 +197,13 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         customerGeneralInfo()
         localization()
     }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+////        let touch = touches.first
+////        if touch?.view != self.logoutView{
+////            self.logoutView.isHidden = true
+////        }
+//    }
 
     override func viewWillDisappear(_ animated: Bool) {
         backbtnWidth = 0
@@ -172,6 +253,40 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         present(vc!, animated: true)
     }
     
+    @IBAction func didTappedSettingBtn(_ sender: Any) {
+        logoutView.isHidden ? (logoutView.isHidden =  false) : (logoutView.isHidden = true)
+//        logoutView.isHidden =  false
+    }
+    
+    @IBAction func didTappedDeleteaccount(_ sender: Any) {
+        deleteAccount()
+    }
+    
+    @IBAction func didTappedLogoutBtn(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SuccessMessage2") as? SuccessMessage2
+        vc!.delegate = self
+        vc!.message = "Are you sure you want to Logout ?".localiz()
+        vc?.btnName = "Logout".localiz()
+        vc?.vcTitle = "Logout".localiz()
+        vc!.flags = "1"
+        vc!.modalPresentationStyle = .overCurrentContext
+        vc!.modalTransitionStyle = .crossDissolve
+        self.present(vc!, animated: true, completion: nil)
+ 
+//        let alert = UIAlertController(title: "Logout".localiz(), message: "Are you sure you want to Logout ?".localiz(), preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "Yes".localiz(), style: .default, handler: { UIAlertAction in
+//
+//
+//
+//        }))
+//        alert.addAction(UIAlertAction(title: "No".localiz(), style: UIAlertAction.Style.default, handler: nil))
+//    self.present(alert, animated: true, completion: nil)
+  
+        
+        
+    }
+    
+    
     @IBAction func didTappedUpdateBtn(_ sender: UIButton) {
         if firstNameTF.text?.count == 0{
             self.view.makeToast("firstName_toast_message".localiz(), duration: 2.0, position: .center)
@@ -183,13 +298,16 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
 //        else if emailTF.text?.count == 0 {
 //            self.view.makeToast("Enter the email", duration: 2.0, position: .center)
 //        }
-        else if selectDateLbl.text == "DOB_toast_message".localiz(){
-            self.view.makeToast("DOB_toast_message".localiz(), duration: 2.0, position: .center)
-        }else if selectGenderLbl.text == "gender_toast_message".localiz(){
-            self.view.makeToast("gender_toast_message".localiz(), duration: 2.0, position: .center)
-        }else if selectAnniversarydateLbl.text == "date_of_aniversary_toast_message".localiz(){
-            self.view.makeToast("date_of_aniversary_toast_message".localiz(), duration: 2.0, position: .center)
-        }else{
+//        else if selectDateLbl.text == "DOB_toast_message".localiz(){
+//            self.view.makeToast("DOB_toast_message".localiz(), duration: 2.0, position: .center)
+//        }
+//        else if selectGenderLbl.text == "Select gender"{
+//            self.view.makeToast("gender_toast_message".localiz(), duration: 2.0, position: .center)
+//        }
+//        else if selectAnniversarydateLbl.text == "date_of_aniversary_toast_message".localiz(){
+//            self.view.makeToast("date_of_aniversary_toast_message".localiz(), duration: 2.0, position: .center)
+//        }
+        else{
             profileUpdate_Api()
         }
         
@@ -251,6 +369,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
 //                ]
 //        ]
         
+        
         [
             "ActionType": "4",
             "ActorId": userId,
@@ -260,16 +379,19 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
                 "FirstName": firstNameTF.text ?? "",
                 "lastname":lastNameTF.text ?? "",
                 "Email": emailTF.text ?? "",
-                "DOB": selectDateLbl.text ?? "",
+                "DOB": DOB,
                 "Mobile": mobileNumberTF.text ?? "",
-                "RegistrationSource": registerationNo
+                "RegistrationSource": "3",
+                "rELATED_PROJECT_TYPE" : "HOYA",
+                "customerTypeID": customerTypeID
             ] as [String : Any],
             "ObjCustomerDetails": [
-                "IsNewProfilePicture":0,
+                "IsNewProfilePicture":1,
                 "Anniversary": aniversaryDate,
-                "Gender": selectGenderLbl.text ?? ""
+                "Gender": gender
             ] as [String : Any]
         ]
+        print(parameter,"profile update")
         
         self.VM.peofileUpdate(parameter: parameter)
     }
@@ -299,9 +421,34 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         dateTitleLbl.text = "DOB".localiz()
         selectDateLbl.text = "DOB_toast_message".localiz()
         genderLbl.text = "gender".localiz()
-        selectGenderLbl.text = "gender_toast_message".localiz()
+        selectGenderLbl.text = "Select gender"
         anniversaryDateLbl.text = "date_of_Aniversary".localiz()
         selectAnniversarydateLbl.text = "date_of_aniversary_toast_message".localiz()
         updateBtn.setTitle("update".localiz(), for: .normal)
+        generalInfoBtn.setTitle("general_info".localiz(), for: .normal)
+        personalInfoBtn.setTitle("personal_info".localiz(), for: .normal)
+        deleteAccountLbl.text = "Delete Account".localiz()
+        logoutLbl.text = "Logout".localiz()
     }
+    
+    func deleteAccount(){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SuccessMessage2") as? SuccessMessage2
+        vc!.delegate = self
+        vc!.message = "Account_deleted_successfully".localiz()
+        vc?.btnName = "Delete".localiz()
+        vc?.vcTitle = "Delete Account".localiz()
+        vc!.flags = "0"
+        vc!.modalPresentationStyle = .overCurrentContext
+        vc!.modalTransitionStyle = .crossDissolve
+        self.present(vc!, animated: true, completion: nil)
+        
+//        let alert = UIAlertController(title: "", message: "are_sure_delete_account".localiz(), preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { UIAlertAction in
+//
+//    }))
+//        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
+//    self.present(alert, animated: true, completion: nil)
+
+    }
+    
 }

@@ -12,7 +12,37 @@ import SDWebImage
 import LanguageManager_iOS
 import ImageSlideshow
 
-class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate {
+class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate, popMessage2Delegate, SuccessMessageDelegate {
+    func goToLoginPage(item: HYT_SuccessMessageVC) {
+        if item.itsComeFrom == "1"{
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            if #available(iOS 13.0, *){
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.setInitialViewAsRootViewController()
+            }else{
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setInitialViewAsRootViewController()
+            }
+        }
+    }
+    
+    func didTappedOKBtn(item: SuccessMessage2) {
+        if item.flags == "1"{
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            if #available(iOS 13.0, *){
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.setInitialViewAsRootViewController()
+            }else{
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setInitialViewAsRootViewController()
+            }
+        }
+    }
+    
 
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
         localization()
@@ -56,29 +86,45 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
 //        profileImage.image = UIImage(named: "Image-3")
         imagePicker.delegate = self
         tokendata()
-        dashboardOffersApi()
         setUpMenuList()
+        dashboardOffersApi()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setUpMenuList()
+        localization()
         tokendata()
         
     }
     
 
     @IBAction func didTappedLogoutBtn(_ sender: UIButton) {
-        let domain = Bundle.main.bundleIdentifier!
-        UserDefaults.standard.removePersistentDomain(forName: domain)
-        UserDefaults.standard.synchronize()
-        if #available(iOS 13.0, *){
-            let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-            sceneDelegate.setInitialViewAsRootViewController()
-        }else{
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.setInitialViewAsRootViewController()
-        }
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SuccessMessage2") as? SuccessMessage2
+        vc!.delegate = self
+        vc!.message = "Are you sure you want to Logout ?".localiz()
+        vc?.btnName = "Logout".localiz()
+        vc?.vcTitle = "Logout".localiz()
+        vc!.flags = "1"
+        vc!.modalPresentationStyle = .overCurrentContext
+        vc!.modalTransitionStyle = .crossDissolve
+        self.present(vc!, animated: true, completion: nil)
+        
+        
+        
+        
+        
+//        let alert = UIAlertController(title: "Logout".localiz(), message: "Are you sure you want to Logout ?".localiz(), preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "Yes".localiz(), style: .default, handler: { UIAlertAction in
+//
+//
+//
+//
+//        }))
+//        alert.addAction(UIAlertAction(title: "No".localiz(), style: UIAlertAction.Style.default, handler: nil))
+//    self.present(alert, animated: true, completion: nil)
+  
         
     }
     @IBAction func didTappedNotificationBtn(_ sender: UIButton) {
@@ -128,9 +174,33 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         let parameter : [String : Any] = [
                 "ActorId": userId
         ]
-        self.VM.dashBoardApi(parameter: parameter)
+        self.VM.dashBoardApi(parameter: parameter, completion: {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+            vc!.delegate = self
+            vc!.successMessage = "account_Deactivate_error".localiz()
+            vc!.itsComeFrom = "1"
+            vc!.modalPresentationStyle = .overCurrentContext
+            vc!.modalTransitionStyle = .crossDissolve
+            self.present(vc!, animated: true, completion: nil)
+            
+            
+            
+            
+            
+            
+            
+            
+//            let alert = UIAlertController(title: "", message: "account_Deactivate_error".localiz(), preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok".localiz(), style: .default, handler: { UIAlertAction in
+//
+//
+//
+//
+//            }))
+//
+//        self.present(alert, animated: true, completion: nil)
+        })
     }
-    
     
     func dashboardOffersApi(){
         let parameter : [String : Any] = [
@@ -372,6 +442,9 @@ extension HYT_DashboardVC{
         }
     
     private func localization(){
+        tabBarController?.tabBar.items![0].title = "Home".localiz()
+        tabBarController?.tabBar.items![1].title = "Support".localiz()
+        tabBarController?.tabBar.items![2].title = "Profile".localiz()
         pointsTitleLbl.text = "points".localiz()
         membershipIdTitleLbl.text = "membershipId".localiz()
         roleTitleLbl.text = "role".localiz()

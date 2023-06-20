@@ -541,7 +541,7 @@ class RestAPI_Requests {
         }
     }
     
-    // NOTIFICATION LISTING
+    //MARK: - NOTIFICATION LISTING
     
     func notificationList(parameters: JSON, completion: @escaping (NotificationModels?, Error?) -> ()) -> URLSessionDataTask? {
        return client.load(path: historyNotification, method: .post, params: parameters) { data, error in
@@ -570,5 +570,49 @@ class RestAPI_Requests {
 //           }
 //       }
 //    }
+    
+    //MARK: - TERMS AND CONDITIONS API
+    func termsAndCondition_API(parameters: JSON, completion: @escaping (termsAndConditionModels?, Error?) -> ()) -> URLSessionDataTask? {
+        return client.load(path: termsAndConditionMethodName, method: .post, params: parameters) { data, error in
+            do{
+//                print(data)
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(termsAndConditionModels?.self, from: data as! Data)
+                    completion(result1, nil)
+                }
+            }catch{
+                completion(nil, error)
+            }
+        }
+    }
+    
+    
+    //    MARK: - DELETE ACCOUNT API
+        func deleteAccountApi(parameters: JSON, completion: @escaping (DeleteAccountModels?, Error?) -> ()) -> URLSessionDataTask? {
+           return client.load(path: deleteAccountMethodName, method: .post, params: parameters) { data, error in
+               do{
+                   if data != nil{
+                       let result1 =  try JSONDecoder().decode(DeleteAccountModels?.self, from: data as! Data)
+                       completion(result1, nil)
+                   }
+               }catch{
+                   completion(nil, error)
+               }
+           }
+        }
+    
+    //    MARK: - Check IdNumber existancy API
+        func chechIdNumberExistancyApi(parameters: JSON, completion: @escaping (IDcradExistancyModels?, Error?) -> ()) -> URLSessionDataTask? {
+           return client.load(path: chechIdExistancyMethodName, method: .post, params: parameters) { data, error in
+               do{
+                   if data != nil{
+                       let result1 =  try JSONDecoder().decode(IDcradExistancyModels?.self, from: data as! Data)
+                       completion(result1, nil)
+                   }
+               }catch{
+                   completion(nil, error)
+               }
+           }
+        }
 }
 

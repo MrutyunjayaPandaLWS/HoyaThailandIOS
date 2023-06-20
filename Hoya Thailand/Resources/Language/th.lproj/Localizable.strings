@@ -32,9 +32,14 @@
 
 //Login
 "login" = "กรุณาลงชื่อเข้าสู่ระบบ";
-"Enter_a_valid_password" = "Enter a valid password"; //mark
-"Mobile_number_is_doesn't_exists" = "Membership ID / Mobile number is doesn't exists"; //mark
-"Password_is_incorrect" = "Password is incorrect"; //mark
+"Enter_a_valid_password" = "ป้อนรหัสผ่านที่ถูกต้อง"; //mark
+"Mobile_number_is_doesn't_exists" = "ไม่มีรหัสสมาชิก / เบอร์มือถือ";
+"account_Deactivate_error" = "บัญชีของคุณถูกปิดใช้งาน โปรดติดต่อผู้ดูแลระบบของคุณ";
+"account_Pending_error" = "การยืนยันบัญชีของคุณอยู่ระหว่างดำเนินการ โปรดติดต่อผู้ดูแลระบบของคุณ";
+"account_login_error" = "การเข้าสู่ระบบบัญชีของคุณล้มเหลว โปรดติดต่อผู้ดูแลระบบของคุณ";
+
+//mark
+"Password_is_incorrect" = "รหัสผ่านไม่ถูกต้อง"; //mark
 "loginInfo" = "ป้อนรายละเอียดที่กำหนดเพื่อเข้าสู่ระบบบัญชี";
 "userId" = "หมายเลขสมาชิก / หมายเลขโทรศัพท์มือถือ";
 "userId_toast_message" = "กรุณากรอกหมายเลขสมาชิก / หมายเลขโทรศัพท์มือถือ";
@@ -72,8 +77,8 @@
 "lastName_toast_message" = "กรุณากรอกนามสกุล";
 "email" = "อีเมล์";
 "email_toast_message" = "กรุณากรอกอีเมล์";
-"email_validation" = "This Email already exist try another email"; //mark
-"wrong_email_format" = "Enter a valid email"; //mark
+"email_validation" = "อีเมลนี้มีอยู่แล้ว ลองอีเมลอื่น"; //mark
+"wrong_email_format" = "ป้อนอีเมลที่ถูกต้อง"; //mark
 "mobileNumber" = "หมายเลขโทรศัพท์มือถือ";
 "mobileNumber_toast_message" = "กรุณากรอกหมายเลขโทรศัพท์มือถือ";
 "mobileNumbervalidation" = "โปรดป้อนหมายเลขโทรศัพท์มือถือที่ถูกต้อง!";
@@ -91,7 +96,7 @@
 "idCardNumber_toast_message" = "กรุณากรอกหมายเลขบัตรประชาชน";
 "back_Login" = "กลับไปหน้าลงชื่อเข้าใช้งาน";
 "register_success_Message" = "คุณลงทะเบียนสำเร็จ";
-"registrationFailed" = "This storeID already registered, please try other storeID"; //mark
+"registrationFailed" = "StoreID นี้ลงทะเบียนแล้ว โปรดลองใช้ StoreID อื่น"; //mark
 
 //Help
 "membershipId" = "หมายเลขสมาชิก";
@@ -107,7 +112,7 @@
 
 
 //Support-Query listing
-"query" = "Query"; //mark
+"query" = "สอบถาม"; //mark
 "newQuery" = "เพิ่มการแจ้งปัญหาใหม่";
 "newQueryInfo" = "โปรดยืนยันการแจ้งปัญหาของคุณโดยผ่านแบบฟอร์ม";
 "queryDetails" = "รายละเอียดของปัญหา";
@@ -127,7 +132,7 @@
 "myredeemption" = "การแลกของฉัน";
 "pointExpireReport" = "รายงานของคะแนนที่หมดอายุ";
 "offerDetails" = "รายละเอียดข้อเสนอ";
-"My_Promotions" = "My Promotions"; //mark
+"My_Promotions" = "โปรโมชั่นของฉัน"; //mark
 
 //Myprofile
 
@@ -143,14 +148,14 @@
 "promotionList" = "รายการโปรโมชั่น";
 "details" = "รายละเอียด";
 "claim" = "การเคลม";
-"validUntli" = "ใช้ได้ถึงวันที่";
+"validUntli" = "ใช้ได้ถึง";
 
 //Promotion Details
-"promotionDetails" = "Promotion Details"; //mark
-"promotionValid" = "Promotion Valid till"; //mark
+"promotionDetails" = "รายละเอียดโปรโมชั่น"; //mark
+"promotionValid" = "โปรโมชั่นใช้ได้จนถึง"; //mark
 "product" = "Product"; //mark
-"getBenefit" = "Get Benefits"; //mark
-"promotionDetails_info" = "When scan the QR or Upload the invoice"; //mark
+"getBenefit" = "รับสิทธิประโยชน์"; //mark
+"promotionDetails_info" = "เมื่อสแกน QR หรืออัปโหลดใบแจ้งหนี้"; //mark
 
 
 
@@ -197,3 +202,49 @@
 "Home" = "หน้าหลัก";
 "Profile" = "ประวัติ";
 "Valid_till" = "ใช้ได้ถึง";
+"Terms And Condition" = "ข้อกำหนดและเงื่อนไข";
+"Lens Design" = "การออกแบบเลนส์";
+
+
+"accept terms and condition" = "ยอมรับข้อกำหนดและเงื่อนไข";
+"Are you sure you want to Logout ?" = "คุณแน่ใจว่าคุณต้องการที่จะออกจากระบบ ?";
+"Logout" = "ออกจากระบบ";
+"Yes" = "ใช่";
+"No" = "เลขที่";
+"Ok" = "ตกลง";
+"Account_deleted_successfully" = "ลบบัญชีเรียบร้อยแล้ว";
+"are_sure_delete_account" = "คุณแน่ใจหรือว่าต้องการลบบัญชีของคุณจริงๆ";
+"Delete" = "ลบ";
+"Delete Account" = "ลบบัญชี";
+"idCardExistancy" = "ไม่มีรหัสอยู่แล้ว !";
+"something_went_wrong" = "เกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง...";
+"Your voucher redeemed successfully" = "แลกบัตรกำนัลของคุณสำเร็จแล้ว";
+
+"Earned Points" = "คะแนนที่ได้รับ";
+"Redeemed Points" = "คะแนนแลก";
+"Expired Points" = "คะแนนหมดอายุ";
+"Available Points" = "คะแนนที่มีอยู่";
+"No data found!" = "ไม่พบข้อมูล!";
+
+"Claim Details" = "รายละเอียดการเรียกร้อง";
+"Upload Code" = "อัปโหลดรหัส";
+"Validity until" = "ใช้ได้ถึง";
+
+"Enter your invoice number" = "ป้อนหมายเลขใบแจ้งหนี้ของคุณ";
+"Select the product name" = "เลือกชื่อผลิตภัณฑ์";
+"Enter a quantity" = "ป้อนปริมาณ";
+"Hoya Application need Camera permission for Scanning Codes" = "แอปพลิเคชัน Hoya ต้องได้รับอนุญาตจากกล้องสำหรับการสแกนรหัส";
+"Allow Camera Access" = "อนุญาตการเข้าถึงกล้อง";
+"Allow" = "อนุญาต";
+"DisAllow" = "ไม่อนุญาต";
+"lens design name is not available" = "ไม่มีชื่อการออกแบบเลนส์";
+"Scan a valid QR Code" = "สแกนรหัส QR ที่ถูกต้อง";
+"Summitted Len Design is not available" = "ไม่มีการออกแบบเลนส์ที่ส่งมา";
+"This combination already exist" = "มีชุดค่าผสมนี้อยู่แล้ว";
+"Claim request has been submitted successfully" = "ส่งคำขอเรียกร้องเรียบร้อยแล้ว";
+"Invalid claim request" = "คำขอเรียกร้องไม่ถูกต้อง";
+
+"userId_1" = "รหัสสมาชิก";
+"userId_toast_message_1" = "ใส่รหัสสมาชิก";
+"Pin has been sent to registered mobile number" = "ส่ง PIN ไปที่เบอร์มือถือที่ลงทะเบียนแล้ว";
+"Mobile_number_is_doesn't_exists1" = "ไม่มีรหัสสมาชิก";

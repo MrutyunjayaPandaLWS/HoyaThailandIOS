@@ -52,6 +52,7 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         emptyMessage.isHidden = true
         backBtnWidth.constant = 0
         localization()
+        self.queryTableView.contentInset = UIEdgeInsets(top: 0,left: 0,bottom: 50,right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,6 +104,7 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
                     "QueryStatus":""
                 
         ]
+        print(parameter,"getQueryList_Api")
         self.VM.getQueryList(parameter: parameter)
         
     }
@@ -151,6 +153,7 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     private func localization(){
         titleLbl.text = "query".localiz()
         newQueryLbl.text = "newQuery".localiz()
+        emptyMessage.text = "No data found!".localiz()
     }
     
 }

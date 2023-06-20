@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
 
 class HYT_ForgotPasswordVM{
@@ -44,7 +45,7 @@ class HYT_ForgotPasswordVM{
                 if str ?? "" != "1"{
                     DispatchQueue.main.async{
                         self.VC?.stopLoading()
-                        self.VC?.view.makeToast("Invalid membership Id / Mobile number", duration: 2.0, position: .center)
+                        self.VC?.view.makeToast("Invalid membership Id", duration: 2.0, position: .center)
                     }
                 }else{
                     DispatchQueue.main.async{
@@ -145,7 +146,7 @@ class HYT_ForgotPasswordVM{
                     }
                 }else{
                     DispatchQueue.main.async{
-                        self.VC?.successMessagePopUp(message: "Pin has been sent to registered mobile number")
+                        self.VC?.successMessagePopUp(message: "Pin has been sent to registered mobile number".localiz())
                         self.VC?.navigationController?.popViewController(animated: true)
                         self.VC?.stopLoading()
                     }

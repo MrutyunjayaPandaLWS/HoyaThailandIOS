@@ -15,7 +15,7 @@ class HYT_DashboardVM{
     var requestAPIs = RestAPI_Requests()
     var dashboardOffers = [LstPromotionJsonList]()
     
-    func dashBoardApi(parameter: JSON){
+    func dashBoardApi(parameter: JSON,completion: @escaping ()->()){
         
         self.VC?.startLoading()
         self.requestAPIs.dashBoardApi(parameters: parameter) { (result, error) in
@@ -34,16 +34,18 @@ class HYT_DashboardVM{
                                 print(result?.objCustomerDashboardList?[0].notificationCount ?? "", "NotificationCount")
                                 print(result?.objCustomerDashboardList?[0].redeemablePointsBalance ?? "", "totalpoints")
 
-                                self.VC?.pointsLbl.text = "\(Int(result?.objCustomerDashboardList?[0].totalRedeemed ?? 0))"
+                        self.VC?.pointsLbl.text = "\(Int(result?.objCustomerDashboardList?[0].overAllPoints ?? 0))"
 
-                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].totalRedeemed ?? "", forKey: "TotalPoints")
+                                UserDefaults.standard.setValue(result?.objCustomerDashboardList?[0].overAllPoints ?? "", forKey: "TotalPoints")
                                 UserDefaults.standard.synchronize()
                                    
                             }
                         let customerFeedbakcJSON = result?.lstCustomerFeedBackJsonApi ?? []
                         if customerFeedbakcJSON.count != 0 {
+                            UserDefaults.standard.set(result?.lstCustomerFeedBackJsonApi?[0].customerTypeId, forKey: "customerTypeID")
                             if result?.lstCustomerFeedBackJsonApi?[0].customerStatus ?? 0 != 1{
                                 DispatchQueue.main.async{
+                                    completion()
                                 }
                             }else{
                                 let profileImg = String(result?.lstCustomerFeedBackJsonApi?[0].customerImage ?? "").dropFirst(2)

@@ -66,7 +66,7 @@ class BaseViewController: UIViewController {
             self.activityIndicator.color = UIColor.black
             self.view.addSubview(self.activityIndicator);
             self.activityIndicator.startAnimating();
-            self.view.isUserInteractionEnabled = true
+            self.view.isUserInteractionEnabled = false
         }
        }
        func stopLoading(){

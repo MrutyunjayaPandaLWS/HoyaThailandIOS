@@ -30,6 +30,11 @@ class HYT_OffersDetailsVC: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        localization()
+    }
+    
     @IBAction func didTappedBackBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -42,7 +47,7 @@ class HYT_OffersDetailsVC: UIViewController {
     }
 
     func localization(){
-        titleLbl.text = "".localiz()
+        titleLbl.text = "Offer_Details".localiz()
     }
     
 }

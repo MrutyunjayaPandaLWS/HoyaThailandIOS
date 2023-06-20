@@ -69,6 +69,7 @@ class HYT_S_PromotionVC: BaseViewController, UITableViewDelegate, UITableViewDat
 
     private func localization(){
         vcTitleLbl.text = "promotionList".localiz()
+        emptyMessage.text = "No data found!".localiz()
     }
     
 }

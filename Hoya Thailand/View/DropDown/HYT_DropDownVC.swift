@@ -31,12 +31,13 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     var rowNumber = 0
     var flags = ""
     var progrmaId = 0
-    var genderList = ["Male","Female","Don't want to show"]
+    var genderList = ["Male","Female"]
     var promotionNameList = ["promotion-A","promotion-B","promotion-C","promotion-D","promotion-E"]
     var accountTypeList = ["Store owner","Individual"]
     var roleList = ["Frontliner"]
     var salesRepresentativeList = ["SalesRepresentative-1","SalesRepresentative-2","SalesRepresentative-3"]
-    var myRedeemptionStatus : [myredeemptionStatusModel] = [myredeemptionStatusModel(statusName: "Approved", statusID: 0),myredeemptionStatusModel(statusName: "Cancelled", statusID: 1)]
+//    var myRedeemptionStatus : [myredeemptionStatusModel] = [myredeemptionStatusModel(statusName: "Approved", statusID: 0),myredeemptionStatusModel(statusName: "Cancelled", statusID: 1)]
+    var myRedeemptionStatus : [myredeemptionStatusModel] = [myredeemptionStatusModel(statusName: "Pending", statusID: 0),myredeemptionStatusModel(statusName: "Delivered", statusID: 4),myredeemptionStatusModel(statusName: "Cancelled", statusID: 3)]
     var genderName = ""
     var promotionName = ""
     var accountType = ""
@@ -52,7 +53,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        heightOfTableView.constant = CGFloat(45)
         self.VM.VC = self
         dropdownTableView.delegate = self
         dropdownTableView.dataSource = self
@@ -84,6 +85,7 @@ class HYT_DropDownVC: BaseViewController, UITableViewDelegate, UITableViewDataSo
             getPromotionList_Api()
         case "myRedeemption":
             rowNumber = myRedeemptionStatus.count
+            heightOfTableView.constant = CGFloat(45 * rowNumber)
         case "productList":
             getProductList_Api()
             

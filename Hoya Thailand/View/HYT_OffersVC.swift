@@ -71,6 +71,7 @@ class HYT_OffersVC: BaseViewController, UITableViewDelegate, UITableViewDataSour
     
     func localization(){
         offersTitleLbl.text = "Offers".localiz()
+        emptyMessage.text = "No data found!".localiz()
         
     }
 }

@@ -28,6 +28,7 @@ class HYT_MyRedemptionTVCell: UITableViewCell {
     var downloadVoucher:String = ""
     var delegate : myRedeemptionDelegate?
     var productName = ""
+    var pdfLink = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
-class HYT_ClaimDetailsVM{
+class HYT_ClaimDetailsVM: SuccessMessageDelegate{
+    func goToLoginPage(item: HYT_SuccessMessageVC) {
+        self.VC?.navigationController?.popToRootViewController(animated: true)
+    }
+    
     weak var VC : HYT_ClaimDetailsVC?
+    var promotionProductList = [LsrProductDetails]()
     
     var requestAPIs = RestAPI_Requests()
     
@@ -20,7 +26,7 @@ class HYT_ClaimDetailsVM{
                 if result != nil{
                     DispatchQueue.main.async {
                         print("invoice",result?.lstAttributesDetails?[0].attributeId)
-                        if result?.lstAttributesDetails?[0].attributeId == 1{
+                        if result?.lstAttributesDetails?[0].attributeId == 0{
                             self.VC?.scanCodeStatus = 1
 //                            if self.VC?.flags == "scanned"{
 //                                self.VC?.productValidationApi(productId: self.VC?.promotionData?.programId ?? 0)
@@ -77,11 +83,11 @@ class HYT_ClaimDetailsVM{
                             self.VC?.invoiceNumberCheckApi(invoiceNumber: self.VC?.invoiceNumberTF.text ?? "")
                         }else{
                             self.VC?.productCodeStatus = -1
-                            self.VC?.view.makeToast("Summitted Len Design is not available",duration: 2.0,position: .center)
+                            self.VC?.view.makeToast("Summitted Len Design is not available".localiz(),duration: 2.0,position: .center)
                             self.VC?.stopLoading()
-                            if self.VC?.flags == "scanned"{
-                                self.VC?.reStartScan()
-                            }
+//                            if self.VC?.flags == "scanned"{
+//                                self.VC?.reStartScan()
+//                            }
                         }
                     }
                 }else{
@@ -110,7 +116,7 @@ class HYT_ClaimDetailsVM{
 //                            self.VC?.salesReturnStatus = 1
                             self.VC?.stopLoading()
 //                            self.VC?.claimSubmission_Api()
-                            self.VC?.view.makeToast("This combination already exixts",duration: 2.0,position: .center)
+                            self.VC?.view.makeToast("This combination already exist".localiz(),duration: 2.0,position: .center)
                             
                         }else{
 //                            self.VC?.salesReturnStatus = -1
@@ -143,13 +149,17 @@ class HYT_ClaimDetailsVM{
             if error == nil{
                 if result != nil{
                     DispatchQueue.main.async {
-                        if result?.returnValue == 1{
+                        if ((result?.returnMessage?.contains("1")) != nil){
                             self.VC?.stopLoading()
-                            self.VC?.successMessagePopUp(message: "Claim request has been submitted successfully")
-                            self.VC?.navigationController?.popViewController(animated: true)
+                            let vc = self.VC?.storyboard?.instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+                            vc?.modalTransitionStyle = .crossDissolve
+                            vc?.modalPresentationStyle = .overFullScreen
+                            vc?.delegate = self
+                            vc?.successMessage = "Claim request has been submitted successfully".localiz()
+                            self.VC?.present(vc!, animated: true)
                         }else{
                             self.VC?.stopLoading()
-                            self.VC?.view.makeToast("Invalid claim request",duration: 2.0,position: .center)
+                            self.VC?.view.makeToast("Invalid claim request".localiz(),duration: 2.0,position: .center)
                         }
                     }
                 }else{
@@ -198,7 +208,7 @@ class HYT_ClaimDetailsVM{
                     if str ?? "" == "false"{
                         self.VC?.productAndInvoiceValidation = "false"
                             self.VC?.stopLoading()
-                            self.VC?.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
+                        self.VC?.view.makeToast("Invalid claim request".localiz(), duration: 2.0, position: .center)
                     }else{
                         self.VC?.productAndInvoiceValidation = "true"
                             self.VC?.stopLoading()
@@ -208,11 +218,41 @@ class HYT_ClaimDetailsVM{
             }catch{
                      DispatchQueue.main.async{
                          self.VC?.stopLoading()
-                         print("Invalid claim request",error.localizedDescription)
+                         print("Invalid claim request".localiz(),error.localizedDescription)
                      }
             }
         })
         task.resume()
+    }
+    
+    
+    func productListApi(parameter: JSON){
+        self.promotionProductList.removeAll()
+        self.VC?.startLoading()
+        requestAPIs.getPromotionDetailsProductList(parameters: parameter) { result, error in
+            if error == nil{
+                if result != nil{
+                    self.promotionProductList = result?.lsrProductDetails ?? []
+                    DispatchQueue.main.async {
+                        if result?.lsrProductDetails?.count != 0{
+                            self.VC?.stopLoading()
+                        }else{
+                            self.VC?.stopLoading()
+                        }
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self.VC?.stopLoading()
+                    }
+                }
+            }
+            else{
+                DispatchQueue.main.async {
+                    self.VC?.stopLoading()
+                    print("My Redeemption error",error?.localizedDescription)
+                }
+            }
+        }
     }
             
 }

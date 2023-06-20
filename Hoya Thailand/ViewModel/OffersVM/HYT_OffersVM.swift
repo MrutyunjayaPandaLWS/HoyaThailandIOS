@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
 class HYT_OffersVM{
     
@@ -30,7 +31,7 @@ class HYT_OffersVM{
                             }else{
                                 self.VC?.offersTableView.reloadData()
                                 self.VC?.emptyMessage.isHidden = false
-                                self.VC?.emptyMessage.text = "No data found"
+                                self.VC?.emptyMessage.text = "No data found!".localiz()
                                 self.VC?.stopLoading()
                             }
                         }

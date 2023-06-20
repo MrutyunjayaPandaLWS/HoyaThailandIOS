@@ -33,7 +33,11 @@
 //Login
 "login" = "Login";
 "Enter_a_valid_password" = "Enter a valid password"; //mark
-"Mobile_number_is_doesn't_exists" = "Membership ID / Mobile number is doesn't exists"; //mark
+"Mobile_number_is_doesn't_exists" = "Membership ID / Mobile number is doesn't exists";
+"account_Deactivate_error" = "Your account is deactivate please contact to your administrator";
+"account_Pending_error" = "Your account verification is pending, please contact to your administrator";
+"account_login_error" = "Your account login is faild, please contact to your administrator";
+//mark
 "Password_is_incorrect" = "Password is incorrect"; //mark
 "loginInfo" = "Enter given details to login the account";
 "userId" = "Membership ID / Mobile Number";
@@ -105,7 +109,7 @@
 "querySubmit_success_message" = "Your query has been submitted successfully.";
 
 
-//Support-Query listing
+//MARK: - Support-Query listing
 "query" = "Query"; //mark
 "newQuery" = "New Query";
 "newQueryInfo" = "Please submit your query using the form";
@@ -115,7 +119,7 @@
 "submit_query" = "Submit Query";
 
 
-//Dashboard
+//Mark: - Dashboard
 "points" = "Points";
 "hi" = "Hi"; //mark
 "role" = "Role";
@@ -142,7 +146,7 @@
 "promotionList" = "Promotion List";
 "details" = "Details";
 "claim" = "Claim";
-"validUntli" = "Valid untill";
+"validUntli" = "Valid till";
 
 //Promotion Details
 "promotionDetails" = "Promotion Details"; //mark
@@ -198,4 +202,46 @@
 "Profile" = "Profile";
 "Valid_till" = "Valid till";
 
+"Terms And Condition" = "Terms And Condition";
+"accept terms and condition" = "Accept Terms And Conditions";
+"Lens Design" = "Lens Design";
+"Are you sure you want to Logout ?" = "Are you sure you want to Logout ?";
+"Logout" = "Logout";
+"Yes" = "Yes";
+"No" = "No";
+"Ok" = "Ok";
+"Account_deleted_successfully" = "Account deleted successfully";
+"are_sure_delete_account" = "Are you sure you really want to delete your account?";
+"Delete" = "Delete";
+"Delete Account" = "Delete Account";
+"idCardExistancy" = "Id no already exist !";
+"something_went_wrong" = "Something went to wrong, please try after some time...";
+"Your voucher redeemed successfully" = "Your voucher redeemed successfully";
 
+"Earned Points" = "Earned\nPoints";
+"Redeemed Points" = "Redeemed\nPoints";
+"Expired Points" = "Expired\nPoints";
+"Available Points" = "Available\nPoints";
+"No data found!" = "No data found!";
+"Claim Details" = "Claim Details";
+"Upload Code" = "Upload Code";
+
+"Validity until" = "Validity until";
+"Enter your invoice number" = "Enter your invoice number";
+"Select the product name" = "Select the product name";
+"Enter a quantity" = "Enter a quantity";
+"Hoya Application need Camera permission for Scanning Codes" = "Hoya Application need Camera permission for Scanning Codes";
+"Allow Camera Access" = "Allow Camera Access";
+"Allow" = "Allow";
+"DisAllow" = "DisAllow";
+"lens design name is not available" = "lens design name is not available";
+"Scan a valid QR Code" = "Scan a valid QR Code";
+"Summitted Len Design is not available" = "Summitted Len Design is not available";
+"This combination already exist" = "This combination already exist";
+"Claim request has been submitted successfully" = "Claim request has been submitted successfully";
+"Invalid claim request" = "Invalid claim request";
+
+"userId_1" = "Membership ID";
+"userId_toast_message_1" = "Enter Membership ID";
+"Pin has been sent to registered mobile number" = "Pin has been sent to registered mobile number";
+"Mobile_number_is_doesn't_exists1" = "Membership ID is doesn't exists";

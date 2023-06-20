@@ -8,9 +8,18 @@
 import UIKit
 import Lottie
 import SDWebImage
+//import Kingfisher
 import Firebase
+import LanguageManager_iOS
 
-class HistoryNotificationsViewController: BaseViewController {
+class HistoryNotificationsViewController: BaseViewController, notificationDelgate {
+    func didTappedNotificationimage(cell: HistoryNotificationsTableViewCell) {
+        let secondaryIMG = cell.imageUrl.dropFirst(1)
+//        expandedimageview.kf.setImage(with: URL(string: "\(Promo_ImageData)\(secondaryIMG)"), placeholder: UIImage(named: "no_image1.jpg"))
+        expandedimageview.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(secondaryIMG)"), placeholderImage: UIImage(named: "no_image1.jpg"))
+        expandedview.isHidden = false
+    }
+    
     
     @IBOutlet weak var expandedview: UIView!
     @IBOutlet weak var animationLottieView: LottieAnimationView!
@@ -24,8 +33,6 @@ class HistoryNotificationsViewController: BaseViewController {
         expandedview.isHidden = true
     }
     
-//    let userID = UserDefaults.standard.string(forKey: "UserID") ?? ""
-//    let loyaltyId = UserDefaults.standard.string(forKey: "LoyaltyID") ?? ""
     var VM = HistoryNotificationsViewModel()
     
     override func viewDidLoad() {
@@ -33,6 +40,7 @@ class HistoryNotificationsViewController: BaseViewController {
         self.VM.VC = self
         expandedview.isHidden = true
         self.noDataFound.isHidden = true
+        self.noDataFound.text = "No data found!".localiz()
         self.NotificationstableView.register(UINib(nibName: "HistoryNotificationsTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoryNotificationsTableViewCell")
         notificationListApi()
         self.NotificationstableView.delegate = self
@@ -48,36 +56,33 @@ class HistoryNotificationsViewController: BaseViewController {
 //
 //        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
 //        tracker.send(builder.build() as [NSObject : AnyObject])
-        
+
+        tabBarController?.tabBar.isHidden =  true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
     func playAnimation(){
         animationView = .init(name: "lf30_editor_jh47f7lt")
           animationView!.frame = animationLottieView.bounds
-          // 3. Set animation content mode
           animationView!.contentMode = .scaleAspectFit
-          // 4. Set animation loop mode
           animationView!.loopMode = .loop
-          // 5. Adjust animation speed
           animationView!.animationSpeed = 0.5
         animationLottieView.addSubview(animationView!)
-          // 6. Play animation
           animationView!.play()
 
     }
     
     func languagelocalization(){
-//        if UserDefaults.standard.string(forKey: "LanguageLocalizable") == "1"{
-            self.header.text = "Notification"
-            
-        
+            self.header.text = "Notifications".localiz()
     }
     
     func notificationListApi(){
         let parameters = [
             "ActionType": 0,
-            "ActorId": userId,
-            "LoyaltyId": loyaltyId
+            "ActorId": self.userId,
+            "LoyaltyId": self.loyaltyId
         ] as [String: Any]
         print(parameters)
         self.VM.notificationListApi(parameters: parameters) { response in
@@ -113,28 +118,52 @@ extension HistoryNotificationsViewController : UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryNotificationsTableViewCell") as! HistoryNotificationsTableViewCell
         cell.createdDate.text = self.VM.notificationListArray[indexPath.row].jCreatedDate ?? ""
-        cell.notificationHeader.text = self.VM.notificationListArray[indexPath.row].title ?? ""
-        cell.notificationMessage.text = self.VM.notificationListArray[indexPath.row].pushMessage ?? ""
+        let header = self.VM.notificationListArray[indexPath.row].title ?? ""
+        let message = self.VM.notificationListArray[indexPath.row].pushMessage ?? ""
+        if header.count != 0{
+            cell.notificationHeader.isHidden = false
+            cell.notificationHeader.text = header
+        }else{
+            cell.notificationHeader.isHidden = true
+        }
+        if message.count != 0{
+            cell.notificationMessage.isHidden = false
+            cell.notificationMessage.text = message
+        }else{
+            cell.notificationMessage.isHidden = true
+        }
+        
+        
+//        cell.notificationImg.sd_setImage(with: URL(string: PROMO_IMG + receivedImage), placeholderImage: UIImage(named: "no_image1.jpg"))
         let receivedImage = String(self.VM.notificationListArray[indexPath.row].imagesURL ?? "")
-        cell.notificationImg.sd_setImage(with: URL(string: PROMO_IMG1 + receivedImage), placeholderImage: UIImage(named: "no_image1.jpg"))
+        if  receivedImage != ""{
+            cell.imageView1.isHidden = false
+            cell.notificationImg.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(receivedImage.dropFirst(1))"), placeholderImage: UIImage(named: "no_image1.jpg"))
+//            cell.notificationImg.kf.setImage(with: URL(string: "\(Promo_ImageData)\(receivedImage.dropFirst(1))"), placeholder: UIImage(named: "no_image1.jpg"))
+        }else{
+            cell.imageView1.isHidden = true
+        }
+        cell.imageUrl = receivedImage
+        cell.delegate = self
         return cell
         
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 140
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if  self.VM.notificationListArray[indexPath.item].imagesURL != nil {
-            var secondaryIMG = self.VM.notificationListArray[indexPath.item].imagesURL ?? ""
-//            let splited = secondaryIMG.components(separatedBy: "~")
-//            print("\(PROMO_IMG)\(splited[1])")
-            expandedimageview.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(secondaryIMG)"), placeholderImage: UIImage(named: "no_image1.jpg"))
-            expandedview.isHidden = false
-            return
-        }else{
-            return
-        }
+//        if  self.VM.notificationListArray[indexPath.item].imagesURL != nil {
+//            var secondaryIMG = self.VM.notificationListArray[indexPath.item].imagesURL?.dropFirst(1) ?? ""
+////            let splited = secondaryIMG.components(separatedBy: "~")
+////            print("\(PROMO_IMG)\(splited[1])")
+////            expandedimageview.sd_setImage(with: URL(string: "\(PROMO_IMG)\(secondaryIMG)"), placeholderImage: UIImage(named: "no_image1.jpg"))
+//            expandedimageview.kf.setImage(with: URL(string: "\(Promo_ImageData)\(secondaryIMG)"), placeholder: UIImage(named: "no_image1.jpg"))
+//            expandedview.isHidden = false
+//            return
+//        }else{
+//            return
+//        }
 
     }
 }

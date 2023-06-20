@@ -11,32 +11,26 @@ import Firebase
 import AVFoundation
 import CoreLocation
 import Lottie
+import LanguageManager_iOS
 
-class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBufferDelegate,CLLocationManagerDelegate, FilterStatusDelegate {
+class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBufferDelegate,CLLocationManagerDelegate, FilterStatusDelegate, SearchableDropDownDelegate,UITextFieldDelegate {
     func didTappedFilterStatus(item: HYT_DropDownVC) {
-        productNameTF.text = item.statusName
+        lensDesignNameLbl.text = item.statusName
+        lensDesignNameLbl.textColor = .black
         productName = item.statusName
-        productCode = item.statusId
+        productCode = "\(item.statusId)"
     }
-    
-//    func didTappedPromotionName(item: HYT_DropDownVC) {
-//        productNameTF.text = item.statusName
-//        productName = item.statusName
-//        productCode = item.statusId
-////        flags = ""
-////        productValidationApi(productId: item.statusId)
-//    }
-//
-//    func didTappedGenderBtn(item: HYT_DropDownVC) {}
-//
-//    func didTappedAccountType(item: HYT_DropDownVC) {}
-//
-//    func didTappedRoleBtn(item: HYT_DropDownVC) {}
-//
-//    func didTappedSalesRepresentative(item: HYT_DropDownVC) {}
-    
-    
+    func selectedProductName(item: SelectDealerDropDownVC) {
+        lensDesignNameLbl.text = item.selectedStatusName
+        lensDesignNameLbl.textColor = .black
+        productName = item.selectedStatusName
+        productCode = "\(item.selectedStatusID)"
+    }
 
+    @IBOutlet weak var dropDownBtn: UIButton!
+    
+    @IBOutlet weak var lensDesignNameLbl: UILabel!
+    @IBOutlet weak var shadowView: UIImageView!
     @IBOutlet weak var scannerAnimationView: LottieAnimationView!
     @IBOutlet weak var userDetailsView: UIView!
     @IBOutlet weak var viewTitle: UILabel!
@@ -67,19 +61,23 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
     var barcodeDetector :VisionBarcodeDetector?
     var qrList = [String]()
     var invoiceNumber = ""
+    var quantity = "1"
     var scanCodeStatus = -1
     var productCodeStatus = -1
     var salesReturnStatus = -1
     var productName = ""
-    var productCode = 0
+    var productCode = ""
     var productAndInvoiceValidation = "false"
     var flags = ""
     var timmer = Timer()
+    var placeHolderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
         lottieAnimation(animationView: scannerAnimationView)
         scanBarcodeView.isHidden = false
+        shadowView.isHidden = false
         userDetailsView.isHidden = true
         claimDetailsView.isHidden = true
         uploadCodeLbl.backgroundColor = .white
@@ -91,11 +89,32 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
         customerNameLbl.text = promotionData?.programName
         validityDateLbl.text = "\(promotionData?.jEndDate?.prefix(10) ?? "")"
         quantityTF.keyboardType = .numberPad
+        quantityTF.text = "2"
+        quantityTF.isEnabled =  false
+        invoiceNumberTF.delegate = self
+        localization()
+        getProductList_Api()
         scannerSetup()
     }
     
+    private func localization(){
+        viewTitle.text = "claim".localiz()
+        claimDetailsLbl.text = "Claim Details".localiz()
+        invoiceNumberLbl.text = "invoiceNumer".localiz()
+        productNameLbl.text = "Lens Design".localiz()
+        quantityLbl.text = "Quantity".localiz()
+        submitBtn.setTitle("submit".localiz(), for: .normal)
+        cancelBtn.setTitle("Cancel".localiz(), for: .normal)
+        uploadCodeLbl.text = "Upload Code".localiz()
+        scanCodeLbl.text = "Scan_Code".localiz()
+        validityDateTitle.text = "Validity until".localiz()
+    }
+    
     @IBAction func didTappedScanCodeBtn(_ sender: UIButton) {
-        session.startRunning()
+        DispatchQueue.main.async {
+            self.session.startRunning()
+        }
+        shadowView.isHidden = false
         scannerAnimationView.isHidden = false
         userDetailsView.isHidden = true
         claimDetailsView.isHidden = true
@@ -115,20 +134,22 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
     
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if invoiceNumberTF.text?.count == 0 {
-            self.view.makeToast("Enter your invoice number", duration: 2.0, position: .center)
-        }else if productNameTF.text?.count == 0{
-            self.view.makeToast("Enter the product name", duration: 2.0, position: .center)
+            self.view.makeToast("Enter your invoice number".localiz(), duration: 2.0, position: .center)
+        }else if lensDesignNameLbl.text == "Select Lens Design"{
+            self.view.makeToast("Select the product name".localiz(), duration: 2.0, position: .center)
         }else if quantityTF.text?.count == 0{
-            self.view.makeToast("Enter a quantity", duration: 2.0, position: .center)
-        }else if scanCodeStatus == -1{
-            self.view.makeToast("Invoice number already exist", duration: 2.0, position: .center)
-        }else if productCodeStatus == -1{
-            self.view.makeToast("Summitted Len Design is not available", duration: 2.0, position: .center)
-        }else if salesReturnStatus == -1{
-            self.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
-        }else if productAndInvoiceValidation == "false"{
-            self.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
-        }else{
+            self.view.makeToast("Enter a quantity".localiz(), duration: 2.0, position: .center)
+        }
+//        else if scanCodeStatus == -1{
+//            self.view.makeToast("Invoice number already exist", duration: 2.0, position: .center)
+//        }else if productCodeStatus == -1{
+//            self.view.makeToast("Summitted Len Design is not available", duration: 2.0, position: .center)
+//        }else if salesReturnStatus == -1{
+//            self.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
+//        }else if productAndInvoiceValidation == "false"{
+//            self.view.makeToast("Invalid claim request", duration: 2.0, position: .center)
+//        }
+        else{
 //            invoiceNumberCheckApi(invoiceNumber: invoiceNumberTF.text ?? "")
             productValidationApi(productId: productCode)
         }
@@ -144,12 +165,23 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
         claimDetailsView.isHidden = false
         userDetailsView.isHidden = false
         scanBarcodeView.isHidden = true
+        shadowView.isHidden = true
         uploadCodeLbl.backgroundColor = primaryColor
         uploadCodeLbl.textColor = .white
         scanCodeLbl.backgroundColor = .white
         scanCodeLbl.textColor = .black
 //        cancelBtn.isHidden = true
 //        cancelBtnView.isHidden = true
+//        if claimDetailsView.isHidden == true{
+            invoiceNumber = ""
+            productName = ""
+            self.invoiceNumberTF.text = ""
+            self.invoiceNumberTF.isEnabled = true
+            self.lensDesignNameLbl.text = "Select Lens Design"
+            self.lensDesignNameLbl.textColor = placeHolderColor
+            dropDownBtn.isEnabled = true
+//        }
+        
     }
     
     @IBAction func endEdditingInvoiceNumberTF(_ sender: UITextField) {
@@ -175,12 +207,12 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
 //        }else if scanCodeStatus != 1{
 //            self.view.makeToast("Enter a valid invoice number",duration: 2.0,position: .center)
 //        }else{
-            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_DropDownVC") as? HYT_DropDownVC
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SelectDealerDropDownVC") as? SelectDealerDropDownVC
             vc?.modalPresentationStyle = .overFullScreen
             vc?.modalTransitionStyle = .crossDissolve
-            vc?.flags = "productList"
+//            vc?.flags = "productList"
             vc?.progrmaId = promotionData?.programId ?? 0
-            vc?.delegate1 = self
+            vc?.delegate = self
             present(vc!, animated: true)
 //        }
 
@@ -222,13 +254,13 @@ extension HYT_ClaimDetailsVC{
                 startLiveVideo()
             }else{
                 print("permission denied")
-                let alertVC = UIAlertController(title: "Hoya Application need Camera permission for Scanning Codes", message: "Allow Camera Access", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Allow", style: UIAlertAction.Style.default) {
+                let alertVC = UIAlertController(title: "Hoya Application need Camera permission for Scanning Codes".localiz(), message: "Allow Camera Access".localiz(), preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Allow".localiz(), style: UIAlertAction.Style.default) {
                     UIAlertAction in
 //                    UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
                     self.startLiveVideo()
                 }
-                let cancelAction = UIAlertAction(title: "DisAllow", style: UIAlertAction.Style.cancel) {
+                let cancelAction = UIAlertAction(title: "DisAllow".localiz(), style: UIAlertAction.Style.cancel) {
                     UIAlertAction in
                     
                 }
@@ -268,17 +300,37 @@ extension HYT_ClaimDetailsVC{
                         for barcode in result! {
                             let data = barcode.rawValue
                             print("barcode value",data)
-                            self.invoiceNumber = data!
-                                self.session.stopRunning()
-                                self.scannerAnimationView.isHidden = true
-                            self.flags = "scanned"
-                            DispatchQueue.main.asyncAfter(deadline: .now()+4.0, execute: {
-                                self.goToUploadCode()
-                                 })
-//                            self.invoiceNumberCheckApi(invoiceNumber: self.invoiceNumber)
-                            self.startLoading()
-                                
-//                            }
+                            if data?.contains(",") == true{
+                                let scanValue = data?.split(separator: ",")
+                                if (scanValue?.count ?? 0) >= 2{
+                                    self.productName = String(scanValue?[1] ?? "")
+                                        let filterProduct = self.VM.promotionProductList.filter { $0.productName == self.productName }
+                                        if filterProduct.count != 0{
+                                            self.startLoading()
+                                            self.session.stopRunning()
+                                            self.invoiceNumber = String(scanValue?[0] ?? "")
+//                                            self.quantity = String(scanValue?[2] ?? "")
+                                            self.scannerAnimationView.isHidden = true
+                                            self.flags = "scanned"
+                                            self.productCode = filterProduct[0].productCode ?? ""
+                                            DispatchQueue.main.asyncAfter(deadline: .now()+1.0, execute: {
+                                                self.stopLoading()
+                                                self.goToUploadCode()
+                                                 })
+                                        }else{
+                                            
+                                            self.view.makeToast("lens design name is not available".localiz(),duration: 2.0,position: .center)
+                                            DispatchQueue.main.async {
+                                                self.session.startRunning()
+                                            }
+                                        }
+                                    
+                                }else{
+                                    self.view.makeToast("Scan a valid QR Code".localiz(),duration: 2.0,position: .center)
+                                }
+                            }else{
+                                self.view.makeToast("Scan a valid QR Code".localiz(),duration: 2.0,position: .center)
+                            }
                         }
                     }
                 }
@@ -291,9 +343,14 @@ extension HYT_ClaimDetailsVC{
         self.stopLoading()
         userDetailsView.isHidden = false
         self.invoiceNumberTF.text = invoiceNumber
-        self.quantityTF.text = "1"
+        self.lensDesignNameLbl.text = productName
+        self.lensDesignNameLbl.textColor = .black
+        dropDownBtn.isEnabled = false
+        self.invoiceNumberTF.isEnabled = false
+        self.quantityTF.text = "2"
         claimDetailsView.isHidden = false
         scanBarcodeView.isHidden = true
+        shadowView.isHidden = true
         uploadCodeLbl.backgroundColor = primaryColor
         uploadCodeLbl.textColor = .white
         scanCodeLbl.backgroundColor = .white
@@ -304,7 +361,7 @@ extension HYT_ClaimDetailsVC{
     
     
     func reStartScan(){
-        DispatchQueue.main.asyncAfter(deadline: .now()+4.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.0, execute: {
             self.scannerAnimationView.isHidden = false
             self.stopLoading()
             self.session.startRunning()
@@ -317,20 +374,21 @@ extension HYT_ClaimDetailsVC{
                 "ActionType": 168,
                 "RoleIDs": invoiceNumber
         ]
-        
+        print(parameter,"invoiceNumberCheckApi")
         self.VM.invoiceNumberValidationApi(parameter: parameter)
     }
     
     
 //    MARK: LWS - PRODUCT VALIDATION API
-    func productValidationApi(productId: Int){
+    func productValidationApi(productId: String){
         
         let parameter : [String : Any] = [
         
                 "ActionType": 169,
                 "RoleIDs": "\(productId)" ,   // SEND PRODUCT CODE IN THIS TAGS
-                "HelpTopicID": loyaltyId // SEND LOYALTY PROGRAM ID HERE
+                "HelpTopicID": promotionData?.programId ?? 0// SEND LOYALTY PROGRAM ID HERE
         ]
+        print(parameter,"productValidationApi")
         self.VM.productValidationApi(parameter: parameter)
     }
     
@@ -340,9 +398,10 @@ extension HYT_ClaimDetailsVC{
             
                 "ActionType": 170,
                 "RoleIDs": invoiceNumberTF.text ?? "",  // SEND INVOIVE NUMBER HERE
-                "MobilePrefix": productNameTF.text ?? "" // SEND PRODUCTNAME HERE
+                "MobilePrefix": productCode // SEND PRODUCTNAME HERE
              
         ]
+        print(parameter,"combineValidationApi")
         self.VM.combine_Inv_Pro_Validation(parameter: parameter)
     }
     
@@ -352,13 +411,14 @@ extension HYT_ClaimDetailsVC{
             "ActorId": userId,
             "LoyaltyId": loyaltyId,
             "InvoiceNumber": invoiceNumberTF.text ?? "",
-            "ProductCode": productNameTF.text ?? "",
+            "ProductCode": lensDesignNameLbl.text ?? "",
             "SellingPrice": 1,
-            "LoyaltyProgramId": 6,
+            "LoyaltyProgramId": promotionData?.programId ?? 0,
             "VoucherImagePath": "",
             "Domain": "Hoya",
             "ClaimingQuantity": quantityTF.text ?? "0"
         ]
+        print(parameter,"claimSubmission_Api")
         self.VM.claimSubmissionApi(parameter: parameter)
     }
     
@@ -367,9 +427,30 @@ extension HYT_ClaimDetailsVC{
         let parameter : [String : Any] = [
             "Country": "Thailand",
             "InvoiceNo":invoiceNumberTF.text ?? "",
-            "LenDesign": productNameTF.text ?? "",
+            "LenDesign": lensDesignNameLbl.text ?? "",
             "Quantity": quantityTF.text ?? ""
         ]
+        print(parameter,"hoyaValidationApi")
         self.VM.hoyaValidationApi(paramters: parameter)
+    }
+    
+//    MARK: - PRODUCT LISTING API
+    func getProductList_Api(){
+        let parameter : [String : Any] = [
+                "ActorId":userId,
+                 "SearchText": "",
+                "LoyaltyProgramId": promotionData?.programId ?? 0,
+                "ProductDetails":[
+                    "ActionType": 20
+                ]
+        ]
+        print(parameter,"getProductList_Api")
+        
+        self.VM.productListApi(parameter: parameter)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.invoiceNumberTF.text = self.invoiceNumberTF.text?.uppercased()
+        return true
     }
 }

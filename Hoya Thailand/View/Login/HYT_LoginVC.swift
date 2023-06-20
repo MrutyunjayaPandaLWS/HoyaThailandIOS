@@ -25,7 +25,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     
     func didtappedLanguageBtn(item: HYT_LanguageDropDownVC) {
         languageLbl.text = item.language
-        if item.language == "English"{
+        if item.language == "EN"{
             UserDefaults.standard.set("EN", forKey: "LanguageName")
             UserDefaults.standard.synchronize()
         }else{
@@ -93,20 +93,22 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
             print(membershipIdTF.text)
             mobileNumberExistancyApi()
         }else{
-            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message_1".localiz(), duration: 2.0, position: .center)
         }
         
     }
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
-            self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
+            self.view.makeToast("userId_toast_message_1".localiz(), duration: 2.0, position: .center)
         }else if self.mobileNumberExistancy != 1{
-            self.view.makeToast("Mobile_number_is_doesn't_exists".localiz(), duration: 2.0, position: .center)
+            self.view.makeToast("Mobile_number_is_doesn't_exists1".localiz(), duration: 2.0, position: .center)
         }else if passwordTF.text?.count == 0{
             self.view.makeToast("password_toast_message".localiz(), duration: 2.0, position: .center)
-        }else if passwordTF.text?.count != 6{
-            self.view.makeToast("Enter_a_valid_password".localiz(), duration: 2.0, position: .center)
-        }else if tcStatus == 0{
+        }
+//        else if passwordTF.text?.count != 15{
+//            self.view.makeToast("Enter_a_valid_password".localiz(), duration: 2.0, position: .center)
+//        }
+        else if tcStatus == 0{
             self.view.makeToast("Accept the term & condition",duration: 2.0,position: .center)
         }else{
             loginSubmissionApi()
@@ -182,7 +184,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         if textField == membershipIdTF{
             maxLength = 14
         }else if textField == passwordTF{
-            maxLength = 6
+            maxLength = 15
         }
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
@@ -192,8 +194,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     private func localization(){
         loginLbl.text = "login".localiz()
         loginInfoLbl.text = "loginInfo".localiz()
-        membershipIDLbl.text = "userId".localiz()
-        membershipIdTF.placeholder = "userId_toast_message".localiz()
+        membershipIDLbl.text = "userId_1".localiz()
+        membershipIdTF.placeholder = "userId_toast_message_1".localiz()
         passwordLbl.text = "password".localiz()
         passwordTF.placeholder = "password_toast_message".localiz()
         accountStatusLbl.text = "don't_have_account".localiz()
@@ -202,6 +204,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         forgotPasswordBtn.setTitle("forgot_password".localiz(), for: .normal)
         needHelpBtn.setTitle("Need_Help".localiz(), for: .normal)
         languageLbl.text = "language".localiz()
+        termAndCondLbl.text = "accept terms and condition".localiz()
         
     }
     

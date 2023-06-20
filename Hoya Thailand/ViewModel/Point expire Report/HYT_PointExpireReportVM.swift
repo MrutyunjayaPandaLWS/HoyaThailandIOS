@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
 class HYT_PointExpireReportVM{
     weak var VC: HYT_PointsExpiryReportVC?
@@ -36,7 +37,7 @@ class HYT_PointExpireReportVM{
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.emptyMessage.isHidden = false
-                            self.VC?.emptyMessage.text = "No data found"
+                            self.VC?.emptyMessage.text = "No data found!".localiz()
                             self.VC?.pointsLbl.isHidden = true
                             self.VC?.pointsTitleLbl.isHidden = true
                             self.VC?.pointLbl.isHidden = true

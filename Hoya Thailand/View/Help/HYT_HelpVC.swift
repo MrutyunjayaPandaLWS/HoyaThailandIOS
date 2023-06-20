@@ -71,7 +71,7 @@ var VM = HYT_HelpVM()
     @IBAction func didTappedSubmitBtn(_ sender: UIButton) {
         if membershipIdTF.text?.count == 0 {
             self.view.makeToast("membershipId_toast_message".localiz(), duration: 2.0, position: .center)
-        }else if selectQueryTopicLbl.text == "queryTopic_toast_message".localiz(){
+        }else if selectQueryTopicLbl.text == "Select Query Topic"{
             self.view.makeToast("queryTopic_toast_message".localiz(), duration: 2.0, position: .center)
         } else if querySummeryTF.text?.count == 0 {
             self.view.makeToast("query_summery_toast_message".localiz(), duration: 2.0, position: .center)
@@ -246,7 +246,7 @@ extension HYT_HelpVC{
         membershipIdLbl.text = "membershipId".localiz()
         membershipIdTF.placeholder = "membershipId_toast_message".localiz()
         queryTopicTitleLbl.text = "queryTopic".localiz()
-        selectQueryTopicLbl.text = "queryTopic_toast_message".localiz()
+//        selectQueryTopicLbl.text = "queryTopic_toast_message".localiz()
         querySummeryLbl.text = "query_summery".localiz()
         querySummeryTF.placeholder = "query_summery_toast_message".localiz()
         uploadImageLbl.text = "uploadImage".localiz()

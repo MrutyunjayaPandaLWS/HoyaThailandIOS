@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import LanguageManager_iOS
 
 class HYT_PromotionListVM{
     
@@ -27,7 +27,7 @@ class HYT_PromotionListVM{
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.emptyMessage.isHidden = false
-                            self.VC?.emptyMessage.text = "No data found"
+                            self.VC?.emptyMessage.text = "No data found!".localiz()
                             self.VC?.promotionListTableView.reloadData()
                             self.VC?.stopLoading()
                         }
@@ -35,7 +35,7 @@ class HYT_PromotionListVM{
                 }else{
                     DispatchQueue.main.async {
                         self.VC?.emptyMessage.isHidden = false
-                        self.VC?.emptyMessage.text = "No data found"
+                        self.VC?.emptyMessage.text = "No data found!".localiz()
                         self.VC?.stopLoading()
                     }
                 }
@@ -44,7 +44,7 @@ class HYT_PromotionListVM{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
                     self.VC?.emptyMessage.isHidden = false
-                    self.VC?.emptyMessage.text = "No data found"
+                    self.VC?.emptyMessage.text = "No data found!".localiz()
                     print("My Redeemption error",error?.localizedDescription)
                 }
             }

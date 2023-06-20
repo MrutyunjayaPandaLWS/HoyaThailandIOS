@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -42,11 +42,8 @@
                                         <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="0.71999999999999997" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x42-k5-Ajp">
-                                        <rect key="frame" x="0.0" y="30" width="273" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="KcE-Jf-QIb"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x42-k5-Ajp">
+                                        <rect key="frame" x="0.0" y="30" width="263" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="14"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
@@ -94,7 +91,7 @@
                                     <constraint firstItem="x42-k5-Ajp" firstAttribute="top" secondItem="o0d-vJ-WOl" secondAttribute="bottom" constant="10" id="RDO-bG-I4m"/>
                                     <constraint firstItem="o0d-vJ-WOl" firstAttribute="leading" secondItem="otb-el-SoW" secondAttribute="leading" id="ZC2-0l-CGM"/>
                                     <constraint firstAttribute="height" constant="48" id="fQH-KI-CPp"/>
-                                    <constraint firstItem="wuj-ah-9vW" firstAttribute="leading" secondItem="x42-k5-Ajp" secondAttribute="trailing" constant="10" id="kEy-2X-hKJ"/>
+                                    <constraint firstItem="wuj-ah-9vW" firstAttribute="leading" secondItem="x42-k5-Ajp" secondAttribute="trailing" constant="20" id="kEy-2X-hKJ"/>
                                     <constraint firstItem="o0d-vJ-WOl" firstAttribute="top" secondItem="otb-el-SoW" secondAttribute="top" constant="8" id="lYL-7S-pxU"/>
                                     <constraint firstAttribute="bottom" secondItem="x42-k5-Ajp" secondAttribute="bottom" constant="4" id="py9-Qe-war"/>
                                     <constraint firstAttribute="trailing" secondItem="wuj-ah-9vW" secondAttribute="trailing" constant="8" id="raC-0U-KIP"/>
@@ -113,11 +110,8 @@
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.71999999999999997" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3T-rr-trf">
-                                        <rect key="frame" x="0.0" y="26" width="287" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="n9Y-VN-IJA"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3T-rr-trf">
+                                        <rect key="frame" x="0.0" y="26" width="277" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="14"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
@@ -140,7 +134,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Hok-yt-oGN" firstAttribute="leading" secondItem="j3T-rr-trf" secondAttribute="trailing" constant="10" id="0L8-hC-lbp"/>
+                                    <constraint firstItem="Hok-yt-oGN" firstAttribute="leading" secondItem="j3T-rr-trf" secondAttribute="trailing" constant="20" id="0L8-hC-lbp"/>
                                     <constraint firstItem="eFh-eW-KRl" firstAttribute="top" secondItem="Lht-Ib-pgw" secondAttribute="top" constant="4" id="4uR-MH-JIn"/>
                                     <constraint firstItem="D9x-O3-741" firstAttribute="top" secondItem="Lht-Ib-pgw" secondAttribute="top" constant="4" id="D75-a5-LA7"/>
                                     <constraint firstItem="Hok-yt-oGN" firstAttribute="top" secondItem="D9x-O3-741" secondAttribute="bottom" constant="10" id="Ngc-Yc-U0a"/>

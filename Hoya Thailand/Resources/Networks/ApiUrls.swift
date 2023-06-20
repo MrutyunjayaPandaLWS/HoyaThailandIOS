@@ -10,7 +10,7 @@ import Foundation
 //DEMO
 let tokenURL = "https://hoyatserv.loyltwo3ks.com/token"
 let baseURl = "https://hoyatserv.loyltwo3ks.com/Mobile/"
-var number = "6362630805"
+var number = "th000051"
 
 //let PROMO_IMG = "https://ddmotors.loyltwo3ks.com/UploadFiles/"
 //let PROMO_IMG1 = "https://hoyatserv.loyltwo3ks.com/"

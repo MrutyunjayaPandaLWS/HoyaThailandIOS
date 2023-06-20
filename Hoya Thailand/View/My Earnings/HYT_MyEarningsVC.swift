@@ -27,6 +27,14 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
     
 
 
+    @IBOutlet weak var availablePointsLbl: UILabel!
+    @IBOutlet weak var availablePointsTitleLbl: UILabel!
+    @IBOutlet weak var expiredPointsLbl: UILabel!
+    @IBOutlet weak var expiredPointsTitleLbl: UILabel!
+    @IBOutlet weak var redeemPointsTitleLbl: UILabel!
+    @IBOutlet weak var redeemedPointsLbl: UILabel!
+    @IBOutlet weak var earnedPointTitleLbl: UILabel!
+    @IBOutlet weak var earnedPointLbl: UILabel!
     @IBOutlet weak var emptyMessage: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var myEarningTableView: UITableView!
@@ -43,12 +51,14 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
         myEarningTableView.dataSource = self
         myEarningTableView.register(UINib(nibName: "HYT_MyEarningsTVCell", bundle: nil), forCellReuseIdentifier: "HYT_MyEarningsTVCell")
         emptyMessage.isHidden = true
+        self.myEarningTableView.contentInset = UIEdgeInsets(top: 0,left: 0,bottom: 50,right: 0)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myEarningList_Api()
+        getPointExpireReportDetails()
         localization()
     }
     
@@ -61,6 +71,7 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
         vc?.toDate = toDate
         vc?.statusId = promotionId
         vc?.statusName = promotionName
+        vc?.tagName =  1
         vc?.delegate = self
         present(vc!, animated: true)
     }
@@ -80,7 +91,20 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
                 "ToDate": toDate,
                 "ProgramID": promotionId
         ]
+        print(parameter)
         self.VM.myEarningListApi(parameter: parameter)
+    }
+    
+    func getPointExpireReportDetails(){
+        let parameter : [String : Any] = [
+            "ActionType": 1,
+            "LoyaltyId": "\(self.loyaltyId)",
+                "FromDate": fromDate,
+                "ToDate": toDate
+            
+        ]
+        print(parameter,"point expire report")
+        self.VM.pointExpireReportApi(parameter: parameter)
     }
     
 //    MARK: - MY EARNINGS TABLEVIEW
@@ -95,7 +119,7 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
             cell.expireDateView.constant = 0
             cell.productStatus.text = "Reward Adjustment"
             cell.pointsView.backgroundColor = primaryColor
-        }else if self.VM.myEarningList[indexPath.row].remarks?.contains("Loyalty Program") == true{
+        }else if self.VM.myEarningList[indexPath.row].remarks?.contains("Points Credited") == true{
             cell.expireDateView.constant = 40
             let expDate = self.VM.myEarningList[indexPath.row].pointExpiryDate?.split(separator: " ")
             cell.expiredateLbl.text = "\(expDate?[0] ?? "")"
@@ -119,6 +143,11 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
  
     private func localization(){
         titleLbl.text = "myEarnings".localiz()
+        earnedPointTitleLbl.text = "Earned Points".localiz()
+        redeemPointsTitleLbl.text = "Redeemed Points".localiz()
+        expiredPointsTitleLbl.text = "Expired Points".localiz()
+        availablePointsTitleLbl.text = "Available Points".localiz()
+        emptyMessage.text = "No data found!".localiz()
     }
     
 }
