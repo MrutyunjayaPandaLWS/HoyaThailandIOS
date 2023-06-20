@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -4627,7 +4627,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-Qb-B2F">
-                                <rect key="frame" x="20" y="293" width="353" height="266"/>
+                                <rect key="frame" x="20" y="294" width="353" height="264"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOM-yg-K4Z">
                                         <rect key="frame" x="20" y="20" width="313" height="36"/>
@@ -4654,19 +4654,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-cD-NAb">
-                                        <rect key="frame" x="25.999999999999996" y="82" width="55.666666666666657" height="14"/>
+                                        <rect key="frame" x="25.999999999999996" y="82" width="59.666666666666657" height="12"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-nO-6Vw">
-                                        <rect key="frame" x="286" y="82" width="37" height="14"/>
+                                        <rect key="frame" x="282.33333333333331" y="82" width="40.666666666666686" height="12"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qv-e1K" customClass="DPOTPView" customModule="DPOTPView">
-                                        <rect key="frame" x="24" y="106" width="309" height="70"/>
+                                        <rect key="frame" x="24" y="104" width="309" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Jhf-YM-d0O"/>
@@ -4697,7 +4697,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-lK-ZAY">
-                                        <rect key="frame" x="19.666666666666657" y="206" width="314" height="40"/>
+                                        <rect key="frame" x="19.666666666666657" y="204" width="314" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs8-ut-8f9">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
@@ -6145,19 +6145,19 @@ UmFuZ2UgOiALA
                                 <rect key="frame" x="24" y="236" width="345" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-sp-cTL">
-                                        <rect key="frame" x="125.66666666666666" y="30" width="94" height="18.666666666666671"/>
+                                        <rect key="frame" x="120" y="30" width="105.33333333333331" height="16"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="16"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invoice Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5V-fz-VOZ">
-                                        <rect key="frame" x="34" y="70.666666666666686" width="85" height="14"/>
+                                        <rect key="frame" x="33.999999999999993" y="68" width="92.333333333333314" height="12"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-GF-ucO">
-                                        <rect key="frame" x="20" y="94.666666666666686" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="90" width="305" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter invoice number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-S7-ysw">
                                                 <rect key="frame" x="20" y="0.0" width="285" height="40"/>
@@ -6183,13 +6183,13 @@ UmFuZ2UgOiALA
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lens Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-nD-k3z">
-                                        <rect key="frame" x="34" y="146.66666666666669" width="85" height="14"/>
+                                        <rect key="frame" x="33.999999999999993" y="142" width="92.333333333333314" height="12"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-BW-e1Y">
-                                        <rect key="frame" x="20" y="170.66666666666669" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="164" width="305" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Lens Design" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keB-TO-jv8">
                                                 <rect key="frame" x="20" y="0.0" width="252" height="40"/>
@@ -6246,13 +6246,13 @@ UmFuZ2UgOiALA
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-2t-YO9">
-                                        <rect key="frame" x="34" y="222.66666666666669" width="85" height="14"/>
+                                        <rect key="frame" x="33.999999999999993" y="216" width="92.333333333333314" height="12"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-Medium" family="GalanoGrotesque-Medium" pointSize="12"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGe-M0-hhd">
-                                        <rect key="frame" x="20" y="246.66666666666669" width="305" height="40"/>
+                                        <rect key="frame" x="20" y="238" width="305" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-hW-5MM">
                                                 <rect key="frame" x="20" y="0.0" width="285" height="40"/>
@@ -6404,22 +6404,22 @@ UmFuZ2UgOiALA
                                 <rect key="frame" x="30" y="139" width="333" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az0-hY-Ll1">
-                                        <rect key="frame" x="10" y="10" width="313" height="14"/>
+                                        <rect key="frame" x="10" y="10" width="313" height="16"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="16"/>
                                         <color key="textColor" name="Background color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GCv-AM-Eez">
-                                        <rect key="frame" x="95.666666666666671" y="34" width="141.66666666666663" height="14"/>
+                                        <rect key="frame" x="84.333333333333329" y="36" width="164.33333333333337" height="12"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validity until :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nf-p3-2UJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="12"/>
                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00-00-0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veK-re-pAu">
-                                                <rect key="frame" x="78.666666666666671" y="0.0" width="63.000000000000014" height="14"/>
+                                                <rect key="frame" x="89.333333333333329" y="0.0" width="74.999999999999986" height="12"/>
                                                 <fontDescription key="fontDescription" name="GalanoGrotesque-SemiBold" family="GalanoGrotesque-SemiBold" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -6543,7 +6543,7 @@ UmFuZ2UgOiALA
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-PK-PtC">
-                                        <rect key="frame" x="54" y="22" width="329" height="16.333333333333329"/>
+                                        <rect key="frame" x="54" y="23" width="329" height="14"/>
                                         <fontDescription key="fontDescription" name="GalanoGrotesqueAlt-SemiBold" family="GalanoGrotesqueAlt-SemiBold" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -8509,6 +8509,78 @@ UmFuZ2UgOiALA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8e-I4-dGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7992" y="825"/>
+        </scene>
+        <!--iOS Internet Check-->
+        <scene sceneID="EEU-zf-BTH">
+            <objects>
+                <viewController storyboardIdentifier="DD_IOS_Internet_Check" id="d2J-bV-34d" customClass="DD_IOS_Internet_Check" customModule="DD_Motors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eck-Cp-7kO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-2J-6wz" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="456" width="393" height="362"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-iw-AYy">
+                                        <rect key="frame" x="144.33333333333334" y="312" width="104.33333333333334" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bQ1-NF-HnG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.82022868530000004" green="0.11883968809999999" blue="0.052762946890000002" alpha="0.9520431318" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edY-KM-KhC">
+                                        <rect key="frame" x="171" y="15" width="51" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nlb-2X-aGW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="edY-KM-KhC" firstAttribute="centerX" secondItem="fTb-2J-6wz" secondAttribute="centerX" id="Agt-3a-IbY"/>
+                                    <constraint firstAttribute="height" constant="362" id="Jpf-4p-0rT"/>
+                                    <constraint firstItem="edY-KM-KhC" firstAttribute="top" secondItem="fTb-2J-6wz" secondAttribute="top" constant="15" id="TwW-Xg-HuR"/>
+                                    <constraint firstItem="vz2-iw-AYy" firstAttribute="centerX" secondItem="fTb-2J-6wz" secondAttribute="centerX" id="bK1-Xl-4Vh"/>
+                                    <constraint firstAttribute="bottom" secondItem="vz2-iw-AYy" secondAttribute="bottom" constant="20" id="yce-Zs-auQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.29999999999999999" height="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jwY-65-CgK"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jwY-65-CgK" firstAttribute="bottom" secondItem="fTb-2J-6wz" secondAttribute="bottom" id="Ejt-hH-VDK"/>
+                            <constraint firstItem="jwY-65-CgK" firstAttribute="trailing" secondItem="fTb-2J-6wz" secondAttribute="trailing" id="lSm-OA-o8R"/>
+                            <constraint firstItem="fTb-2J-6wz" firstAttribute="leading" secondItem="jwY-65-CgK" secondAttribute="leading" id="wNd-Hl-7Hb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lottieImageView" destination="fTb-2J-6wz" id="eVb-fB-w0m"/>
+                        <outlet property="noInternetvLbl" destination="vz2-iw-AYy" id="HLq-KB-hmi"/>
+                        <outlet property="oopsLbl" destination="edY-KM-KhC" id="2eF-wV-Ivl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tX9-46-LMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7138" y="1415"/>
         </scene>
         <!--DashboardVC-->
         <scene sceneID="Al3-tn-7Nc">
@@ -10871,6 +10943,7 @@ UmFuZ2UgOiALA
         </scene>
     </scenes>
     <designables>
+        <designable name="fTb-2J-6wz"/>
         <designable name="lSh-PY-pEy"/>
     </designables>
     <resources>
@@ -10952,6 +11025,9 @@ UmFuZ2UgOiALA
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

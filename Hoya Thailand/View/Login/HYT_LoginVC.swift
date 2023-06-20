@@ -57,6 +57,9 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     var VM = HYT_LoginVM()
     var tcStatus = 0
     var textfieldsStatus = 0
+    var pushID = UserDefaults.standard.string(forKey: "SMSDEVICE_TOKEN") ?? ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VM.VC = self
@@ -169,7 +172,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
                 "Browser": "Android",
                 "LoggedDeviceName": "Android",
                 "Password": passwordTF.text ?? "",
-                "PushID":"",
+                "PushID": "\(pushID)",
                 "SessionId": "HOYA",
                 "UserActionType": "GetPasswordDetails",
                 "UserName": membershipIdTF.text ?? "",

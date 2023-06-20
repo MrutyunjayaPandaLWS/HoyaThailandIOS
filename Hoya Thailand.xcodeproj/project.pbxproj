@@ -247,6 +247,10 @@
 		845FD7732A3853FD004554C9 /* PointsVoucher_TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FD7712A3853FC004554C9 /* PointsVoucher_TVC.swift */; };
 		845FD7742A3853FD004554C9 /* RedeemQuantity_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FD7722A3853FD004554C9 /* RedeemQuantity_VC.swift */; };
 		845FD7772A385580004554C9 /* HYT_RedeemQuantity_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FD7762A385580004554C9 /* HYT_RedeemQuantity_VM.swift */; };
+		848F7FE92A419EE60075AA93 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F7FE82A419EE60075AA93 /* NotificationService.swift */; };
+		848F7FED2A419EE60075AA93 /* NotificationServices.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 848F7FE62A419EE60075AA93 /* NotificationServices.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		848F7FF32A41AED10075AA93 /* DD_IOS_Internet_Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F7FF22A41AED00075AA93 /* DD_IOS_Internet_Check.swift */; };
+		848F7FF72A41AF1E0075AA93 /* no_internet_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 848F7FF62A41AF1D0075AA93 /* no_internet_lottie.json */; };
 		84ABCDC929D5832000ADA78E /* ObjCatalogueList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */; };
 		84AE3A6C2A3D8D8000967CDA /* DeleteAccountModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A6B2A3D8D8000967CDA /* DeleteAccountModels.swift */; };
 		84AE3A6F2A3D948A00967CDA /* SuccessMessage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */; };
@@ -257,6 +261,30 @@
 		84E5C7DD29DE99B1004D5025 /* LstPushHistoryJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */; };
 		F8012B4BA950FDC4CD1E152D /* Pods_Hoya_Thailand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25362235308BA973D5DFCE1F /* Pods_Hoya_Thailand.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		848F7FEB2A419EE60075AA93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FABD292994EF9B00061E01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848F7FE52A419EE60075AA93;
+			remoteInfo = NotificationServices;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		848F7FF12A419EE60075AA93 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				848F7FED2A419EE60075AA93 /* NotificationServices.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.debug.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.debug.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +538,13 @@
 		845FD7712A3853FC004554C9 /* PointsVoucher_TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsVoucher_TVC.swift; sourceTree = "<group>"; };
 		845FD7722A3853FD004554C9 /* RedeemQuantity_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemQuantity_VC.swift; sourceTree = "<group>"; };
 		845FD7762A385580004554C9 /* HYT_RedeemQuantity_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_RedeemQuantity_VM.swift; sourceTree = "<group>"; };
+		848F7FE12A419EAF0075AA93 /* Hoya Thailand.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hoya Thailand.entitlements"; sourceTree = "<group>"; };
+		848F7FE62A419EE60075AA93 /* NotificationServices.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationServices.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		848F7FE82A419EE60075AA93 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		848F7FEA2A419EE60075AA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848F7FF22A41AED00075AA93 /* DD_IOS_Internet_Check.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DD_IOS_Internet_Check.swift; path = ../../DD_Motors_Customer_IOS/DD_Motors/View/DD_IOS_Internet_Check.swift; sourceTree = "<group>"; };
+		848F7FF42A41AEDD0075AA93 /* DD_IOS_Internet_Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DD_IOS_Internet_Check.swift; sourceTree = "<group>"; };
+		848F7FF62A41AF1D0075AA93 /* no_internet_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = no_internet_lottie.json; path = ../../../../DD_Motors_Customer_IOS/DD_Motors/Resources/Animation/no_internet_lottie.json; sourceTree = "<group>"; };
 		84ABCDC829D5832000ADA78E /* ObjCatalogueList1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCatalogueList1.swift; sourceTree = "<group>"; };
 		84AE3A6B2A3D8D8000967CDA /* DeleteAccountModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountModels.swift; sourceTree = "<group>"; };
 		84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessage2.swift; sourceTree = "<group>"; };
@@ -527,6 +562,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8012B4BA950FDC4CD1E152D /* Pods_Hoya_Thailand.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848F7FE32A419EE60075AA93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1178,7 @@
 		806CBA2529C1ED3400AC135E /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				848F7FF62A41AF1D0075AA93 /* no_internet_lottie.json */,
 				806CBA2629C1ED5300AC135E /* 116297-scanner.json */,
 			);
 			path = Animation;
@@ -1602,6 +1645,7 @@
 			isa = PBXGroup;
 			children = (
 				80FABD332994EF9B00061E01 /* Hoya Thailand */,
+				848F7FE72A419EE60075AA93 /* NotificationServices */,
 				80FABD322994EF9B00061E01 /* Products */,
 				F71EDD0365E35BF0A9228A4B /* Pods */,
 				841119C4FF4F1A4470A2DDBB /* Frameworks */,
@@ -1612,6 +1656,7 @@
 			isa = PBXGroup;
 			children = (
 				80FABD312994EF9B00061E01 /* Hoya Thailand.app */,
+				848F7FE62A419EE60075AA93 /* NotificationServices.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1619,10 +1664,12 @@
 		80FABD332994EF9B00061E01 /* Hoya Thailand */ = {
 			isa = PBXGroup;
 			children = (
+				848F7FE12A419EAF0075AA93 /* Hoya Thailand.entitlements */,
 				80E20533299B97E300E3327F /* Resources */,
 				80FABD582994F7D100061E01 /* ViewModel */,
 				80FABD592994F7DA00061E01 /* Models */,
 				80FABD4D2994F07200061E01 /* View */,
+				848F7FF22A41AED00075AA93 /* DD_IOS_Internet_Check.swift */,
 				80FABD402994EFA000061E01 /* Assets.xcassets */,
 				806CBA2329C1E4F000AC135E /* GoogleService-Info.plist */,
 				80FABD452994EFA000061E01 /* Info.plist */,
@@ -1633,6 +1680,7 @@
 		80FABD4D2994F07200061E01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				848F7FF52A41AEE10075AA93 /* NoInternetCheck */,
 				84AE3A6D2A3D945F00967CDA /* SuccessMessage2 */,
 				845C91FA2A39BFA000B0D157 /* SearchableDopdown */,
 				84E5C7CF29DE9551004D5025 /* NotificationVC */,
@@ -1792,6 +1840,23 @@
 			path = AmountDropDown;
 			sourceTree = "<group>";
 		};
+		848F7FE72A419EE60075AA93 /* NotificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				848F7FE82A419EE60075AA93 /* NotificationService.swift */,
+				848F7FEA2A419EE60075AA93 /* Info.plist */,
+			);
+			path = NotificationServices;
+			sourceTree = "<group>";
+		};
+		848F7FF52A41AEE10075AA93 /* NoInternetCheck */ = {
+			isa = PBXGroup;
+			children = (
+				848F7FF42A41AEDD0075AA93 /* DD_IOS_Internet_Check.swift */,
+			);
+			path = NoInternetCheck;
+			sourceTree = "<group>";
+		};
 		84AE3A6A2A3D8D7200967CDA /* DeleteAccountModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1865,15 +1930,34 @@
 				80FABD2E2994EF9B00061E01 /* Frameworks */,
 				80FABD2F2994EF9B00061E01 /* Resources */,
 				09247CB1E4B2EB14D61DDEA4 /* [CP] Embed Pods Frameworks */,
+				848F7FF12A419EE60075AA93 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				848F7FEC2A419EE60075AA93 /* PBXTargetDependency */,
 			);
 			name = "Hoya Thailand";
 			productName = "Hoya Thailand";
 			productReference = 80FABD312994EF9B00061E01 /* Hoya Thailand.app */;
 			productType = "com.apple.product-type.application";
+		};
+		848F7FE52A419EE60075AA93 /* NotificationServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848F7FEE2A419EE60075AA93 /* Build configuration list for PBXNativeTarget "NotificationServices" */;
+			buildPhases = (
+				848F7FE22A419EE60075AA93 /* Sources */,
+				848F7FE32A419EE60075AA93 /* Frameworks */,
+				848F7FE42A419EE60075AA93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationServices;
+			productName = NotificationServices;
+			productReference = 848F7FE62A419EE60075AA93 /* NotificationServices.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1882,11 +1966,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					80FABD302994EF9B00061E01 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					848F7FE52A419EE60075AA93 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -1905,6 +1992,7 @@
 			projectRoot = "";
 			targets = (
 				80FABD302994EF9B00061E01 /* Hoya Thailand */,
+				848F7FE52A419EE60075AA93 /* NotificationServices */,
 			);
 		};
 /* End PBXProject section */
@@ -1950,6 +2038,7 @@
 				807F54F629D4397E007BA3FF /* TandC-Johnson samriddhi.html in Resources */,
 				8011A6522995046C0033E740 /* Galano Grotesque Light.otf in Resources */,
 				803C912329B06668007B622F /* senderImageTableViewCell.xib in Resources */,
+				848F7FF72A41AF1E0075AA93 /* no_internet_lottie.json in Resources */,
 				8011A6782995046C0033E740 /* Galano Grotesque Semi Bold Italic.otf in Resources */,
 				8065F5E429BA1411009D1F40 /* Localizable.strings in Resources */,
 				8011A6622995046C0033E740 /* Galano Grotesque Alt Italic.otf in Resources */,
@@ -1973,6 +2062,13 @@
 				8011A6642995046C0033E740 /* Galano Grotesque Alt Thin Italic.otf in Resources */,
 				8011A65E2995046C0033E740 /* Galano Grotesque Alt Extra Bold.otf in Resources */,
 				8011A6612995046C0033E740 /* Galano Grotesque Heavy.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848F7FE42A419EE60075AA93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2200,6 +2296,7 @@
 				80448E9C29A89CE400EBD7BC /* TokenModels.swift in Sources */,
 				800CE67729A9D163005CC793 /* S_MobileNumberExistancyModel.swift in Sources */,
 				8050E3162997AD4A00F8B692 /* HYT_VoucherVC.swift in Sources */,
+				848F7FF32A41AED10075AA93 /* DD_IOS_Internet_Check.swift in Sources */,
 				80FABD352994EF9B00061E01 /* AppDelegate.swift in Sources */,
 				800CE66E29A9C244005CC793 /* LstAttributesDetails2.swift in Sources */,
 				80FABD372994EF9B00061E01 /* SceneDelegate.swift in Sources */,
@@ -2217,7 +2314,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		848F7FE22A419EE60075AA93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848F7FE92A419EE60075AA93 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		848F7FEC2A419EE60075AA93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848F7FE52A419EE60075AA93 /* NotificationServices */;
+			targetProxy = 848F7FEB2A419EE60075AA93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8065F5E629BA1411009D1F40 /* Localizable.strings */ = {
@@ -2370,8 +2483,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -2413,8 +2528,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7FD8CACC8BBB5FDDDD553DE /* Pods-Hoya Thailand.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -2452,6 +2569,68 @@
 			};
 			name = Release;
 		};
+		848F7FEF2A419EE60075AA93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationServices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Hoya_Thai_ NotificationServices_Development";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		848F7FF02A419EE60075AA93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationServices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Hoya_Thai_ NotificationServices_Development";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2469,6 +2648,15 @@
 			buildConfigurations = (
 				80FABD492994EFA000061E01 /* Debug */,
 				80FABD4A2994EFA000061E01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848F7FEE2A419EE60075AA93 /* Build configuration list for PBXNativeTarget "NotificationServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848F7FEF2A419EE60075AA93 /* Debug */,
+				848F7FF02A419EE60075AA93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
