@@ -8,8 +8,10 @@
 import UIKit
 import LanguageManager_iOS
 
-class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-
+class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, InternetCheckDelgate {
+    func interNetIsON(item: IOS_Internet_Check) {
+        myStaffListing_Api()
+    }
     @IBOutlet weak var emptyMessageLbl: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var titleLbl: UILabel!
@@ -28,7 +30,18 @@ class HYT_MyStaffVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myStaffListing_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.delegate = self
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+           myStaffListing_Api()
+        }
+//        myStaffListing_Api()
     }
     
     @IBAction func didTappedBackBtn(_ sender: UIButton) {

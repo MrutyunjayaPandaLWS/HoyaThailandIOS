@@ -8,7 +8,12 @@
 import UIKit
 import LanguageManager_iOS
 
-class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate {
+class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, FilterProtocolDelegate, InternetCheckDelgate {
+    
+    func interNetIsON(item: IOS_Internet_Check) {
+        myEarningList_Api()
+        getPointExpireReportDetails()
+    }
     func didTappedResetFilterBtn(item: HYT_FilterVC) {
         fromDate = ""
         toDate = ""
@@ -57,8 +62,20 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myEarningList_Api()
-        getPointExpireReportDetails()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.delegate = self
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            myEarningList_Api()
+            getPointExpireReportDetails()
+        }
+//        myEarningList_Api()
+//        getPointExpireReportDetails()
         localization()
     }
     

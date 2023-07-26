@@ -9,7 +9,10 @@ import SDWebImage
 import LanguageManager_iOS
 import UIKit
 
-class HYT_OffersVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, OffersDelegate {
+class HYT_OffersVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, OffersDelegate, InternetCheckDelgate {
+    func interNetIsON(item: IOS_Internet_Check) {
+        OffersApi()
+    }
     func didTappedViewBtn(item: HYT_OffersTVCell) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_OffersDetailsVC") as? HYT_OffersDetailsVC
         vc?.offersDetails = item.offersData
@@ -27,7 +30,18 @@ class HYT_OffersVC: BaseViewController, UITableViewDelegate, UITableViewDataSour
         offersTableView.delegate = self
         offersTableView.dataSource = self
         emptyMessage.isHidden = true
-        OffersApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.delegate =  self
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            OffersApi()
+        }
+//        OffersApi()
         localization()
     }
     

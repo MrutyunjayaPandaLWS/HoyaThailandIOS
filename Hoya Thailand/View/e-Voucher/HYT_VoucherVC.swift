@@ -56,8 +56,18 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                     self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                     item.amountTF.text = ""
                 }else{
-                    redeemVoucher(countryID: item.voucherDetails?.countryID ?? 0, catalogueID: item.voucherDetails?.catalogueId ?? 0, amount: item.amountTF.text ?? "0", productCode: item.voucherDetails?.productCode ?? "0", productImage: item.voucherDetails?.productImage ?? "", productName: item.voucherDetails?.productName ?? "", currentDate: currentDate, venderID: item.voucherDetails?.vendorId ?? 0, redemptionId: item.voucherDetails?.redemptionId ?? 0)
-                    item.amountTF.text = ""
+                    if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                        DispatchQueue.main.async{
+                            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                            vc.modalTransitionStyle = .crossDissolve
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+                        }
+                    }else{
+                        redeemVoucher(countryID: item.voucherDetails?.countryID ?? 0, catalogueID: item.voucherDetails?.catalogueId ?? 0, amount: item.amountTF.text ?? "0", productCode: item.voucherDetails?.productCode ?? "0", productImage: item.voucherDetails?.productImage ?? "", productName: item.voucherDetails?.productName ?? "", currentDate: currentDate, venderID: item.voucherDetails?.vendorId ?? 0, redemptionId: item.voucherDetails?.redemptionId ?? 0)
+                        item.amountTF.text = ""
+                    }
+
                 }
             }else{
                 self.view.makeToast("Enter amount between min & max range", duration: 2.0, position: .center)
@@ -75,7 +85,17 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                     self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                     item.amountTF.text = ""
                 }else{
-                    redeemVoucher(countryID: item.voucherDetails?.countryID ?? 0, catalogueID: item.voucherDetails?.catalogueId ?? 0, amount: item.selectAmountLbl.text ?? "0", productCode: item.voucherDetails?.productCode ?? "0", productImage: item.voucherDetails?.productImage ?? "", productName: item.voucherDetails?.productName ?? "", currentDate: currentDate, venderID: item.voucherDetails?.vendorId ?? 0, redemptionId: item.voucherDetails?.redemptionId ?? 0)
+                    if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                        DispatchQueue.main.async{
+                            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                            vc.modalTransitionStyle = .crossDissolve
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+                        }
+                    }else{
+                        redeemVoucher(countryID: item.voucherDetails?.countryID ?? 0, catalogueID: item.voucherDetails?.catalogueId ?? 0, amount: item.selectAmountLbl.text ?? "0", productCode: item.voucherDetails?.productCode ?? "0", productImage: item.voucherDetails?.productImage ?? "", productName: item.voucherDetails?.productName ?? "", currentDate: currentDate, venderID: item.voucherDetails?.vendorId ?? 0, redemptionId: item.voucherDetails?.redemptionId ?? 0)
+                    }
+                   
                 }
             }
         }
@@ -147,11 +167,23 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getVoucherList_Api()
-        getPointExpire_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            getVoucherList_Api()
+            getPointExpire_Api()
+            dashboardApi()
+        }
+//        getVoucherList_Api()
+//        getPointExpire_Api()
         currentdate()
         localization()
-        dashboardApi()
+//        dashboardApi()
     }
     
     @IBAction func didtappedBackBtn(_ sender: UIButton) {

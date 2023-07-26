@@ -59,7 +59,17 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dashboardApi()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            dashboardApi()
+        }
+//        dashboardApi()
 //        availableBalanceLbl.text = "\(redeemablePointBal)"
         if pointExpireDetails.count != 0{
             if (pointExpireDetails[0].attributeId ?? 0) != 0{
@@ -109,7 +119,17 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
                     self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                     amountTF.text = ""
                 }else{
-                    redeemVoucher(countryID: productDetails?.countryID ?? 0, catalogueID: productDetails?.catalogueId ?? 0, amount: self.amountTF.text ?? "0", productCode: productDetails?.productCode ?? "0", productImage: productDetails?.productImage ?? "", productName: productDetails?.productName ?? "", currentDate: currentDate, venderID: productDetails?.vendorId ?? 0, redemptionId: productDetails?.redemptionId ?? 0)
+                    if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                        DispatchQueue.main.async{
+                            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                            vc.modalTransitionStyle = .crossDissolve
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+                        }
+                    }else{
+                        redeemVoucher(countryID: productDetails?.countryID ?? 0, catalogueID: productDetails?.catalogueId ?? 0, amount: self.amountTF.text ?? "0", productCode: productDetails?.productCode ?? "0", productImage: productDetails?.productImage ?? "", productName: productDetails?.productName ?? "", currentDate: currentDate, venderID: productDetails?.vendorId ?? 0, redemptionId: productDetails?.redemptionId ?? 0)
+                    }
+                    
                 }
                 
             }else{
@@ -128,7 +148,17 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
                     self.view.makeToast("insufficient Redeemable Balance", duration: 2.0, position: .center)
                     self.selectAmountLbl.text = "Select Amount"
                 }else{
-                    redeemVoucher(countryID: productDetails?.countryID ?? 0, catalogueID: productDetails?.catalogueId ?? 0, amount: self.selectAmountLbl.text ?? "0", productCode: productDetails?.productCode ?? "0", productImage: productDetails?.productImage ?? "", productName: productDetails?.productName ?? "", currentDate: currentDate, venderID: productDetails?.vendorId ?? 0, redemptionId: productDetails?.redemptionId ?? 0)
+                    if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                        DispatchQueue.main.async{
+                            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                            vc.modalTransitionStyle = .crossDissolve
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+                        }
+                    }else{
+                        redeemVoucher(countryID: productDetails?.countryID ?? 0, catalogueID: productDetails?.catalogueId ?? 0, amount: self.selectAmountLbl.text ?? "0", productCode: productDetails?.productCode ?? "0", productImage: productDetails?.productImage ?? "", productName: productDetails?.productName ?? "", currentDate: currentDate, venderID: productDetails?.vendorId ?? 0, redemptionId: productDetails?.redemptionId ?? 0)
+                    }
+                    
                 }
             }
 

@@ -114,7 +114,17 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         else if tcStatus == 0{
             self.view.makeToast("Accept the term & condition",duration: 2.0,position: .center)
         }else{
-            loginSubmissionApi()
+            if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                DispatchQueue.main.async{
+                    let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true)
+                }
+            }else{
+                loginSubmissionApi()
+            }
+//            loginSubmissionApi()
         }
 
     }

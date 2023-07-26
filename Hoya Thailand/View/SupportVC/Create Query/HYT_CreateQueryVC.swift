@@ -49,8 +49,16 @@ class HYT_CreateQueryVC: BaseViewController,TopicListDelegate,UIImagePickerContr
         }else if queryDetailsTF.text?.count == 0 {
             self.view.makeToast("queryDetails_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
-            newQuerySubmission()
-            
+            if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                DispatchQueue.main.async{
+                    let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true)
+                }
+            }else{
+                newQuerySubmission()
+            }
         }
         
         
@@ -75,11 +83,22 @@ class HYT_CreateQueryVC: BaseViewController,TopicListDelegate,UIImagePickerContr
     @IBOutlet weak var queryDetailsHeadingLbl: UILabel!
     
     @IBAction func didTappedSelectTopicBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LQTopicListVC") as? HYT_LQTopicListVC
-        vc?.modalPresentationStyle = .overFullScreen
-        vc?.modalTransitionStyle = .crossDissolve
-        vc?.delegate = self
-        present(vc!, animated: true)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LQTopicListVC") as? HYT_LQTopicListVC
+            vc?.modalPresentationStyle = .overFullScreen
+            vc?.modalTransitionStyle = .crossDissolve
+            vc?.delegate = self
+            present(vc!, animated: true)
+        }
+        
+        
     }
     @IBAction func didTappedBackBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -91,7 +110,7 @@ class HYT_CreateQueryVC: BaseViewController,TopicListDelegate,UIImagePickerContr
                 "ActorId": userId,
                 "CustomerName": "",
                 "Email": "",
-                "HelpTopic": selectTopicLbl.text ?? "" ,
+                "HelpTopic": queryName ,
                 "HelpTopicID": "\(selectTopicId)",
                 "ImageUrl": strdata1,
                 "IsQueryFromMobile": "true",
@@ -196,7 +215,7 @@ extension HYT_CreateQueryVC{
     private func localization(){
         queryDescriptionLbl.text = "newQueryInfo".localiz()
         selectTopicHeadingLbl.text = "queryTopic".localiz()
-        selectTopicLbl.text = "queryTopic_toast_message".localiz()
+//        selectTopicLbl.text = "queryTopic_toast_message".localiz()
         querySummeryLbl.text = "query_summery".localiz()
         querySummeryTF.placeholder = "query_summery_toast_message".localiz()
         queryDetailsHeadingLbl.text = "queryDetails".localiz()

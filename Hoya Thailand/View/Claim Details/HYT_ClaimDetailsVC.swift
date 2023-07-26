@@ -13,7 +13,12 @@ import CoreLocation
 import Lottie
 import LanguageManager_iOS
 
-class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBufferDelegate,CLLocationManagerDelegate, FilterStatusDelegate, SearchableDropDownDelegate,UITextFieldDelegate {
+class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBufferDelegate,CLLocationManagerDelegate, FilterStatusDelegate, SearchableDropDownDelegate,UITextFieldDelegate, InternetCheckDelgate {
+    
+    func interNetIsON(item: IOS_Internet_Check) {
+        getProductList_Api()
+    }
+    
     func didTappedFilterStatus(item: HYT_DropDownVC) {
         lensDesignNameLbl.text = item.statusName
         lensDesignNameLbl.textColor = .black
@@ -93,7 +98,18 @@ class HYT_ClaimDetailsVC: BaseViewController,AVCaptureVideoDataOutputSampleBuffe
         quantityTF.isEnabled =  false
         invoiceNumberTF.delegate = self
         localization()
-        getProductList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                vc.delegate = self
+                self.present(vc, animated: true)
+            }
+        }else{
+            getProductList_Api()
+        }
+//        getProductList_Api()
         scannerSetup()
     }
     
@@ -303,13 +319,20 @@ extension HYT_ClaimDetailsVC{
                             if data?.contains(",") == true{
                                 let scanValue = data?.split(separator: ",")
                                 if (scanValue?.count ?? 0) >= 2{
-                                    self.productName = String(scanValue?[1] ?? "")
-                                        let filterProduct = self.VM.promotionProductList.filter { $0.productName == self.productName }
+                                    var productData = String(scanValue?[1] ?? "")
+                                    if productData.first == " "{
+                                       productData = "\(productData.dropFirst())"
+                                    }
+                                        var filterProduct = self.VM.promotionProductList.filter { $0.productName == productData }
+                                    if filterProduct.count == 0{
+                                        filterProduct = self.VM.promotionProductList.filter { ($0.productCode ?? "") == productData }
+                                    }
                                         if filterProduct.count != 0{
                                             self.startLoading()
                                             self.session.stopRunning()
                                             self.invoiceNumber = String(scanValue?[0] ?? "")
 //                                            self.quantity = String(scanValue?[2] ?? "")
+                                            self.productName = filterProduct[0].productName ?? ""
                                             self.scannerAnimationView.isHidden = true
                                             self.flags = "scanned"
                                             self.productCode = filterProduct[0].productCode ?? ""
@@ -419,7 +442,17 @@ extension HYT_ClaimDetailsVC{
             "ClaimingQuantity": quantityTF.text ?? "0"
         ]
         print(parameter,"claimSubmission_Api")
-        self.VM.claimSubmissionApi(parameter: parameter)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            self.VM.claimSubmissionApi(parameter: parameter)
+        }
+//        self.VM.claimSubmissionApi(parameter: parameter)
     }
     
 //    MARK: - HOYA VALIDATION

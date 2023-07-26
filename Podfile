@@ -12,16 +12,13 @@ pod 'DPOTPView'
 pod 'lottie-ios'
 pod 'Toast-Swift', '~> 5.0.1'
 pod "ImageSlideshow/Alamofire"
-pod 'Alamofire', '~> 4.0'
 pod 'LanguageManager-iOS'
 pod 'Firebase/CoreOnly'
-
-
-
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'Firebase/Messaging'
+
 
 
 

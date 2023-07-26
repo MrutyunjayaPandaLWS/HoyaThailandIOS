@@ -643,7 +643,17 @@ extension HYT_RegisterVC{
             ]
         ]
         print(parameter,"individual register")
-        self.VM.registrationApi(parameter: parameter)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            self.VM.registrationApi(parameter: parameter)
+        }
+//        self.VM.registrationApi(parameter: parameter)
     }
     
     func storeOwnerRegisterApi(){
@@ -679,7 +689,18 @@ extension HYT_RegisterVC{
 
                 ]
         ]
-        self.VM.registrationApi(parameter: parameter)
+        print(parameter,"Store owner registration")
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            self.VM.registrationApi(parameter: parameter)
+        }
+//        self.VM.registrationApi(parameter: parameter)
     }
     
     

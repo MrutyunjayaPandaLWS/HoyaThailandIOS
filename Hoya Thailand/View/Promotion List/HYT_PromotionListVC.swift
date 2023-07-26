@@ -8,8 +8,10 @@
 import UIKit
 import LanguageManager_iOS
 
-class HYT_PromotionListVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, PromotionListDelegate {
-    
+class HYT_PromotionListVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, PromotionListDelegate, InternetCheckDelgate {
+    func interNetIsON(item: IOS_Internet_Check) {
+        getPromotionList_Api()
+    }
     func didTappedPromotionDetails(item: HYT_PromotionListTVCell) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_PromotionDetailsVC") as? HYT_PromotionDetailsVC
         vc?.promotionDetailsData = item.promotionData
@@ -39,7 +41,18 @@ class HYT_PromotionListVC: BaseViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getPromotionList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                vc.delegate = self
+                self.present(vc, animated: true)
+            }
+        }else{
+           getPromotionList_Api()
+        }
+//        getPromotionList_Api()
     }
 
     @IBAction func didTappedBackBtn(_ sender: UIButton) {

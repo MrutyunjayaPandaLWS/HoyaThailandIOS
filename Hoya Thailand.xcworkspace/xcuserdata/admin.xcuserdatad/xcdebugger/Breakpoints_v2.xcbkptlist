@@ -350,6 +350,36 @@
                   endingLineNumber = "77"
                   offsetFromSymbolStart = "272">
                </Location>
+               <Location
+                  uuid = "F494605E-DCB8-4FEC-9F4A-EFC3AEC53634 - eb7b885d3cdc2d77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "F494605E-DCB8-4FEC-9F4A-EFC3AEC53634 - e7e782291921fd12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hoya_Thailand.PointExpireModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "276">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -397,6 +427,21 @@
                   startingLineNumber = "81"
                   endingLineNumber = "81"
                   offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  uuid = "4FB2E9BA-389A-4FFC-9960-7F508EAF7A26 - cd71ca9126dc2ec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.PointExpireModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "140">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -446,6 +491,21 @@
                   endingLineNumber = "101"
                   offsetFromSymbolStart = "487">
                </Location>
+               <Location
+                  uuid = "BC1BB897-515F-4E8F-BFB4-660C3FDC03D9 - 57ae4b0489439db2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.PointExpireModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "608">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -494,6 +554,21 @@
                   endingLineNumber = "92"
                   offsetFromSymbolStart = "4780">
                </Location>
+               <Location
+                  uuid = "AA777CB6-83A7-4E62-AC6A-49E9B6B3E400 - cd71ca9126dc2c74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.PointExpireModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.expirePointsDetailsApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "3980">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -507,8 +582,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "409"
-            endingLineNumber = "409"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
             landmarkName = "claimSubmission_Api()"
             landmarkType = "7">
             <Locations>
@@ -557,6 +632,36 @@
                   endingLineNumber = "395"
                   offsetFromSymbolStart = "65">
                </Location>
+               <Location
+                  uuid = "15F6D480-A394-4764-83B8-8DCC6B1AA79C - 25de65b18bd0a8b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.claimSubmission_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  uuid = "15F6D480-A394-4764-83B8-8DCC6B1AA79C - 25de65b18bd0a989"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.claimSubmission_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "433"
+                  endingLineNumber = "433"
+                  offsetFromSymbolStart = "292">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -570,8 +675,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
             landmarkName = "hoyaValidationApi()"
             landmarkType = "7">
             <Locations>
@@ -620,6 +725,36 @@
                   endingLineNumber = "418"
                   offsetFromSymbolStart = "1842">
                </Location>
+               <Location
+                  uuid = "AC524D70-C435-40EA-8893-1C2E329AB1DF - a4963c04305c32a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.hoyaValidationApi() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "459"
+                  endingLineNumber = "459"
+                  offsetFromSymbolStart = "1842">
+               </Location>
+               <Location
+                  uuid = "AC524D70-C435-40EA-8893-1C2E329AB1DF - a4963c04305c211"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.hoyaValidationApi() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "466"
+                  endingLineNumber = "466"
+                  offsetFromSymbolStart = "1712">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -633,8 +768,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "getProductList_Api()"
             landmarkType = "7">
             <Locations>
@@ -683,6 +818,36 @@
                   endingLineNumber = "432"
                   offsetFromSymbolStart = "947">
                </Location>
+               <Location
+                  uuid = "EC531485-DC8D-43FD-802D-F53260AB0EC4 - e726f651d4a73e57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.getProductList_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "473"
+                  endingLineNumber = "473"
+                  offsetFromSymbolStart = "947">
+               </Location>
+               <Location
+                  uuid = "EC531485-DC8D-43FD-802D-F53260AB0EC4 - e726f651d4a73f48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.getProductList_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "480"
+                  endingLineNumber = "480"
+                  offsetFromSymbolStart = "804">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -696,8 +861,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
+            startingLineNumber = "427"
+            endingLineNumber = "427"
             landmarkName = "combineValidationApi()"
             landmarkType = "7">
             <Locations>
@@ -776,6 +941,36 @@
                   endingLineNumber = "389"
                   offsetFromSymbolStart = "818">
                </Location>
+               <Location
+                  uuid = "6F2B2F91-49CD-4206-BCEE-3E08C13E9DEE - 173c54674a6a00d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.combineValidationApi() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "420"
+                  endingLineNumber = "420"
+                  offsetFromSymbolStart = "818">
+               </Location>
+               <Location
+                  uuid = "6F2B2F91-49CD-4206-BCEE-3E08C13E9DEE - 173c54674a6a07fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.combineValidationApi() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "427"
+                  endingLineNumber = "427"
+                  offsetFromSymbolStart = "840">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -789,8 +984,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
+            startingLineNumber = "414"
+            endingLineNumber = "414"
             landmarkName = "productValidationApi(productId:)"
             landmarkType = "7">
             <Locations>
@@ -884,6 +1079,36 @@
                   endingLineNumber = "376"
                   offsetFromSymbolStart = "984">
                </Location>
+               <Location
+                  uuid = "CA32CEA5-D6F9-467F-AFF1-17EEF356DB9D - dda3bc6bffb22b92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.productValidationApi(productId: Swift.String) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "407"
+                  endingLineNumber = "407"
+                  offsetFromSymbolStart = "984">
+               </Location>
+               <Location
+                  uuid = "CA32CEA5-D6F9-467F-AFF1-17EEF356DB9D - dda3bc6bffb22889"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.productValidationApi(productId: Swift.String) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "768">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -897,8 +1122,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "invoiceNumberCheckApi(invoiceNumber:)"
             landmarkType = "7">
             <Locations>
@@ -961,6 +1186,36 @@
                   startingLineNumber = "362"
                   endingLineNumber = "362"
                   offsetFromSymbolStart = "354">
+               </Location>
+               <Location
+                  uuid = "7115E35D-A013-4E48-95FB-AEE0060C81DE - 4f32f572932e6aaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.invoiceNumberCheckApi(invoiceNumber: Swift.String) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "393"
+                  endingLineNumber = "393"
+                  offsetFromSymbolStart = "354">
+               </Location>
+               <Location
+                  uuid = "7115E35D-A013-4E48-95FB-AEE0060C81DE - 4f32f572932e6b90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.invoiceNumberCheckApi(invoiceNumber: Swift.String) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "400"
+                  endingLineNumber = "400"
+                  offsetFromSymbolStart = "328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1025,6 +1280,36 @@
                   endingLineNumber = "74"
                   offsetFromSymbolStart = "134">
                </Location>
+               <Location
+                  uuid = "2125C024-604B-497D-897E-000CB27419D3 - 86e00b30a7469d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ProductValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.productValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "134">
+               </Location>
+               <Location
+                  uuid = "2125C024-604B-497D-897E-000CB27419D3 - 86e00b30a7469d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ProductValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.productValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "104">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1038,8 +1323,8 @@
             filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "421"
-            endingLineNumber = "421"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
             landmarkName = "claimSubmission_Api()"
             landmarkType = "7">
             <Locations>
@@ -1087,6 +1372,36 @@
                   startingLineNumber = "406"
                   endingLineNumber = "406"
                   offsetFromSymbolStart = "2688">
+               </Location>
+               <Location
+                  uuid = "B0BB2E8B-B498-4432-906E-437899FC3645 - 25de65b18bd0a905"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.claimSubmission_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "2825">
+               </Location>
+               <Location
+                  uuid = "B0BB2E8B-B498-4432-906E-437899FC3645 - 25de65b18bd0aa62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVC.claimSubmission_Api() -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/Claim%20Details/HYT_ClaimDetailsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "444"
+                  endingLineNumber = "444"
+                  offsetFromSymbolStart = "2484">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1199,6 +1514,36 @@
                   endingLineNumber = "114"
                   offsetFromSymbolStart = "134">
                </Location>
+               <Location
+                  uuid = "A34720A7-AA06-42CE-9CC5-09CB192401E0 - f7268d3403a551fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "134">
+               </Location>
+               <Location
+                  uuid = "A34720A7-AA06-42CE-9CC5-09CB192401E0 - f7268d3403a551fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "92">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1261,6 +1606,36 @@
                   startingLineNumber = "28"
                   endingLineNumber = "28"
                   offsetFromSymbolStart = "803">
+               </Location>
+               <Location
+                  uuid = "4F3E979F-7481-4E55-819A-8F12BD6287ED - b715993e57d02aeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.InvoiceNumberValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "803">
+               </Location>
+               <Location
+                  uuid = "4F3E979F-7481-4E55-819A-8F12BD6287ED - b715993e57d02aeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.InvoiceNumberValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "592">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1325,6 +1700,36 @@
                   endingLineNumber = "82"
                   offsetFromSymbolStart = "996">
                </Location>
+               <Location
+                  uuid = "2B485F70-8BB4-4328-B770-751A1BC70B9A - 86e00b30a746ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ProductValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.productValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "996">
+               </Location>
+               <Location
+                  uuid = "2B485F70-8BB4-4328-B770-751A1BC70B9A - 86e00b30a746ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ProductValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.productValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "804">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1387,6 +1792,36 @@
                   startingLineNumber = "22"
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  uuid = "31395AD6-88E9-4572-B123-6743A6458D53 - e954c7ed8bd9501a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  uuid = "31395AD6-88E9-4572-B123-6743A6458D53 - e954c7ed8bd9501a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "44">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1547,6 +1982,36 @@
                   endingLineNumber = "128"
                   offsetFromSymbolStart = "1546">
                </Location>
+               <Location
+                  uuid = "BCF42236-50A2-42D2-80F9-CDE11A0BD3F6 - f7268d3403a5562f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "1621">
+               </Location>
+               <Location
+                  uuid = "BCF42236-50A2-42D2-80F9-CDE11A0BD3F6 - f7268d3403a5564e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1340">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1655,6 +2120,66 @@
                   endingLineNumber = "151"
                   offsetFromSymbolStart = "112">
                </Location>
+               <Location
+                  uuid = "A0B015B4-5639-4F9F-8D98-CA46DFA0F2F7 - 868f725dbfe05d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "A0B015B4-5639-4F9F-8D98-CA46DFA0F2F7 - b9928516a79a83c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "A0B015B4-5639-4F9F-8D98-CA46DFA0F2F7 - 868f725dbfe05d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  uuid = "A0B015B4-5639-4F9F-8D98-CA46DFA0F2F7 - b9928516a79a83c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "108">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1717,6 +2242,36 @@
                   startingLineNumber = "152"
                   endingLineNumber = "152"
                   offsetFromSymbolStart = "462">
+               </Location>
+               <Location
+                  uuid = "0A8F97BB-D88C-4BF1-8707-B1AFFF43F960 - b9928516a79a83e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "462">
+               </Location>
+               <Location
+                  uuid = "0A8F97BB-D88C-4BF1-8707-B1AFFF43F960 - b9928516a79a83e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "460">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1781,6 +2336,36 @@
                   endingLineNumber = "161"
                   offsetFromSymbolStart = "1977">
                </Location>
+               <Location
+                  uuid = "64F03FD9-F3A1-4DEC-8217-1F67B37783E1 - b9928516a79a9d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "2077">
+               </Location>
+               <Location
+                  uuid = "64F03FD9-F3A1-4DEC-8217-1F67B37783E1 - b9928516a79a9d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.ClaimSubmissionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.claimSubmissionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "1924">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1843,6 +2428,36 @@
                   startingLineNumber = "210"
                   endingLineNumber = "210"
                   offsetFromSymbolStart = "635">
+               </Location>
+               <Location
+                  uuid = "B97F06D8-BE14-4E75-9A35-1A04B8A81F2A - 6cc23e4af3b4baf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.hoyaValidationApi(paramters: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "635">
+               </Location>
+               <Location
+                  uuid = "B97F06D8-BE14-4E75-9A35-1A04B8A81F2A - 6cc23e4af3b4baf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.hoyaValidationApi(paramters: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "568">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1907,6 +2522,36 @@
                   endingLineNumber = "223"
                   offsetFromSymbolStart = "1142">
                </Location>
+               <Location
+                  uuid = "58BC2AAA-FFE2-4BB0-A077-5074CA829024 - d1532937005aa174"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.hoyaValidationApi(paramters: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "1142">
+               </Location>
+               <Location
+                  uuid = "58BC2AAA-FFE2-4BB0-A077-5074CA829024 - d1532937005aa174"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.hoyaValidationApi(paramters: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "1204">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1954,6 +2599,36 @@
                   startingLineNumber = "118"
                   endingLineNumber = "118"
                   offsetFromSymbolStart = "871">
+               </Location>
+               <Location
+                  uuid = "A0925BD0-2776-4F65-B26C-F7D80DA0893D - f7268d3403a55171"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "871">
+               </Location>
+               <Location
+                  uuid = "A0925BD0-2776-4F65-B26C-F7D80DA0893D - f7268d3403a55171"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.SalesReturnValidationModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.combine_Inv_Pro_Validation(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "668">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2017,6 +2692,36 @@
                   startingLineNumber = "37"
                   endingLineNumber = "37"
                   offsetFromSymbolStart = "1608">
+               </Location>
+               <Location
+                  uuid = "F60E34E2-20A7-4A35-B992-4722A36130B1 - b715993e57d3d400"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.InvoiceNumberValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1608">
+               </Location>
+               <Location
+                  uuid = "F60E34E2-20A7-4A35-B992-4722A36130B1 - b715993e57d3d400"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Hoya_Thailand.InvoiceNumberValidationModels&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_ClaimDetailsVM.invoiceNumberValidationApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/ClaimDetailsVM/HYT_ClaimDetailsVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1288">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2250,8 +2955,8 @@
             filePath = "Hoya Thailand/View/My Redemption/HYT_MyRedemptionVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "didTappedVoucherDownloadBtn(_:)"
             landmarkType = "7">
             <Locations>
@@ -2285,6 +2990,36 @@
                   endingLineNumber = "99"
                   offsetFromSymbolStart = "86">
                </Location>
+               <Location
+                  uuid = "5957522D-24E7-4FF9-8311-99FA4FF43CA5 - 59758a61ad73ae6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_MyRedemptionVC.didTappedVoucherDownloadBtn(Any) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/My%20Redemption/HYT_MyRedemptionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "5957522D-24E7-4FF9-8311-99FA4FF43CA5 - 59758a61ad73ae6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_MyRedemptionVC.didTappedVoucherDownloadBtn(Any) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/My%20Redemption/HYT_MyRedemptionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "88">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2298,8 +3033,8 @@
             filePath = "Hoya Thailand/View/My Profile/HYT_MyProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "profileUpdate_Api()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2314,8 +3049,8 @@
             filePath = "Hoya Thailand/View/My Profile/HYT_MyProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "goToLoginPage(item:)"
             landmarkType = "7">
             <Locations>
@@ -2439,6 +3174,36 @@
                   endingLineNumber = "62"
                   offsetFromSymbolStart = "112">
                </Location>
+               <Location
+                  uuid = "BCC6B251-7E2E-4B19-8E17-D318170A1730 - c1ae555f35759802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_MyProfileVC.goToLoginPage(item: Hoya_Thailand.HYT_SuccessMessageVC) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/My%20Profile/HYT_MyProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "BCC6B251-7E2E-4B19-8E17-D318170A1730 - c1ae555f35759802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_MyProfileVC.goToLoginPage(item: Hoya_Thailand.HYT_SuccessMessageVC) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/My%20Profile/HYT_MyProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "112">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2452,8 +3217,8 @@
             filePath = "Hoya Thailand/View/e-Voucher/HYT_VoucherVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "redeemVoucher(countryID:catalogueID:amount:productCode:productImage:productName:currentDate:venderID:redemptionId:)"
             landmarkType = "7">
             <Locations>
@@ -2486,6 +3251,36 @@
                   startingLineNumber = "114"
                   endingLineNumber = "114"
                   offsetFromSymbolStart = "5901">
+               </Location>
+               <Location
+                  uuid = "7C77173E-A0EA-43AA-B6AC-A8ADAADC712C - 5c571167efb18657"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_VoucherVC.redeemVoucher(countryID: Swift.Int, catalogueID: Swift.Int, amount: Swift.String, productCode: Swift.String, productImage: Swift.String, productName: Swift.String, currentDate: Swift.String, venderID: Swift.Int, redemptionId: Swift.Int) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/e-Voucher/HYT_VoucherVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "5901">
+               </Location>
+               <Location
+                  uuid = "7C77173E-A0EA-43AA-B6AC-A8ADAADC712C - 5c571167efb18657"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_VoucherVC.redeemVoucher(countryID: Swift.Int, catalogueID: Swift.Int, amount: Swift.String, productCode: Swift.String, productImage: Swift.String, productName: Swift.String, currentDate: Swift.String, venderID: Swift.Int, redemptionId: Swift.Int) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/View/e-Voucher/HYT_VoucherVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "4412">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2534,6 +3329,21 @@
                   startingLineNumber = "121"
                   endingLineNumber = "121"
                   offsetFromSymbolStart = "1232">
+               </Location>
+               <Location
+                  uuid = "D3F2186D-8120-4182-A6D6-8477017C7A74 - e4d547fa08133560"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hoya_Thailand.VoucherRedeemptionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hoya_Thailand.HYT_VoucherListVM.voucherRedeemptionApi(parameter: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/HYT_VoucherListVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "1144">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2599,6 +3409,21 @@
                   endingLineNumber = "45"
                   offsetFromSymbolStart = "1369">
                </Location>
+               <Location
+                  uuid = "5FA472B0-559C-416D-9E0B-EAB4006FF406 - 2cb6b1a946b9059"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hoya_Thailand.HYT_RedeemQuantity_VM.myVouchersAPI(userID: Swift.String, productCode: Swift.String) -&gt; ()"
+                  moduleName = "Hoya Thailand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Ios%20project/LWS%20project/HoyaThailandIOS/Hoya%20Thailand/ViewModel/e-VoucherVM/PointRangeDropDwonVM/HYT_RedeemQuantity_VM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1116">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2644,9 +3469,105 @@
             filePath = "Hoya Thailand/View/My Redemption/HYT_MyRedemptionVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "myRedeemptionList_Api()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3B76848-79F7-4195-B49D-2203D678D413"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/Resources/Delegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31A243C2-EE71-416A-AB3A-0CFDF9E70216"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/Resources/Delegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "294DE50E-588B-4D2B-8E6E-371A6FB0566F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/Resources/Delegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E33C7AF6-8C08-4C71-A556-24EC0AFEC196"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/Resources/Delegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A905EF5-D13B-4744-89B6-E26217D6067F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/Resources/Delegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "messaging(_:didReceiveRegistrationToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABFF0986-E68A-4CEE-9757-3377D7C2573D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hoya Thailand/View/Claim Details/HYT_ClaimDetailsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

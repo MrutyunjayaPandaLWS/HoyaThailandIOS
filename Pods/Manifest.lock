@@ -346,14 +346,13 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
-  - Protobuf (3.22.4)
+  - Protobuf (3.22.1)
   - SDWebImage (5.15.5):
     - SDWebImage/Core (= 5.15.5)
   - SDWebImage/Core (5.15.5)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
   - Alamofire (~> 4.4)
   - DPOTPView
   - Firebase/CoreOnly
@@ -429,10 +428,10 @@ SPEC CHECKSUMS:
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  Protobuf: e61924c2c174ec1bee11cc3f151aa9e650ba09d7
+  Protobuf: d7f7c8329edf5eb8af65547a8ba3e9c1cee927d5
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 381786bcaf54fb606b1a6513941d135ce8b88441
+PODFILE CHECKSUM: ab97444613c34f7ff042689068042cf653237d93
 
 COCOAPODS: 1.12.0

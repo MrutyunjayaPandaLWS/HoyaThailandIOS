@@ -12,7 +12,15 @@ import SDWebImage
 import LanguageManager_iOS
 import ImageSlideshow
 
-class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate, popMessage2Delegate, SuccessMessageDelegate {
+class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate, popMessage2Delegate, SuccessMessageDelegate, InternetCheckDelgate {
+    
+    func interNetIsON(item: IOS_Internet_Check) {
+        if sourceArray.isEmpty{
+            dashboardOffersApi()
+        }
+        tokendata()
+    }
+    
     func goToLoginPage(item: HYT_SuccessMessageVC) {
         if item.itsComeFrom == "1"{
             let domain = Bundle.main.bundleIdentifier!
@@ -83,19 +91,27 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         topView.clipsToBounds = true
         topView.layer.cornerRadius = 24
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
-//        profileImage.image = UIImage(named: "Image-3")
         imagePicker.delegate = self
-        tokendata()
         setUpMenuList()
-        dashboardOffersApi()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setUpMenuList()
         localization()
-        tokendata()
-        
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.delegate = self
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            if sourceArray.isEmpty{
+                dashboardOffersApi()
+            }
+            tokendata()
+        }
     }
     
 
@@ -110,22 +126,6 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         vc!.modalPresentationStyle = .overCurrentContext
         vc!.modalTransitionStyle = .crossDissolve
         self.present(vc!, animated: true, completion: nil)
-        
-        
-        
-        
-        
-//        let alert = UIAlertController(title: "Logout".localiz(), message: "Are you sure you want to Logout ?".localiz(), preferredStyle: UIAlertController.Style.alert)
-//        alert.addAction(UIAlertAction(title: "Yes".localiz(), style: .default, handler: { UIAlertAction in
-//
-//
-//
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "No".localiz(), style: UIAlertAction.Style.default, handler: nil))
-//    self.present(alert, animated: true, completion: nil)
-  
-        
     }
     @IBAction func didTappedNotificationBtn(_ sender: UIButton) {
         
@@ -281,9 +281,8 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             offersSlideShow.pageControl.currentPageIndicatorTintColor = primaryColor // UIColor(red: 230/255, green: 27/255, blue: 34/255, alpha: 1)
             offersSlideShow.pageControl.pageIndicatorTintColor = UIColor.lightGray
         }else{
-            offersSlideShow.setImageInputs([
-                ImageSource(image: UIImage(named: "ic_default_img (1)")!)
-            ])
+            offersSlideShow.contentScaleMode = .scaleToFill
+            offersSlideShow.setImageInputs([ImageSource(image: UIImage(named: "ic_default_img (1)")!)])
         }
     }
     

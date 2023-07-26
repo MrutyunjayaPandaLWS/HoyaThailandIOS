@@ -9,8 +9,12 @@ import UIKit
 import Toast_Swift
 import LanguageManager_iOS
 
-class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate, SuccessMessageDelegate, popMessage2Delegate {
+class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegate, OtpDelegate, SuccessMessageDelegate, popMessage2Delegate, InternetCheckDelgate {
 
+    func interNetIsON(item: IOS_Internet_Check) {
+        customerGeneralInfo()
+    }
+    
     func didTappedOKBtn(item: SuccessMessage2 ) {
         if item.flags == "1"{
             let domain = Bundle.main.bundleIdentifier!
@@ -121,6 +125,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     }
     
 
+    @IBOutlet weak var shadowLogoutView: UIView!
     @IBOutlet weak var logoutLbl: UILabel!
     
     @IBOutlet weak var deleteAccountLbl: UILabel!
@@ -181,6 +186,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     override func viewWillAppear(_ animated: Bool) {
 //        personalInformationTopHeight.constant = 20
         self.logoutView.isHidden = true
+        self.shadowLogoutView.isHidden = true
         personalInformationView.isHidden = true
         generalInformationView.isHidden = false
         updateBtn.isHidden = true
@@ -194,16 +200,28 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
         storeNameTF.isUserInteractionEnabled = false
         salesRepresentativeTF.isUserInteractionEnabled = false
         idCardNumberTF.isUserInteractionEnabled = false
-        customerGeneralInfo()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.delegate = self
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+         customerGeneralInfo()
+        }
+//        customerGeneralInfo()
         localization()
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-////        let touch = touches.first
-////        if touch?.view != self.logoutView{
-////            self.logoutView.isHidden = true
-////        }
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.view != self.shadowLogoutView{
+            self.logoutView.isHidden = true
+            self.shadowLogoutView.isHidden = true
+        }
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         backbtnWidth = 0
@@ -255,7 +273,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     
     @IBAction func didTappedSettingBtn(_ sender: Any) {
         logoutView.isHidden ? (logoutView.isHidden =  false) : (logoutView.isHidden = true)
-//        logoutView.isHidden =  false
+        shadowLogoutView.isHidden ? (shadowLogoutView.isHidden =  false) : (shadowLogoutView.isHidden = true)
     }
     
     @IBAction func didTappedDeleteaccount(_ sender: Any) {
@@ -392,8 +410,17 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
             ] as [String : Any]
         ]
         print(parameter,"profile update")
-        
-        self.VM.peofileUpdate(parameter: parameter)
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            self.VM.VC?.profileUpdate_Api()
+        }
+//        self.VM.peofileUpdate(parameter: parameter)
     }
     
     private func localization(){

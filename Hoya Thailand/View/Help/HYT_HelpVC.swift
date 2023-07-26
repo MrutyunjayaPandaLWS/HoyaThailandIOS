@@ -78,7 +78,17 @@ var VM = HYT_HelpVM()
         }else if mobileNumberExistancy == -1{
             self.view.makeToast("userId_toast_message".localiz(), duration: 2.0, position: .center)
         }else{
-            newQuerySubmission()
+            if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+                DispatchQueue.main.async{
+                    let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true)
+                }
+            }else{
+                newQuerySubmission()
+            }
+//            newQuerySubmission()
         }
 
     }

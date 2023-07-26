@@ -40,7 +40,16 @@ class HYT_S_PromotionDetailsVC: BaseViewController , UITableViewDelegate, UITabl
         promotionDate.text = String(promotionDetails1?.jEndDate?.prefix(10) ?? "")
         promotionNameLbl.text = promotionDetails1?.programName
         promotionDetails.text = promotionDetails1?.programDesc
-        getProductList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            getProductList_Api()
+        }
     }
 
     @IBAction func didTappedBackBtn(_ sender: UIButton) {

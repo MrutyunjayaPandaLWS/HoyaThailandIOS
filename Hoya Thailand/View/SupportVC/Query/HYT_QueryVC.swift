@@ -29,6 +29,7 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     func topicName(item: HYT_LQTopicListVC) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_CreateQueryVC") as? HYT_CreateQueryVC
         vc?.queryName = item.topicName
+        vc?.selectTopicId = item.selectTopicId
         navigationController?.pushViewController(vc!, animated: true)
     }
 
@@ -57,7 +58,16 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getQueryList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            getQueryList_Api()
+        }
         localization()
     }
     
@@ -87,8 +97,15 @@ class HYT_QueryVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     @IBAction func didTappedNewQueryBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_CreateQueryVC") as? HYT_CreateQueryVC
-        navigationController?.pushViewController(vc!, animated: true)
+//        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_CreateQueryVC") as? HYT_CreateQueryVC
+//        navigationController?.pushViewController(vc!, animated: true)
+        
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_LQTopicListVC") as? HYT_LQTopicListVC
+        vc?.modalPresentationStyle = .overFullScreen
+        vc?.modalTransitionStyle = .crossDissolve
+        vc?.delegate = self
+        vc?.flags = 1
+        present(vc!, animated: true)
         
     }
     

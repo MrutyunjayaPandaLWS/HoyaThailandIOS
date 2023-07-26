@@ -7,27 +7,29 @@
 
 import Foundation
 
-//DEMO
-let tokenURL = "https://hoyatserv.loyltwo3ks.com/token"
-let baseURl = "https://hoyatserv.loyltwo3ks.com/Mobile/"
-var number = "th000051"
-
-//let PROMO_IMG = "https://ddmotors.loyltwo3ks.com/UploadFiles/"
-//let PROMO_IMG1 = "https://hoyatserv.loyltwo3ks.com/"
-let PROMO_IMG1 = "https://hoyatdemo.loyltwo3ks.com/"
-//let product_IMG = "https://ddmotors.loyltwo3ks.com/UploadFiles/CategoryImg/"
-//let imageBaseURL = "https://ddmotors.loyltwo3ks.com/UploadFiles/ProductManager/ProductImages/"
+// MARK: - DEMO
+//let tokenURL = "https://hoyatserv.loyltwo3ks.com/token"
+//let baseURl = "https://hoyatserv.loyltwo3ks.com/Mobile/"
+//var number = "th000051"
+//let PROMO_IMG1 = "https://hoyatdemo.loyltwo3ks.com/"
+//let checkUserExistencyURL = "https://hoyatserv.loyltwo3ks.com/Mobile/CheckCustomerExistancyAndVerification"
+//let forgotPasswordUrl = "https://hoyatserv.loyltwo3ks.com/Mobile/forgotPasswordMobileApp"
 //
-//let profileImageURL = "https://ddmotors.loyltwo3ks.com/UploadFiles/CustomerImage/"
-//let productCatalogueImgURL = "https://ddmotors.loyltwo3ks.com/UploadFiles/CatalogueImages/"
-let checkUserExistencyURL = "https://hoyatserv.loyltwo3ks.com/Mobile/CheckCustomerExistancyAndVerification"
-let forgotPasswordUrl = "https://hoyatserv.loyltwo3ks.com/Mobile/forgotPasswordMobileApp"
+//let username = "LtyHoyaThDemo"
+//let password = "H0)Y@7L$mK#9p87"
+//let grant_type = "password"
 
 
-let username = "LtyHoyaThDemo"
-let password = "H0)Y@7L$mK#9p87"
+// MARK: - LIVE Api
+
+let tokenURL = "https://hoyaliveservth.loyltwo3ks.com/token"
+let baseURl = "https://hoyaliveservth.loyltwo3ks.com/Mobile/"
+var number = "th000051"
+let PROMO_IMG1 = "https://hoyarewardsthai.com/"
+let checkUserExistencyURL = "https://hoyaliveservth.loyltwo3ks.com/Mobile/CheckCustomerExistancyAndVerification"
+let forgotPasswordUrl = "https://hoyaliveservth.loyltwo3ks.com/Mobile/forgotPasswordMobileApp"
+
+
+let username = "HoyaLiveService"
+let password = "H@aL!Ml(K*0$9H"
 let grant_type = "password"
-//let MerchantUserName = "DDMotorsDemoAdmin"
-
-
-

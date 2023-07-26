@@ -108,12 +108,21 @@ class HYT_FilterVC: UIViewController, DateSelectedDelegate, FilterStatusDelegate
     
     
     @IBAction func didTappedResetBtn(_ sender: UIButton) {
-        selectPromotionNameLbl.text = statusTitle
         fromDateLbl.text = "From Date"
         toDateLbl.text = "To Date"
         fromDate = ""
         toDate = ""
         statusName = ""
+        if tagName == 0{
+            selectPromotionNameLbl.text = "Select Status"
+            statusTitle = "Select Status"
+        }else if tagName == 1{
+            selectPromotionNameLbl.text = "Select Promotion Name"
+            statusTitle = "Select Promotion Name"
+        }else if tagName == 2{
+            selectPromotionNameLbl.text = "Select Promotion Name"
+            statusTitle = "Select Promotion Name"
+        }
         delegate?.didTappedResetFilterBtn(item: self)
     }
     

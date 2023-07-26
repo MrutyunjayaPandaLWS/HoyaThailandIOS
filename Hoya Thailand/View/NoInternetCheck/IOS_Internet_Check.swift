@@ -8,7 +8,10 @@
 import UIKit
 import Lottie
 
-class DD_IOS_Internet_Check: UIViewController {
+@objc protocol InternetCheckDelgate{
+    @objc optional func interNetIsON(item: IOS_Internet_Check)
+}
+class IOS_Internet_Check: UIViewController {
 
     @IBOutlet weak var lottieImageView: LottieAnimationView!
     
@@ -16,6 +19,8 @@ class DD_IOS_Internet_Check: UIViewController {
     @IBOutlet weak var oopsLbl: UILabel!
     
     var timers = Timer()
+    var delegate: InternetCheckDelgate?
+    var flags: Int = 0
     private var loaderAnimationView : LottieAnimationView?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +39,9 @@ class DD_IOS_Internet_Check: UIViewController {
         if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
             timers = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(internetCheck), userInfo: nil, repeats: true)
         }else{
-            dismiss(animated: true)
+            dismiss(animated: true){
+                self.delegate?.interNetIsON?(item: self)
+            }
         }
     }
     

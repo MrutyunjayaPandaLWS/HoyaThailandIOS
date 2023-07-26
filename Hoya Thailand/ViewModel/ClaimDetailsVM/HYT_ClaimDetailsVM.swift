@@ -15,7 +15,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
     
     weak var VC : HYT_ClaimDetailsVC?
     var promotionProductList = [LsrProductDetails]()
-    
+    var token = UserDefaults.standard.string(forKey: "TOKEN") ?? ""
     var requestAPIs = RestAPI_Requests()
     
     //    MARK: - invoice Number Validation API
@@ -192,7 +192,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
         }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("Bearer \(UserDefaults.standard.string(forKey: "TOKEN") ?? "")", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             guard error == nil else {

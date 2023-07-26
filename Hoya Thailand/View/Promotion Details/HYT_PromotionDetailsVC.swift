@@ -49,7 +49,17 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
         userName.text = promotionDetailsData?.programName
         promotionDetails.text = promotionDetailsData?.programDesc
         localization()
-        getProductList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            getProductList_Api()
+        }
+//        getProductList_Api()
     }
     
     @IBAction func didTappedClaimBtn(_ sender: UIButton) {
@@ -72,7 +82,7 @@ class HYT_PromotionDetailsVC: BaseViewController, UITableViewDelegate, UITableVi
                     "ActionType": 20
                 ]
         ]
-        
+        print(parameter,"getProductList_Api")
         self.VM.productListApi(parameter: parameter)
     }
     

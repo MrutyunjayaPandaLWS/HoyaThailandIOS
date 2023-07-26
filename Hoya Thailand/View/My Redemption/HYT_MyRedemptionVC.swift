@@ -74,7 +74,17 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         super.viewWillAppear(animated)
         self.VM.myRedeemptionList.removeAll()
         self.downloadVoucherShadowView.isHidden = true
-        myRedeemptionList_Api()
+        if MyCommonFunctionalUtilities.isInternetCallTheApi() == false{
+            DispatchQueue.main.async{
+                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IOS_Internet_Check") as! IOS_Internet_Check
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
+            }
+        }else{
+            myRedeemptionList_Api()
+        }
+//        myRedeemptionList_Api()
         localization()
     }
     
