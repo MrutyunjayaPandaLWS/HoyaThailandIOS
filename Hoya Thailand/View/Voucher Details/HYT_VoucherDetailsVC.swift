@@ -228,7 +228,7 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
                       "ReceiverName": firstName ?? "",
                       "ReceiverEmail": customerEmail ?? "",
                       "ReceiverMobile": customerMobileNumber ?? "",
-                      "SourceMode": 4
+                      "SourceMode": 5
         ]
         self.VM.voucherRedeemptionApi(parameter: parameter)
     }

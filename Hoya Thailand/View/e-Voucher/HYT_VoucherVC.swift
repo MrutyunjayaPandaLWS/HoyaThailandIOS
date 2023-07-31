@@ -129,7 +129,7 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                       "ReceiverName": firstName ?? "",
                       "ReceiverEmail": "lohith.loyltwo3ks@gmail.com",
                       "ReceiverMobile": customerMobileNumber ?? "",
-                      "SourceMode": 4
+                      "SourceMode": 5
         ]
         print(parameter)
         self.VM.voucherRedeemptionApi(parameter: parameter)

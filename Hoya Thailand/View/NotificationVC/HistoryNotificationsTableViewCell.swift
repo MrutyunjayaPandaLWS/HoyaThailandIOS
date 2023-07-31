@@ -32,7 +32,9 @@ class HistoryNotificationsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func didTappedViewImage(_ sender: UIButton) {
-        delegate?.didTappedNotificationimage(cell: self)
+        if imageUrl != ""{
+            delegate?.didTappedNotificationimage(cell: self)
+        }
     }
     
 }

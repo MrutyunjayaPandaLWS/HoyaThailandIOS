@@ -360,7 +360,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
                "ActionType": "6",
                "CustomerId": "\(self.userId)"//customerTypeID
         ]
-        
+        print(parameter,"customerGeneralInfo")
         self.VM.customerGeneralInfo(parameter: parameter)
     }
     
@@ -418,7 +418,8 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
                 self.present(vc, animated: true)
             }
         }else{
-            self.VM.VC?.profileUpdate_Api()
+//            self.VM.VC?.profileUpdate_Api()
+            self.VM.peofileUpdate(parameter: parameter)
         }
 //        self.VM.peofileUpdate(parameter: parameter)
     }
@@ -461,7 +462,7 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     func deleteAccount(){
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SuccessMessage2") as? SuccessMessage2
         vc!.delegate = self
-        vc!.message = "Account_deleted_successfully".localiz()
+        vc!.message = "are_sure_delete_account".localiz()
         vc?.btnName = "Delete".localiz()
         vc?.vcTitle = "Delete Account".localiz()
         vc!.flags = "0"

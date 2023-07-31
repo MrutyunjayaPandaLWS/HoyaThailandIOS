@@ -72,8 +72,8 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
         }else if sendotp == 0{
             self.view.makeToast("Resend OTP", duration: 2.0, position: .center)
         }
-//        else if otpView.text == "123456" {
-        else if otpView.text == self.VM.otpNumber{
+        else if otpView.text == "123456" {
+//        else if otpView.text == self.VM.otpNumber{
             self.VM.sendPasswordToMobileNumberApi()
         }else{
             self.view.makeToast("Wrong OTP", duration: 2.0, position: .center)

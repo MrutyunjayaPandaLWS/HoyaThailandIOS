@@ -180,7 +180,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
         let parameter : [String : Any] = [
             
                 "Browser": "Android",
-                "LoggedDeviceName": "Android",
+                "LoggedDeviceName": "IOS",
                 "Password": passwordTF.text ?? "",
                 "PushID": "\(pushID)",
                 "SessionId": "HOYA",

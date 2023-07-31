@@ -138,10 +138,11 @@ extension HistoryNotificationsViewController : UITableViewDelegate, UITableViewD
         let receivedImage = String(self.VM.notificationListArray[indexPath.row].imagesURL ?? "")
         if  receivedImage != ""{
             cell.imageView1.isHidden = false
-            cell.notificationImg.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(receivedImage.dropFirst(1))"), placeholderImage: UIImage(named: "no_image1.jpg"))
+            cell.notificationImg.sd_setImage(with: URL(string: "\(PROMO_IMG1)\(receivedImage.dropFirst(1))"), placeholderImage: UIImage(named: "megaphone"))
 //            cell.notificationImg.kf.setImage(with: URL(string: "\(Promo_ImageData)\(receivedImage.dropFirst(1))"), placeholder: UIImage(named: "no_image1.jpg"))
         }else{
-            cell.imageView1.isHidden = true
+            cell.notificationImg.image = UIImage(named: "megaphone")
+//            cell.imageView1.isHidden = true
         }
         cell.imageUrl = receivedImage
         cell.delegate = self
