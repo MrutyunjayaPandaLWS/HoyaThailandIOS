@@ -245,3 +245,4 @@
 "userId_toast_message_1" = "Enter Membership ID";
 "Pin has been sent to registered mobile number" = "Pin has been sent to registered mobile number";
 "Mobile_number_is_doesn't_exists1" = "Membership ID is doesn't exists";
+"Voucher Details" = "Voucher Description";

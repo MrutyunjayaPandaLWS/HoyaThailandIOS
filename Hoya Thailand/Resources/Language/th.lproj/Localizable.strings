@@ -248,3 +248,4 @@
 "userId_toast_message_1" = "ใส่รหัสสมาชิก";
 "Pin has been sent to registered mobile number" = "ส่ง PIN ไปที่เบอร์มือถือที่ลงทะเบียนแล้ว";
 "Mobile_number_is_doesn't_exists1" = "ไม่มีรหัสสมาชิก";
+"Voucher Details" = "คำอธิบายบัตรกำนัล";

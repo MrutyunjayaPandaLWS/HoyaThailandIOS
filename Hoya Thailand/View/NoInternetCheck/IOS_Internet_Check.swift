@@ -40,6 +40,7 @@ class IOS_Internet_Check: UIViewController {
             timers = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(internetCheck), userInfo: nil, repeats: true)
         }else{
             dismiss(animated: true){
+                self.timers.invalidate()
                 self.delegate?.interNetIsON?(item: self)
             }
         }

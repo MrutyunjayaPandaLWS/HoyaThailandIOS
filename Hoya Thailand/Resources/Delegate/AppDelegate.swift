@@ -102,8 +102,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         completionHandler([.alert, .badge, .sound])
     }
     //MessagingDelegate
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        print("Firebase token: \(fcmToken ?? "")")
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase token: \(fcmToken )")
 //        UserDefaults.standard.setValue(fcmToken ?? "", forKey: "SMSDEVICE_TOKEN")
 
     }
@@ -118,12 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             let session = URLSession.shared
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-
-            do {
-                 request.httpBody = parameters
-            } catch let error {
-                print(error.localizedDescription)
-            }
+            request.httpBody = parameters
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
            

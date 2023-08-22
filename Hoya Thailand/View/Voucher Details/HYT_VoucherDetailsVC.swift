@@ -25,6 +25,7 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
     }
     
 
+    @IBOutlet weak var voucherDetailsTitleLbl: UILabel!
     @IBOutlet weak var pointsView: UIView!
     @IBOutlet weak var selectAmountLbl: UILabel!
     @IBOutlet weak var dropDownAmountView: UIView!
@@ -196,6 +197,7 @@ class HYT_VoucherDetailsVC: BaseViewController, pointsDelegate {
     func localization(){
         titleLbl.text = "e_voucher".localiz()
         availableBalanceTitle.text = "availableBal".localiz()
+        self.voucherDetailsTitleLbl.text = "Voucher Details".localiz()
         redeemBtn.setTitle("redeem".localiz(), for: .normal)
         
     }

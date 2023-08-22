@@ -35,6 +35,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     
 //    var timmer = Timer()
 //    var count = 0
+    var mobileNumber = ""
     var sendotp = 0
     var VM = HYT_ForgotPasswordVM()
     override func viewDidLoad() {
@@ -69,15 +70,18 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
             self.view.makeToast("enterOtp".localiz(), duration: 2.0, position: .center)
         }else if otpView.text?.count != 6{
             self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
-        }else if sendotp == 0{
-            self.view.makeToast("Resend OTP", duration: 2.0, position: .center)
         }
-        else if otpView.text == "123456" {
-//        else if otpView.text == self.VM.otpNumber{
-            self.VM.sendPasswordToMobileNumberApi()
-        }else{
-            self.view.makeToast("Wrong OTP", duration: 2.0, position: .center)
-            otpView.text = ""
+//        else if sendotp == 0{
+//            self.view.makeToast("Resend OTP", duration: 2.0, position: .center)
+//        }
+//        else if otpView.text == "123456" {
+////        else if otpView.text == self.VM.otpNumber{
+//            self.VM.sendPasswordToMobileNumberApi()
+//        }
+        else{
+//            self.view.makeToast("Wrong OTP", duration: 2.0, position: .center)
+//            otpView.text = ""
+            self.VM.serverOTP(mobileNumber: self.mobileNumber, otpNumber: otpView.text ?? "")
 
         }
     }
@@ -135,8 +139,8 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     private func localization(){
         forgotPasswordLbl.text = "forgot_password".localiz()
         forgotPWDescriptionLbl.text = "forgot_password_info".localiz()
-        membershipIdLbl.text = "userId_1".localiz()
-        membershipIdTF.placeholder = "userId_toast_message_1".localiz()
+        membershipIdLbl.text = "userId".localiz()
+        membershipIdTF.placeholder = "userId_toast_message".localiz()
         sendOtpBtn.setTitle("sendOtp".localiz(), for: .normal)
         backToLoginLbl.text = "back_Login".localiz()
         selectLanguageLbl.text = "language".localiz()

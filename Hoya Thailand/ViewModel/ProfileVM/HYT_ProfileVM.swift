@@ -7,6 +7,7 @@
 
 import Foundation
 import Toast_Swift
+import LanguageManager_iOS
 
 class HYT_ProfileVM{
     
@@ -38,7 +39,7 @@ class HYT_ProfileVM{
                             }
                             let DOB = self.generalInfo[0].jdob?.split(separator: " ")
                             self.VC?.selectDateLbl.text = String(DOB?[0] ?? "Select DOB")
-                            let DOA = self.generalInfo[0].jAnniversary?.split(separator: " ")
+                            let DOA = self.generalInfo[0].anniversary?.split(separator: " ")
                             self.VC?.selectAnniversarydateLbl.text = String(DOA?[0] ?? "Select Date")
                             self.VC?.registerationNo = self.generalInfo[0].registrationSource ?? 0
                             self.VC?.idCardNumberTF.text = self.generalInfo[0].identificationNo ?? "-"
@@ -73,7 +74,7 @@ class HYT_ProfileVM{
             if error == nil{
                 if result != nil{
                     if ((result?.returnMessage?.contains("1")) != nil){
-                            self.VC?.successMessagePopUp(message: "Your profile has been updated successfully")
+                        self.VC?.successMessagePopUp(message: "profile_update_success_message".localiz())
                             self.VC?.stopLoading()
                         }else{
                             self.VC?.view.makeToast("Profile isn't Update", duration: 2.0, position: .center)

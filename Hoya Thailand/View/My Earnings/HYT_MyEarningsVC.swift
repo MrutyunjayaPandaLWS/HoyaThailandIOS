@@ -108,7 +108,7 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
                 "ToDate": toDate,
                 "ProgramID": promotionId
         ]
-        print(parameter)
+        print(parameter,"myEarningList_Api")
         self.VM.myEarningListApi(parameter: parameter)
     }
     

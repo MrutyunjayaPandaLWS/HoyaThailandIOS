@@ -52,13 +52,19 @@ class HYT_RegisterOtpVC: BaseViewController {
             self.view.makeToast("Enter OTP", duration: 2.0, position: .center)
         }else if otpView.text?.count != 6{
             self.view.makeToast("Enter valid OTP", duration: 2.0, position: .center)
-        }else if otpView.text == "123456"{
-//        }else if otpView.text == self.VM.otpNumber{
-            delegate?.getRegistrationApi()
-            dismiss(animated: true)
-        }else{
-            self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
-            otpView.text = ""
+        }
+//        else if otpView.text == "123456"{
+////        }else if otpView.text == self.VM.otpNumber{
+//            delegate?.getRegistrationApi()
+//            dismiss(animated: true)
+//        }
+        else{
+            self.VM.serverOTP(mobileNumber: mobileNumber, otpNumber: otpView.text ?? ""){
+                    self.delegate?.getRegistrationApi()
+                    self.dismiss(animated: true)
+            }
+//            self.view.makeToast("Invalid OTP", duration: 2.0, position: .center)
+//            otpView.text = ""
 
         }
     }
@@ -78,7 +84,7 @@ class HYT_RegisterOtpVC: BaseViewController {
     func sendOtptoRegisterNumber(){
         let parameter : [String : Any] = [
             
-                "MerchantUserName": "MSPDemoAdmin",
+                "MerchantUserName": merchantName,
                 "MobileNo": mobileNumber,
                 "OTPType": "Enrollment",
                 "UserId": -1,

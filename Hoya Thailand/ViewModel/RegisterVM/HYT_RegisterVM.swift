@@ -289,12 +289,16 @@ class HYT_RegisterVM{
                     if result != nil{
                         DispatchQueue.main.async {
                             print(result?.returnMessage)
-                            if String(result?.returnMessage?.prefix(1) ?? "") == "1"{
+                            if String(result?.returnMessage?.prefix(1) ?? "") == "1" && result?.returnMessage?.contains("~") == true{
                                 self.VC?.popMessage()
                                 self.VC?.navigationController?.popViewController(animated: true)
                                 self.VC?.stopLoading()
                             }else{
-                                self.VC?.view.makeToast("registrationFailed".localiz(), duration: 2.0, position: .center)
+                                if result?.returnMessage?.contains("~") == true{
+                                    self.VC?.view.makeToast("registrationFailed".localiz(), duration: 2.0, position: .center)
+                                }else{
+                                    self.VC?.view.makeToast("something_went_wrong".localiz(), duration: 2.0, position: .center)
+                                }
                                 self.VC?.stopLoading()
                             }
                             

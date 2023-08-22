@@ -343,6 +343,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
                    vc?.modalPresentationStyle = .overFullScreen
                    vc?.modalTransitionStyle = .crossDissolve
 //                   vc?.registrationData = self
+                   vc?.mobileNumber = mobileNumberTF.text ?? ""
                    vc?.delegate = self
                    present(vc!, animated: true)
             }else{
@@ -350,6 +351,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
                 vc?.modalPresentationStyle = .overFullScreen
                 vc?.modalTransitionStyle = .crossDissolve
 //                vc?.registrationData = self
+                vc?.mobileNumber = mobileNumberTF.text ?? ""
                 vc?.delegate = self
                 present(vc!, animated: true)
             }
@@ -622,7 +624,7 @@ extension HYT_RegisterVC{
                 "LoyaltyId": storeCode,// store code // atribute name
                 "LocationId":  storeId,// store id
                 "LocationName": storeNameLbl1.text ?? "",
-                "CountryId": 17,
+                "CountryId": 84,
                 "CustomerTypeID": roleId, // if store owner -54 else individual -
                 "FirstName": "\(firstNameTF.text ?? "")",
                 "LastName": "\(lastNameTF.text ?? "")",
@@ -669,7 +671,7 @@ extension HYT_RegisterVC{
                     "LoyaltyId": storeCode,  // LocationCode (if UserName check api is valid)
                     "LocationId": storeId,
                     "LocationName": storeNameLbl1.text ?? "", // Store Name.....(SEND LOCATION NAME HERE)
-                    "CountryId": 17,
+                    "CountryId": 84,
                     "CustomerTypeID": 54,
                     "FirstName": "\(firstNameTF.text ?? "")",
                     "LastName": "\(lastNameTF.text ?? "")",

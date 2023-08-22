@@ -9,7 +9,7 @@ pod 'SDWebImage'
 pod 'Alamofire', '~> 4.4'
 pod 'IQKeyboardManagerSwift'
 pod 'DPOTPView'
-pod 'lottie-ios'
+
 pod 'Toast-Swift', '~> 5.0.1'
 pod "ImageSlideshow/Alamofire"
 pod 'LanguageManager-iOS'
@@ -19,7 +19,7 @@ pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'Firebase/Messaging'
 
-
+pod 'lottie-ios'
 
 
 

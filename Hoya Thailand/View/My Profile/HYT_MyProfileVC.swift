@@ -52,7 +52,13 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
                             }
                     }else{
                         DispatchQueue.main.async{
-                            
+                            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
+                            vc!.delegate = self
+                            vc!.successMessage = "something_went_wrong".localiz()
+                            vc!.itsComeFrom = ""
+                            vc!.modalPresentationStyle = .overCurrentContext
+                            vc!.modalTransitionStyle = .crossDissolve
+                            self.present(vc!, animated: true, completion: nil)
                             }
                     }
                   self.stopLoading()
@@ -277,10 +283,14 @@ class HYT_MyProfileVC: BaseViewController, DropdownDelegate, DateSelectedDelegat
     }
     
     @IBAction func didTappedDeleteaccount(_ sender: Any) {
+        self.logoutView.isHidden = true
+        self.shadowLogoutView.isHidden = true
         deleteAccount()
     }
     
     @IBAction func didTappedLogoutBtn(_ sender: Any) {
+        self.logoutView.isHidden = true
+        self.shadowLogoutView.isHidden = true
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SuccessMessage2") as? SuccessMessage2
         vc!.delegate = self
         vc!.message = "Are you sure you want to Logout ?".localiz()

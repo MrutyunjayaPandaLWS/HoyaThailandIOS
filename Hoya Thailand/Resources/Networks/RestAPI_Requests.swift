@@ -614,5 +614,35 @@ class RestAPI_Requests {
                }
            }
         }
+    
+    //    MARK: - GET MOBILE NUMBER API
+        func getMobileNumberApi(parameters: JSON, completion: @escaping (GetMobileNumberModels?, Error?) -> ()) -> URLSessionDataTask? {
+           return client.load(path: checkStoreIdexistancy_URLMethod, method: .post, params: parameters) { data, error in
+               do{
+                   if data != nil{
+                       let result1 =  try JSONDecoder().decode(GetMobileNumberModels?.self, from: data as! Data)
+                       completion(result1, nil)
+                   }
+               }catch{
+                   completion(nil, error)
+               }
+           }
+        }
+    
+    // MARK: - OTP VALIDATION API
+    func OTP_Validation_API(parameters: JSON, completion: @escaping (ServerOTPModels?, Error?) -> ()) -> URLSessionDataTask? {
+        
+        return client.load(path: isvalidateOTP_URLMethode, method: .post, params: parameters) { data, error in
+            do{
+                if data != nil{
+                    let result1 =  try JSONDecoder().decode(ServerOTPModels.self, from: data as! Data)
+                    completion(result1, nil)                }
+            }catch{
+                completion(nil, error)
+                print(error)
+            }
+        }
+    }
+    
 }
 

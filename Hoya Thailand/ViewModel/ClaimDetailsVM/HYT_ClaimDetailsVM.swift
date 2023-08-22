@@ -25,7 +25,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             if error == nil{
                 if result != nil{
                     DispatchQueue.main.async {
-                        print("invoice",result?.lstAttributesDetails?[0].attributeId)
+                        print("invoice",result?.lstAttributesDetails?[0].attributeId ?? 0)
                         if result?.lstAttributesDetails?[0].attributeId == 0{
                             self.VC?.scanCodeStatus = 1
 //                            if self.VC?.flags == "scanned"{
@@ -58,7 +58,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("invoice number error",error?.localizedDescription)
+                    print("invoice number error",error?.localizedDescription ?? "")
                 }
             }
         }
@@ -70,7 +70,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
         requestAPIs.productNumberValidation_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    print("product",result?.lstAttributesDetails?[0].attributeId)
+                    print("product",result?.lstAttributesDetails?[0].attributeId ?? 0)
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?[0].attributeId == 1{
                             self.VC?.stopLoading()
@@ -99,7 +99,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("invoice number error",error?.localizedDescription)
+                    print("invoice number error",error?.localizedDescription ?? "")
                 }
             }
         }
@@ -118,6 +118,8 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
 //                            self.VC?.claimSubmission_Api()
                             self.VC?.view.makeToast("This combination already exist".localiz(),duration: 2.0,position: .center)
                             
+                        }else if result?.lstAttributesDetails?[0].attributeId == -2{
+                            self.VC?.view.makeToast("Invalid claim request".localiz(),duration: 2.0,position: .center)
                         }else{
 //                            self.VC?.salesReturnStatus = -1
 //                            self.VC?.view.makeToast("Invalid claim request",duration: 2.0,position: .center)
@@ -136,7 +138,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("invoice number error",error?.localizedDescription)
+                    print("invoice number error",error?.localizedDescription ?? "")
                 }
             }
         }
@@ -149,7 +151,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             if error == nil{
                 if result != nil{
                     DispatchQueue.main.async {
-                        if ((result?.returnMessage?.contains("1")) != nil){
+                        if result?.returnMessage == "1"{
                             self.VC?.stopLoading()
                             let vc = self.VC?.storyboard?.instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
                             vc?.modalTransitionStyle = .crossDissolve
@@ -171,7 +173,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("invoice number error",error?.localizedDescription)
+                    print("invoice number error",error?.localizedDescription ?? "")
                 }
             }
         }
@@ -179,7 +181,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
     
     func hoyaValidationApi(paramters: JSON){
         self.VC?.startLoading()
-        let urlString = "https://hoyatserv.loyltwo3ks.com/Mobile/ValidateAInvoiceNumber"
+        let urlString = hoyaValidationApiUrl
         let url = URL(string: urlString)!
         let session = URLSession.shared
         var request = URLRequest(url: url)
@@ -201,9 +203,9 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             guard let data = data else {
                 return
             }
-            do{
+//            do{
                 let str = String(decoding: data, as: UTF8.self) as String?
-                 print(str, "- invoice and product status")
+                 print(str ?? "", "- invoice and product status")
                 DispatchQueue.main.async {
                     if str ?? "" == "false"{
                         self.VC?.productAndInvoiceValidation = "false"
@@ -215,12 +217,12 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
                             self.VC?.claimSubmission_Api()
                     }
                 }
-            }catch{
-                     DispatchQueue.main.async{
-                         self.VC?.stopLoading()
-                         print("Invalid claim request".localiz(),error.localizedDescription)
-                     }
-            }
+//            }catch{
+//                     DispatchQueue.main.async{
+//                         self.VC?.stopLoading()
+//                         print("Invalid claim request".localiz(),error.localizedDescription)
+//                     }
+//            }
         })
         task.resume()
     }
@@ -249,7 +251,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("My Redeemption error",error?.localizedDescription)
+                    print("My Redeemption error",error?.localizedDescription ?? "")
                 }
             }
         }

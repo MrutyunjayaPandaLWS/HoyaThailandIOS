@@ -93,7 +93,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     
     @IBAction func didTappedmobileNumberTF(_ sender: UITextField) {
         if membershipIdTF.text?.count != 0{
-            print(membershipIdTF.text)
+            print(membershipIdTF.text ?? "")
             mobileNumberExistancyApi()
         }else{
             self.view.makeToast("userId_toast_message_1".localiz(), duration: 2.0, position: .center)
@@ -171,6 +171,7 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
                     "UserName" : "\(membershipIdTF.text ?? "")"
                 ]
         ]
+        print(parameter,"Mobile number existancy")
         VM.verifyMobileNumberAPI(paramters: parameter)
 //        56875434356
     }
@@ -207,8 +208,8 @@ class HYT_LoginVC: BaseViewController, LanguageDropDownDelegate,UITextFieldDeleg
     private func localization(){
         loginLbl.text = "login".localiz()
         loginInfoLbl.text = "loginInfo".localiz()
-        membershipIDLbl.text = "userId_1".localiz()
-        membershipIdTF.placeholder = "userId_toast_message_1".localiz()
+        membershipIDLbl.text = "userId".localiz()
+        membershipIdTF.placeholder = "userId_toast_message".localiz()
         passwordLbl.text = "password".localiz()
         passwordTF.placeholder = "password_toast_message".localiz()
         accountStatusLbl.text = "don't_have_account".localiz()

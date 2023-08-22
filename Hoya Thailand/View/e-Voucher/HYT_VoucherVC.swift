@@ -219,8 +219,8 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
                 
                     "ActionType": 6,
                     "ActorId": userId,
-                     "StartIndex": startIndex,
-                    "NoOfRows": "10",
+                     "StartIndex": 1,//startIndex,
+//                    "NoOfRows": "10",
                     "ObjCatalogueDetails": [
                         "CatalogueType": 4
                     ],
@@ -291,23 +291,23 @@ class HYT_VoucherVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if tableView == voucherTableView{
-            if indexPath.row == (self.VM.voucherListArray.count - 1){
-                if noOfElement == 10{
-                    startIndex += 1
-                    getVoucherList_Api()
-                }else if noOfElement > 10{
-                    startIndex += 1
-                    getVoucherList_Api()
-                }else if noOfElement < 10{
-                    print("no need to reload data")
-                    return
-                }else{
-                    print("No data available")
-                    return
-                }
-            }
-        }
+//        if tableView == voucherTableView{
+//            if indexPath.row == (self.VM.voucherListArray.count - 1){
+//                if noOfElement == 10{
+//                    startIndex += 1
+//                    getVoucherList_Api()
+//                }else if noOfElement > 10{
+//                    startIndex += 1
+//                    getVoucherList_Api()
+//                }else if noOfElement < 10{
+//                    print("no need to reload data")
+//                    return
+//                }else{
+//                    print("No data available")
+//                    return
+//                }
+//            }
+//        }
 
     }
     

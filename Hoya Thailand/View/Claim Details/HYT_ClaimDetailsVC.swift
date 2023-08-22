@@ -243,7 +243,7 @@ extension HYT_ClaimDetailsVC{
     func authorizelocationstates(){
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             currentlocation = locationManager.location
-            print(currentlocation)
+            print(currentlocation ?? "")
         }
         else{
             // Note : This function is overlap permission
@@ -311,11 +311,11 @@ extension HYT_ClaimDetailsVC{
                 let visionImage = VisionImage(buffer: sampleBuffer)
                 barcodeDetector.detect(in: visionImage) { result, error in
                     if error != nil{
-                        print("barcode scanner error", error?.localizedDescription)
+                        print("barcode scanner error", error?.localizedDescription ?? "")
                     }else{
                         for barcode in result! {
                             let data = barcode.rawValue
-                            print("barcode value",data)
+                            print("barcode value",data ?? "")
                             if data?.contains(",") == true{
                                 let scanValue = data?.split(separator: ",")
                                 if (scanValue?.count ?? 0) >= 2{
@@ -434,7 +434,7 @@ extension HYT_ClaimDetailsVC{
             "ActorId": userId,
             "LoyaltyId": loyaltyId,
             "InvoiceNumber": invoiceNumberTF.text ?? "",
-            "ProductCode": lensDesignNameLbl.text ?? "",
+            "ProductCode": productCode,//lensDesignNameLbl.text ?? "",
             "SellingPrice": 1,
             "LoyaltyProgramId": promotionData?.programId ?? 0,
             "VoucherImagePath": "",

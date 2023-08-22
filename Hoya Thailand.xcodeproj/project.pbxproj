@@ -256,6 +256,10 @@
 		84AE3A6F2A3D948A00967CDA /* SuccessMessage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */; };
 		84AE3A722A3DB52100967CDA /* IDcradExistancyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A712A3DB52100967CDA /* IDcradExistancyModels.swift */; };
 		84AE3A742A3DB56800967CDA /* idCardExistancy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */; };
+		84B3A70E2A8F8F80004BAB78 /* GetMobileNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */; };
+		84B3A70F2A8F8F80004BAB78 /* GetMobileNumberModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */; };
+		84B3A7132A8FA47E004BAB78 /* ServerOTPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */; };
+		84B3A7142A8FA47E004BAB78 /* UserList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7122A8FA47D004BAB78 /* UserList2.swift */; };
 		84E5C7D829DE9925004D5025 /* HistoryNotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */; };
 		84E5C7DC29DE99B1004D5025 /* NotificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */; };
 		84E5C7DD29DE99B1004D5025 /* LstPushHistoryJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */; };
@@ -549,6 +553,10 @@
 		84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessage2.swift; sourceTree = "<group>"; };
 		84AE3A712A3DB52100967CDA /* IDcradExistancyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcradExistancyModels.swift; sourceTree = "<group>"; };
 		84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idCardExistancy1.swift; sourceTree = "<group>"; };
+		84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetMobileNumber.swift; path = ../../../../../../../Downloads/codegen_64df57d6106bf/GetMobileNumber.swift; sourceTree = "<group>"; };
+		84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetMobileNumberModels.swift; path = ../../../../../../../Downloads/codegen_64df57d6106bf/GetMobileNumberModels.swift; sourceTree = "<group>"; };
+		84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerOTPModels.swift; sourceTree = "<group>"; };
+		84B3A7122A8FA47D004BAB78 /* UserList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserList2.swift; sourceTree = "<group>"; };
 		84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewModel.swift; sourceTree = "<group>"; };
 		84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModels.swift; sourceTree = "<group>"; };
 		84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstPushHistoryJson.swift; sourceTree = "<group>"; };
@@ -1734,6 +1742,8 @@
 		80FABD592994F7DA00061E01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84B3A7102A8FA45C004BAB78 /* Otp Validation */,
+				84B3A70B2A8F8F65004BAB78 /* Get MobileNumber Models */,
 				84AE3A702A3DB50600967CDA /* IDcradExistancyModels */,
 				84AE3A6A2A3D8D7200967CDA /* DeleteAccountModels */,
 				845FD7692A38279D004554C9 /* TermsAndConditionModels */,
@@ -1878,6 +1888,24 @@
 				84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */,
 			);
 			path = IDcradExistancyModels;
+			sourceTree = "<group>";
+		};
+		84B3A70B2A8F8F65004BAB78 /* Get MobileNumber Models */ = {
+			isa = PBXGroup;
+			children = (
+				84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */,
+				84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */,
+			);
+			path = "Get MobileNumber Models";
+			sourceTree = "<group>";
+		};
+		84B3A7102A8FA45C004BAB78 /* Otp Validation */ = {
+			isa = PBXGroup;
+			children = (
+				84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */,
+				84B3A7122A8FA47D004BAB78 /* UserList2.swift */,
+			);
+			path = "Otp Validation";
 			sourceTree = "<group>";
 		};
 		84E5C7CF29DE9551004D5025 /* NotificationVC */ = {
@@ -2174,6 +2202,7 @@
 				80845AA929974F1D00C7846F /* HYT_OffersVC.swift in Sources */,
 				800A8B3D29A8E93000D3A39C /* UserList.swift in Sources */,
 				8041910329ADD46000CDFFA5 /* PointExpireModel.swift in Sources */,
+				84B3A7132A8FA47E004BAB78 /* ServerOTPModels.swift in Sources */,
 				809FAA23299B707500783420 /* HYT_DashboardVC.swift in Sources */,
 				80448E9629A89A1B00EBD7BC /* ServiceError.swift in Sources */,
 				80A8C20829AC69BD00082829 /* PointExpireReportModel.swift in Sources */,
@@ -2220,6 +2249,7 @@
 				80F8CAF529AF47AE00FEE039 /* VoucherRedeemptionModel.swift in Sources */,
 				80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */,
 				800CE67329A9CB08005CC793 /* LstAttributesDetails3.swift in Sources */,
+				84B3A70F2A8F8F80004BAB78 /* GetMobileNumberModels.swift in Sources */,
 				800CE67C29A9DDCD005CC793 /* String+Extenssion.swift in Sources */,
 				809142C12996788F00212358 /* Colors.swift in Sources */,
 				845C92062A39DD5F00B0D157 /* HistoryNotificationsViewController.swift in Sources */,
@@ -2285,6 +2315,7 @@
 				804667AA29A8BE1F006B70A9 /* HYT_LoginVM.swift in Sources */,
 				80BAFFD629964D1200984104 /* HYT_MyStaffTVCell.swift in Sources */,
 				84AE3A6C2A3D8D8000967CDA /* DeleteAccountModels.swift in Sources */,
+				84B3A70E2A8F8F80004BAB78 /* GetMobileNumber.swift in Sources */,
 				8041912629AE15BB00CDFFA5 /* HYT_S_MyPromotionListVM.swift in Sources */,
 				80D7209729B073850065A947 /* SubmitNwQuerModels.swift in Sources */,
 				80D7209329B071490065A947 /* ChatListModels.swift in Sources */,
@@ -2295,6 +2326,7 @@
 				8050E3162997AD4A00F8B692 /* HYT_VoucherVC.swift in Sources */,
 				80FABD352994EF9B00061E01 /* AppDelegate.swift in Sources */,
 				8439EE7F2A46ABB200131CE9 /* IOS_Internet_Check.swift in Sources */,
+				84B3A7142A8FA47E004BAB78 /* UserList2.swift in Sources */,
 				800CE66E29A9C244005CC793 /* LstAttributesDetails2.swift in Sources */,
 				80FABD372994EF9B00061E01 /* SceneDelegate.swift in Sources */,
 				84AE3A722A3DB52100967CDA /* IDcradExistancyModels.swift in Sources */,

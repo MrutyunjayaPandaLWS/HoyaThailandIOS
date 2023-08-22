@@ -48,7 +48,9 @@ class SuccessMessage2: UIViewController {
     }
 
     @IBAction func didTappedOkBtn(_ sender: Any) {
-        delegate?.didTappedOKBtn(item: self)
+        dismiss(animated: true){
+            self.delegate?.didTappedOKBtn(item: self)
+        }
     }
     
     @IBAction func didTappedCancelBtn(_ sender: Any) {

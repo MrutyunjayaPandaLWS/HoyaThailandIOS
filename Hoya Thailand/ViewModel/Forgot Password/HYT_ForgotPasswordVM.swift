@@ -49,8 +49,9 @@ class HYT_ForgotPasswordVM{
                     }
                 }else{
                     DispatchQueue.main.async{
-                        self.getOtpApi()
-                        
+                        self.getMobileNumberApi(){
+                            self.getOtpApi()
+                        }
                         self.VC?.stopLoading()
                     }
                 }
@@ -65,15 +66,50 @@ class HYT_ForgotPasswordVM{
         task.resume()
     }
     
+    func getMobileNumberApi(completion: @escaping ()->()){
+        self.VC?.startLoading()
+        let parameter = [
+                "ActionType": 197,
+                "RoleIDs": self.VC?.membershipIdTF.text ?? ""
+        ] as [String : Any]
+        print(parameter,"Get Mobile number request")
+        self.VC?.mobileNumber = self.VC?.membershipIdTF.text ?? ""
+        requestAPIs.getMobileNumberApi(parameters: parameter) { (result, error) in
+            guard error == nil else{
+                self.VC?.stopLoading()
+                print("error comming : -",error?.localizedDescription ?? "")
+                completion()
+                return
+            }
+            guard let result = result else{
+                self.VC?.stopLoading()
+                print("result is nil")
+                completion()
+                return
+            }
+            self.VC?.stopLoading()
+            if result.lstAttributesDetails?.count != 0{
+                if result.lstAttributesDetails?[0].attributeValue != nil && result.lstAttributesDetails?[0].attributeValue != ""{
+                    self.VC?.mobileNumber = result.lstAttributesDetails?[0].attributeValue ?? ""
+                    completion()
+                }else{
+                    completion()
+                }
+            }
+            
+        }
+    }
+    
 //    MARK: - GET OTP API
     func getOtpApi(){
         let parameter : [String : Any] = [
-                "MerchantUserName": "MSPDemoAdmin",
-                "MobileNo": self.VC?.membershipIdTF.text,
+                "MerchantUserName": merchantName,
+                "MobileNo": self.VC?.mobileNumber ?? "",
                 "OTPType": "Enrollment",
                 "UserId": -1,
                 "UserName": ""
         ]
+        print(parameter,"Get otp request")
         self.VC?.startLoading()
         requestAPIs.getOTP_API(parameters: parameter) { result, error in
             if error == nil{
@@ -103,17 +139,56 @@ class HYT_ForgotPasswordVM{
         }
     }
     
-    
+    func serverOTP(mobileNumber : String, otpNumber : String) {
+        DispatchQueue.main.async {
+            self.VC?.startLoading()
+        }
+        let parameters = [
+                "ActionType":"Get Encrypted OTP",
+                "MobileNo": mobileNumber,
+                "OTP": otpNumber,
+                "UserName":""
+        ] as [String: Any]
+        print(parameters)
+        self.requestAPIs.OTP_Validation_API(parameters: parameters) { (result, error) in
+            if error == nil{
+                if result != nil{
+                    DispatchQueue.main.async {
+                    let response = result?.returnMessage ?? ""
+                        print(response, "- OTP")
+//                        if response > "0"{
+                        if response <= "0"{
+                            self.sendPasswordToMobileNumberApi()
+//                            self.VC?.claimSubmissionWithOTP()
+                        }else{
+                            DispatchQueue.main.async{
+                                self.VC?.view.makeToast("Invalid OTP".localiz(), duration: 2.0, position: .bottom)
+                            }
+                        }
+                        self.VC?.stopLoading()
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self.VC?.stopLoading()
+                    }
+                }
+            }else{
+                DispatchQueue.main.async {
+                    self.VC?.stopLoading()
+                }
+            }
+        }
+    }
     
     func sendPasswordToMobileNumberApi(){
         
         let paramters : [String : Any] = [
         
-                    "MerchantUserName":"HoyaThMerchantDemo",
-                    "UserName":self.VC?.membershipIdTF.text
+                    "MerchantUserName": merchantName,
+                    "UserName": self.VC?.membershipIdTF.text ?? ""
                 
         ]
-        
+        print(paramters,"forgot password request")
         self.VC?.startLoading()
         let url = URL(string: forgotPasswordUrl)!
         let session = URLSession.shared
@@ -138,7 +213,7 @@ class HYT_ForgotPasswordVM{
             }
             do{
                 let str = String(decoding: data, as: UTF8.self) as? String
-                 print(str, "- Mobile Number Exists")
+                print(str ?? "", "- Mobile Number Exists")
                 if str ?? "" != "true"{
                     DispatchQueue.main.async{
                         self.VC?.stopLoading()

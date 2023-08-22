@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import LanguageManager_iOS
+
 protocol TopicListDelegate{
     func topicName(item : HYT_LQTopicListVC)
 }
@@ -40,10 +42,10 @@ class HYT_LQTopicListVC: BaseViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if flags == 0{
+//        if flags == 0{
             helpTopicList_Api()
 
-        }
+//        }
             }
     
 //    override func viewDidDisappear(_ animated: Bool) {
@@ -102,9 +104,19 @@ class HYT_LQTopicListVC: BaseViewController, UITableViewDelegate, UITableViewDat
         if flags == 0{
             topicName = self.VM.helpTopicList[indexPath.row].helpTopicName ?? ""
             selectTopicId = self.VM.helpTopicList[indexPath.row].helpTopicId ?? 0
+            
+            
         }else{
-            topicName = self.topicList[indexPath.row].topicName
+//            topicName = self.topicList[indexPath.row].topicName
             selectTopicId = self.topicList[indexPath.row].helptoicID
+            let filterArray = self.VM.helpTopicList.filter{$0.helpTopicId == selectTopicId}
+            if filterArray.count > 0 {
+                topicName = filterArray[0].helpTopicName ?? "queryTopic_toast_message".localiz()
+                selectTopicId = filterArray[0].helpTopicId ?? 0
+            }else{
+                topicName = "queryTopic_toast_message".localiz()
+                selectTopicId = 0
+            }
         }
         
         delegate?.topicName(item: self)
