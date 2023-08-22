@@ -8,7 +8,7 @@
 import UIKit
 import DPOTPView
 import Toast_Swift
-
+import LanguageManager_iOS
 protocol OtpDelegate{
     func sendOtp(item: HYT_OtpVC )
 }
@@ -38,6 +38,7 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
         newNumberTF.keyboardType = .numberPad
         otpBtnTopConstraints.constant = CGFloat(20)
         newNumberTF.isUserInteractionEnabled = true
+        localization()
     }
     
     @IBAction func didTappedGetOtp(_ sender: UIButton) {
@@ -88,7 +89,12 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
                     dismiss(animated: true)
         }
     }
-
+    func localization(){
+        getOtpBtn.setTitle("Get Otp".localiz(), for: .normal)
+        newNumberLbl.text = "new number".localiz()
+        newNumberTF.text = "Enter New Number".localiz()
+        
+    }
     func sendOtptoRegisterNumber(){
         let parameter : [String : Any] = [
             

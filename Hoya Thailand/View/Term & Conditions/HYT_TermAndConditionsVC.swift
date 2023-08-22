@@ -48,6 +48,8 @@ class HYT_TermAndConditionsVC: BaseViewController {
     }
     private func localization(){
         titleVC.text = "Terms And Condition".localiz()
+        acceptBtn.setTitle("accept".localiz(), for: .normal)
+        declineBtn.setTitle("decline".localiz(), for: .normal)
     }
     
     func termsAndConditionApi(){

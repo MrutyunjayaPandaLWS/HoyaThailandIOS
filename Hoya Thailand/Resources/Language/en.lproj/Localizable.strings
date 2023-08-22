@@ -203,6 +203,8 @@
 "Valid_till" = "Valid till";
 
 "Terms And Condition" = "Terms And Condition";
+"accept" = "accept";
+"decline" = "decline";
 "accept terms and condition" = "Accept Terms And Conditions";
 "Lens Design" = "Lens Design";
 "Are you sure you want to Logout ?" = "Are you sure you want to Logout ?";
@@ -246,3 +248,6 @@
 "Pin has been sent to registered mobile number" = "Pin has been sent to registered mobile number";
 "Mobile_number_is_doesn't_exists1" = "Membership ID is doesn't exists";
 "Voucher Details" = "Voucher Description";
+"Get Otp" = "Get Otp";
+"Enter New Number" = "Enter New Number";
+"new number" = "New Number";

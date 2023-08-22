@@ -346,7 +346,7 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
-  - Protobuf (3.22.1)
+  - Protobuf (3.23.2)
   - SDWebImage (5.15.5):
     - SDWebImage/Core (= 5.15.5)
   - SDWebImage/Core (5.15.5)
@@ -428,10 +428,10 @@ SPEC CHECKSUMS:
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  Protobuf: d7f7c8329edf5eb8af65547a8ba3e9c1cee927d5
+  Protobuf: 5df4e9d2abd535fb675c68d171f6bc87983d27a6
   SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
 PODFILE CHECKSUM: 7800715a004c87fa8a47eaec15c55b6d6c19ad73
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

@@ -105,6 +105,7 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
     private func localization(){
         pointsTitleLbl.text = "points".localiz()
         dateLbl.text = "date".localiz()
+        pointLbl.text = "points".localiz()
         pointsLbl.text = "points".localiz()
         titleLbl.text = "pointExpireReport".localiz()
         emptyMessage.text = "No data found!".localiz()

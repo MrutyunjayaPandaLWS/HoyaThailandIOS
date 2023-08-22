@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25B192962A9494D2000197FB /* GetMobileNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B192942A9494D2000197FB /* GetMobileNumber.swift */; };
+		25B192972A9494D2000197FB /* GetMobileNumberModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B192952A9494D2000197FB /* GetMobileNumberModels.swift */; };
 		800393A629A7986700542450 /* HYT_S_PromotionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393A529A7986600542450 /* HYT_S_PromotionTVCell.swift */; };
 		800393A829A7988F00542450 /* HYT_S_PromotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393A729A7988F00542450 /* HYT_S_PromotionVC.swift */; };
 		800393AC29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800393AB29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift */; };
@@ -256,8 +258,6 @@
 		84AE3A6F2A3D948A00967CDA /* SuccessMessage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */; };
 		84AE3A722A3DB52100967CDA /* IDcradExistancyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A712A3DB52100967CDA /* IDcradExistancyModels.swift */; };
 		84AE3A742A3DB56800967CDA /* idCardExistancy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */; };
-		84B3A70E2A8F8F80004BAB78 /* GetMobileNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */; };
-		84B3A70F2A8F8F80004BAB78 /* GetMobileNumberModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */; };
 		84B3A7132A8FA47E004BAB78 /* ServerOTPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */; };
 		84B3A7142A8FA47E004BAB78 /* UserList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7122A8FA47D004BAB78 /* UserList2.swift */; };
 		84E5C7D829DE9925004D5025 /* HistoryNotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */; };
@@ -293,6 +293,8 @@
 /* Begin PBXFileReference section */
 		12F747CA0ED73EB4D5CE003A /* Pods-Hoya Thailand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hoya Thailand.debug.xcconfig"; path = "Target Support Files/Pods-Hoya Thailand/Pods-Hoya Thailand.debug.xcconfig"; sourceTree = "<group>"; };
 		25362235308BA973D5DFCE1F /* Pods_Hoya_Thailand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hoya_Thailand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B192942A9494D2000197FB /* GetMobileNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMobileNumber.swift; sourceTree = "<group>"; };
+		25B192952A9494D2000197FB /* GetMobileNumberModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMobileNumberModels.swift; sourceTree = "<group>"; };
 		800393A529A7986600542450 /* HYT_S_PromotionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionTVCell.swift; sourceTree = "<group>"; };
 		800393A729A7988F00542450 /* HYT_S_PromotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionVC.swift; sourceTree = "<group>"; };
 		800393AB29A79DED00542450 /* HYT_S_PromotionDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYT_S_PromotionDetailsVC.swift; sourceTree = "<group>"; };
@@ -553,8 +555,6 @@
 		84AE3A6E2A3D948A00967CDA /* SuccessMessage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessage2.swift; sourceTree = "<group>"; };
 		84AE3A712A3DB52100967CDA /* IDcradExistancyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcradExistancyModels.swift; sourceTree = "<group>"; };
 		84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idCardExistancy1.swift; sourceTree = "<group>"; };
-		84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetMobileNumber.swift; path = ../../../../../../../Downloads/codegen_64df57d6106bf/GetMobileNumber.swift; sourceTree = "<group>"; };
-		84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetMobileNumberModels.swift; path = ../../../../../../../Downloads/codegen_64df57d6106bf/GetMobileNumberModels.swift; sourceTree = "<group>"; };
 		84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerOTPModels.swift; sourceTree = "<group>"; };
 		84B3A7122A8FA47D004BAB78 /* UserList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserList2.swift; sourceTree = "<group>"; };
 		84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewModel.swift; sourceTree = "<group>"; };
@@ -582,6 +582,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B192932A9494B1000197FB /* Get MobileNumber Models */ = {
+			isa = PBXGroup;
+			children = (
+				25B192942A9494D2000197FB /* GetMobileNumber.swift */,
+				25B192952A9494D2000197FB /* GetMobileNumberModels.swift */,
+			);
+			path = "Get MobileNumber Models";
+			sourceTree = "<group>";
+		};
 		800393A429A7981300542450 /* StoreOwner-Promotion */ = {
 			isa = PBXGroup;
 			children = (
@@ -1742,8 +1751,8 @@
 		80FABD592994F7DA00061E01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				25B192932A9494B1000197FB /* Get MobileNumber Models */,
 				84B3A7102A8FA45C004BAB78 /* Otp Validation */,
-				84B3A70B2A8F8F65004BAB78 /* Get MobileNumber Models */,
 				84AE3A702A3DB50600967CDA /* IDcradExistancyModels */,
 				84AE3A6A2A3D8D7200967CDA /* DeleteAccountModels */,
 				845FD7692A38279D004554C9 /* TermsAndConditionModels */,
@@ -1888,15 +1897,6 @@
 				84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */,
 			);
 			path = IDcradExistancyModels;
-			sourceTree = "<group>";
-		};
-		84B3A70B2A8F8F65004BAB78 /* Get MobileNumber Models */ = {
-			isa = PBXGroup;
-			children = (
-				84B3A70D2A8F8F80004BAB78 /* GetMobileNumberModels.swift */,
-				84B3A70C2A8F8F80004BAB78 /* GetMobileNumber.swift */,
-			);
-			path = "Get MobileNumber Models";
 			sourceTree = "<group>";
 		};
 		84B3A7102A8FA45C004BAB78 /* Otp Validation */ = {
@@ -2249,7 +2249,6 @@
 				80F8CAF529AF47AE00FEE039 /* VoucherRedeemptionModel.swift in Sources */,
 				80721F7029BEE96900010156 /* ProfileIamgeUpadate.swift in Sources */,
 				800CE67329A9CB08005CC793 /* LstAttributesDetails3.swift in Sources */,
-				84B3A70F2A8F8F80004BAB78 /* GetMobileNumberModels.swift in Sources */,
 				800CE67C29A9DDCD005CC793 /* String+Extenssion.swift in Sources */,
 				809142C12996788F00212358 /* Colors.swift in Sources */,
 				845C92062A39DD5F00B0D157 /* HistoryNotificationsViewController.swift in Sources */,
@@ -2277,6 +2276,7 @@
 				80A8C21529AC896500082829 /* HYT_NewQuerySubmissionVM.swift in Sources */,
 				8400363F2A45CE3400471D56 /* otherInfoImageTableViewCell.swift in Sources */,
 				800AAE2629A5E770005C9886 /* HYT_ProductListTVCell.swift in Sources */,
+				25B192972A9494D2000197FB /* GetMobileNumberModels.swift in Sources */,
 				803C011929CEDB140081B050 /* LstCustomerJson.swift in Sources */,
 				80F0147D299791BD000BD64C /* HYT_PromotionListTVCell.swift in Sources */,
 				80448E9229A89A1B00EBD7BC /* RestAPI_Requests.swift in Sources */,
@@ -2297,6 +2297,7 @@
 				800A8B3529A8D63C00D3A39C /* LstAttributesDetails1.swift in Sources */,
 				8041911B29AE002D00CDFFA5 /* LstPromotionJsonList.swift in Sources */,
 				8050E3182997AD6A00F8B692 /* HYT_VoucherTVCell.swift in Sources */,
+				25B192962A9494D2000197FB /* GetMobileNumber.swift in Sources */,
 				80448E9429A89A1B00EBD7BC /* URLMethods.swift in Sources */,
 				8400363C2A45CE3400471D56 /* otherInfoTableViewCell.swift in Sources */,
 				8400363D2A45CE3400471D56 /* otherImageTableViewCell.swift in Sources */,
@@ -2315,7 +2316,6 @@
 				804667AA29A8BE1F006B70A9 /* HYT_LoginVM.swift in Sources */,
 				80BAFFD629964D1200984104 /* HYT_MyStaffTVCell.swift in Sources */,
 				84AE3A6C2A3D8D8000967CDA /* DeleteAccountModels.swift in Sources */,
-				84B3A70E2A8F8F80004BAB78 /* GetMobileNumber.swift in Sources */,
 				8041912629AE15BB00CDFFA5 /* HYT_S_MyPromotionListVM.swift in Sources */,
 				80D7209729B073850065A947 /* SubmitNwQuerModels.swift in Sources */,
 				80D7209329B071490065A947 /* ChatListModels.swift in Sources */,

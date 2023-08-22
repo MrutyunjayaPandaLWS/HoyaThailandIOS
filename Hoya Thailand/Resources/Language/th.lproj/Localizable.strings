@@ -204,7 +204,8 @@
 "Valid_till" = "ใช้ได้ถึง";
 "Terms And Condition" = "ข้อกำหนดและเงื่อนไข";
 "Lens Design" = "การออกแบบเลนส์";
-
+"accept" = "ยอมรับ";
+"decline" = "ปฏิเสธ";
 
 "accept terms and condition" = "ยอมรับข้อกำหนดและเงื่อนไข";
 "Are you sure you want to Logout ?" = "คุณแน่ใจว่าคุณต้องการที่จะออกจากระบบ ?";
@@ -249,3 +250,6 @@
 "Pin has been sent to registered mobile number" = "ส่ง PIN ไปที่เบอร์มือถือที่ลงทะเบียนแล้ว";
 "Mobile_number_is_doesn't_exists1" = "ไม่มีรหัสสมาชิก";
 "Voucher Details" = "คำอธิบายบัตรกำนัล";
+"Get Otp" = "รับโอที";
+"Enter New Number" = "ป้อนหมายเลขใหม่";
+"new number" = "หมายเลขใหม่";
