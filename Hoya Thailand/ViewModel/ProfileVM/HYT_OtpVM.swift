@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 class HYT_OtpVM{
     weak var VC: HYT_OtpVC?
     var requestAPIs = RestAPI_Requests()
@@ -25,7 +26,7 @@ class HYT_OtpVM{
                             self.VC?.enterOtpLbl.isHidden = false
                             self.VC?.timerLbl.isHidden = false
                             self.VC?.otpBtnTopConstraints.constant = CGFloat(124)
-                            self.VC?.getOtpBtn.setTitle("Submit", for: .normal)
+                            self.VC?.getOtpBtn.setTitle("submit".localiz(), for: .normal)
                             self.VC?.newNumberTF.isUserInteractionEnabled = false
                             self.VC?.otpBtnStatus = 1
                             self.count = 60
@@ -74,7 +75,7 @@ class HYT_OtpVM{
                     
                     if result?.returnValue == 1{
                         DispatchQueue.main.async {
-                            self.VC?.view.makeToast("The Mobile number allready exists", duration: 2.0, position: .center)
+                            self.VC?.view.makeToast("mobile_number_alreadyExits".localiz(), duration: 2.0, position: .center)
                             self.VC?.stopLoading()
                         }
                     }else{
@@ -115,8 +116,8 @@ class HYT_OtpVM{
                     DispatchQueue.main.async {
                     let response = result?.returnMessage ?? ""
                         print(response, "- OTP")
-//                        if response > "0"{
-                        if response <= "0"{
+                        if response > "0"{
+//                        if response <= "0"{
                             completion()
 //                            self.VC?.claimSubmissionWithOTP()
                         }else{

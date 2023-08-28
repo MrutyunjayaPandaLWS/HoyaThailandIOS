@@ -119,8 +119,8 @@ class HYT_LQTopicListVC: BaseViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        delegate?.topicName(item: self)
-        dismiss(animated: true)
+        
+        dismiss(animated: true){self.delegate?.topicName(item: self)}
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first

@@ -1,17 +1,16 @@
-/* 
-  Localizable.strings
-  Hoya Thailand
+/*
+Localizable.strings
+Hoya Thailand
 
-  Created by syed on 09/03/23.
-  
+Created by syed on 09/03/23.
 */
 
 "language" = "Th";
-"congratulations" = "ยินดีด้วย!";
+"congratulations" = "ยินดีด้วย !";
 "noInternet" = "กรุณาตรวจสอบสัญญาณอินเตอร์เน็ตของท่าน!";
 
 //Otp
-"otp_message" = "เลข OTP ได้ทำการส่งไปยังหมายเลขโทรศัพท์ที่ท่านลงทะเบียนไว้";
+"otp_message" = "เลข OTP ได้ทำการส่งไปยังหมายเลขโทรศัพท์ที่ท่านลงทะเบียนไว้.";
 "enterOtp" = "กรอกหมายเลข OTP ที่ท่านได้รับ";
 "resendOtp" = "ส่งเลข OTP อีกครั้ง?";
 "submit" = "ยืนยัน";
@@ -21,22 +20,26 @@
 
 //filter
 "filter" = "ตัวกรอง";
-"fromDate" = "From Date"; //mark
-"toDate" = "To Date"; //mark
+"fromDate" = "จากวันที่";
+"toDate" = "ถึงวันที่";
 "select_status" = "กรุณาเลือกสถานะ";
 "reset" = "รีเซ็ต";
 "filter_toast_message" = "กรุณาเลือกเขตข้อมูล";
-
+"Select Promotion Name or Date Range or both" = "โปรดเลือกช่วงวันที่หรือชื่อโปรโมชั่นหรือทั้งสองอย่าง!";
+"Select Status or Date Range or both" = "เลือก สถานะ หรือ ช่วงวันที่ หรือทั้งสองอย่าง";
+"Select ToDate" = "เลือกวันที่ที่ต้องการ";
+"Select From Date" = "เลือกจากวันที่";
+"ToDate should be lower than FromDate" = "ถึงวันที่ควรต่ํากว่าวันที่นับจากวันที่";
 
 
 
 //Login
 "login" = "กรุณาลงชื่อเข้าสู่ระบบ";
-"Enter_a_valid_password" = "ป้อนรหัสผ่านที่ถูกต้อง"; //mark
-"Mobile_number_is_doesn't_exists" = "ไม่มีรหัสสมาชิก / เบอร์มือถือ";
-"account_Deactivate_error" = "บัญชีของคุณถูกปิดใช้งาน โปรดติดต่อผู้ดูแลระบบของคุณ";
-"account_Pending_error" = "การยืนยันบัญชีของคุณอยู่ระหว่างดำเนินการ โปรดติดต่อผู้ดูแลระบบของคุณ";
-"account_login_error" = "การเข้าสู่ระบบบัญชีของคุณล้มเหลว โปรดติดต่อผู้ดูแลระบบของคุณ";
+"Enter_a_valid_password" = "ป้อนรหัสผ่านที่ถูกต้อง";
+"Mobile_number_is_doesn't_exists" = "ไม่มีหมายเลขสมาชิก / หมายเลขโทรศัพท์มือถือ";
+"account_Deactivate_error" = "บัญชีของคุณถูกปิดใช้งานโปรดติดต่อผู้ดูแลระบบของคุณ";
+"account_Pending_error" = "การตรวจสอบบัญชีของคุณอยู่ระหว่างดําเนินการโปรดติดต่อผู้ดูแลระบบของคุณ";
+"account_login_error" = "การยืนยันบัญชีของคุณล้มเหลวโปรดติดต่อผู้ดูแลระบบของคุณ";
 
 //mark
 "Password_is_incorrect" = "รหัสผ่านไม่ถูกต้อง"; //mark
@@ -63,35 +66,35 @@
 "register" = "ลงทะเบียน";
 "register_info" = "กรอกรายละเอียดที่กำหนดเพื่อลงทะเบียน";
 "account_type" = "ประเภทบัญชี";
-"selectAccountType" = "Select account type"; //mark
+"selectAccountType" = "กรุณาเลือกประเภทบัญชี!";//mark
 "stoeId" = "รหัสร้านค้า";
 "storeId_toast_message" = "กรุณากรอกรหัสร้านค้า";
-"This_store_ID_already_exist" = "This store ID already exist"; //mark
+"This_store_ID_already_exist" = "รหัสร้านค้าซ้ำ"; //mark
 "storeName" = "ชื่อร้านค้า";
 "storeName_toast_message" = "กรุณากรอกชื่อร้านค้า";
 "role" = "บทบาท";
-"select_role" = "Select role"; //mark
+"select_role" = "กรุณาเลือกบทบาท"; //mark
 "firstName" = "ชื่อ";
 "firstName_toast_message" = "กรุณากรอกชื่อ";
 "lastName" = "นามสกุล";
 "lastName_toast_message" = "กรุณากรอกนามสกุล";
 "email" = "อีเมล์";
 "email_toast_message" = "กรุณากรอกอีเมล์";
-"email_validation" = "อีเมลนี้มีอยู่แล้ว ลองอีเมลอื่น"; //mark
+"email_validation" = "อีเมลถูกลงทะเบียนโดยผู้อื่นแล้ว!"; //mark
 "wrong_email_format" = "ป้อนอีเมลที่ถูกต้อง"; //mark
 "mobileNumber" = "หมายเลขโทรศัพท์มือถือ";
 "mobileNumber_toast_message" = "กรุณากรอกหมายเลขโทรศัพท์มือถือ";
 "mobileNumbervalidation" = "โปรดป้อนหมายเลขโทรศัพท์มือถือที่ถูกต้อง!";
-"mobile_number_alreadyExits" = "This mobile number already exist try another mobile number";//mark
+"mobile_number_alreadyExits" = "หมายเลขโทรศัพท์มือถือถูกลงทะเบียนโดยผู้อื่นแล้ว!";//mark
 "wrong_idCard_message" = "กรุณากรอกหมายเลขบัตรประชาชนที่ถูกต้อง!";
 "sales_representative" = "ตัวแทนฝ่ายขาย";
 "sales_representative_toast_message" = "เลือกตัวแทนฝ่ายขาย";
 "setPassword" = "ตั้งค่ารหัสผ่าน";
-"password_toast_message" = "กรุณากรอกรหัสผ่าน";
+"password_toast_message" = "กรุณากรอกรหัสผ่านของท่าน";
 "DOB" = "วัน เดือน ปี เกิด";
 "DOB_toast_message" = "เลือก วัน เดือน ปี เกิด";
 "gender" = "เพศ";
-"gender_toast_message" = "เพศ"; //mark
+"gender_toast_message" = "กรุณาเลือกเพศ!"; //mark
 "idCardNumber" = "หมายเลขบัตรประชาชน";
 "idCardNumber_toast_message" = "กรุณากรอกหมายเลขบัตรประชาชน";
 "back_Login" = "กลับไปหน้าลงชื่อเข้าใช้งาน";
@@ -137,7 +140,7 @@
 //Myprofile
 
 "date_of_Aniversary" = "วันครบรอบ";
-"date_of_aniversary_toast_message" = "วันครบรอบ"; //mark
+"date_of_aniversary_toast_message" = "เลือกวันครบรอบ"; //mark
 "update" = "ปรับปรุง";
 "myProfile" = "ประวัติของฉัน";
 "general_info" = "ข้อมูลทั่วไป";
@@ -152,8 +155,8 @@
 
 //Promotion Details
 "promotionDetails" = "รายละเอียดโปรโมชั่น"; //mark
-"promotionValid" = "โปรโมชั่นใช้ได้จนถึง"; //mark
-"product" = "Product"; //mark
+"promotionValid" = "ใช้ได้ถึง"; //mark
+"product" = "product"; //mark
 "getBenefit" = "รับสิทธิประโยชน์"; //mark
 "promotionDetails_info" = "เมื่อสแกน QR หรืออัปโหลดใบแจ้งหนี้"; //mark
 
@@ -174,7 +177,7 @@
 "e_voucher" = "บัตรกำนัลอิเล็กทรอนิกส์";
 "availableBal" = "ยอดคงเหลือ";
 "willExpireon" = "จะหมดอายุวันที่";
-"range" = "Range"; //mark
+"range" = "เทือก"; //mark
 "redeem" = "การแลก";
 "status" = "สถานะ";
 
@@ -202,54 +205,58 @@
 "Home" = "หน้าหลัก";
 "Profile" = "ประวัติ";
 "Valid_till" = "ใช้ได้ถึง";
-"Terms And Condition" = "ข้อกำหนดและเงื่อนไข";
+"Terms And Condition" = "ข้อกําหนดและเงื่อนไข";
 "Lens Design" = "การออกแบบเลนส์";
 "accept" = "ยอมรับ";
-"decline" = "ปฏิเสธ";
+"decline" = "ไม่ยอมรับ";
 
-"accept terms and condition" = "ยอมรับข้อกำหนดและเงื่อนไข";
-"Are you sure you want to Logout ?" = "คุณแน่ใจว่าคุณต้องการที่จะออกจากระบบ ?";
+"accept terms and condition" = "ข้าพเจ้ายอมรับข้อตกลงและเงื่อนไข";
+"Are you sure you want to Logout ?" = "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?";
 "Logout" = "ออกจากระบบ";
 "Yes" = "ใช่";
-"No" = "เลขที่";
+"No" = "ไม่ใช่";
 "Ok" = "ตกลง";
 "Account_deleted_successfully" = "ลบบัญชีเรียบร้อยแล้ว";
-"are_sure_delete_account" = "คุณแน่ใจหรือว่าต้องการลบบัญชีของคุณจริงๆ";
+"are_sure_delete_account" = "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณจริงๆ?";
 "Delete" = "ลบ";
 "Delete Account" = "ลบบัญชี";
 "idCardExistancy" = "ไม่มีรหัสอยู่แล้ว !";
-"something_went_wrong" = "เกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง...";
-"Your voucher redeemed successfully" = "แลกบัตรกำนัลของคุณสำเร็จแล้ว";
+"something_went_wrong" = "หมายเลขบัตรประชาชนถูกลงทะเบียนโดยผู้อื่นแล้ว!";
+"Your voucher redeemed successfully" = "แลกใช้เวาเชอร์ของคุณสําเร็จแล้ว";
 
 "Earned Points" = "คะแนนที่ได้รับ";
-"Redeemed Points" = "คะแนนแลก";
+"Redeemed Points" = "คะแนนที่แลก";
 "Expired Points" = "คะแนนหมดอายุ";
-"Available Points" = "คะแนนที่มีอยู่";
+"Available Points" = "คะแนนที่ใช้ได้";
 "No data found!" = "ไม่พบข้อมูล!";
 
-"Claim Details" = "รายละเอียดการเรียกร้อง";
-"Upload Code" = "อัปโหลดรหัส";
-"Validity until" = "ใช้ได้ถึง";
+"Claim Details" = "รายละเอียดการเคลม";
+"Upload Code" = "อัพโหลดรหัส";
+"Validity until" = "ใช้ได้ถึงวันที่";
 
 "Enter your invoice number" = "ป้อนหมายเลขใบแจ้งหนี้ของคุณ";
-"Select the product name" = "เลือกชื่อผลิตภัณฑ์";
+"Select the product name" = "เลือกการออกแบบเลนส์";
 "Enter a quantity" = "ป้อนปริมาณ";
-"Hoya Application need Camera permission for Scanning Codes" = "แอปพลิเคชัน Hoya ต้องได้รับอนุญาตจากกล้องสำหรับการสแกนรหัส";
+"Hoya Application need Camera permission for Scanning Codes" = "การประยุกต์ใช้ Hoya ต้องได้รับอนุญาตกล้องสําหรับการสแกนรหัส";
 "Allow Camera Access" = "อนุญาตการเข้าถึงกล้อง";
 "Allow" = "อนุญาต";
-"DisAllow" = "ไม่อนุญาต";
-"lens design name is not available" = "ไม่มีชื่อการออกแบบเลนส์";
+"DisAllow" = "ห้าม";
+"lens design name is not available" = "ไม่มีรุ่นเลนส์ที่ระบุ";
 "Scan a valid QR Code" = "สแกนรหัส QR ที่ถูกต้อง";
-"Summitted Len Design is not available" = "ไม่มีการออกแบบเลนส์ที่ส่งมา";
-"This combination already exist" = "มีชุดค่าผสมนี้อยู่แล้ว";
-"Claim request has been submitted successfully" = "ส่งคำขอเรียกร้องเรียบร้อยแล้ว";
-"Invalid claim request" = "คำขอเรียกร้องไม่ถูกต้อง";
+"Summitted Len Design is not available" = "รุ่นเลนส์ที่ระบุไม่สามารถใช้ได้";
+"This combination already exist" = "การรวมกันมีอยู่แล้ว";
+"Claim request has been submitted successfully" = "ส่งคำร้องการเคลมของคุณเรียบร้อยแล้ว";
+"Invalid claim request" = "หมายเลขใบแจ้งหนี้ไม่ถูกต้อง";
 
-"userId_1" = "รหัสสมาชิก";
-"userId_toast_message_1" = "ใส่รหัสสมาชิก";
-"Pin has been sent to registered mobile number" = "ส่ง PIN ไปที่เบอร์มือถือที่ลงทะเบียนแล้ว";
-"Mobile_number_is_doesn't_exists1" = "ไม่มีรหัสสมาชิก";
-"Voucher Details" = "คำอธิบายบัตรกำนัล";
-"Get Otp" = "รับโอที";
-"Enter New Number" = "ป้อนหมายเลขใหม่";
+"userId_1" = "หมายเลขสมาชิก";
+"userId_toast_message_1" = "กรุณากรอกหมายเลขสมาชิก";
+"Pin has been sent to registered mobile number" = "พินถูกส่งไปยังหมายเลขโทรศัพท์มือถือที่ลงทะเบียนไว้แล้ว";
+"Mobile_number_is_doesn't_exists1" = "ไม่มีหมายเลขสมาชิก!";
+"Voucher Details" = "คําอธิบายบัตรกํานัล";
+"Get Otp" = "รับ OTP";
+"Enter New Number" = "ใส่หมายเลขใหม่";
 "new number" = "หมายเลขใหม่";
+"Invalid OTP" = "รหัส OTP ไม่ถูกต้อง!";
+"chat with us" = "แชทกับเรา";
+"Write Query Here" = "เขียนแบบสอบถามที่นี่";
+"deleteAccountError" = "บัญชีของคุณถูกลบตามคําขอของคุณโปรดลงทะเบียนบัญชีใหม่ด้วยหมายเลขโทรศัพท์มือถือใหม่!";

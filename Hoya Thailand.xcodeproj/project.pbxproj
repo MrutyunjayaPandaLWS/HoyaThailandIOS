@@ -260,6 +260,7 @@
 		84AE3A742A3DB56800967CDA /* idCardExistancy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */; };
 		84B3A7132A8FA47E004BAB78 /* ServerOTPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */; };
 		84B3A7142A8FA47E004BAB78 /* UserList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3A7122A8FA47D004BAB78 /* UserList2.swift */; };
+		84BE89372A99FEBB0021DC87 /* 94350-gears-lottie-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 84BE89362A99FEBB0021DC87 /* 94350-gears-lottie-animation.json */; };
 		84E5C7D829DE9925004D5025 /* HistoryNotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */; };
 		84E5C7DC29DE99B1004D5025 /* NotificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */; };
 		84E5C7DD29DE99B1004D5025 /* LstPushHistoryJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */; };
@@ -557,6 +558,7 @@
 		84AE3A732A3DB56800967CDA /* idCardExistancy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idCardExistancy1.swift; sourceTree = "<group>"; };
 		84B3A7112A8FA47D004BAB78 /* ServerOTPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerOTPModels.swift; sourceTree = "<group>"; };
 		84B3A7122A8FA47D004BAB78 /* UserList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserList2.swift; sourceTree = "<group>"; };
+		84BE89362A99FEBB0021DC87 /* 94350-gears-lottie-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "94350-gears-lottie-animation.json"; sourceTree = "<group>"; };
 		84E5C7D729DE9925004D5025 /* HistoryNotificationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNotificationsViewModel.swift; sourceTree = "<group>"; };
 		84E5C7DA29DE99B0004D5025 /* NotificationModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModels.swift; sourceTree = "<group>"; };
 		84E5C7DB29DE99B1004D5025 /* LstPushHistoryJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LstPushHistoryJson.swift; sourceTree = "<group>"; };
@@ -1175,6 +1177,7 @@
 		806CBA2529C1ED3400AC135E /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				84BE89362A99FEBB0021DC87 /* 94350-gears-lottie-animation.json */,
 				8439EE7D2A46AB8E00131CE9 /* no_internet_lottie.json */,
 				806CBA2629C1ED5300AC135E /* 116297-scanner.json */,
 			);
@@ -2077,6 +2080,7 @@
 				806CBA2729C1ED5300AC135E /* 116297-scanner.json in Resources */,
 				8011A6632995046C0033E740 /* Galano Grotesque Extra Bold Italic.otf in Resources */,
 				8086649929961854008EAEB7 /* HYT_MyEarningsTVCell.xib in Resources */,
+				84BE89372A99FEBB0021DC87 /* 94350-gears-lottie-animation.json in Resources */,
 				8011A66C2995046C0033E740 /* Galano Grotesque Alt Black.otf in Resources */,
 				80FABD3C2994EF9B00061E01 /* Main.storyboard in Resources */,
 				8011A65A2995046C0033E740 /* Galano Grotesque Medium Italic.otf in Resources */,
@@ -2444,7 +2448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2499,7 +2503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2518,7 +2522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -2547,10 +2551,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thailand_DEV;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = HoyaThailand_AppStore;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2563,7 +2570,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -2592,10 +2599,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thailand_DEV;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = HoyaThailand_AppStore;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -2603,7 +2613,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -2622,11 +2632,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Hoya_Thai_ NotificationServices_Development";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thai_Notification_AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2634,7 +2644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -2653,11 +2663,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Hoya_Thai_ NotificationServices_Development";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thai_Notification_AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

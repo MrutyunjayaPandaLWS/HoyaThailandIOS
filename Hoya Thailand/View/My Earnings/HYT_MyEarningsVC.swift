@@ -133,21 +133,40 @@ class HYT_MyEarningsVC: BaseViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "HYT_MyEarningsTVCell", for: indexPath) as! HYT_MyEarningsTVCell
         cell.selectionStyle = .none
         if self.VM.myEarningList[indexPath.row].remarks?.contains("Reward Adjustment") == true{
-            cell.expireDateView.constant = 0
-            cell.productStatus.text = "Reward Adjustment"
+            
+//            cell.productStatus.text = "Reward Adjustment"
             cell.pointsView.backgroundColor = primaryColor
         }else if self.VM.myEarningList[indexPath.row].remarks?.contains("Points Credited") == true{
-            cell.expireDateView.constant = 40
-            let expDate = self.VM.myEarningList[indexPath.row].pointExpiryDate?.split(separator: " ")
-            cell.expiredateLbl.text = "\(expDate?[0] ?? "")"
-            cell.productStatus.text = "Point credited"
+            
+            
+//            cell.productStatus.text = "Point credited"
             cell.pointsView.backgroundColor = primaryColor
         }else{
-            cell.expireDateView.constant = 0
-            cell.productStatus.text = "Sale Return"
+//            cell.expireDateView.constant = 0
+//            cell.productStatus.text = "Sale Return"
             cell.pointsView.backgroundColor = .red
             
         }
+        if self.VM.myEarningList[indexPath.row].remarks?.contains("(") == true{
+            var splitValue = self.VM.myEarningList[indexPath.row].remarks?.split(separator: "(")
+//            let splitValue2 = splitValue?[1].split(separator: ")")
+            cell.productStatus.text = "\(splitValue?[0] ?? "")"//"\(splitValue2?[0].dropFirst(1) ?? "")"
+        }else{
+            cell.productStatus.text = self.VM.myEarningList[indexPath.row].remarks
+        }
+            
+//            print("behaviour id - ",self.VM.myEarningList[indexPath.row].behaviourId ?? 0)
+            
+        if self.VM.myEarningList[indexPath.row].behaviourId == 8 || self.VM.myEarningList[indexPath.row].behaviourId == 32{
+            cell.expireDateView.constant = 0
+            cell.pointsView.backgroundColor = .red
+        }else{
+            let expDate = self.VM.myEarningList[indexPath.row].pointExpiryDate?.split(separator: " ")
+            cell.expiredateLbl.text = "\(expDate?[0] ?? "")"
+            cell.expireDateView.constant = 40
+            cell.pointsView.backgroundColor = myEarningColor
+        }
+        
         
         cell.pointsLbl.text = "\(Int(self.VM.myEarningList[indexPath.row].creditedPoint ?? 0))"
         cell.invoiceNumberLbl.text = self.VM.myEarningList[indexPath.row].invoiceNo ?? "-"

@@ -44,21 +44,21 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
     @IBAction func didTappedGetOtp(_ sender: UIButton) {
         if otpBtnStatus == 0{
             if newNumberTF.text?.count == 0{
-                self.view.makeToast("Enter mobile number", duration: 2.0, position: .center)
+                self.view.makeToast("mobileNumber_toast_message".localiz(), duration: 2.0, position: .center)
             }else if newNumberTF.text?.count == 9{
                 if  String(newNumberTF.text?.prefix(1) ?? "") == "9" || String(newNumberTF.text?.prefix(1) ?? "") == "8" || String(newNumberTF.text?.prefix(1) ?? "") == "7" || String(newNumberTF.text?.prefix(1) ?? "") == "6"{
                     checkMobileNumberExistancy()
                 }else{
-                    self.view.makeToast("Enter valid mobile number", duration: 2.0, position: .center)
+                    self.view.makeToast("mobileNumbervalidation".localiz(), duration: 2.0, position: .center)
                 }
             }else{
-                self.view.makeToast("Enter valid mobile number", duration: 2.0, position: .center)
+                self.view.makeToast("mobileNumbervalidation".localiz(), duration: 2.0, position: .center)
             }
         }else{
             if otpView.text?.count == 0{
-                self.view.makeToast("Enter OTP", duration: 2.0, position: .center)
+                self.view.makeToast("enterOtp".localiz(), duration: 2.0, position: .center)
             }else if otpView.text?.count != 6{
-                self.view.makeToast("Enter valid OTP", duration: 2.0, position: .center)
+                self.view.makeToast("mobileNumbervalidation".localiz(), duration: 2.0, position: .center)
 //            }else if otpView.text == self.VM.otpNumber{
             }
 //            else if otpView.text == "123456"{
@@ -92,7 +92,9 @@ class HYT_OtpVC: BaseViewController,UITextFieldDelegate{
     func localization(){
         getOtpBtn.setTitle("Get Otp".localiz(), for: .normal)
         newNumberLbl.text = "new number".localiz()
-        newNumberTF.text = "Enter New Number".localiz()
+        newNumberTF.placeholder = "Enter New Number".localiz()
+        enterOtpLbl.text = "enterOtp".localiz()
+        resendBtn.setTitle("resendOtp".localiz(), for: .normal)
         
     }
     func sendOtptoRegisterNumber(){

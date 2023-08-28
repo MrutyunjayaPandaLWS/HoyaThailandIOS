@@ -16,6 +16,7 @@ class HYT_PointExpireReportVM{
     func pointExpireReportApi(parameter: JSON){
         self.VC?.startLoading()
         pointExpireReportList.removeAll()
+        self.totalPointExpire = 0
         requestAPIs.getPonintExpireReport(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{

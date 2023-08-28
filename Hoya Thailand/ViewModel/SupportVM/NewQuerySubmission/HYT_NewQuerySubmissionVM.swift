@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LanguageManager_iOS
 
 
 class HYT_NewQuerySubmissionVM{
@@ -21,7 +22,7 @@ class HYT_NewQuerySubmissionVM{
                         self.queryMessage = result?.returnMessage ?? ""
                         DispatchQueue.main.async {
                             if self.queryMessage.contains("Saved Successfully"){
-                                self.VC?.successMessagePopUp(message: "Your query has been submitted successfully")
+                                self.VC?.successMessagePopUp(message: "querySubmit_success_message".localiz())
                                 self.VC?.navigationController?.popViewController(animated: true)
                                 self.VC?.stopLoading()
                             }else{
@@ -42,7 +43,7 @@ class HYT_NewQuerySubmissionVM{
             }else{
                 DispatchQueue.main.async {
                     self.VC?.stopLoading()
-                    print("New Query Submission error",error?.localizedDescription)
+                    print("New Query Submission error",error?.localizedDescription ?? "")
                 }
             }
         }

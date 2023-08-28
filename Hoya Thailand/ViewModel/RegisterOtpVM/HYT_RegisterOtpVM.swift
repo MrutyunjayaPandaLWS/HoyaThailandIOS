@@ -79,8 +79,8 @@ class HYT_RegisterOtpVM{
                     DispatchQueue.main.async {
                     let response = result?.returnMessage ?? ""
                         print(response, "- OTP")
-//                        if response > "0"{
-                        if response <= "0"{
+                        if response > "0"{
+//                        if response <= "0"{
                             completion()
 //                            self.VC?.claimSubmissionWithOTP()
                         }else{

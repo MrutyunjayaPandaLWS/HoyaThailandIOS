@@ -11,6 +11,8 @@ import Photos
 import SDWebImage
 import LanguageManager_iOS
 import ImageSlideshow
+import Lottie
+import Alamofire
 
 class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate,LanguageDropDownDelegate, popMessage2Delegate, SuccessMessageDelegate, InternetCheckDelgate {
     
@@ -19,6 +21,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             dashboardOffersApi()
         }
         tokendata()
+        self.maintenanceAPI()
     }
     
     func goToLoginPage(item: HYT_SuccessMessageVC) {
@@ -75,13 +78,17 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var topView: UIView!
 //    @IBOutlet weak var menuTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var dashboardMenuTableView: UITableView!
+    @IBOutlet var underMaintananceView: LottieAnimationView!
+    @IBOutlet var maintananceView: UIView!
     
+    @IBOutlet weak var maintanceMessageLbl: UILabel!
     let imagePicker = UIImagePickerController()
     var strdata1 = ""
     var menuList : [MenuListModel] = []
     var cellHeight = 0.0
     var VM = HYT_DashboardVM()
     var sourceArray = [AlamofireSource]()
+    private var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +117,8 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             if sourceArray.isEmpty{
                 dashboardOffersApi()
             }
+            maintenanceAPI()
+            isUpdateAvailable()
             tokendata()
         }
     }
@@ -174,6 +183,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         let parameter : [String : Any] = [
                 "ActorId": userId
         ]
+        print(parameter,"Dashboard APi")
         self.VM.dashBoardApi(parameter: parameter, completion: {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HYT_SuccessMessageVC") as? HYT_SuccessMessageVC
             vc!.delegate = self
@@ -182,23 +192,6 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             vc!.modalPresentationStyle = .overCurrentContext
             vc!.modalTransitionStyle = .crossDissolve
             self.present(vc!, animated: true, completion: nil)
-            
-            
-            
-            
-            
-            
-            
-            
-//            let alert = UIAlertController(title: "", message: "account_Deactivate_error".localiz(), preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "Ok".localiz(), style: .default, handler: { UIAlertAction in
-//
-//
-//
-//
-//            }))
-//
-//        self.present(alert, animated: true, completion: nil)
         })
     }
     
@@ -272,7 +265,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
                 let imageURL = image.proImage ?? ""
                 let filteredURLArray = imageURL.dropFirst(3)
                 let replaceString = "\(PROMO_IMG1)\(filteredURLArray)".replacingOccurrences(of: " ", with: "%20")
-                self.sourceArray.append(AlamofireSource(urlString: "\(replaceString)", placeholder: UIImage(named: "ic_default_img (1)"))!)
+                self.sourceArray.append(AlamofireSource(urlString: "\(replaceString)", placeholder: UIImage(named: "offer-banner"))!)
             }
             offersSlideShow.setImageInputs(self.sourceArray)
             offersSlideShow.slideshowInterval = 3.0
@@ -282,7 +275,7 @@ class HYT_DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataS
             offersSlideShow.pageControl.pageIndicatorTintColor = UIColor.lightGray
         }else{
             offersSlideShow.contentScaleMode = .scaleToFill
-            offersSlideShow.setImageInputs([ImageSource(image: UIImage(named: "ic_default_img (1)")!)])
+            offersSlideShow.setImageInputs([ImageSource(image: UIImage(named: "offer-banner")!)])
         }
     }
     
@@ -478,4 +471,91 @@ struct MenuListModel{
     let itemName : String
     let itemImage : String
     let id : Int
+}
+
+
+extension HYT_DashboardVC{
+    
+    func playAnimation(){
+        animationView = .init(name: "94350-gears-lottie-animation")
+        animationView!.frame = underMaintananceView.bounds
+          // 3. Set animation content mode
+        animationView!.contentMode = .scaleAspectFit
+          // 4. Set animation loop mode
+        animationView!.loopMode = .loop
+          // 5. Adjust animation speed
+        animationView!.animationSpeed = 1
+        underMaintananceView.addSubview(animationView!)
+          // 6. Play animation
+        animationView!.play()
+
+    }
+    
+    func maintenanceAPI(){
+        guard let url = URL(string: "http://appupdate.arokiait.com/updates/serviceget?pid=com.loyaltyWorks.Hoya-Thailand") else {return}
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let dataResponse = data,
+                  error == nil else {
+                print(error?.localizedDescription ?? "Response Error")
+                return }
+            do{
+                //here dataResponse received from a network request
+                let jsonResponse = try JSONSerialization.jsonObject(with:dataResponse, options: [])
+                print(jsonResponse)
+                let isMaintenanceValue = ((jsonResponse as AnyObject).value(forKeyPath: "Result.is_maintenance") as? String)
+                let forceupdatevalue = ((jsonResponse as AnyObject).value(forKeyPath: "Result.version_number") as? String)
+                print(forceupdatevalue ?? "")
+                print(isMaintenanceValue ?? "","maintenance status")
+                if isMaintenanceValue == "1"{
+                    print(isMaintenanceValue ?? "")
+                    DispatchQueue.main.async {
+                        self.maintananceView.isHidden = false
+                        self.tabBarController?.tabBar.isUserInteractionEnabled = false
+                        self.playAnimation()
+                    }
+                }else if isMaintenanceValue == "0"{
+                    self.maintananceView.isHidden = true
+//                    self.tokendata()
+                    self.tabBarController?.tabBar.isUserInteractionEnabled = true
+                    self.animationView?.stop()
+                }
+            } catch let parsingError {
+                print("Error", parsingError)
+            }
+        }
+        task.resume()
+    }
+    
+    func isUpdateAvailable() {
+        let bundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
+        print(bundleId)
+        Alamofire.request("https://itunes.apple.com/in/lookup?bundleId=\(bundleId)").responseJSON { response in
+            if let json = response.result.value as? NSDictionary, let results = json["results"] as? NSArray, let entry = results.firstObject as? NSDictionary, let appStoreVersion = entry["version"] as? String,let appstoreid = entry["trackId"], let trackUrl = entry["trackViewUrl"], let installedVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                let installed = Int(installedVersion.replacingOccurrences(of: ".", with: "")) ?? 0
+                print(installed)
+                let appStore = Int(appStoreVersion.replacingOccurrences(of: ".", with: "")) ?? 0
+                print(appStore)
+                print(appstoreid)
+                if appStore>installed {
+                        let alertController = UIAlertController(title: "New update Available!", message: "Update is available to download. Downloading the latest update you will get the latest features, improvements and bug fixes of Fleet Guard APP", preferredStyle: .alert)
+
+                        // Create the actions
+                        let okAction = UIAlertAction(title: "Update Now", style: UIAlertAction.Style.default) {
+                            UIAlertAction in
+                            UIApplication.shared.openURL(NSURL(string: "\(trackUrl)")! as URL)
+
+                        }
+                        //                     Add the actions
+                        alertController.addAction(okAction)
+                        // Present the controller
+                        self.present(alertController, animated: true, completion: nil)
+
+                }else{
+                    print("no updates")
+
+                }
+            }
+        }
+    }
+
 }

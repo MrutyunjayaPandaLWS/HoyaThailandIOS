@@ -1,9 +1,8 @@
-/* 
-  Localizable.strings
-  Hoya Thailand
+/*
+Localizable.strings
+Hoya Thailand
 
-  Created by syed on 09/03/23.
-  
+Created by syed on 09/03/23.
 */
 
 "language" = "En";
@@ -26,8 +25,11 @@
 "select_status" = "Select Status";
 "reset" = "Reset";
 "filter_toast_message" = "Select Date Range";
-
-
+"Select Promotion Name or Date Range or both" = "Select Promotion Name or Date Range or both";
+"Select Status or Date Range or both" = "Select Status or Date Range or both";
+"Select ToDate" = "Select To Date";
+"Select From Date" = "Select From Date";
+"ToDate should be lower than FromDate" = "ToDate should be lower than FromDate";
 
 
 //Login
@@ -162,7 +164,7 @@
 "myEarnings" = "My Earnings";
 "promotionName" = "Promotion Name";
 "date" = "Date";
-"productName" = "Product Name";
+"productName" = "Lens Design";
 "invoiceNumer" = "Invoice Number";
 "point_will_expire" = "Points will expire on";
 "remarks" = "Remarks";
@@ -203,8 +205,8 @@
 "Valid_till" = "Valid till";
 
 "Terms And Condition" = "Terms And Condition";
-"accept" = "accept";
-"decline" = "decline";
+"accept" = "Accept";
+"decline" = "Decline";
 "accept terms and condition" = "Accept Terms And Conditions";
 "Lens Design" = "Lens Design";
 "Are you sure you want to Logout ?" = "Are you sure you want to Logout ?";
@@ -228,9 +230,9 @@
 "Claim Details" = "Claim Details";
 "Upload Code" = "Upload Code";
 
-"Validity until" = "Validity until";
+"Validity until" = "Valid till";
 "Enter your invoice number" = "Enter your invoice number";
-"Select the product name" = "Select the product name";
+"Select the product name" = "Select the Lens Design";
 "Enter a quantity" = "Enter a quantity";
 "Hoya Application need Camera permission for Scanning Codes" = "Hoya Application need Camera permission for Scanning Codes";
 "Allow Camera Access" = "Allow Camera Access";
@@ -251,3 +253,7 @@
 "Get Otp" = "Get Otp";
 "Enter New Number" = "Enter New Number";
 "new number" = "New Number";
+"Invalid OTP" = "Invalid OTP";
+"chat with us" = "Chat with us";
+"Write Query Here" = "Write Query Here";
+"deleteAccountError" = "Your account has been deleted as per your request, please register new account with new Mobile Number!";

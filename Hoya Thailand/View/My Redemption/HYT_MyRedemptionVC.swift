@@ -205,7 +205,7 @@ class HYT_MyRedemptionVC: BaseViewController, UITableViewDelegate, UITableViewDa
         var myRedeemptionData = self.VM.myRedeemptionList[indexPath.row]
         if myRedeemptionData.redemptionStatus == 4 {
             cell.downloadVoucherViewHeight.constant = 60
-            cell.statusLbl.text = "Deliverd"
+            cell.statusLbl.text = "Delivered"
             cell.statusLbl.textColor = approvedTextColor
             cell.statusLbl.backgroundColor = approvedBgColor
             cell.downloadVoucher = myRedeemptionData.productImage ?? ""

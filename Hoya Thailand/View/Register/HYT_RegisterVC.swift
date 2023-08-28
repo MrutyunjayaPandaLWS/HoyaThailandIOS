@@ -524,7 +524,7 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
 //    MARK: - Check ID card Existancy
     func checkIDcardExiistancy(){
         let parameter : [String : Any] = [
-            "ActionType" : 185,
+            "ActionType" : 198,
             "MobilePrefix": idCardNumberTF.text ?? ""
         ]
         print(parameter,"checkIDcardExiistancy")
@@ -535,7 +535,6 @@ class HYT_RegisterVC: BaseViewController,RegisterOtpDelegate, DropdownDelegate, 
     //   MARK: - CHECK ID CARD VALIDATION API
         func checkIdcardNumber(){
             let parameter : [String : Any] = [
-                "ActorId": 91,
                 "RoleIDs": idCardNumberTF.text ?? ""
             ]
             print(parameter,"checkIdcardNumber")

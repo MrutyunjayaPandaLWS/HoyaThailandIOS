@@ -137,6 +137,7 @@ class HYT_ForgotPasswordVC: BaseViewController,UITextFieldDelegate, LanguageDrop
     }
     
     private func localization(){
+        enterOtpLbl.text = "enterOtp".localiz()
         forgotPasswordLbl.text = "forgot_password".localiz()
         forgotPWDescriptionLbl.text = "forgot_password_info".localiz()
         membershipIdLbl.text = "userId".localiz()

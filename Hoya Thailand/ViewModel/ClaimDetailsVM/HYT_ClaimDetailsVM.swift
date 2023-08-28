@@ -25,7 +25,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
             if error == nil{
                 if result != nil{
                     DispatchQueue.main.async {
-                        print("invoice",result?.lstAttributesDetails?[0].attributeId ?? 0)
+                        print("invoice number validation response",result?.lstAttributesDetails?[0].attributeId ?? 0)
                         if result?.lstAttributesDetails?[0].attributeId == 0{
                             self.VC?.scanCodeStatus = 1
 //                            if self.VC?.flags == "scanned"{
@@ -70,7 +70,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
         requestAPIs.productNumberValidation_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
-                    print("product",result?.lstAttributesDetails?[0].attributeId ?? 0)
+                    print("product validation response",result?.lstAttributesDetails?[0].attributeId ?? 0)
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?[0].attributeId == 1{
                             self.VC?.stopLoading()
@@ -111,6 +111,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
         requestAPIs.checkSalesReturnStatus_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
+                    print(result?.lstAttributesDetails?[0].attributeId , "Combination api")
                     DispatchQueue.main.async {
                         if result?.lstAttributesDetails?[0].attributeId == 1{
 //                            self.VC?.salesReturnStatus = 1
@@ -150,6 +151,7 @@ class HYT_ClaimDetailsVM: SuccessMessageDelegate{
         requestAPIs.claimSubmission_API(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{
+                    print(result?.returnMessage ?? "", "Claim submission")
                     DispatchQueue.main.async {
                         if result?.returnMessage == "1"{
                             self.VC?.stopLoading()

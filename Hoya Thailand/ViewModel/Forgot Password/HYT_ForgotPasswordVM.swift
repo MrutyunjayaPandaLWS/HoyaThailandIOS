@@ -90,12 +90,10 @@ class HYT_ForgotPasswordVM{
             self.VC?.stopLoading()
             if result.lstAttributesDetails?.count != 0{
                 if result.lstAttributesDetails?[0].attributeValue != nil && result.lstAttributesDetails?[0].attributeValue != ""{
-                    self.VC?.mobileNumber = result.lstAttributesDetails?[0].attributeValue ?? ""
-                    completion()
-                }else{
-                    completion()
+                    self.VC?.mobileNumber = result.lstAttributesDetails?[0].attributeValue ?? ""   
                 }
             }
+            completion()
             
         }
     }
@@ -156,8 +154,8 @@ class HYT_ForgotPasswordVM{
                     DispatchQueue.main.async {
                     let response = result?.returnMessage ?? ""
                         print(response, "- OTP")
-//                        if response > "0"{
-                        if response <= "0"{
+                        if response > "0"{
+//                        if response <= "0"{
                             self.sendPasswordToMobileNumberApi()
 //                            self.VC?.claimSubmissionWithOTP()
                         }else{

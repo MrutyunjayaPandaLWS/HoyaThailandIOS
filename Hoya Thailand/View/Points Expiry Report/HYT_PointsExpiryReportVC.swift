@@ -69,6 +69,7 @@ class HYT_PointsExpiryReportVC: BaseViewController, UITableViewDelegate, UITable
         vc?.bottomConstraintsValue = 0
         vc?.fromDate = fromDate
         vc?.toDate = toDate
+        vc?.selectStatusEnable = false
         vc?.delegate = self
         present(vc!, animated: true)
     }

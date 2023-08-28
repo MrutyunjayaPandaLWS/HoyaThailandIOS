@@ -81,7 +81,7 @@ class HYT_LoginVM{
                                 }else if data?.result == -1{
                                     self.VC?.view.makeToast("Password_is_incorrect".localiz(), duration: 2.0, position: .center)
                                 }else if data?.result == -6{
-                                    self.VC?.view.makeToast("Mobile_number_is_doesn't_exists1".localiz(), duration: 2.0, position: .center)
+                                    self.VC?.view.makeToast("deleteAccountError".localiz(), duration: 2.0, position: .center)
                                 }else if data?.result == -3{
                                     self.VC?.view.makeToast("something_went_wrong".localiz(), duration: 2.0, position: .center)
                                 }

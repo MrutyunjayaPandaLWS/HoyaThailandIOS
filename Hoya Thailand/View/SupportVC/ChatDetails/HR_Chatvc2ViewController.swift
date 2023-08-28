@@ -4,7 +4,7 @@ import Photos
 import AVFoundation
 import SDWebImage
 import Toast_Swift
-//import LanguageManager_iOS
+import LanguageManager_iOS
 
 class HR_Chatvc2ViewController: UIViewController, UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentPickerDelegate{
     
@@ -63,8 +63,8 @@ class HR_Chatvc2ViewController: UIViewController, UITextFieldDelegate,UITableVie
             chatListingAPI()
 //        }
         querySummarylabel.text = "\("Query summary") : \(querysummary)"
-        self.supportHeadingLabel.text = "Chat with us"
-        self.commenttextfield.placeholder = "\("Write Query Here")..."
+        self.supportHeadingLabel.text = "chat with us".localiz()
+        self.commenttextfield.placeholder = "\("Write Query Here".localiz())..."
 
     }
     
@@ -215,7 +215,7 @@ class HR_Chatvc2ViewController: UIViewController, UITextFieldDelegate,UITableVie
             "CustomerTicketID":"\(CustomerTicketIDchatvc)"
             
         ] as [String:Any]
-        print(parameterJSON)
+        print(parameterJSON, "Chat details listing")
         self.requestAPIs.chatQuery_Post_API(parameters: parameterJSON) { (result, error) in
             if error == nil {
                 if result != nil{
@@ -467,7 +467,7 @@ extension HR_Chatvc2ViewController{
             return
         }
         
-        self.FileType = "JPG"
+        self.FileType = "png"
         let imageData = selectedImage.resized(withPercentage: 0.1)
         let imageData1: NSData = imageData!.pngData()! as NSData
         strBase64 = imageData1.base64EncodedString(options: .lineLength64Characters)
@@ -506,7 +506,7 @@ extension HR_Chatvc2ViewController{
                 "IsQueryFromMobile": true,
                 "QueryStatus": "1"
         ] as! [String:Any]
-//         print(parameterJSON)
+         print(parameterJSON,"image attachment")
         self.requestAPIs.newQueryTicket_API(parameters: parameterJSON) { (result, error) in
             if error == nil {
                 if result != nil{
