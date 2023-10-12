@@ -239,6 +239,7 @@
 		840036412A45CE3400471D56 /* senderImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840036352A45CE3300471D56 /* senderImageTableViewCell.xib */; };
 		8439EE7E2A46AB8E00131CE9 /* no_internet_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8439EE7D2A46AB8E00131CE9 /* no_internet_lottie.json */; };
 		8439EE7F2A46ABB200131CE9 /* IOS_Internet_Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F7FF42A41AEDD0075AA93 /* IOS_Internet_Check.swift */; };
+		844327A52AD7AEA300492A9F /* loaderScreen.json in Resources */ = {isa = PBXBuildFile; fileRef = 844327A42AD7AEA300492A9F /* loaderScreen.json */; };
 		845C91F92A39799100B0D157 /* UiViewx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C91F82A39799100B0D157 /* UiViewx.swift */; };
 		845C91FD2A39BFE900B0D157 /* SelectDealerDropDownTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C91FB2A39BFE800B0D157 /* SelectDealerDropDownTVC.swift */; };
 		845C91FE2A39BFE900B0D157 /* SelectDealerDropDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C91FC2A39BFE900B0D157 /* SelectDealerDropDownVC.swift */; };
@@ -530,6 +531,7 @@
 		840036342A45CE3300471D56 /* otherInfoImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = otherInfoImageTableViewCell.xib; sourceTree = "<group>"; };
 		840036352A45CE3300471D56 /* senderImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = senderImageTableViewCell.xib; sourceTree = "<group>"; };
 		8439EE7D2A46AB8E00131CE9 /* no_internet_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_internet_lottie.json; sourceTree = "<group>"; };
+		844327A42AD7AEA300492A9F /* loaderScreen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loaderScreen.json; sourceTree = "<group>"; };
 		8443584629DD7AC0005C6FB8 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		8443584829DD7B27005C6FB8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8443584A29DD81F3005C6FB8 /* libnetwork.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnetwork.tbd; path = usr/lib/libnetwork.tbd; sourceTree = SDKROOT; };
@@ -1177,6 +1179,7 @@
 		806CBA2529C1ED3400AC135E /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				844327A42AD7AEA300492A9F /* loaderScreen.json */,
 				84BE89362A99FEBB0021DC87 /* 94350-gears-lottie-animation.json */,
 				8439EE7D2A46AB8E00131CE9 /* no_internet_lottie.json */,
 				806CBA2629C1ED5300AC135E /* 116297-scanner.json */,
@@ -2075,6 +2078,7 @@
 				8011A6622995046C0033E740 /* Galano Grotesque Alt Italic.otf in Resources */,
 				806CBA2429C1E4F000AC135E /* GoogleService-Info.plist in Resources */,
 				8011A6752995046C0033E740 /* Galano Grotesque Italic.otf in Resources */,
+				844327A52AD7AEA300492A9F /* loaderScreen.json in Resources */,
 				8011A6792995046C0033E740 /* Galano Grotesque Alt Semi Bold Italic.otf in Resources */,
 				8011A6502995046C0033E740 /* Galano Grotesque Alt Semi Bold.otf in Resources */,
 				806CBA2729C1ED5300AC135E /* 116297-scanner.json in Resources */,
@@ -2522,11 +2526,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hoya Thailand/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hoya Rewards THAI";
@@ -2551,7 +2553,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = HoyaThailand_AppStore;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -2570,11 +2571,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hoya Thailand/Hoya Thailand.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hoya Thailand/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hoya Rewards THAI";
@@ -2599,7 +2598,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = HoyaThailand_AppStore;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -2613,16 +2611,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServices/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2632,7 +2628,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thai_Notification_AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2644,16 +2639,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2HG885J5KS;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 2HG885J5KS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServices/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServices;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2663,7 +2656,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loyaltyWorks.Hoya-Thailand.NotificationServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Hoya_Thai_Notification_AppStore;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

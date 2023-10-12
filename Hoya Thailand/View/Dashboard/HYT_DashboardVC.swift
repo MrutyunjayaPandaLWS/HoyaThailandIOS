@@ -506,18 +506,20 @@ extension HYT_DashboardVC{
                 let forceupdatevalue = ((jsonResponse as AnyObject).value(forKeyPath: "Result.version_number") as? String)
                 print(forceupdatevalue ?? "")
                 print(isMaintenanceValue ?? "","maintenance status")
-                if isMaintenanceValue == "1"{
+                if isMaintenanceValue == "0"{
                     print(isMaintenanceValue ?? "")
                     DispatchQueue.main.async {
                         self.maintananceView.isHidden = false
                         self.tabBarController?.tabBar.isUserInteractionEnabled = false
                         self.playAnimation()
                     }
-                }else if isMaintenanceValue == "0"{
-                    self.maintananceView.isHidden = true
-//                    self.tokendata()
-                    self.tabBarController?.tabBar.isUserInteractionEnabled = true
-                    self.animationView?.stop()
+                }else if isMaintenanceValue == "1"{
+                    DispatchQueue.main.async {
+                        self.maintananceView.isHidden = true
+    //                    self.tokendata()
+                        self.tabBarController?.tabBar.isUserInteractionEnabled = true
+                        self.animationView?.stop()
+                    }
                 }
             } catch let parsingError {
                 print("Error", parsingError)

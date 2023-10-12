@@ -18,8 +18,11 @@ class HYT_VoucherListVM: SuccessMessageDelegate{
     var voucherListArray = [ObjCatalogueList1]()
     var pointExpireDetails = [eVoucherPointExpModel]()
     func voucherListApi(parameter: JSON){
-//        self.voucherListArray.removeAll()
-        self.VC?.startLoading()
+        DispatchQueue.main.async {
+            self.voucherListArray.removeAll()
+            self.VC?.voucherTableView.reloadData()
+            self.VC?.startLoading()
+        }
         requestAPIs.getVoucherListApi(parameters: parameter) { result, error in
             if error == nil{
                 if result != nil{

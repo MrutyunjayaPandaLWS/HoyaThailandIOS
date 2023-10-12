@@ -130,7 +130,7 @@ Created by syed on 09/03/23.
 "role" = "บทบาท";
 "membershipId" = "หมายเลขสมาชิก";
 "scan_upload_invoice" = "สแกน QR / อัพโหลดใบกำกับภาษี";
-"myEarning" = "รายได้ของฉัน";
+"myEarning" = "คะแนนของฉัน";
 "redeem_Voucher" = "แลกบัตรกำนัลอิเล็กทรอนิกส์";
 "myredeemption" = "การแลกของฉัน";
 "pointExpireReport" = "รายงานของคะแนนที่หมดอายุ";
@@ -145,12 +145,12 @@ Created by syed on 09/03/23.
 "myProfile" = "ประวัติของฉัน";
 "general_info" = "ข้อมูลทั่วไป";
 "personal_info" = "ข้อมูลส่วนตัว";
-"profile_update_success_message" = "ประวัติของคุณทำการปรับปรุงเรียบร้อยแล้ว";
+"profile_update_success_message" = "ประวัติของคุณ ถูกบันทึกเรียบร้อยแล้ว";
 
 //promtionList
 "promotionList" = "รายการโปรโมชั่น";
 "details" = "รายละเอียด";
-"claim" = "การเคลม";
+"claim" = "สะสมคะแนน";
 "validUntli" = "ใช้ได้ถึง";
 
 //Promotion Details
@@ -230,7 +230,7 @@ Created by syed on 09/03/23.
 "Available Points" = "คะแนนที่ใช้ได้";
 "No data found!" = "ไม่พบข้อมูล!";
 
-"Claim Details" = "รายละเอียดการเคลม";
+"Claim Details" = "รายละเอียดการสะสมคะแนน";
 "Upload Code" = "อัพโหลดรหัส";
 "Validity until" = "ใช้ได้ถึงวันที่";
 
@@ -245,7 +245,7 @@ Created by syed on 09/03/23.
 "Scan a valid QR Code" = "สแกนรหัส QR ที่ถูกต้อง";
 "Summitted Len Design is not available" = "รุ่นเลนส์ที่ระบุไม่สามารถใช้ได้";
 "This combination already exist" = "การรวมกันมีอยู่แล้ว";
-"Claim request has been submitted successfully" = "ส่งคำร้องการเคลมของคุณเรียบร้อยแล้ว";
+"Claim request has been submitted successfully" = "คะแนนของคุณบันทึกเรียบร้อยแล้ว";
 "Invalid claim request" = "หมายเลขใบแจ้งหนี้ไม่ถูกต้อง";
 
 "userId_1" = "หมายเลขสมาชิก";

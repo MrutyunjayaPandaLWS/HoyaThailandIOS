@@ -242,7 +242,7 @@ Created by syed on 09/03/23.
 "Scan a valid QR Code" = "Scan a valid QR Code";
 "Summitted Len Design is not available" = "Summitted Len Design is not available";
 "This combination already exist" = "This combination already exist";
-"Claim request has been submitted successfully" = "Claim request has been submitted successfully";
+"Claim request has been submitted successfully" = "Claim request has been submitted successfully.";
 "Invalid claim request" = "Invalid claim request";
 
 "userId_1" = "Membership ID";
