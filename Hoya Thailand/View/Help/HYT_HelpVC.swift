@@ -153,7 +153,7 @@ var VM = HYT_HelpVM()
                 "LoyaltyID": membershipIdTF.text ?? "",
                 "QueryDetails": querySummeryTF.text ?? "",
                 "QuerySummary": querySummeryTF.text ?? "",
-                "SourceType": "1"
+                "SourceType": "3"
 
         ]
         self.VM.newQuerySubmission(parameter: parameter)
